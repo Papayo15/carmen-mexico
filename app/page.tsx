@@ -17,10 +17,8 @@ export default function HomePage() {
   const { profile, hidratado: profileHidratado, guardarProfile, borrarProfile } = useProfile();
   const { progreso, hidratado: progresoHidratado, resetearProgreso } = useProgresoContext();
 
-  // Espera hidratación antes de decidir qué mostrar
-  if (!profileHidratado) return null;
-
-  // Sin perfil → pantalla de bienvenida
+  // Sin perfil (o aún sin hidratar) → pantalla de bienvenida
+  // Nunca retorna null para que el HTML inicial tenga contenido
   if (!profile) {
     return <WelcomeScreen onContinuar={guardarProfile} />;
   }
