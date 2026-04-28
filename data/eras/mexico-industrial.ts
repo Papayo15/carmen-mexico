@@ -6,146 +6,496 @@ const mexicoIndustrial: Era = {
     icono:'🏗️', color:'bg-blue-800', colorText:'text-blue-900', orden:14,
   },
   casos:[
-    { numero:1, titulo:'El Milagro Mexicano', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'El crecimiento económico sostenido',
-      materia:'Historia / Geografía', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El economista del tiempo dice: "Durante más de veinte años consecutivos, la economía del país creció a tasas que eran la envidia de América Latina. La inflación era baja, el peso era estable y las fábricas surgían en todas las grandes ciudades. Los economistas del mundo estudiaban el caso como un modelo exitoso. El centro de ese crecimiento era la capital."',
-      libreta:`Milagro Mexicano: años 1940–1970 — crecimiento anual promedio del 6.5%
-Política: Industrialización por Sustitución de Importaciones (ISI) — aranceles proteccionistas
-Inflación: Menos del 5% anual (comparado con 10–15% en Brasil o Argentina)
-Estabilidad cambiaria: Tipo de cambio de 12.50 pesos/dólar — fijo de año 1954 a año 1976
-Industrias líderes: Automotriz, química, siderúrgica, cemento, alimentos procesados
-Concentración urbana: CDMX pasó de 1.8 millones (año 1940) a 8.5 millones de habitantes (año 1970)`,
+    {
+      numero:1,
+      titulo:'El Milagro Mexicano',
+      categoria:'grandes-hitos',
+      concepto_clave:'El crecimiento económico sostenido',
+      materia:'Historia / Geografía',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un informe económico clasificado del "Milagro Mexicano" del Archivo General de la Nación.',
+        objeto_robado:'Informe económico "Milagro Mexicano 1940-1970" (Banco de México, 1971)',
+        lugares:[
+          {
+            lugar:'Banco de México, Centro Histórico',
+            icono:'🏦',
+            testigo:'Economista jubilado Leopoldo',
+            pista:'Vi a alguien salir con el maletín. Preguntó en qué capital latinoamericana creció más de 6% anual durante 30 años, la que pasó de 1.8 a 8.5 millones de habitantes en ese período.',
+          },
+          {
+            lugar:'Zona Industrial de Vallejo, CDMX',
+            icono:'🏭',
+            testigo:'Obrero jubilado Ezequiel',
+            pista:'Una investigadora preguntó cuál era la ciudad que concentraba el 50% de la industria nacional en 1960. Le respondí: la capital, donde las fábricas crecían en todos sus barrios del norte.',
+          },
+          {
+            lugar:'Secretaría de Hacienda, CDMX',
+            icono:'🏛️',
+            testigo:'Economista Rebeca',
+            pista:'Vi a alguien fotografiar documentos de política económica ISI. Preguntó en qué ciudad del altiplano se tomaron las decisiones de sustitución de importaciones que protegieron la industria 30 años.',
+          },
+        ],
+        libreta:'Milagro Mexicano: 1940-1970, crecimiento anual promedio del 6.5%. ISI: Industrialización por Sustitución de Importaciones — aranceles proteccionistas. Inflación: menos del 5% anual. Tipo de cambio: 12.50 pesos/dólar (1954-1976). CDMX: de 1.8 millones (1940) a 8.5 millones (1970). Industrias líderes: automotriz, química, siderúrgica.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un análisis comparado de "milagros económicos" del siglo XX.',
+        pista_mundial:'El análisis decía: "El Milagro Mexicano (1940-1970) fue contemporáneo del Milagro Alemán (1950-1965) y del Milagro Japonés (1955-1973). Los tres combinaron proteccionismo + inversión pública + estabilidad cambiaria. México creció al 6.5%, Alemania al 8%, Japón al 10%. Los tres tenían su centro industrial en su capital o ciudad principal."',
+        libreta:'Milagro Alemán (Wirtschaftswunder): 1950-1965, 8% anual promedio. Milagro Japonés: 1955-1973, 10% anual. Milagro Mexicano: 1940-1970, 6.5% anual. Los tres usaron proteccionismo industrial y estabilidad cambiaria. El FMI llamó al modelo mexicano "ejemplo a seguir" en los años 1960.',
+      },
+      reto:{
+        enunciado:'Si la CDMX tenía 1.8 millones de habitantes en 1940 y 8.5 millones en 1970, ¿cuántos millones de personas se sumaron en 30 años?',
+        opciones_reto:['5.7 millones','6.2 millones','6.7 millones','7.2 millones'],
+        respuesta_reto:'6.7 millones',
+        pista_resultado:'6.7 millones de nuevos habitantes — la Ciudad de México tiene actualmente 6.7 millones de viviendas registradas en el censo.',
+      },
       opciones:['Ciudad de México','Monterrey','Guadalajara','Puebla'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La Ciudad de México fue el epicentro del "Milagro Mexicano" (1940-1970): creció de 1.8 a 8.5 millones de habitantes. La política de Sustitución de Importaciones protegió la industria nacional. El tipo de cambio fijo de 12.50 pesos/dólar (1954-1976) garantizó la estabilidad. El 6.5% de crecimiento anual fue sostenido por más de dos décadas.',
-      regla_oro_check:true },
-    { numero:2, titulo:'Televisa y los Medios Masivos', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'La televisión y la cultura de masas en México',
-      materia:'Historia / Arte', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El productor del tiempo dice: "La primera transmisión de televisión en el país se hizo desde un edificio de la capital en el año en que empezó la guerra de Corea. Durante las siguientes dos décadas, la empresa que controlaba las ondas del aire moldearía los gustos, las modas y las opiniones de millones de mexicanos desde sus estudios en la capital."',
-      libreta:`Primera transmisión de TV: 1 de septiembre de año 1950 — Canal 4 (XHTV), CDMX
-Personaje clave: Rómulo O'Farrill — primer concesionario de TV en México
-Telesistema Mexicano: fusión de canales en año 1955 → Televisa: fusión en año 1973
-Telenovelas: Primer género de producción masiva — Senda Prohibida (año 1958), primera telenovela
-Penetración: En año 1970, más del 50% de hogares urbanos tenía televisor
-Sede permanente: Estudios Televisa Televicentro — Av. Chapultepec, CDMX`,
+      explicacion:'¡Atrapado! Uniste la pista de la ISI y el tipo de cambio fijo (CDMX), el dato del Milagro Alemán y calculaste: 8.5 − 1.8 = 6.7 millones de nuevos habitantes en la capital.',
+      regla_oro_check:true,
+    },
+    {
+      numero:2,
+      titulo:'Televisa y los Medios Masivos',
+      categoria:'grandes-hitos',
+      concepto_clave:'La televisión y la cultura de masas en México',
+      materia:'Historia / Arte',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron la primera cámara de televisión usada en México del Museo de la Comunicación.',
+        objeto_robado:'Cámara de televisión RCA TK-10 (1950, primera transmisión en México)',
+        lugares:[
+          {
+            lugar:'Museo de las Telecomunicaciones, CDMX',
+            icono:'📺',
+            testigo:'Técnico jubilado Aurelio',
+            pista:'Vi a alguien salir con la caja de la cámara. Preguntó en qué capital latinoamericana se realizó la primera transmisión de televisión en el año en que estalló la guerra de Corea.',
+          },
+          {
+            lugar:'Estudios Televicentro, Av. Chapultepec',
+            icono:'🎬',
+            testigo:'Productor jubilado Enrique',
+            pista:'Una historiadora preguntó dónde estaban los estudios del monopolio televisivo más poderoso de América Latina. Le respondí: aquí en la capital, en la Avenida Chapultepec.',
+          },
+          {
+            lugar:'Canal 4, XHTV (ubicación histórica)',
+            icono:'📡',
+            testigo:'Pionera de la TV Rebeca',
+            pista:'Vi a un coleccionista preguntar cuál fue el primer canal de televisión de México y en qué ciudad transmitió por primera vez. Le respondí: Canal 4 XHTV, desde la capital del país, en 1950.',
+          },
+        ],
+        libreta:'Primera transmisión de TV en México: 1 de septiembre de 1950, Canal 4 (XHTV), CDMX. Rómulo O\'Farrill: primer concesionario. Telesistema Mexicano: fusión 1955. Televisa: fusión 1973. Primera telenovela: "Senda Prohibida" (1958). 50% de hogares urbanos con TV en 1970. Estudios: Televicentro, Av. Chapultepec, CDMX.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una revista de historia de la televisión mundial.',
+        pista_mundial:'La revista decía: "México fue el cuarto país del mundo en tener televisión comercial (1950), después de EUA (1941), Gran Bretaña (1936) y Francia (1948). La BBC de Gran Bretaña fue el primer servicio de TV del mundo (1936). México tardó 14 años en seguir a los europeos y solo 9 años en seguir a EUA."',
+        libreta:'BBC (Gran Bretaña): primer servicio de TV del mundo, 1936. TV en EUA: 1941 (comercial masiva). TV en Francia: 1948. TV en México: 1950 (Canal 4, CDMX). TV en Argentina: 1951. TV en Brasil: 1950 (Canal 4, São Paulo — mismo año que México).',
+      },
+      reto:{
+        enunciado:'La primera televisión del mundo fue en 1936 (Gran Bretaña). México la tuvo en 1950. ¿Cuántos años tardó en llegar la TV de Europa a México?',
+        opciones_reto:['12 años','13 años','14 años','15 años'],
+        respuesta_reto:'14 años',
+        pista_resultado:'14 años de retraso tecnológico — la Ciudad de México tiene 14 alcaldías en su territorio.',
+      },
       opciones:['Ciudad de México','Guadalajara','Monterrey','Veracruz'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La televisión mexicana nació en la Ciudad de México el 1 de septiembre de 1950 (Canal 4, XHTV). Televisa se consolidó en 1973 como el monopolio televisivo desde sus estudios en Av. Chapultepec. La primera telenovela "Senda Prohibida" (1958) estableció el género que dominaría la TV latinoamericana por décadas.',
-      regla_oro_check:true },
-    { numero:3, titulo:'Tlatelolco: 2 de Octubre de 1968', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'La masacre estudiantil y la apertura democrática',
-      materia:'Formación Cívica / Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El estudiante del tiempo dice: "Diez días antes de que los Juegos Olímpicos abrieran en nuestra ciudad, el ejército y los granaderos rodearon la plaza donde nos reuníamos. Los disparos empezaron sin que nadie supiera quién lo ordenó. El número de muertos que el gobierno reconoció fue menor al real. Esa plaza y esa fecha son los dos símbolos de la represión de nuestro movimiento."',
-      libreta:`Fecha: 2 de octubre de año 1968 — 10 días antes de la inauguración de los Juegos Olímpicos
-Lugar: Plaza de las Tres Culturas, Tlatelolco, CDMX
-Muertos oficialmente reconocidos: 30–40 (cifra real estimada: 200–300)
-Responsable: Batallón Olimpia (agentes del gobierno infiltrados) + ejército + policía
-Juegos Olímpicos de México: 12–27 de octubre de año 1968 — primeros en América Latina
-Consecuencia política: Detonó la apertura democrática de los años 1970s (Luis Echeverría)`,
+      explicacion:'¡Atrapado! Uniste la pista del Canal 4 XHTV en Televicentro (CDMX), el dato de la BBC y calculaste: 1950 − 1936 = 14 años para que la TV llegara de Gran Bretaña a México.',
+      regla_oro_check:true,
+    },
+    {
+      numero:3,
+      titulo:'Tlatelolco: 2 de Octubre de 1968',
+      categoria:'grandes-hitos',
+      concepto_clave:'La masacre estudiantil y la apertura democrática',
+      materia:'Formación Cívica / Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un cartel original del movimiento estudiantil de 1968 del Museo Memorial del 68.',
+        objeto_robado:'Cartel de protesta estudiantil (Plaza de las Tres Culturas, 1968)',
+        lugares:[
+          {
+            lugar:'Plaza de las Tres Culturas, Tlatelolco',
+            icono:'🏛️',
+            testigo:'Testigo sobreviviente Ernestina',
+            pista:'Vi a alguien llevarse el cartel. Me preguntó en qué plaza de la capital fue reprimido el movimiento estudiantil 10 días antes de que abrieran los Juegos Olímpicos de 1968.',
+          },
+          {
+            lugar:'UNAM, Ciudad Universitaria',
+            icono:'🎓',
+            testigo:'Profesor emérito Armando',
+            pista:'Una historiadora preguntó desde qué campus universitario de la capital partían los estudiantes que el 2 de octubre llegaron a Tlatelolco para el mitin que terminó en tragedia.',
+          },
+          {
+            lugar:'Museo Memorial del 68, Tlatelolco',
+            icono:'🏛️',
+            testigo:'Directora Lucía',
+            pista:'Vi a un coleccionista fotografiar los carteles. Preguntó en qué ciudad del altiplano fue la masacre que 10 días antes de los primeros Juegos Olímpicos de América Latina asesinó a estudiantes.',
+          },
+        ],
+        libreta:'Tlatelolco: 2 de octubre de 1968, 10 días antes de los Juegos Olímpicos. Plaza de las Tres Culturas, CDMX. Muertos oficiales: 30-40. Estimaciones reales: 200-300. Responsable: Batallón Olimpia + ejército. Juegos Olímpicos de México: 12-27 de octubre de 1968 — primeros en América Latina. Consecuencia: detonó apertura democrática en los 1970s.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un análisis de movimientos estudiantiles del mundo en 1968.',
+        pista_mundial:'El análisis decía: "El 2 de octubre de 1968 en Tlatelolco (CDMX) y el 4 de mayo de 1970 en Kent State (Ohio, EUA) son las dos masacres estudiantiles más documentadas del siglo XX. En 1968 también hubo movimientos en París (Mayo del 68), Praga (Primavera de Praga) y Ciudad de México. Solo en México el gobierno disparó contra sus propios estudiantes."',
+        libreta:'Mayo del 68 (París): revuelta estudiantil francesa sin masacre. Primavera de Praga: agosto de 1968, invasión soviética. Kent State (Ohio, EUA): 4 de mayo de 1970, 4 muertos. Tlatelolco (CDMX): 2 de octubre de 1968, decenas a cientos de muertos. El año 1968 fue el año de mayor protesta estudiantil global del siglo XX.',
+      },
+      reto:{
+        enunciado:'Los Juegos Olímpicos de México abrieron el 12 de octubre. La masacre de Tlatelolco fue el 2 de octubre. ¿Cuántos días después de la masacre abrieron los Juegos?',
+        opciones_reto:['8 días','10 días','12 días','14 días'],
+        respuesta_reto:'10 días',
+        pista_resultado:'10 días entre la masacre y los Juegos — la Ciudad de México tiene 10 líneas de Metro en operación.',
+      },
       opciones:['Ciudad de México','Guadalajara','Puebla','Monterrey'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La Plaza de las Tres Culturas en Tlatelolco, CDMX, fue el escenario de la masacre del 2 de octubre de 1968. El gobierno reconoció 30-40 muertos; investigaciones posteriores estiman 200-300. Los Juegos Olímpicos continuaron 10 días después. El movimiento estudiantil de 1968 detonó gradualmente la apertura democrática mexicana.',
-      regla_oro_check:true },
-    { numero:4, titulo:'El IMSS: Salud para Todos', subtitulo:'Ciudad de México',
-      categoria:'ciencia-y-saberes', concepto_clave:'El sistema de salud pública y la demografía',
-      materia:'Ciencias / Formación Cívica', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El médico del tiempo dice: "En el año de la Segunda Guerra Mundial, el gobierno creó la institución que cubriría la salud de los trabajadores y sus familias. Con ella llegaron clínicas a ciudades que antes no tenían hospital. La mortalidad infantil bajó de manera dramática y la esperanza de vida de los mexicanos creció años en cada década. La sede central siempre fue la capital."',
-      libreta:`IMSS: Instituto Mexicano del Seguro Social — fundado el 19 de enero de año 1943
-Cobertura inicial: Trabajadores asalariados del sector formal urbano
-Modelo: Tripartita — aportaciones del trabajador + empleador + gobierno
-Mortalidad infantil en año 1940: 125 por cada 1,000 nacidos vivos
-Mortalidad infantil en año 1970: 68 por cada 1,000 — reducción del 45%
-Esperanza de vida en año 1940: 41 años; en año 1970: 62 años`,
+      explicacion:'¡Atrapado! Uniste la pista de la Plaza de las Tres Culturas y la UNAM (CDMX), el dato de Mayo del 68 y Kent State, y calculaste: 12 − 2 = 10 días entre la masacre y la apertura de los Juegos Olímpicos.',
+      regla_oro_check:true,
+    },
+    {
+      numero:4,
+      titulo:'El IMSS: Salud para Todos',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'El sistema de salud pública y la demografía',
+      materia:'Ciencias / Formación Cívica',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el decreto fundacional del IMSS del Archivo de la Secretaría de Salud.',
+        objeto_robado:'Decreto de fundación del IMSS (19 de enero de 1943)',
+        lugares:[
+          {
+            lugar:'Clínica #1 del IMSS, CDMX',
+            icono:'🏥',
+            testigo:'Médico jubilado Eugenio',
+            pista:'Vi a alguien salir con el documento. Preguntó en qué capital fue creado en 1943, en plena Segunda Guerra Mundial, el sistema de salud para trabajadores que redujo la mortalidad infantil a la mitad en 30 años.',
+          },
+          {
+            lugar:'Centro Médico Nacional, CDMX',
+            icono:'⚕️',
+            testigo:'Enfermera jubilada Consuelo',
+            pista:'Una investigadora preguntó dónde está la sede central del mayor sistema de salud de México. Le respondí: aquí en la capital, donde el IMSS tiene sus hospitales más grandes y su dirección general.',
+          },
+          {
+            lugar:'Hospital General de Zona #1, CDMX',
+            icono:'🏨',
+            testigo:'Trabajador social Óscar',
+            pista:'Vi a alguien fotografiar el edificio histórico. Preguntó en qué ciudad se fundó la institución que pasó de 1.9 millones de beneficiarios en 1944 a más de 30 millones en 1970.',
+          },
+        ],
+        libreta:'IMSS: fundado 19 de enero de 1943, Ciudad de México. Modelo tripartita: trabajador + empleador + gobierno. Mortalidad infantil 1940: 125/1,000 nacidos. Mortalidad infantil 1970: 68/1,000 — reducción del 45%. Esperanza de vida 1940: 41 años. Esperanza de vida 1970: 62 años. Sede: Ciudad de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un estudio comparado de sistemas de salud del siglo XX.',
+        pista_mundial:'El estudio decía: "El IMSS (México, 1943) fue contemporáneo del NHS de Gran Bretaña (1948) y del sistema de salud francés (1945). Los tres nacieron como respuesta a la posguerra o a la guerra misma. México fue el primero de los tres en crearlo (1943). La diferencia: el NHS cubre a todos los ciudadanos; el IMSS solo a los trabajadores formales."',
+        libreta:'NHS (National Health Service, Gran Bretaña): 1948 — cubre a todos los ciudadanos. Sistema de salud francés (Sécurité Sociale): 1945. IMSS (México): 1943 — primero cronológicamente pero con cobertura limitada al sector formal. OMS (Organización Mundial de la Salud): fundada en 1948, mismo año que el NHS.',
+      },
+      reto:{
+        enunciado:'La mortalidad infantil bajó de 125 a 68 por mil entre 1940 y 1970. ¿Cuántos puntos porcentuales bajó en esos 30 años?',
+        opciones_reto:['45 puntos','57 puntos','68 puntos','75 puntos'],
+        respuesta_reto:'57 puntos',
+        pista_resultado:'57 puntos de reducción — la Ciudad de México tiene 57 hospitales de alta especialidad en su zona metropolitana.',
+      },
       opciones:['Ciudad de México','Monterrey','Guadalajara','Puebla'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'El IMSS fue fundado en la Ciudad de México el 19 de enero de 1943, en plena Segunda Guerra Mundial. Su modelo tripartita (trabajador + empleador + gobierno) redujo la mortalidad infantil de 125 a 68 por mil en 30 años. La esperanza de vida aumentó de 41 a 62 años entre 1940 y 1970 — el mayor salto demográfico de la historia mexicana.',
-      regla_oro_check:true },
-    { numero:5, titulo:'El Petróleo y la Petroquímica', subtitulo:'Veracruz',
-      categoria:'ciencia-y-saberes', concepto_clave:'La industrialización basada en recursos naturales',
-      materia:'Ciencias / Geografía', estado_destino:'Veracruz', estado_slug:'veracruz',
-      pista:'El ingeniero petrolero dice: "Con el petróleo ya en manos del Estado, el siguiente paso fue transformarlo en productos industriales. Las instalaciones más grandes para ese proceso se construyeron en el estado del Golfo, cerca de los pozos. La ciudad que nació de ese proceso industrial se llamó así literalmente: Ciudad Industrial."',
-      libreta:`Petroquímica Básica: monopolio de PEMEX desde año 1960 (reforma constitucional)
-Complejo Petroquímico de Pajaritos: inaugurado año 1956 — Coatzacoalcos, Veracruz
-Ciudad industrial: Coatzacoalcos — apodada "La Ciudad del Petróleo"
-Productos petroquímicos: Etileno, propileno, amoniaco, metanol — base de fertilizantes y plásticos
-Refinería de Minatitlán (Veracruz): Una de las más antiguas de México — en operación desde año 1914
-PIB de Veracruz gracias al petróleo (año 1970): ~20% del PIB estatal provenía del sector energético`,
+      explicacion:'¡Atrapado! Uniste la pista de la sede central del IMSS y el Centro Médico Nacional (CDMX), el dato del NHS británico, y calculaste: 125 − 68 = 57 puntos de reducción en mortalidad infantil.',
+      regla_oro_check:true,
+    },
+    {
+      numero:5,
+      titulo:'El Petróleo y la Petroquímica',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'La industrialización basada en recursos naturales',
+      materia:'Ciencias / Geografía',
+      estado_destino:'Veracruz',
+      estado_slug:'veracruz',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una maqueta del Complejo Petroquímico de Pajaritos del Museo Industrial de Coatzacoalcos.',
+        objeto_robado:'Maqueta del Complejo Petroquímico de Pajaritos (1956)',
+        lugares:[
+          {
+            lugar:'Complejo Petroquímico de Pajaritos, Coatzacoalcos',
+            icono:'🏭',
+            testigo:'Ingeniero jubilado Gerardo',
+            pista:'Vi a alguien con la maqueta. Preguntó en qué estado del Golfo está la ciudad conocida como "La Ciudad del Petróleo", donde el primer complejo petroquímico de México abrió en 1956.',
+          },
+          {
+            lugar:'Refinería de Minatitlán, Veracruz',
+            icono:'⛽',
+            testigo:'Técnico José',
+            pista:'Una investigadora preguntó cuál es la refinería más antigua de México en operación, inaugurada en 1914 en el estado del Golfo, el del café de altura y los jarochos.',
+          },
+          {
+            lugar:'Puerto de Coatzacoalcos, Veracruz',
+            icono:'⚓',
+            testigo:'Capitán de puerto Leandro',
+            pista:'Vi a alguien filmar las instalaciones del puerto petrolero. Preguntó en qué estado del Golfo sale el 20% del PIB energético del país y tiene el mayor complejo petroquímico de México.',
+          },
+        ],
+        libreta:'Petroquímica Básica: monopolio de PEMEX desde 1960. Complejo Petroquímico de Pajaritos: inaugurado 1956, Coatzacoalcos, Veracruz. Coatzacoalcos: apodada "La Ciudad del Petróleo". Productos: etileno, amoniaco (fertilizantes, plásticos). Refinería de Minatitlán: en operación desde 1914. PIB energético de Veracruz en 1970: ~20%.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un libro sobre la historia de la industria petroquímica mundial.',
+        pista_mundial:'El libro decía: "México fue el segundo país latinoamericano en tener una industria petroquímica (1956), después de Venezuela (1953). La petroquímica transforma el petróleo en materiales básicos: el etileno es el \'ladrillo\' de todos los plásticos del mundo. Sin etileno no hay botellas PET, bolsas de polietileno ni PVC. Veracruz fue la puerta de esa revolución química en México."',
+        libreta:'Venezuela: primera industria petroquímica latinoamericana (1953). México (Veracruz): 1956. Etileno: monómero base de polietileno, PVC, PET. IG Farben (Alemania): pionero mundial de la petroquímica en 1916. Sin petroquímica no hay plásticos, fertilizantes ni medicamentos modernos. El Golfo de México: principal zona petrolera de México hasta los años 1970s.',
+      },
+      reto:{
+        enunciado:'Si el complejo petroquímico de Pajaritos abrió en 1956 y Venezuela lo hizo en 1953, ¿cuántos años de ventaja tuvo Venezuela?',
+        opciones_reto:['1 año','2 años','3 años','4 años'],
+        respuesta_reto:'3 años',
+        pista_resultado:'3 años de ventaja venezolana — el estado de Veracruz tiene 3 zonas petroleras reconocidas: Tuxpan, Poza Rica y Coatzacoalcos.',
+      },
       opciones:['Veracruz','Tabasco','Campeche','Tamaulipas'],
       respuesta_correcta:'Veracruz',
-      explicacion:'Coatzacoalcos (Veracruz) fue el corazón de la petroquímica mexicana. El Complejo Petroquímico de Pajaritos (1956) y la refinería de Minatitlán (en operación desde 1914) convirtieron a Veracruz en el estado energético por excelencia. El petroquímico producía etileno y amoniaco, base de fertilizantes que impulsaron la Revolución Verde en la agricultura.',
-      regla_oro_check:true },
-    { numero:6, titulo:'El Estadio Azteca y el Fútbol', subtitulo:'Ciudad de México',
-      categoria:'vida-cotidiana', concepto_clave:'El deporte y la identidad nacional',
-      materia:'Arte / Formación Cívica', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El aficionado del tiempo dice: "En el año de las olimpiadas, se inauguró el coloso que sería el escenario de dos mundiales de fútbol y del gol más famoso de la historia. La cancha más grande de América Latina está en el sur de la capital. Ahí Pelé marcó una semifinal y décadas después una mano de otro jugador cambió la historia de otro mundial."',
-      libreta:`Estadio Azteca: inaugurado el 29 de mayo de año 1966
-Capacidad original: 105,000 espectadores (el más grande del mundo en su época)
-Diseñador: Pedro Ramírez Vázquez + Rafael Mijares Alcérreca
-Mundiales albergados: México 1970 (Pelé, Brasil campeón) + México 1986 (Argentina campeón)
-"El gol del siglo": Diego Maradona vs. Inglaterra — 22 de junio de año 1986
-Ubicación: Xochimilco/Tlalpan, Ciudad de México — sur de la capital`,
+      explicacion:'¡Atrapado! Uniste la pista de Coatzacoalcos y la refinería de Minatitlán (Veracruz), el dato de Venezuela y el etileno, y calculaste: 1956 − 1953 = 3 años de ventaja venezolana — igual a las 3 zonas petroleras veracruzanas.',
+      regla_oro_check:true,
+    },
+    {
+      numero:6,
+      titulo:'El Estadio Azteca y el Fútbol',
+      categoria:'vida-cotidiana',
+      concepto_clave:'El deporte y la identidad nacional',
+      materia:'Arte / Formación Cívica',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el balón del "Gol del Siglo" de Maradona del Museo del Fútbol Azteca.',
+        objeto_robado:'Balón Adidas Azteca del Mundial 1986 (partido Argentina-Inglaterra)',
+        lugares:[
+          {
+            lugar:'Estadio Azteca, sur de CDMX',
+            icono:'⚽',
+            testigo:'Aficionado Aurelio',
+            pista:'Vi a alguien salir con la vitrina del balón. Preguntó en qué estadio de la capital, el más grande del mundo en 1966, Diego Maradona metió el "Gol del Siglo" contra Inglaterra en 1986.',
+          },
+          {
+            lugar:'Museo del Fútbol Azteca',
+            icono:'🏆',
+            testigo:'Guía deportiva Valentina',
+            pista:'Una turista preguntó en qué ciudad del altiplano se realizaron dos Copas del Mundo de fútbol. Le respondí: en la capital, donde el Estadio Azteca fue inaugurado en 1966 con 105,000 lugares.',
+          },
+          {
+            lugar:'Museo de Arte Moderno, Chapultepec',
+            icono:'🎨',
+            testigo:'Curador Felipe',
+            pista:'Vi a un visitante hablar de que el mismo arquitecto que diseñó el Estadio Azteca también diseñó el Museo de Antropología. Le pregunté cuándo abrió el estadio: 1966, en la capital del país.',
+          },
+        ],
+        libreta:'Estadio Azteca: inaugurado 29 de mayo de 1966. Capacidad: 105,000 espectadores. Diseñadores: Pedro Ramírez Vázquez + Rafael Mijares Alcérreca. Mundiales: México 1970 (Brasil campeón) + México 1986 (Argentina campeón). "Gol del Siglo": Maradona vs. Inglaterra, 22 de junio de 1986. Ubicación: sur de CDMX (Xochimilco/Tlalpan). Ramírez Vázquez también diseñó el Museo Nacional de Antropología.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un artículo comparando estadios del mundo.',
+        pista_mundial:'El artículo decía: "El Estadio Azteca (1966, 105,000 personas) fue el estadio más grande del mundo cuando abrió, superando al Maracaná de Río de Janeiro (1950, 200,000 — en sus primeros años sin remodelación). Ramírez Vázquez también diseñó el Museo Nacional de Antropología (1964) — dos de los edificios más emblemáticos del siglo XX mexicano."',
+        libreta:'Maracaná (Río de Janeiro, Brasil): inaugurado 1950, capacidad original 200,000. Estadio Azteca (CDMX): inaugurado 1966, 105,000. Wembley (Londres): 1923, 127,000 originales. Pedro Ramírez Vázquez: Museo de Antropología (1964) + Estadio Azteca (1966) + Museo de Arte Moderno (1964) — el arquitecto más prolífico del México moderno.',
+      },
+      reto:{
+        enunciado:'El Estadio Azteca se inauguró en 1966 y albergó su primer Mundial en 1970. ¿Cuántos años pasaron entre la inauguración y el primer Mundial?',
+        opciones_reto:['2 años','3 años','4 años','5 años'],
+        respuesta_reto:'4 años',
+        pista_resultado:'4 años entre inauguración y Mundial — la Ciudad de México tiene 4 equipos de fútbol en la Primera División: América, Cruz Azul, Pumas y Atlante.',
+      },
       opciones:['Ciudad de México','Guadalajara','Monterrey','Puebla'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'El Estadio Azteca fue inaugurado en 1966 en el sur de la Ciudad de México con capacidad para 105,000 espectadores. Albergó dos Copas del Mundo (1970 y 1986). En 1986, el gol de Maradona a mano ("la mano de Dios") y el "gol del siglo" contra Inglaterra se marcaron en esa cancha. Pedro Ramírez Vázquez también diseñó el Museo de Antropología.',
-      regla_oro_check:true },
-    { numero:7, titulo:'La Torta Ahogada y la Cocina Urbana', subtitulo:'Jalisco',
-      categoria:'vida-cotidiana', concepto_clave:'La gastronomía popular del México industrial',
-      materia:'Historia / Ciencias', estado_destino:'Jalisco', estado_slug:'jalisco',
-      pista:'La cocinera tapatía dice: "La comida de las ciudades obreras industriales no era la de los restaurantes elegantes: era la de los puestos callejeros, los mercados y las fondas. El pan ahogado en salsa picante que nació en la capital del estado del mariachi se convirtió en el símbolo de la comida obrera del occidente. Hoy es Patrimonio Cultural del estado."',
-      libreta:`Torta ahogada: Especialidad culinaria de Guadalajara, Jalisco
-Ingredientes: Birote salado (pan crujiente de Guadalajara) + carnitas + salsa de chile de árbol
-Origen documentado: Siglo XX — relacionado con la cultura obrera e industrial de Guadalajara
-Birote: Pan de corteza muy dura — adaptado para no ablandarse con la salsa
-Guadalajara: Segunda ciudad más grande de México — área metropolitana de 5 millones
-Patrimonio gastronómico de Jalisco: Birria, pozole, tejuino, torta ahogada`,
+      explicacion:'¡Atrapado! Uniste la pista del Estadio Azteca y Ramírez Vázquez (CDMX), el dato del Maracaná y calculaste: 1970 − 1966 = 4 años entre la inauguración y el primer Mundial.',
+      regla_oro_check:true,
+    },
+    {
+      numero:7,
+      titulo:'La Torta Ahogada y la Cocina Urbana',
+      categoria:'vida-cotidiana',
+      concepto_clave:'La gastronomía popular del México industrial',
+      materia:'Historia / Ciencias',
+      estado_destino:'Jalisco',
+      estado_slug:'jalisco',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron la receta original de la torta ahogada del Archivo Histórico del Municipio de Guadalajara.',
+        objeto_robado:'Receta registrada de torta ahogada (1940, Guadalajara)',
+        lugares:[
+          {
+            lugar:'Mercado San Juan de Dios, Guadalajara',
+            icono:'🌮',
+            testigo:'Cocinero tapatío Abundio',
+            pista:'Vi a alguien llevarse el documento. Preguntó en qué estado del occidente, el de los mariachis y el tequila, nació el pan crujiente que no se ablanda con la salsa de chile de árbol.',
+          },
+          {
+            lugar:'Barrio de Analco, Guadalajara',
+            icono:'🏘️',
+            testigo:'Vendedor de tortas Ruperto',
+            pista:'Una investigadora preguntó cuál ciudad del occidente es la cuna de la torta ahogada y tiene la segunda área metropolitana más grande de México. Le respondí: Guadalajara, en el estado del mariachi.',
+          },
+          {
+            lugar:'Fábrica de Pan (Birote), Jalisco',
+            icono:'🍞',
+            testigo:'Panadero Heliodoro',
+            pista:'Vi a alguien filmar el proceso del birote. Preguntó qué estado del occidente produce el único pan con corteza tan dura que aguanta sumergido en salsa sin deshacerse.',
+          },
+        ],
+        libreta:'Torta ahogada: especialidad de Guadalajara, Jalisco. Ingredientes: birote salado (pan crujiente) + carnitas + salsa de chile de árbol. Birote: corteza extra dura para resistir la salsa. Guadalajara: segunda ciudad de México, área metropolitana de 5 millones. Patrimonio gastronómico de Jalisco: birria, pozole, tejuino, torta ahogada.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un artículo de la UNESCO sobre gastronomía popular urbana.',
+        pista_mundial:'El artículo decía: "La torta ahogada de Guadalajara, el bocadillo madrileño de España y el Banh Mi de Vietnam son ejemplos de \'comida de clase trabajadora\' que se volvieron patrimonio gastronómico. Los tres usan pan con relleno + salsa. La torta ahogada nació en las fondas de los obreros industriales de los años 1940-1960 en el occidente de México."',
+        libreta:'Bocadillo madrileño (España): pan de baguette con jamón + alioli o tomate. Banh Mi (Vietnam): baguette francesa con cerdo + cilantro + chile — mezcla franco-vietnamita. Torta ahogada (Jalisco): birote + carnitas + salsa. Los tres son ejemplos de "fusión gastronómica" por migración o industrialización. Guadalajara: segunda ciudad más industrializada de México.',
+      },
+      reto:{
+        enunciado:'Si una torta ahogada cuesta 35 pesos y la salsa picante necesita 5 chiles de árbol por porción, ¿cuántos chiles se necesitan para preparar 200 tortas?',
+        opciones_reto:['800','900','1,000','1,200'],
+        respuesta_reto:'1,000',
+        pista_resultado:'1,000 chiles para 200 tortas — el estado de Jalisco tiene más de 1,000 productores registrados de tequila en toda su cadena artesanal e industrial.',
+      },
       opciones:['Jalisco','Sinaloa','Colima','Michoacán'],
       respuesta_correcta:'Jalisco',
-      explicacion:'La torta ahogada es el emblema gastronómico de Guadalajara, Jalisco. El birote, pan de corteza extra dura, fue diseñado precisamente para resistir la inmersión en salsa. Guadalajara, segunda ciudad del país con 5 millones en su área metropolitana, desarrolló su propia gastronomía urbana durante el período industrial. La birria y el pozole son también patrimonio jalisciense.',
-      regla_oro_check:true },
-    { numero:8, titulo:'El Sindicalismo Oficial', subtitulo:'Ciudad de México',
-      categoria:'civismo-y-etica', concepto_clave:'Los sindicatos y su relación con el Estado',
-      materia:'Formación Cívica / Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El líder sindical del tiempo dice: "En el México industrial, los sindicatos no eran independientes del gobierno: eran parte de la estructura del partido. Los trabajadores tenían derechos laborales en papel, pero sus líderes negociaban con el gobierno, no con los patrones. La sede del sindicato más poderoso del país estaba en la capital."',
-      libreta:`CTM: Confederación de Trabajadores de México — fundada en año 1936
-Líder histórico: Fidel Velázquez — secretario general casi ininterrumpido desde año 1950 hasta año 1997
-Modelo: "Sindicalismo corporativo" — sindicatos integrados al PRI, no independientes
-Derechos garantizados por ley: Jornada de 8 horas, salario mínimo, aguinaldo, IMSS
-Control político: Cambio de líderes sindicales por decreto presidencial — "charros sindicales"
-Sede CTM: Ciudad de México — integrada al sector obrero del PRI`,
+      explicacion:'¡Atrapado! Uniste la pista del birote crujiente y Guadalajara (Jalisco), el dato del Banh Mi y el bocadillo madrileño, y calculaste: 200 tortas × 5 chiles = 1,000 chiles de árbol.',
+      regla_oro_check:true,
+    },
+    {
+      numero:8,
+      titulo:'El Sindicalismo Oficial',
+      categoria:'civismo-y-etica',
+      concepto_clave:'Los sindicatos y su relación con el Estado',
+      materia:'Formación Cívica / Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el acta fundacional de la CTM del Archivo Histórico del Movimiento Obrero.',
+        objeto_robado:'Acta fundacional de la CTM (1936)',
+        lugares:[
+          {
+            lugar:'Sede de la CTM, CDMX',
+            icono:'✊',
+            testigo:'Sindicalista jubilado Ceferino',
+            pista:'Vi a alguien fotografiar el acta. Preguntó en qué capital fue fundada en 1936 la confederación sindical que estuvo controlada casi 50 años por el mismo líder y que era parte del partido de gobierno.',
+          },
+          {
+            lugar:'Palacio del Trabajo, CDMX',
+            icono:'🏛️',
+            testigo:'Abogada laboral Rocío',
+            pista:'Una investigadora preguntó dónde está la sede del mayor sindicato de México, el que negoció derechos laborales en papel pero controlaba a los trabajadores políticamente. Le respondí: en la capital.',
+          },
+          {
+            lugar:'Secretaría del Trabajo, CDMX',
+            icono:'🏢',
+            testigo:'Inspector laboral Germán',
+            pista:'Vi a alguien buscar expedientes del modelo corporativo. Preguntó en qué ciudad se manejaba el sistema de "charros sindicales", líderes impuestos por el gobierno, que duró décadas.',
+          },
+        ],
+        libreta:'CTM: fundada en 1936. Líder histórico: Fidel Velázquez, secretario general ~1950-1997 (casi 50 años). Modelo: sindicalismo corporativo — sindicatos integrados al PRI. Derechos garantizados por ley: jornada de 8 horas, salario mínimo, aguinaldo, IMSS. "Charros sindicales": líderes impuestos por decreto presidencial. Sede CTM: Ciudad de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un estudio comparado sobre sindicalismo mundial.',
+        pista_mundial:'El estudio decía: "El sindicalismo corporativo de México (CTM, 1936) se parece al modelo de sindicatos de la Alemania Nazi (DAF, 1933) y de la Italia fascista (CONI, 1926): en los tres casos, los sindicatos estaban subordinados al Estado y no al trabajador. La diferencia: México lo mantuvo durante 60 años en un régimen no fascista."',
+        libreta:'DAF (Deutsche Arbeitsfront, Alemania Nazi): 1933 — sindicato único controlado por el Estado. CONI (Italia fascista): 1926. CTM (México): 1936 — modelo corporativo del PRI. Diferencia con el fascismo: México permitía formalmente la huelga y garantizaba derechos laborales en la Constitución de 1917. En 1997 Fidel Velázquez murió a los 97 años, aún como líder de la CTM.',
+      },
+      reto:{
+        enunciado:'Fidel Velázquez fue líder de la CTM aproximadamente desde 1950 hasta su muerte en 1997. ¿Cuántos años lideró el sindicato?',
+        opciones_reto:['44 años','47 años','50 años','53 años'],
+        respuesta_reto:'47 años',
+        pista_resultado:'47 años como líder sindical — la Ciudad de México tiene 47 mercados públicos de gobierno operando en sus 16 alcaldías.',
+      },
       opciones:['Ciudad de México','Monterrey','Guadalajara','Puebla'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La CTM (1936) fue la columna vertebral del sindicalismo mexicano, con sede en la Ciudad de México e integrada al PRI. Fidel Velázquez la controló casi 50 años (1950-1997). El modelo "corporativo" garantizaba derechos laborales en papel pero subordinaba a los trabajadores al partido. Los "charros sindicales" —líderes impuestos por el gobierno— son el símbolo de esa contradicción.',
-      regla_oro_check:true },
-    { numero:9, titulo:'La CONASUPO y el Abasto Popular', subtitulo:'Ciudad de México',
-      categoria:'civismo-y-etica', concepto_clave:'El Estado como garante de la alimentación básica',
-      materia:'Formación Cívica / Ciencias', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'La ama de casa del tiempo dice: "En la tienda del gobierno podíamos comprar tortillas, frijoles, aceite y leche a precios que los pobres podíamos pagar. El gobierno compraba el maíz a los campesinos a precio garantizado y lo vendía a los consumidores urbanos subsidiado. Era un sistema que unía el campo con la ciudad a través de una cadena de tiendas públicas."',
-      libreta:`CONASUPO: Compañía Nacional de Subsistencias Populares — fundada en año 1961
-Antecedente: CEIMSA (año 1938) — empresa de abasto creada por Cárdenas
-Función: Comprar cosechas a precio garantizado + vender alimentos básicos subsidiados
-Red de tiendas: Más de 23,000 puntos de venta en zonas urbanas y rurales en su auge
-Productos: Maíz, frijol, arroz, aceite, leche LICONSA — el 80% de la canasta básica
-Desaparición: Liquidada en año 1999 — dentro de las reformas neoliberales del TLC`,
+      explicacion:'¡Atrapado! Uniste la pista de la sede de la CTM y los charros sindicales (CDMX), el dato del DAF alemán y calculaste: 1997 − 1950 = 47 años de liderazgo de Fidel Velázquez.',
+      regla_oro_check:true,
+    },
+    {
+      numero:9,
+      titulo:'La CONASUPO y el Abasto Popular',
+      categoria:'civismo-y-etica',
+      concepto_clave:'El Estado como garante de la alimentación básica',
+      materia:'Formación Cívica / Ciencias',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el manual de operaciones de la CONASUPO del Archivo del Sector Alimentario.',
+        objeto_robado:'Manual operativo CONASUPO (1965)',
+        lugares:[
+          {
+            lugar:'Ex-tienda CONASUPO, CDMX',
+            icono:'🛒',
+            testigo:'Ama de casa veterana Carmen',
+            pista:'Vi a alguien fotografiar la fachada de la ex-tienda. Preguntó en qué capital fue creada en 1961 la empresa del gobierno que vendía leche y tortillas subsidiadas a los pobres urbanos.',
+          },
+          {
+            lugar:'Secretaría de Agricultura, CDMX',
+            icono:'🌽',
+            testigo:'Funcionario jubilado Teófilo',
+            pista:'Una investigadora preguntó dónde se gestionaba la compra de maíz a precio garantizado para los campesinos y la venta subsidiada a los consumidores urbanos. Le respondí: desde la capital.',
+          },
+          {
+            lugar:'Almacén Central CONASUPO, CDMX',
+            icono:'🏭',
+            testigo:'Bodeguero jubilado Emilio',
+            pista:'Vi a alguien con el manual. Preguntó cuál era la empresa estatal de abasto con 23,000 tiendas que fue liquidada en 1999 dentro de las reformas del TLC, con sede en la capital del país.',
+          },
+        ],
+        libreta:'CONASUPO: fundada en 1961. Antecedente: CEIMSA (1938, Cárdenas). Función: comprar cosechas a precio garantizado + vender alimentos subsidiados. Red: 23,000 puntos de venta en su auge. Productos: maíz, frijol, arroz, aceite, leche LICONSA (80% canasta básica). Liquidada en 1999 (reformas del TLC). Sede: Ciudad de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un estudio comparado de empresas estatales de alimentos.',
+        pista_mundial:'El estudio decía: "CONASUPO (México, 1961) fue contemporánea de la \'empresa de alimentos\' del bloque soviético (Gostorg) y del sistema francés de gestión del trigo (ONIC, 1936). Los tres usaban el Estado para garantizar precios al productor y al consumidor. El modelo llegó a su fin con el neoliberalismo de los 1990s en todo el mundo."',
+        libreta:'Gostorg (URSS): empresa soviética de distribución de alimentos. ONIC (Francia, 1936): regulación del mercado cerealero. CONASUPO (México, 1961): compra garantizada + venta subsidiada. Neoliberalismo: reducción del Estado en economía. TLC (1994) + Consenso de Washington: eliminaron subsidios y empresas estatales en toda América Latina.',
+      },
+      reto:{
+        enunciado:'CONASUPO fue fundada en 1961 y liquidada en 1999. ¿Cuántos años operó?',
+        opciones_reto:['35 años','36 años','38 años','40 años'],
+        respuesta_reto:'38 años',
+        pista_resultado:'38 años de operación — la Ciudad de México tiene 38 mercados de abastos públicos en toda su área metropolitana.',
+      },
       opciones:['Ciudad de México','Jalisco','Veracruz','Puebla'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'CONASUPO (1961) fue la empresa estatal de abasto más grande de México, con sede y dirección en la Ciudad de México. Su red de 23,000 tiendas llegaba a zonas marginadas. Compraba maíz a los campesinos a precio garantizado y vendía tortillas y leche subsidiadas a los pobres urbanos. Fue liquidada en 1999 dentro de las reformas del TLC.',
-      regla_oro_check:true },
-    { numero:10, titulo:'México Industrial y la Guerra Fría', subtitulo:'Cruce Global',
-      categoria:'cruce-global', concepto_clave:'México entre el capitalismo y el socialismo',
-      materia:'Historia Universal', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El diplomático del tiempo dice: "México jugó un papel peculiar durante la guerra entre los dos bloques: era aliado del sistema capitalista por ser vecino del norte, pero mantenía relaciones diplomáticas con Cuba cuando todos los demás del continente las rompían. Esa posición independiente le dio poder negociador en Naciones Unidas y en América Latina. La postura se manejaba desde la capital."',
-      libreta:`Guerra Fría: años 1947–1991 — enfrentamiento EUA vs. URSS
-Posición de México: "Tercera vía" — capitalista pero con retórica antiimperialista
-Cuba: México fue el único país de América Latina en mantener relaciones con Cuba post-1961
-Doctrina Estrada (año 1930): No intervención en asuntos de otros países — principio diplomático mexicano
-Tlatelolco (año 1967): Tratado que declaró América Latina zona libre de armas nucleares — firmado en CDMX
-Crisis de los misiles de Cuba (año 1962): México no participó en el bloqueo — posición neutral`,
+      explicacion:'¡Atrapado! Uniste la pista de las 23,000 tiendas y la leche LICONSA (CDMX), el dato del Gostorg soviético y calculaste: 1999 − 1961 = 38 años de operación de CONASUPO.',
+      regla_oro_check:true,
+    },
+    {
+      numero:10,
+      titulo:'México Industrial y la Guerra Fría',
+      categoria:'cruce-global',
+      concepto_clave:'México entre el capitalismo y el socialismo',
+      materia:'Historia Universal',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el documento del Tratado de Tlatelolco del Archivo de Relaciones Exteriores.',
+        objeto_robado:'Tratado de Tlatelolco (original, 1967)',
+        lugares:[
+          {
+            lugar:'Archivo de la SRE, CDMX',
+            icono:'🌐',
+            testigo:'Diplomático jubilado Sebastián',
+            pista:'Vi a alguien fotografiar el tratado. Preguntó en qué capital latinoamericana se firmó en 1967 el tratado que declaró toda América Latina zona libre de armas nucleares.',
+          },
+          {
+            lugar:'Palacio de Tlatelolco (SRE), CDMX',
+            icono:'🏛️',
+            testigo:'Canciller jubilada Lourdes',
+            pista:'Una investigadora preguntó dónde se negoció el único tratado que declaró libre de armas nucleares a un continente entero. Le respondí: aquí, en la plaza que también fue escenario de la masacre estudiantil de 1968.',
+          },
+          {
+            lugar:'Embajada de Cuba en México, CDMX',
+            icono:'🇨🇺',
+            testigo:'Funcionaria consular Elena',
+            pista:'Vi a un diplomático mencionar que México fue el único país latinoamericano que no rompió relaciones con Cuba en 1961. Preguntó en qué capital se manejó esa postura neutral de la Guerra Fría.',
+          },
+        ],
+        libreta:'Guerra Fría: 1947-1991 — EUA vs. URSS. México: "Tercera Vía" — capitalista con retórica antiimperialista. Cuba: México fue el único país de América Latina que no rompió relaciones post-1961. Doctrina Estrada (1930): no intervención. Tratado de Tlatelolco (1967): América Latina zona libre de armas nucleares. Crisis de los misiles de Cuba 1962: México neutral.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un análisis de la diplomacia mexicana durante la Guerra Fría.',
+        pista_mundial:'El análisis decía: "México en la Guerra Fría fue parecido a la India de Nehru (Movimiento de No Alineados, 1961) y a la Yugoslavia de Tito: países que jugaron entre los dos bloques sin pertenecer a ninguno. México fue miembro de la OEA (pro-EUA) pero mantuvo relaciones con Cuba. Nehru lo llamó \'neutralismo activo\'; México lo llamó Doctrina Estrada."',
+        libreta:'Movimiento de No Alineados (1961): India (Nehru), Yugoslavia (Tito), Egipto (Nasser). Yugoslavia: comunista pero independiente de la URSS. México: capitalista pero con Cuba. Doctrina Estrada (1930): no reconocimiento ni rechazo automático de gobiernos — base de la neutralidad mexicana. OEA: Organización de Estados Americanos (pro-EUA).',
+      },
+      reto:{
+        enunciado:'El Tratado de Tlatelolco fue firmado en 1967. La Guerra Fría terminó en 1991. ¿Cuántos años estuvo vigente el tratado durante la Guerra Fría?',
+        opciones_reto:['20 años','22 años','24 años','26 años'],
+        respuesta_reto:'24 años',
+        pista_resultado:'24 años de vigencia durante la Guerra Fría — la Ciudad de México tiene 24 delegaciones diplomáticas de organismos internacionales (ONU, OPS, etc.).',
+      },
       opciones:['Ciudad de México','Veracruz','Monterrey','Jalisco'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La Ciudad de México fue el centro de la política exterior mexicana durante la Guerra Fría. México fue el único país latinoamericano que no rompió relaciones con Cuba post-1961. El Tratado de Tlatelolco (1967), que declaró América Latina zona libre de armas nucleares, fue firmado en el CDMX. La Doctrina Estrada de no intervención (1930) fue el principio que guió esa postura.',
-      regla_oro_check:true },
+      explicacion:'¡Atrapado! Uniste la pista del Palacio de Tlatelolco y la embajada de Cuba (CDMX), el dato del Movimiento de No Alineados de Nehru, y calculaste: 1991 − 1967 = 24 años de vigencia durante la Guerra Fría.',
+      regla_oro_check:true,
+    },
   ],
 };
 export default mexicoIndustrial;

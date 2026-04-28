@@ -1,9 +1,9 @@
-import type { EraMetadata, Caso } from '@/lib/types';
+import type { EraMetadata, CasoInteractivo } from '@/lib/types';
 import { CATEGORIA_ICONOS, CATEGORIA_LABELS } from '@/lib/types';
 
 interface MisionHeaderProps {
   era: EraMetadata;
-  caso: Caso;
+  caso: CasoInteractivo;
   onSalir: () => void;
 }
 

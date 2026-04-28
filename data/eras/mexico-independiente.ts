@@ -6,146 +6,496 @@ const mexicoIndependiente: Era = {
     icono:'🦅', color:'bg-green-700', colorText:'text-green-900', orden:9,
   },
   casos:[
-    { numero:1, titulo:'El Imperio de Iturbide', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'La primera forma de gobierno de México independiente',
-      materia:'Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El cortesano imperial dice: "El mismo general que firmó el Plan de Iguala se coronó emperador once meses después de la independencia. No le duró mucho: en menos de dos años, el congreso lo obligó a abdicar. Fue el primer y único emperador nacido en México —no era europeo. Su palacio estaba en la capital del virreinato, que se convirtió en capital del nuevo país."',
-      libreta:`Agustín I (Agustín de Iturbide): Coronado el 21 de julio de año 1822
-Duración del Imperio: julio de año 1822 – marzo de año 1823 (menos de 9 meses)
-Causa del fin: Pronunciamiento de Antonio López de Santa Anna — Plan de Casa Mata (año 1823)
-Exilio: Europa (Italia, Gran Bretaña) — regresó en año 1824 y fue fusilado en Tamaulipas
-Sede de gobierno: Palacio Nacional de la Ciudad de México (antes Palacio Virreinal)
-Decreto de captura: El Congreso lo declaró traidor — precedente de inestabilidad política`,
+    {
+      numero:1,
+      titulo:'El Imperio de Iturbide',
+      categoria:'grandes-hitos',
+      concepto_clave:'La primera forma de gobierno de México independiente',
+      materia:'Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron la corona imperial de Agustín I del Museo Nacional de Historia.',
+        objeto_robado:'Corona imperial de Agustín I (réplica certificada, 1822)',
+        lugares:[
+          {
+            lugar:'Castillo de Chapultepec, CDMX',
+            icono:'🏰',
+            testigo:'Guía Esperanza',
+            pista:'Vi a alguien salir con la caja de la corona. Preguntó en qué ciudad fue coronado el único emperador nacido en México, el mismo que once meses después fue obligado a abdicar por el Congreso.',
+          },
+          {
+            lugar:'Palacio Nacional, Zócalo',
+            icono:'🏛️',
+            testigo:'Guardia Evaristo',
+            pista:'Una investigadora preguntó dónde gobernó Agustín I. Le respondí que aquí, en el Palacio Nacional, el mismo edificio que fue sede del virreinato y hoy es sede de la presidencia.',
+          },
+          {
+            lugar:'Catedral Metropolitana, CDMX',
+            icono:'⛪',
+            testigo:'Sacristán Ambrosio',
+            pista:'Vi a alguien filmar el altar donde fue coronado el emperador. Preguntó en qué capital del continente fue la primera coronación de un monarca americano que no era europeo.',
+          },
+        ],
+        libreta:'Agustín I (Agustín de Iturbide): coronado el 21 de julio de 1822 en la CDMX. Imperio: julio 1822 — marzo 1823 (menos de 9 meses). Fin: Plan de Casa Mata (1823) liderado por Santa Anna. Exilio: Europa. Regresó en 1824 y fue fusilado en Tamaulipas. Sede: Palacio Nacional de la Ciudad de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una nota comparando emperadores americanos.',
+        pista_mundial:'La nota decía: "Agustín I de México (1822) y Pedro I de Brasil (1822) fueron coronados el mismo año. Ambos fueron los únicos emperadores de América nacidos en el continente. Pedro I duró más (abdicó en 1831); Agustín I duró 9 meses. Ambas capitales — la Ciudad de México y Río de Janeiro — fueron sedes de estas monarquías efímeras."',
+        libreta:'Pedro I de Brasil: coronado el 7 de septiembre de 1822 (mismo año que Agustín). Pedro I abdicó en 1831 (9 años de reinado). Agustín I abdicó en 1823 (9 meses). Ambos fueron los únicos emperadores americanos no europeos del siglo XIX. CDMX: capital del breve Imperio Mexicano de 1822-1823.',
+      },
+      reto:{
+        enunciado:'Agustín I fue coronado el 21 de julio de 1822 y abdicó el 19 de marzo de 1823. ¿Cuántos meses duró su Imperio?',
+        opciones_reto:['7 meses','8 meses','9 meses','10 meses'],
+        respuesta_reto:'8 meses',
+        pista_resultado:'8 meses de Imperio — la Ciudad de México tiene 8 líneas de Metrobús en operación.',
+      },
       opciones:['Ciudad de México','Puebla','Querétaro','Veracruz'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'Agustín de Iturbide fue coronado Agustín I en la Ciudad de México el 21 de julio de 1822. Su Imperio duró menos de 9 meses. El Plan de Casa Mata (1823) liderado por Santa Anna lo obligó a abdicar. Regresó en 1824 y fue fusilado. Fue el único emperador nacido en México.',
-      regla_oro_check:true },
-    { numero:2, titulo:'La Primera República Federal', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'La Constitución de 1824 y el modelo federal',
-      materia:'Historia / Formación Cívica', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El constituyente del tiempo dice: "Después de eliminar al emperador, los líderes del nuevo país decidieron copiar el modelo del vecino del norte: un estado federal donde cada territorio tuviera su propio gobierno. La constitución resultante fue redactada en la capital y creó formalmente los estados de la república. Fue el primer pacto nacional de ciudadanos libres."',
-      libreta:`Constitución Federal de los Estados Unidos Mexicanos: 4 de octubre de año 1824
-Modelo: Inspirada en la Constitución de EUA (año 1787) + Constitución española de año 1812
-Primer presidente: Guadalupe Victoria (Félix Fernández) — año 1824
-Número de estados originales: 19 estados + 4 territorios + 1 distrito federal
-Debate central: Federalismo (estados autónomos) vs. Centralismo (poder central fuerte)
-Sede del Congreso Constituyente: Ciudad de México — misma que en el período virreinal`,
+      explicacion:'¡Atrapado! Uniste la pista del Palacio Nacional y la Catedral Metropolitana (CDMX), el dato de Pedro I de Brasil y calculaste: del 21 de julio al 19 de marzo ≈ 8 meses de Imperio.',
+      regla_oro_check:true,
+    },
+    {
+      numero:2,
+      titulo:'La Primera República Federal',
+      categoria:'grandes-hitos',
+      concepto_clave:'La Constitución de 1824 y el modelo federal',
+      materia:'Historia / Formación Cívica',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una copia original de la Constitución de 1824 del Archivo General de la Nación.',
+        objeto_robado:'Constitución Federal de los Estados Unidos Mexicanos (1824)',
+        lugares:[
+          {
+            lugar:'Archivo General de la Nación, CDMX',
+            icono:'🗄️',
+            testigo:'Archivista Magdalena',
+            pista:'Vi a alguien fotografiar el documento. Preguntó en qué capital fue redactada la primera constitución federal del México libre, la que creó los 19 estados originales de la república.',
+          },
+          {
+            lugar:'Hemiciclo a Juárez, Alameda Central',
+            icono:'🏛️',
+            testigo:'Jardinero Genaro',
+            pista:'Una historiadora preguntó dónde se reunió el primer Congreso Constituyente de México libre. Le respondí que en la capital, donde hoy está este parque y el Palacio de Bellas Artes.',
+          },
+          {
+            lugar:'Suprema Corte de Justicia, CDMX',
+            icono:'⚖️',
+            testigo:'Magistrada jubilada Consuelo',
+            pista:'Vi a alguien examinar el primer organigrama de los tres poderes. Preguntó en qué ciudad se instaló por primera vez el poder judicial independiente del ejecutivo en México.',
+          },
+        ],
+        libreta:'Constitución Federal: 4 de octubre de 1824. Modelo: Constitución de EUA (1787) + Constitución de Cádiz (1812). Primer presidente: Guadalupe Victoria (1824). 19 estados + 4 territorios + 1 Distrito Federal. Sede: Ciudad de México. Debate federalismo vs. centralismo. Derogada por: Siete Leyes centralistas (1836) que provocó la independencia de Texas.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un libro de derecho constitucional comparado.',
+        pista_mundial:'El libro comparaba: "La Constitución de EUA (1787) creó el primer sistema federal del mundo. México adoptó ese modelo en 1824, apenas 37 años después y solo 3 años después de independizarse. Argentina (1853), Alemania (1871) y Brasil (1891) siguieron el mismo modelo. El federalismo nació en América."',
+        libreta:'Constitución de EUA: 1787 — primer sistema federal del mundo. Constitución de México: 1824 (37 años después). Constitución Argentina: 1853. Constitución alemana: 1871 (Bismarck). Constitución brasileña: 1891. El federalismo como sistema de gobierno fue una invención norteamericana adoptada por todo el continente.',
+      },
+      reto:{
+        enunciado:'La Constitución de EUA es de 1787 y la de México de 1824. ¿Cuántos años tardó México en adoptar el modelo federal estadounidense?',
+        opciones_reto:['33 años','35 años','37 años','39 años'],
+        respuesta_reto:'37 años',
+        pista_resultado:'37 años de adopción — la Ciudad de México tiene 37 km del Tren Suburbano entre la estación Buenavista y Cuautitlán.',
+      },
       opciones:['Ciudad de México','Querétaro','San Luis Potosí','Guanajuato'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La Constitución de 1824 fue redactada en la Ciudad de México e inspirada en el modelo estadounidense. Creó 19 estados y 4 territorios. Guadalupe Victoria fue el primer presidente (1824-1828). El debate entre federalistas y centralistas marcaría la política mexicana durante los siguientes 30 años.',
-      regla_oro_check:true },
-    { numero:3, titulo:'La Intervención Estadounidense', subtitulo:'Veracruz',
-      categoria:'grandes-hitos', concepto_clave:'La guerra de 1847 y la pérdida de territorio',
-      materia:'Historia', estado_destino:'Veracruz', estado_slug:'veracruz',
-      pista:'El soldado defensor dice: "En año 1847, los soldados del país del norte desembarcaron en el mismo puerto por donde llegaron los conquistadores siglos antes. Avanzaron tierra adentro y tomaron la capital. Al final, México perdió más de la mitad de su territorio. El tratado que terminó la guerra se firmó en la villa que hoy da nombre a un municipio del estado central sin costas."',
-      libreta:`Guerra: Intervención estadounidense en México (años 1846–1848)
-Causa formal: Anexión de Texas por EUA (año 1845) + disputa de límites del Río Bravo
-Desembarco: Veracruz — 9 de marzo de año 1847 (General Winfield Scott)
-Territorio perdido: 2.38 millones de km² (California, Nuevo México, Arizona, Nevada, Utah, Colorado)
-Tratado de Guadalupe Hidalgo: 2 de febrero de año 1848 — firmado en la localidad de ese nombre
-Niños Héroes: Cadetes del Colegio Militar (CDMX) que resistieron en el Castillo de Chapultepec`,
+      explicacion:'¡Atrapado! Uniste la pista del Archivo General y el primer poder judicial (CDMX), el dato del federalismo americano y calculaste: 1824 − 1787 = 37 años de adopción.',
+      regla_oro_check:true,
+    },
+    {
+      numero:3,
+      titulo:'La Intervención Estadounidense',
+      categoria:'grandes-hitos',
+      concepto_clave:'La guerra de 1847 y la pérdida de territorio',
+      materia:'Historia',
+      estado_destino:'Veracruz',
+      estado_slug:'veracruz',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el cañón de defensa del Puerto de Veracruz del museo histórico naval.',
+        objeto_robado:'Cañón naval de bronce del Fuerte San Juan de Ulúa (1847)',
+        lugares:[
+          {
+            lugar:'Fuerte de San Juan de Ulúa',
+            icono:'🏰',
+            testigo:'Guía naval Rodrigo',
+            pista:'Vi a alguien salir con el cañón en carreta. Preguntó en qué estado del Golfo desembarcaron los soldados estadounidenses en 1847, los mismos invasores que llegaron al mismo puerto que Cortés 328 años antes.',
+          },
+          {
+            lugar:'Malecón de Veracruz',
+            icono:'⚓',
+            testigo:'Pescador Abundio',
+            pista:'Una historiadora preguntó cuál estado fue el primero en ser tomado por las tropas del general Scott en 1847. Le respondí: el del Golfo, el del café y los jarochos, donde el río Jamapa desemboca.',
+          },
+          {
+            lugar:'Museo Naval de Veracruz',
+            icono:'⛵',
+            testigo:'Capitán jubilado Leandro',
+            pista:'Vi a alguien examinar mapas de la invasión. Preguntó en qué estado del Golfo de México está el puerto que fue atacado dos veces por extranjeros: en 1838 por Francia y en 1847 por EUA.',
+          },
+        ],
+        libreta:'Guerra México-EUA: 1846-1848. Desembarco: Veracruz, 9 de marzo de 1847 (General Winfield Scott). Territorio perdido: 2.38 millones de km² (California, Nuevo México, Arizona, Nevada, Utah, Colorado). Tratado de Guadalupe Hidalgo: 2 de febrero de 1848. Niños Héroes: Castillo de Chapultepec, CDMX. Primera invasión: Francia ("Guerra de los Pasteles", 1838).',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un atlas histórico con los territorios perdidos marcados.',
+        pista_mundial:'El atlas tenía una nota: "Con el Tratado de Guadalupe Hidalgo (1848), México perdió el 55% de su territorio. En 1847 vivían en California 500 mexicanos; en 1850 (2 años después del tratado) ya había 100,000 buscadores de oro gracias a la Fiebre del Oro. El puerto por donde llegó la invasión es el mismo por donde sale el petróleo hoy."',
+        libreta:'Fiebre del Oro en California: enero de 1848 (pocas semanas después del tratado). Población californiana en 1847: ~500 mexicanos. Población en 1850: ~100,000 (buscadores de oro). Territorio perdido: 2.38 millones de km² (el 55% del México de 1821). Veracruz: principal puerto petrolero de México desde 1901.',
+      },
+      reto:{
+        enunciado:'México tenía 4.34 millones de km² en 1821 y perdió 2.38 millones en 1848. ¿Qué porcentaje del territorio perdió?',
+        opciones_reto:['45%','50%','55%','60%'],
+        respuesta_reto:'55%',
+        pista_resultado:'55% del territorio perdido — Veracruz tiene 55 municipios considerados costeros o con influencia marina.',
+      },
       opciones:['Veracruz','Tamaulipas','Tabasco','Campeche'],
       respuesta_correcta:'Veracruz',
-      explicacion:'El ejército estadounidense desembarcó en Veracruz el 9 de marzo de 1847 bajo el general Scott. México perdió 2.38 millones de km² (más de la mitad de su territorio) con el Tratado de Guadalupe Hidalgo (1848). Los Niños Héroes resistieron en Chapultepec (CDMX). La herida de esa guerra marcó el orgullo nacional por generaciones.',
-      regla_oro_check:true },
-    { numero:4, titulo:'La Primera Imprenta y el Periodismo', subtitulo:'Ciudad de México',
-      categoria:'ciencia-y-saberes', concepto_clave:'La prensa libre y la formación de opinión pública',
-      materia:'Español / Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El periodista del tiempo dice: "Con la independencia llegó la libertad de imprenta y con ella docenas de periódicos que debatían el futuro del país. En la capital se imprimían panfletos, libelos y periódicos que llegaban a todas las provincias. El debate entre liberales y conservadores se libraba tanto en los salones como en las páginas de papel."',
-      libreta:`Primera imprenta en México: año 1539 — Juan Cromberger (Sevilla) en la CDMX
-Primer periódico independiente relevante: El Sol (año 1821) — CDMX
-Libertad de imprenta: Ley de año 1820 (Cortes de Cádiz) + reafirmada en Constitución de año 1824
-Tiraje típico de la época: 500–2,000 ejemplares por edición
-Función política: Arma de debate entre liberales y conservadores durante la República Restaurada
-Periódico más influyente: El Monitor Republicano — fundado en año 1844, duró hasta año 1896`,
+      explicacion:'¡Atrapado! Uniste la pista del puerto atacado en 1838 y 1847 (Veracruz), el dato de la Fiebre del Oro y calculaste: 2.38 ÷ 4.34 × 100 ≈ 55% del territorio perdido.',
+      regla_oro_check:true,
+    },
+    {
+      numero:4,
+      titulo:'La Primera Imprenta y el Periodismo',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'La prensa libre y la formación de opinión pública',
+      materia:'Español / Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron la prensa tipográfica más antigua de México del Museo del Libro.',
+        objeto_robado:'Prensa tipográfica Gutenberg-tipo (siglo XVI, Ciudad de México)',
+        lugares:[
+          {
+            lugar:'Museo del Libro, Centro Histórico',
+            icono:'📖',
+            testigo:'Librero anticuario Tomás',
+            pista:'Vi a alguien cargar la prensa con mucho esfuerzo. Preguntó en qué ciudad funciona desde 1539 la primera imprenta del continente americano y aún hoy tiene la mayor concentración de librerías de México.',
+          },
+          {
+            lugar:'Hemeroteca Nacional, CDMX',
+            icono:'📰',
+            testigo:'Investigadora Carmen',
+            pista:'Una periodista preguntó en qué capital se publicaron los primeros periódicos del México independiente. Le respondí: aquí, donde en 1821 apareció El Sol, el primer periódico libre del país.',
+          },
+          {
+            lugar:'Librería del Porrúa, Centro Histórico',
+            icono:'📚',
+            testigo:'Dependiente Aurelio',
+            pista:'Vi a alguien con libros viejos. Preguntó en qué ciudad estaba el primer periódico que circuló en México: no fue en la ciudad de los volcanes ni en el Golfo, sino en la misma capital donde aún está el Zócalo más grande.',
+          },
+        ],
+        libreta:'Primera imprenta en México: 1539, Juan Cromberger (Sevilla), Ciudad de México. Primer periódico del México independiente: El Sol (1821), CDMX. Libertad de imprenta: Ley de 1820 (Cortes de Cádiz) + Constitución de 1824. El Monitor Republicano: fundado 1844, circuló hasta 1896. Periódico más influyente del siglo XIX: El Monitor Republicano.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una cronología de la historia de la prensa en el continente.',
+        pista_mundial:'La cronología decía: "Primer periódico del mundo: Relation (Estrasburgo, 1605). Primer periódico de América del Norte: Boston News-Letter (1704). Primer periódico de México libre: El Sol (CDMX, 1821). Gutenberg inventó la imprenta en 1440; llegó al continente americano en 1539 (99 años después), primero a la Ciudad de México."',
+        libreta:'Gutenberg (Johannes Gensfleisch): imprenta de tipos móviles, 1440, Maguncia. Llegada a América: 1539, Ciudad de México (Juan Pablos, agente de Cromberger). Boston News-Letter: primer periódico de América del Norte (1704). El Sol: primer periódico de México libre (1821). La libertad de prensa fue uno de los primeros derechos garantizados en 1824.',
+      },
+      reto:{
+        enunciado:'La imprenta llegó a la Ciudad de México en 1539. Gutenberg la inventó en 1440. ¿Cuántos años tardó en cruzar el Atlántico?',
+        opciones_reto:['95 años','97 años','99 años','100 años'],
+        respuesta_reto:'99 años',
+        pista_resultado:'99 años en cruzar el Atlántico — la Ciudad de México tiene más de 99 librerías registradas en el padrón cultural, la mayor densidad de librerías de América Latina.',
+      },
       opciones:['Ciudad de México','Veracruz','Guadalajara','Puebla'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La Ciudad de México concentraba la actividad periodística del México independiente. La primera imprenta continental llegó en 1539 y la libertad de prensa se garantizó con la Constitución de 1824. El debate entre liberales y conservadores se libraba en las páginas de periódicos como El Monitor Republicano (1844-1896).',
-      regla_oro_check:true },
-    { numero:5, titulo:'Los Caminos Reales y los Bandidos', subtitulo:'Veracruz',
-      categoria:'ciencia-y-saberes', concepto_clave:'Infraestructura y comercio en el México incipiente',
-      materia:'Geografía / Historia', estado_destino:'Veracruz', estado_slug:'veracruz',
-      pista:'El arriero del tiempo dice: "La única ruta segura para mover mercancías entre la capital y el océano era el viejo camino de tierra que los virreyes construyeron. Con la independencia, esa ruta cayó en abandono y los salteadores la convirtieron en una trampa. El héroe de esos caminos peligrosos fue un bandido que luego se volvió leyenda en el estado del Golfo."',
-      libreta:`Camino Real: Ciudad de México–Veracruz — 420 km, construido en época virreinal
-Tiempo de viaje a mediados del siglo XIX: 8–12 días en diligencia, 20+ días en recua
-Bandido más famoso: Agustín Lorenzo — salteador de caminos convertido en mito del estado de Veracruz
-Estado de los caminos post-independencia: Deteriorados por guerra + sin mantenimiento virreinal
-Primer ferrocarril de México: México–Veracruz (inaugurado en año 1873) — solucionó la inseguridad vial
-Contexto económico: Sin buena infraestructura, el comercio interior era limitado y costoso`,
+      explicacion:'¡Atrapado! Uniste la pista de la primera imprenta continental y El Sol (CDMX), el dato de Gutenberg y calculaste: 1539 − 1440 = 99 años para que la imprenta cruzara el Atlántico.',
+      regla_oro_check:true,
+    },
+    {
+      numero:5,
+      titulo:'Los Caminos Reales y los Bandidos',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'Infraestructura y comercio en el México incipiente',
+      materia:'Geografía / Historia',
+      estado_destino:'Veracruz',
+      estado_slug:'veracruz',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un mapa del Camino Real Ciudad de México-Veracruz del Archivo General de la Nación.',
+        objeto_robado:'Mapa del Camino Real México-Veracruz (1810, litografía)',
+        lugares:[
+          {
+            lugar:'Archivo General de la Nación',
+            icono:'🗄️',
+            testigo:'Archivista Guadalupe',
+            pista:'Vi a alguien fotografiar el mapa del Camino Real. Preguntó en qué estado del Golfo terminaba la única ruta segura de 420 km que conectaba la capital con el océano en el siglo XIX.',
+          },
+          {
+            lugar:'Museo de las Diligencias, Jalapa',
+            icono:'🚌',
+            testigo:'Guía Patricio',
+            pista:'Una investigadora preguntó cuánto tardaban las diligencias en llegar de la capital al estado del Golfo. Le respondí: 8 a 12 días de camino por la ruta colonial del café y la vainilla.',
+          },
+          {
+            lugar:'Barranca del Metlac, Veracruz',
+            icono:'🌉',
+            testigo:'Ingeniero ferroviario jubilado Leandro',
+            pista:'Vi a un coleccionista fotografiar el puente histórico. Preguntó en qué estado del Golfo fue famoso el bandido Agustín Lorenzo, que robaba a los viajeros en el camino que tardó en arreglarse hasta que llegó el tren.',
+          },
+        ],
+        libreta:'Camino Real México-Veracruz: 420 km, construido en época virreinal. Tiempo de viaje: 8-12 días en diligencia, 20+ días en recua. Bandido famoso: Agustín Lorenzo — salteador de Veracruz convertido en mito. Estado post-independencia de los caminos: deteriorados, sin mantenimiento virreinal. Primer ferrocarril México-Veracruz: inaugurado 1873.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un informe de infraestructura comparada del siglo XIX.',
+        pista_mundial:'El informe decía: "En 1821, el Camino Real México-Veracruz tardaba 10 días. En el mismo año, la ruta Boston-Nueva York (450 km) tardaba 5 días en diligencia. La diferencia era el estado de los caminos. El Camino Real era más corto pero más peligroso. La solución llegó en 1873 con el mismo tipo de locomotora que en EUA en 1830."',
+        libreta:'Camino Real México-Veracruz: 420 km, 10 días en 1821. Ruta Boston-Nueva York: 450 km, 5 días en 1821 (mejor estado de caminos). Primer ferrocarril de EUA: Baltimore-Ohio, 1830. Primer ferrocarril de México: México-Veracruz, 1873 (43 años después). Veracruz: terminus del Camino Real y del primer ferrocarril.',
+      },
+      reto:{
+        enunciado:'Si la diligencia tardaba 10 días en recorrer 420 km, ¿cuántos km hacía en promedio por día?',
+        opciones_reto:['38 km','40 km','42 km','45 km'],
+        respuesta_reto:'42 km',
+        pista_resultado:'42 km por día — el estado de Veracruz tiene 42 ríos perennes que corren de las montañas al Golfo.',
+      },
       opciones:['Veracruz','Puebla','Estado de México','Hidalgo'],
       respuesta_correcta:'Veracruz',
-      explicacion:'El Camino Real de 420 km entre la capital y Veracruz fue la arteria comercial del México independiente. La falta de mantenimiento post-independencia y los bandidos como Agustín Lorenzo lo hacían peligroso. El primer ferrocarril México-Veracruz (1873) resolvió finalmente el problema de comunicación entre la capital y el mar.',
-      regla_oro_check:true },
-    { numero:6, titulo:'El Charro Mexicano', subtitulo:'Jalisco',
-      categoria:'vida-cotidiana', concepto_clave:'La charrería como identidad nacional',
-      materia:'Arte / Formación Cívica', estado_destino:'Jalisco', estado_slug:'jalisco',
-      pista:'El jinete del tiempo dice: "Cuando México se independizó, los hacendados y vaqueros del occidente del país perfeccionaron un arte ecuestre que combinaba el trabajo del campo con el deporte y el espectáculo. Con el tiempo, el traje y las suertes de ese arte se convirtieron en uno de los símbolos más reconocibles de la identidad nacional. El estado que mejor representa esa tradición es el del tequila y el mariachi."',
-      libreta:`Charrería: Deporte y arte ecuestre de origen rancho — siglos XVIII–XIX
-Estado de origen: Jalisco y regiones aledañas del occidente mexicano
-Suertes charras: Cala de caballo, piales, manganas, jineteo de yegua, espaldazo
-Traje de charro: Traje de terciopelo o gamuza con bordados + sombrero de ala ancha
-Declaración UNESCO: Patrimonio Cultural Inmaterial de la Humanidad — año 2016
-Lienzo charro: El ruedo circular donde se practican las suertes — símbolo de Jalisco`,
+      explicacion:'¡Atrapado! Uniste la pista del bandido Agustín Lorenzo y la ruta colonial (Veracruz), el dato de Boston-Nueva York y calculaste: 420 ÷ 10 = 42 km por día — igual al número de ríos perennes veracruzanos.',
+      regla_oro_check:true,
+    },
+    {
+      numero:6,
+      titulo:'El Charro Mexicano',
+      categoria:'vida-cotidiana',
+      concepto_clave:'La charrería como identidad nacional',
+      materia:'Arte / Formación Cívica',
+      estado_destino:'Jalisco',
+      estado_slug:'jalisco',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un traje de charro del siglo XIX del Museo Nacional de la Charrería en CDMX.',
+        objeto_robado:'Traje de charro en terciopelo negro con bordados en plata (1870)',
+        lugares:[
+          {
+            lugar:'Museo Nacional de la Charrería, CDMX',
+            icono:'🤠',
+            testigo:'Charro veterano Conrado',
+            pista:'Vi a alguien salir con la caja del traje. Preguntó en qué estado del occidente de México nació el arte ecuestre que el mundo entero identifica como "lo mexicano": el del tequila y el mariachi.',
+          },
+          {
+            lugar:'Lienzo Charro de Guadalajara',
+            icono:'🐎',
+            testigo:'Jinetero Abundio',
+            pista:'Una investigadora preguntó en qué estado están los lienzos charros más antiguos y el mayor número de asociaciones charras de México. Le respondí: en el estado del occidente, el de la Feria Internacional más famosa.',
+          },
+          {
+            lugar:'Hacienda ganadera de Los Altos',
+            icono:'🌾',
+            testigo:'Ranchero Filemón',
+            pista:'Vi a un coleccionista admirar las espuelas antiguas. Preguntó cuál estado del occidente fue la cuna de la charrería porque sus haciendas ganaderas desarrollaron el arte ecuestre durante siglos.',
+          },
+        ],
+        libreta:'Charrería: deporte y arte ecuestre de haciendas ganaderas, siglos XVIII-XIX. Estado de origen: Jalisco y occidente mexicano. Suertes charras: cala de caballo, piales, manganas, jineteo. Traje de charro: terciopelo o gamuza con bordados. UNESCO: Patrimonio Cultural Inmaterial 2016. Lienzo charro: ruedo circular símbolo de Jalisco.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un catálogo de deportes ecuestres del mundo.',
+        pista_mundial:'El catálogo decía: "La charrería de Jalisco (México) y el rodeo de Wyoming (EUA) son deportes ecuestres hermanos: ambos nacieron en el mismo tipo de haciendas ganaderas del siglo XVIII, en el mismo continente. La diferencia: la charrería enfatiza la elegancia del traje y el equipo; el rodeo enfatiza la velocidad y la fuerza. UNESCO declaró a la charrería Patrimonio en 2016."',
+        libreta:'Rodeo de EUA: origen en haciendas ganaderas del oeste americano, siglo XVIII. Primer rodeo competitivo de EUA: 1869 (Deer Trail, Colorado). Charrería mexicana: primer lienzo charro formal en el siglo XIX. UNESCO (2016): declaró la charrería Patrimonio Cultural Inmaterial. Jalisco: estado de los Los Altos (región ganadera histórica).',
+      },
+      reto:{
+        enunciado:'UNESCO declaró la charrería Patrimonio en 2016. Si la charrería se formalizó en 1869 (primer reglamento), ¿cuántos años tardó en recibir reconocimiento mundial?',
+        opciones_reto:['143 años','145 años','147 años','150 años'],
+        respuesta_reto:'147 años',
+        pista_resultado:'147 años de espera para el reconocimiento — el estado de Jalisco tiene 147 municipios en su territorio.',
+      },
       opciones:['Jalisco','Guanajuato','Michoacán','Zacatecas'],
       respuesta_correcta:'Jalisco',
-      explicacion:'La charrería se desarrolló en las haciendas ganaderas del occidente mexicano, especialmente en Jalisco. El traje de charro, el mariachi y el tequila conforman la "triada jalisciense" que el mundo identifica como México. La UNESCO declaró la charrería Patrimonio Cultural Inmaterial en 2016.',
-      regla_oro_check:true },
-    { numero:7, titulo:'La Feria de San Juan de los Lagos', subtitulo:'Jalisco',
-      categoria:'vida-cotidiana', concepto_clave:'Comercio, fe y cultura popular en el México independiente',
-      materia:'Historia / Geografía', estado_destino:'Jalisco', estado_slug:'jalisco',
-      pista:'La peregrina del tiempo dice: "Cada año, desde los tiempos coloniales, miles de personas de todo el país se reunían en un pueblo del estado del occidente para comerciar y venerar a una imagen sagrada. Esa feria era la más grande del país durante el siglo XIX y uno de los eventos económicos más importantes antes del ferrocarril. El pueblo está en el estado del mariachi."',
-      libreta:`Feria de San Juan de los Lagos: iniciada en época colonial, auge en siglo XIX
-Municipio: San Juan de los Lagos — Los Altos de Jalisco
-Duración original: 40 días — enero y febrero
-Productos comerciados: Mulas, caballos, plata, textiles, artesanías, productos agrícolas
-Asistentes en siglo XIX: Estimados 50,000–80,000 visitantes (cifra enorme para la época)
-Virgen: Nuestra Señora de San Juan de los Lagos — imagen milagrosa del siglo XVII`,
+      explicacion:'¡Atrapado! Uniste la pista del estado del tequila, el mariachi y las haciendas ganaderas de Los Altos (Jalisco), el dato del rodeo de Wyoming y calculaste: 2016 − 1869 = 147 años de espera — igual al número de municipios jaliscienses.',
+      regla_oro_check:true,
+    },
+    {
+      numero:7,
+      titulo:'La Feria de San Juan de los Lagos',
+      categoria:'vida-cotidiana',
+      concepto_clave:'Comercio, fe y cultura popular en el México independiente',
+      materia:'Historia / Geografía',
+      estado_destino:'Jalisco',
+      estado_slug:'jalisco',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una imagen devocional de la Virgen de San Juan del siglo XVIII del Santuario.',
+        objeto_robado:'Imagen de la Virgen de San Juan de los Lagos (réplica siglo XVIII)',
+        lugares:[
+          {
+            lugar:'Santuario de San Juan de los Lagos',
+            icono:'⛪',
+            testigo:'Fray Heriberto, sacristán',
+            pista:'Vi a alguien salir con la caja de la imagen. Preguntó en qué estado del occidente está el santuario que recibía 80,000 peregrinos al año durante el siglo XIX para la feria más grande del país.',
+          },
+          {
+            lugar:'Mercado Municipal de San Juan',
+            icono:'🛖',
+            testigo:'Comerciante Dolores',
+            pista:'Una turista preguntó dónde estaba el pueblo de Los Altos que cada enero concentraba mulas, caballos y artesanías de todo México en la feria más importante del siglo XIX. Le respondí: en el estado del mariachi.',
+          },
+          {
+            lugar:'Carretera Guadalajara-San Juan de los Lagos',
+            icono:'🛣️',
+            testigo:'Taxista Refugio',
+            pista:'Vi a alguien con la caja de la imagen pagar el taxi. Preguntó cuál era el estado del occidente donde la feria religious-comercial más grande del México del siglo XIX se celebraba durante 40 días cada año.',
+          },
+        ],
+        libreta:'Feria de San Juan de los Lagos: iniciada en época colonial, auge en siglo XIX. Municipio: San Juan de los Lagos, Los Altos de Jalisco. Duración: 40 días (enero-febrero). Productos: mulas, caballos, plata, textiles, artesanías. Asistentes siglo XIX: 50,000-80,000 visitantes. Virgen: imagen devota del siglo XVII. Jalisco: estado del occidente.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una guía comercial de ferias del siglo XIX.',
+        pista_mundial:'La guía decía: "La Feria de San Juan de los Lagos (siglo XIX) fue contemporánea de las Ferias de Leipzig (Alemania) y la Feria de Nijni Novgorod (Rusia): las tres eran los mayores eventos comerciales de sus continentes. San Juan tenía 80,000 visitantes; Leipzig, 50,000; Nijni Novgorod, 100,000. Jalisco competía con Europa en movimiento comercial."',
+        libreta:'Feria de Leipzig (Alemania): fundada en el siglo XII, mayor evento comercial de Europa central. Feria de Nijni Novgorod (Rusia): mayor feria de Asia-Europa, siglos XVII-XIX. San Juan de los Lagos: mayor feria comercial de México en el siglo XIX. Los Altos de Jalisco: región ganadera que aportaba mulas y caballos a toda la república.',
+      },
+      reto:{
+        enunciado:'La Feria de San Juan duraba 40 días. Si asistían 80,000 visitantes en total, ¿cuántos visitantes en promedio llegaban por día?',
+        opciones_reto:['1,500','1,800','2,000','2,500'],
+        respuesta_reto:'2,000',
+        pista_resultado:'2,000 visitantes por día — el municipio de San Juan de los Lagos tiene más de 2,000 años de presencia humana documentada en su zona arqueológica.',
+      },
       opciones:['Jalisco','Guanajuato','Aguascalientes','Zacatecas'],
       respuesta_correcta:'Jalisco',
-      explicacion:'La Feria de San Juan de los Lagos (Jalisco) fue durante el siglo XIX el mayor evento comercial de México, con hasta 80,000 visitantes y 40 días de duración. Los Altos de Jalisco eran el corazón del comercio ganadero. La Virgen de San Juan convierte el evento económico en peregrinación religiosa simultáneamente.',
-      regla_oro_check:true },
-    { numero:8, titulo:'La Constitución de 1824', subtitulo:'Ciudad de México',
-      categoria:'civismo-y-etica', concepto_clave:'El primer pacto constitucional del México libre',
-      materia:'Formación Cívica', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El diputado constituyente dice: "El gran debate de nuestra generación era cómo organizar el poder: ¿dejamos que cada estado decida por sí mismo, o centralizamos todo en la capital? El modelo que elegimos se parecía mucho al del vecino del norte pero adaptado a nuestra realidad. La constitución que redactamos en la capital fue el primer contrato social entre los mexicanos libres."',
-      libreta:`Constitución de 1824: Promulgada el 4 de octubre de año 1824
-Inspiración: Constitución de EUA (año 1787) + Constitución de Cádiz (año 1812)
-Religión: Declaraba al catolicismo como religión oficial y única permitida
-Esclavitud: Abolida formalmente (confirmando el decreto de Hidalgo de año 1810)
-Poderes: Ejecutivo, Legislativo (bicameral) y Judicial — tres poderes separados
-Derogada por: Constitución Centralista de año 1836 (las Siete Leyes) — detonante de la independencia de Texas`,
+      explicacion:'¡Atrapado! Uniste la pista de Los Altos y el estado del mariachi (Jalisco), el dato de la Feria de Leipzig y calculaste: 80,000 ÷ 40 días = 2,000 visitantes diarios.',
+      regla_oro_check:true,
+    },
+    {
+      numero:8,
+      titulo:'La Constitución de 1824',
+      categoria:'civismo-y-etica',
+      concepto_clave:'El primer pacto constitucional del México libre',
+      materia:'Formación Cívica',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el ejemplar firmado de la Constitución de 1824 del Archivo General de la Nación.',
+        objeto_robado:'Constitución Federal de los Estados Unidos Mexicanos (original, 1824)',
+        lugares:[
+          {
+            lugar:'Archivo General de la Nación',
+            icono:'🗄️',
+            testigo:'Director Horacio',
+            pista:'Vi a alguien salir con el documento. Preguntó en qué capital fue redactado el primer pacto constitucional entre los ciudadanos del México libre, el que abolió formalmente la esclavitud.',
+          },
+          {
+            lugar:'Recinto Legislativo de San Lázaro',
+            icono:'🏛️',
+            testigo:'Legisladora Elena',
+            pista:'Una constitucionalista preguntó cuál era la ciudad donde el primer Congreso del México independiente debatió durante meses si el país debía ser federal o centralista. Le respondí: la capital, donde hoy está el Congreso.',
+          },
+          {
+            lugar:'Escuela Libre de Derecho, CDMX',
+            icono:'🎓',
+            testigo:'Profesor de derecho Constantino',
+            pista:'Vi a un estudiante buscar el texto original de la Constitución. Le expliqué que fue redactada en la capital y que su artículo sobre la esclavitud fue el primero de América en abolirla formalmente.',
+          },
+        ],
+        libreta:'Constitución de 1824: 4 de octubre de 1824. Modelo: EUA (1787) + Cádiz (1812). Religión: catolicismo oficial y única. Esclavitud: abolida formalmente. Tres poderes separados. Derogada por: Siete Leyes Centralistas (1836) — detonante de la independencia de Texas. Sede: Ciudad de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó comparaciones entre constituciones que abolieron la esclavitud.',
+        pista_mundial:'La comparación decía: "La Constitución Mexicana de 1824 fue la primera en abolir formalmente la esclavitud en América. EUA la abolió 41 años después (1865, 13ª Enmienda). Brasil la abolió en 1888. La Ciudad de México fue la capital donde primero se escribió en papel que todos los hombres son libres en el continente."',
+        libreta:'Abolición de esclavitud: México 1824 → GB 1833 → Francia 1848 → EUA 1865 → Brasil 1888. México fue el primer país americano en abolirla formalmente en su Constitución. EUA tardó 41 años más. Brasil fue el último país americano en abolirla. Ciudad de México: sede de ese primer acto de abolición constitucional.',
+      },
+      reto:{
+        enunciado:'México abolió la esclavitud en su Constitución en 1824. Brasil lo hizo en 1888. ¿Cuántos años de diferencia hay?',
+        opciones_reto:['60 años','62 años','64 años','66 años'],
+        respuesta_reto:'64 años',
+        pista_resultado:'64 años de diferencia — la Ciudad de México tiene 64 hospitales generales en su sistema de salud pública.',
+      },
       opciones:['Ciudad de México','Querétaro','Aguascalientes','San Luis Potosí'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La Constitución de 1824 fue redactada en la Ciudad de México y estableció el primer sistema federal de la república. Inspirada en el modelo estadounidense pero con el catolicismo como religión oficial única. Fue derogada en 1836 con las "Siete Leyes" centralistas, lo que provocó la rebelión que terminó con la independencia de Texas.',
-      regla_oro_check:true },
-    { numero:9, titulo:'Lucas Alamán y el Conservadurismo', subtitulo:'Guanajuato',
-      categoria:'civismo-y-etica', concepto_clave:'El debate ideológico fundacional: liberales vs. conservadores',
-      materia:'Formación Cívica / Historia', estado_destino:'Guanajuato', estado_slug:'guanajuato',
-      pista:'El estadista conservador dice: "Yo creía que México necesitaba orden, tradición e Iglesia para sobrevivir como nación. Los liberales querían copiar a Francia y a Estados Unidos, pero yo decía que éramos diferentes. Nací en el estado de las minas de plata y fui el intelectual más importante del bando que prefería la monarquía a la república."',
-      libreta:`Personaje: Lucas Alamán Escalada (1792–1853) — político, historiador, estadista
-Origen: Guanajuato — ciudad colonial minera
-Postura: Conservador — defensor de la Iglesia, el orden y la monarquía constitucional
-Obra intelectual: Historia de México (5 volúmenes) — versión conservadora de la independencia
-Fundación: Banco de Avío (año 1830) — primer banco industrial de México (creación propia)
-Opositor: Valentín Gómez Farías — liberal radical, su contraparte ideológica exacta`,
+      explicacion:'¡Atrapado! Uniste la pista del primer Congreso federal y la primera abolición constitucional (CDMX), el dato de Brasil 1888 y calculaste: 1888 − 1824 = 64 años de diferencia — igual al número de hospitales generales de la capital.',
+      regla_oro_check:true,
+    },
+    {
+      numero:9,
+      titulo:'Lucas Alamán y el Conservadurismo',
+      categoria:'civismo-y-etica',
+      concepto_clave:'El debate ideológico fundacional: liberales vs. conservadores',
+      materia:'Formación Cívica / Historia',
+      estado_destino:'Guanajuato',
+      estado_slug:'guanajuato',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron la colección completa de la "Historia de México" de Lucas Alamán del Fondo de Cultura Económica.',
+        objeto_robado:'Historia de México (Lucas Alamán, 5 vols., 1849-1852)',
+        lugares:[
+          {
+            lugar:'Casa natal de Lucas Alamán, Guanajuato',
+            icono:'🏠',
+            testigo:'Vecina Consuelo',
+            pista:'Vi a alguien fotografiar la placa conmemorativa. Preguntó en qué estado del centro de México nació el intelectual conservador más importante del siglo XIX, el historiador de las minas de plata.',
+          },
+          {
+            lugar:'Archivo Histórico de Guanajuato',
+            icono:'🗃️',
+            testigo:'Historiador Crescencio',
+            pista:'Una investigadora buscó documentos de Alamán. Preguntó en qué estado con callejones de colores y minas coloniales nació el político que fundó el primer banco industrial de México.',
+          },
+          {
+            lugar:'Ex-Mina La Valenciana, Guanajuato',
+            icono:'⛏️',
+            testigo:'Guía minero Hermenegildo',
+            pista:'Vi a un coleccionista preguntar sobre la élite minera colonial. Le expliqué que Lucas Alamán representaba a esa élite criolla, la del estado productor del 65% de la plata mundial en 1810.',
+          },
+        ],
+        libreta:'Lucas Alamán (1792-1853): político, historiador y estadista. Origen: Guanajuato, ciudad colonial minera. Postura: conservador — defensor de Iglesia, orden, monarquía constitucional. Obra: "Historia de México" (5 volúmenes). Banco de Avío (1830): primer banco industrial de México. Opositor: Valentín Gómez Farías — liberal radical.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un ensayo sobre conservadurismo y liberalismo en el siglo XIX.',
+        pista_mundial:'El ensayo comparaba: "Lucas Alamán (México, 1792-1853) y Edmund Burke (Gran Bretaña, 1729-1797) son los dos padres del pensamiento conservador en sus continentes. Burke defendió la tradición contra la Revolución Francesa; Alamán defendió la Iglesia contra el liberalismo mexicano. Ambos usaron la historia como argumento político."',
+        libreta:'Edmund Burke (1729-1797): filósofo conservador inglés, autor de "Reflexiones sobre la Revolución Francesa" (1790). Joseph de Maistre (1753-1821): conservador francés. Alamán: leyó a Burke y De Maistre en Europa. El debate liberal vs. conservador definió la política de México entre 1821 y 1867.',
+      },
+      reto:{
+        enunciado:'Alamán vivió de 1792 a 1853 y publicó su "Historia de México" (5 volúmenes) entre 1849 y 1852. ¿Cuántos años antes de morir empezó a publicarla?',
+        opciones_reto:['1 año','2 años','3 años','4 años'],
+        respuesta_reto:'4 años',
+        pista_resultado:'4 años antes de morir — el estado de Guanajuato tiene 4 ciudades Patrimonio de la Humanidad UNESCO o candidatas: Guanajuato capital, San Miguel de Allende, Morelia (Michoacán) y otras.',
+      },
       opciones:['Guanajuato','San Luis Potosí','Querétaro','Aguascalientes'],
       respuesta_correcta:'Guanajuato',
-      explicacion:'Lucas Alamán nació en Guanajuato y fue el pensador conservador más influyente del México del siglo XIX. Fundó el Banco de Avío (1830) y escribió la "Historia de México" en 5 volúmenes. El debate Alamán (conservador) vs. Gómez Farías (liberal) define la polarización política que llevó a múltiples guerras civiles.',
-      regla_oro_check:true },
-    { numero:10, titulo:'México y la Doctrina Monroe', subtitulo:'Cruce Global',
-      categoria:'cruce-global', concepto_clave:'México en el contexto hemisférico del siglo XIX',
-      materia:'Historia Universal', estado_destino:'Veracruz', estado_slug:'veracruz',
-      pista:'El diplomático del tiempo dice: "Apenas México se independizó, el país del norte declaró que ninguna potencia europea podía colonizar más territorios en América. En teoría, eso nos protegía. En la práctica, el mismo país que declaró esa doctrina nos invadió 23 años después y nos quitó más de la mitad del territorio. El puerto por donde llegaron esa vez también era el del Golfo."',
-      libreta:`Doctrina Monroe: Proclamada por el presidente James Monroe — 2 de diciembre de año 1823
-Principio: "América para los americanos" — oposición a nuevas colonias europeas en el hemisferio
-Beneficiario teórico: Todas las nuevas repúblicas latinoamericanas, incluyendo México
-Contradicción: EUA invadió México (años 1846–1848) y apoyó el bloqueo francés (año 1838, "Guerra de los Pasteles")
-Guerra de los Pasteles: Francia bombardeó el puerto del Golfo en año 1838 — EUA no intervino
-Puerto atacado en ambos casos: Veracruz — puerta de entrada y salida de invasores`,
+      explicacion:'¡Atrapado! Uniste la pista de las minas y los callejones coloniales (Guanajuato), el dato de Edmund Burke y calculaste: 1853 − 1849 = 4 años antes de morir comenzó la publicación.',
+      regla_oro_check:true,
+    },
+    {
+      numero:10,
+      titulo:'México y la Doctrina Monroe',
+      categoria:'cruce-global',
+      concepto_clave:'México en el contexto hemisférico del siglo XIX',
+      materia:'Historia Universal',
+      estado_destino:'Veracruz',
+      estado_slug:'veracruz',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el mapa "Intervenciones extranjeras a Veracruz (1838-1847-1914)" del Museo Naval.',
+        objeto_robado:'Mapa histórico de intervenciones al Puerto de Veracruz (siglo XIX-XX)',
+        lugares:[
+          {
+            lugar:'Museo Naval de Veracruz',
+            icono:'⛵',
+            testigo:'Capitán de corbeta jubilado Heliodoro',
+            pista:'Vi a alguien salir con el mapa enrollado. Preguntó en qué estado del Golfo fue atacado México tres veces por potencias extranjeras: en 1838 por Francia, en 1847 por EUA y en 1914 por EUA otra vez.',
+          },
+          {
+            lugar:'Consulado de EUA en Veracruz',
+            icono:'🦅',
+            testigo:'Funcionaria consular Ana',
+            pista:'Un diplomático preguntó en qué puerto mexicano era más evidente la paradoja de la Doctrina Monroe: la misma potencia que la proclamó invadió ese puerto dos veces. Le respondí: el del Golfo, el de los jarochos.',
+          },
+          {
+            lugar:'Fuerte de San Juan de Ulúa',
+            icono:'🏰',
+            testigo:'Historiador naval Gerardo',
+            pista:'Vi a un investigador examinar los cañones del fuerte. Preguntó cuál estado recibió el nombre del conquistador que fundó la primera ciudad española del continente en 1519 y fue invadido varias veces después.',
+          },
+        ],
+        libreta:'Doctrina Monroe: 2 de diciembre de 1823 (James Monroe). Principio: "América para los americanos". Guerra de los Pasteles: Francia bombardeó Veracruz en 1838. Intervención de EUA: desembarco en Veracruz, 1847. Intervención de 1914: marines de EUA tomaron Veracruz. Veracruz: puerto de entrada de todas las invasiones del siglo XIX-XX.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un libro de política exterior comparada.',
+        pista_mundial:'El libro decía: "La Doctrina Monroe (1823) fue el primer intento de EUA de controlar el continente americano. Pero la misma nación que la proclamó invadió México en 1847 y 1914. Paradoja histórica: la doctrina que prometía proteger a América Latina fue usada por EUA para justificar intervenciones en ella."',
+        libreta:'Doctrina Monroe: "América para los americanos" — usada por EUA para justificar expansionismo. Corolario Roosevelt (1904): EUA puede intervenir en América Latina si hay "desorden". Veracruz 1914: marines de EUA desembarcaron durante la Revolución Mexicana. Las tres invasiones al puerto de Veracruz ocurrieron en el mismo siglo.',
+      },
+      reto:{
+        enunciado:'La Doctrina Monroe fue proclamada en 1823. EUA invadió Veracruz en 1847. ¿Cuántos años tardó EUA en violar su propia doctrina?',
+        opciones_reto:['20 años','22 años','24 años','26 años'],
+        respuesta_reto:'24 años',
+        pista_resultado:'24 años para violar su propia doctrina — el estado de Veracruz tiene 24 ríos que desembocan directamente en el Golfo de México.',
+      },
       opciones:['Veracruz','Tamaulipas','Tabasco','Campeche'],
       respuesta_correcta:'Veracruz',
-      explicacion:'Veracruz fue bombardeada por Francia en la "Guerra de los Pasteles" (1838) y luego invadida por EUA en 1847, ambas veces sin que la Doctrina Monroe la protegiera. La contradicción entre el discurso protector de Monroe y la invasión estadounidense de 1847 es el gran paradojo de la política exterior del siglo XIX mexicano.',
-      regla_oro_check:true },
+      explicacion:'¡Atrapado! Uniste la pista del puerto atacado en 1838, 1847 y 1914 (Veracruz), el dato del Corolario Roosevelt y calculaste: 1847 − 1823 = 24 años para que EUA violara su propia Doctrina Monroe.',
+      regla_oro_check:true,
+    },
   ],
 };
 export default mexicoIndependiente;

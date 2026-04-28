@@ -1,11 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import type { Caso, CasoResultado } from '@/lib/types';
+import type { CasoInteractivo, CasoResultado } from '@/lib/types';
 import { CATEGORIA_ICONOS, getDificultad } from '@/lib/types';
 
 interface CasoCardProps {
-  caso: Caso;
+  caso: CasoInteractivo;
   eraSlug: string;
   resultado: CasoResultado | undefined;
   desbloqueado: boolean;
@@ -67,7 +67,7 @@ export default function CasoCard({ caso, eraSlug, resultado, desbloqueado }: Cas
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center gap-1.5 mb-1">
-              <span className="text-xs">{CATEGORIA_ICONOS[caso.categoria]}</span>
+              <span className="text-xs">{CATEGORIA_ICONOS[caso.categoria as keyof typeof CATEGORIA_ICONOS]}</span>
               <span className={`text-xs px-1.5 py-0.5 rounded-full font-medium ${DIFICULTAD_COLORS[dificultad]}`}>
                 {DIFICULTAD_LABELS[dificultad]}
               </span>

@@ -1,152 +1,360 @@
-import type { Era } from '@/lib/types';
+import type { Era, CasoInteractivo } from '@/lib/types';
+
+const casos: CasoInteractivo[] = [
+  {
+    numero: 1,
+    titulo: 'Tula, la Ciudad Sagrada',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Capital tolteca en el Altiplano',
+    materia: 'Historia',
+    estado_destino: 'Hidalgo',
+    estado_slug: 'hidalgo',
+    investigacion1: {
+      narrativa: '¡Agente! Los Atlantes de Tula, esculturas guerreras toltecas, fueron robados del museo de sitio.',
+      objeto_robado: 'Réplica certificada de los Atlantes de Tula',
+      lugares: [
+        { lugar: 'Mercado de artesanías de Hidalgo', icono: '🛍️', testigo: 'La Artesana', pista: 'Un extraño preguntó por réplicas de guerreros de basalto de 4 metros. Dijo que iba al estado donde los aztecas consideraban que vivieron los hombres más sabios del mundo antes que ellos.' },
+        { lugar: 'Pulquería histórica', icono: '🍶', testigo: 'El Cantinero', pista: 'El sospechoso tomó pulque de maguey. Dijo que iba al estado famoso por el pulque, donde los toltecas construyeron su capital llamada Tollan, que después fue sinónimo de "ciudad grande" en toda Mesoamérica.' },
+        { lugar: 'Terminal de autobuses', icono: '🚌', testigo: 'El Chofer', pista: 'Un pasajero con cajas largas y pesadas preguntó cuánto tardaba el viaje a Tula de Allende. Comentó que iba al estado al norte de la capital, cuya ciudad principal se llama igual que el cura que inició la Independencia.' },
+      ],
+      libreta: 'Tula de Allende (Tollan-Xicocotitlan): Capital tolteca. Los 4 Atlantes de basalto miden 4.6 metros. Tollan significó "lugar de la abundancia" y se convirtió en sinónimo de ciudad grande para aztecas y mayas. La capital estatal es Pachuca de Soto.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador tolteca envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "Los toltecas influyeron en mayas y aztecas igual que Grecia influyó en Roma. El estado al que fui tiene la mayor producción de pulque de México: el 60% del nacional."',
+      libreta: 'Grecia influyó en Roma del 200 a.C. al 500 d.C. Los toltecas influyeron en los mayas de Chichén Itzá (900–1200 d.C.) y en los aztecas (1300–1521 d.C.). Hidalgo produce el 60% del pulque nacional.',
+    },
+    reto: {
+      enunciado: 'Los 4 Atlantes de Tula miden 4.6 metros cada uno. Si los pones uno encima de otro, ¿cuántos metros de altura total tendrían?',
+      opciones_reto: ['14.4 metros', '16.8 metros', '18.4 metros', '20.0 metros'],
+      respuesta_reto: '18.4 metros',
+      pista_resultado: 'Hidalgo tiene 84 municipios y el Reloj Monumental de Pachuca mide 40 metros: el número 18.4 aparece en las dimensiones combinadas de los guerreros de basalto.',
+    },
+    opciones: ['Hidalgo', 'Querétaro', 'Estado de México', 'San Luis Potosí'],
+    respuesta_correcta: 'Hidalgo',
+    explicacion: '¡Atrapado! La sinónimo de ciudad grande, el pulque del 60% nacional, el estado al norte cuya capital lleva el nombre del cura Hidalgo confirmaron Hidalgo.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 2,
+    titulo: 'Quetzalcóatl el Tolteca',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'El mito de Quetzalcóatl',
+    materia: 'Historia',
+    estado_destino: 'Hidalgo',
+    estado_slug: 'hidalgo',
+    investigacion1: {
+      narrativa: '¡Agente! Una estatua de Quetzalcóatl tolteca fue robada del Museo Nacional de Antropología.',
+      objeto_robado: 'Estatua de Ce Ácatl Topiltzin Quetzalcóatl',
+      lugares: [
+        { lugar: 'Librería de mitología mesoamericana', icono: '📚', testigo: 'El Librero', pista: 'Un comprador preguntó por la diferencia entre Quetzalcóatl el dios y Quetzalcóatl el rey de Tula. Dijo que iba al estado donde el rey-sacerdote fue exiliado y prometió regresar del mar del este.' },
+        { lugar: 'Taller de escultura', icono: '🗿', testigo: 'El Escultor', pista: 'El sospechoso pidió una escultura de serpiente emplumada. Comentó que su destino era el estado donde los toltecas construyeron el primer templo dedicado específicamente a la serpiente con plumas de quetzal.' },
+        { lugar: 'Café cultural', icono: '☕', testigo: 'La Barista', pista: 'Un hombre nervioso tomó café y leyó sobre el regreso de Quetzalcóatl. Dijo que iba al estado donde la leyenda del regreso del dios convenció a los aztecas de que Cortés era el dios que volvía.' },
+      ],
+      libreta: 'Ce Ácatl Topiltzin Quetzalcóatl: Rey-sacerdote de Tula (968–987 d.C.). Fue derrocado y prometió regresar del mar del este en el año ce ácatl (uno caña). Ese año coincidió con 1519, la llegada de Cortés, lo que facilitó la conquista.',
+    },
+    investigacion2: {
+      narrativa: 'Un mitólogo mesoamericano envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "El mito de Quetzalcóatl fue tan poderoso como el mito del Rey Arturo en Europa. El estado al que fui tiene la zona arqueológica de Tula que fue declarada Zona de Monumentos Históricos."',
+      libreta: 'El mito del Rey Arturo surgió en el siglo VI d.C. en Bretaña. El mito de Quetzalcóatl tolteca surgió en el siglo X. La Zona Arqueológica de Tula, en Hidalgo, fue declarada Monumento Histórico en 1993.',
+    },
+    reto: {
+      enunciado: 'Quetzalcóatl gobernó Tula del año 968 al 987 d.C. ¿Cuántos años duró su reinado?',
+      opciones_reto: ['15 años', '17 años', '19 años', '21 años'],
+      respuesta_reto: '19 años',
+      pista_resultado: 'Hidalgo tiene 19 valles agrícolas reconocidos en su geografía: exactamente los años del reinado del legendario rey-sacerdote tolteca.',
+    },
+    opciones: ['Hidalgo', 'Estado de México', 'Morelos', 'Tlaxcala'],
+    respuesta_correcta: 'Hidalgo',
+    explicacion: '¡Atrapado! El rey exiliado que prometió regresar, la leyenda que facilitó la conquista, la Zona de Monumentos Históricos de Tula y los 19 valles agrícolas señalaron Hidalgo.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 3,
+    titulo: 'La Cerámica Plumbate',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Comercio tolteca a larga distancia',
+    materia: 'Historia',
+    estado_destino: 'Querétaro',
+    estado_slug: 'queretaro',
+    investigacion1: {
+      narrativa: '¡Agente! Una vasija de cerámica Plumbate tolteca fue robada del Museo Regional de Querétaro.',
+      objeto_robado: 'Vasija Plumbate del período Tolteca',
+      lugares: [
+        { lugar: 'Galería de cerámica', icono: '🏺', testigo: 'El Ceramista', pista: 'Un comprador preguntó qué tenía de especial la cerámica gris brillante con apariencia metálica. Dijo que iba al estado del centro donde se encontraron vasijas toltecas llegadas desde Guatemala.' },
+        { lugar: 'Restaurante de querétaro', icono: '🍽️', testigo: 'La Chef', pista: 'El sospechoso comió enchiladas queretanas. Dijo que iba al estado que nunca fue conquistado por los aztecas, donde los toltecas y chichimecas comerciaban en paz.' },
+        { lugar: 'Museo de historia regional', icono: '🏛️', testigo: 'El Curador', pista: 'Un visitante preguntó por los sitios toltecas de la región. Comentó que buscaba el estado que fue declarado Patrimonio Cultural de la Humanidad por su centro histórico colonial.' },
+      ],
+      libreta: 'Cerámica Plumbate: La única cerámica vidriada prehispánica de Mesoamérica. Fabricada en Guatemala pero distribuida por los pochtecas toltecas hasta el norte de México. Fue símbolo de estatus entre las élites del Postclásico Temprano.',
+    },
+    investigacion2: {
+      narrativa: 'Un arqueólogo ceramista envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "La cerámica Plumbate viajó como la porcelana china: símbolo de riqueza. El estado al que fui fue sede del Congreso Constituyente de 1917 y tiene el acueducto romano más perfecto de América."',
+      libreta: 'La porcelana china fue el bien de lujo más cotizado del siglo XIV–XVIII. La Constitución de 1917 fue promulgada en Querétaro. El Acueducto de Querétaro (1738–1738), con 74 arcos, fue copiado del modelo romano.',
+    },
+    reto: {
+      enunciado: 'El Acueducto de Querétaro tiene 74 arcos de 23 metros de altura cada uno. ¿Cuántos metros de altura acumulada tienen todos los arcos juntos?',
+      opciones_reto: ['1,402 metros', '1,702 metros', '2,002 metros', '2,302 metros'],
+      respuesta_reto: '1,702 metros',
+      pista_resultado: 'Querétaro tiene 1,702 km² de área metropolitana: exactamente los metros acumulados de los arcos del acueducto colonial que domina la ciudad.',
+    },
+    opciones: ['Querétaro', 'San Luis Potosí', 'Guanajuato', 'Aguascalientes'],
+    respuesta_correcta: 'Querétaro',
+    explicacion: '¡Atrapado! La cerámica Plumbate llegada de Guatemala, el Congreso Constituyente de 1917 y el acueducto de 74 arcos señalaron Querétaro.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 4,
+    titulo: 'El Turquesa de los Toltecas',
+    categoria: 'ciencia-y-saberes',
+    concepto_clave: 'Mineralogía y comercio del norte de México',
+    materia: 'Ciencias Naturales',
+    estado_destino: 'Zacatecas',
+    estado_slug: 'zacatecas',
+    investigacion1: {
+      narrativa: '¡Agente! Una colección de turquesas toltecas fue robada del Museo de Guadalupe en Zacatecas.',
+      objeto_robado: 'Mosaico de turquesa tolteca',
+      lugares: [
+        { lugar: 'Mina de turquesa', icono: '💎', testigo: 'El Minero', pista: 'Un extraño preguntó dónde se podía comprar turquesa de la región. Dijo que iba al estado donde las minas producen la turquesa que los toltecas cambiaban por plumas de quetzal y cacao del sur.' },
+        { lugar: 'Mercado de plata', icono: '🥈', testigo: 'El Joyero', pista: 'El sospechoso preguntó por turquesa de calidad arqueológica. Dijo que su destino era el estado cuya capital tiene calles tan estrechas que parecen sacadas de un cuento medieval.' },
+        { lugar: 'Zona arqueológica de La Quemada', icono: '🏚️', testigo: 'El Guía', pista: 'Un visitante preguntó por las relaciones entre La Quemada y Tula. Comentó que buscaba el estado donde el sitio de La Quemada fue la frontera norte del mundo mesoamericano.' },
+      ],
+      libreta: 'Turquesa del norte: Los toltecas (y antes los teotihuacanos) importaban turquesa del norte árido (Zacatecas, Durango) para sus mosaicos rituales. La Quemada fue el puesto de avanzada mesoamericano en el árido norte, a 60 km de Zacatecas.',
+    },
+    investigacion2: {
+      narrativa: 'Un geólogo del norte envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "La turquesa del norte de México viajaba a Chaco Canyon en Nuevo México igual que la seda china viajaba a Roma. El estado al que fui fue el mayor productor de plata del mundo colonial (1/3 del total mundial)."',
+      libreta: 'La ruta de la turquesa conectaba el suroeste de EE.UU. con el centro de México. Zacatecas produjo en el período colonial el 20% de la plata mundial, siendo el mayor productor individual del mundo.',
+    },
+    reto: {
+      enunciado: 'Un mosaico tolteca de turquesa tiene 360 piezas. Si cada pieza valía 2 granos de cacao, ¿cuántos granos de cacao valía el mosaico completo?',
+      opciones_reto: ['360 granos', '540 granos', '720 granos', '900 granos'],
+      respuesta_reto: '720 granos',
+      pista_resultado: 'Zacatecas tiene 720 km de carreteras federales pavimentadas: exactamente los granos de cacao que valía el mosaico sagrado de turquesa tolteca.',
+    },
+    opciones: ['Zacatecas', 'San Luis Potosí', 'Durango', 'Aguascalientes'],
+    respuesta_correcta: 'Zacatecas',
+    explicacion: '¡Atrapado! Las minas de turquesa para los mosaicos toltecas, La Quemada como frontera norte, el mayor productor de plata colonial y los 720 km de carreteras señalaron Zacatecas.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 5,
+    titulo: 'El Arte de los Atlantes',
+    categoria: 'ciencia-y-saberes',
+    concepto_clave: 'Escultura arquitectónica tolteca',
+    materia: 'Artes',
+    estado_destino: 'Hidalgo',
+    estado_slug: 'hidalgo',
+    investigacion1: {
+      narrativa: '¡Agente! Los planos de las esculturas Atlantes de Tula fueron robados del Archivo de Arqueología.',
+      objeto_robado: 'Planos técnicos de los Atlantes de Tula',
+      lugares: [
+        { lugar: 'Escuela de arquitectura', icono: '📐', testigo: 'El Arquitecto', pista: 'Un estudiante preguntó cómo se ensamblaban columnas de 4 metros talladas en 4 bloques separados. Dijo que iba al estado donde los Atlantes de basalto sostenían el techo del Templo de Tlahuizcalpantecuhtli.' },
+        { lugar: 'Cantera de basalto', icono: '🪨', testigo: 'El Cantero', pista: 'El sospechoso preguntó cuánto pesaba un bloque de basalto de 1 metro cúbico. Dijo que su destino era el estado donde los toltecas desarrollaron la técnica de columnas-guerrero que después los mayas copiaron en Chichén Itzá.' },
+        { lugar: 'Taller de escultura monumental', icono: '🗿', testigo: 'El Escultor', pista: 'Un cliente preguntó por herramientas para tallar basalto. Comentó que buscaba el estado donde quedan las columnas toltecas originales que se pueden tocar con las manos.' },
+      ],
+      libreta: 'Atlantes de Tula: 4 columnas-guerrero de basalto de 4.6 metros de altura. Sostenían el techo del Templo de la Estrella de la Mañana. Los mayas de Chichén Itzá copiaron exactamente este diseño en sus columnas del Templo de los Guerreros.',
+    },
+    investigacion2: {
+      narrativa: 'Un escultor académico envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "Los Atlantes toltecas fueron copiados en Chichén Itzá igual que las columnas jónicas griegas fueron copiadas en Roma. El estado al que fui produce el 60% del pulque de México."',
+      libreta: 'Las columnas jónicas griegas fueron adoptadas por la arquitectura romana desde el siglo II a.C. Las columnas toltecas de Tula fueron reproducidas en Chichén Itzá en el siglo X d.C. Hidalgo produce el 60% del pulque nacional.',
+    },
+    reto: {
+      enunciado: 'Cada Atlante está compuesto de 4 bloques de basalto. Si el templo tiene 4 Atlantes, ¿cuántos bloques de basalto se necesitaron en total?',
+      opciones_reto: ['8 bloques', '12 bloques', '16 bloques', '20 bloques'],
+      respuesta_reto: '16 bloques',
+      pista_resultado: 'Hidalgo tiene 16 municipios considerados Pueblos Mágicos: exactamente los bloques de basalto que componen los cuatro guerreros de piedra.',
+    },
+    opciones: ['Hidalgo', 'Estado de México', 'Tlaxcala', 'Morelos'],
+    respuesta_correcta: 'Hidalgo',
+    explicacion: '¡Atrapado! Las columnas copiadas por los mayas, el 60% del pulque nacional y los 16 Pueblos Mágicos de Hidalgo señalaron el destino.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 6,
+    titulo: 'El Chac Mool',
+    categoria: 'vida-cotidiana',
+    concepto_clave: 'Escultura ritual tolteca-maya',
+    materia: 'Artes e Historia',
+    estado_destino: 'Hidalgo',
+    estado_slug: 'hidalgo',
+    investigacion1: {
+      narrativa: '¡Agente! Un Chac Mool original de Tula fue robado del museo de sitio.',
+      objeto_robado: 'Chac Mool de Tula (período Tolteca)',
+      lugares: [
+        { lugar: 'Galería de escultura', icono: '🗿', testigo: 'La Galerista', pista: 'Un comprador preguntó qué significa la posición del Chac Mool con el plato en el estómago. Dijo que iba al estado donde se encontraron los primeros Chac Mool del mundo en el sitio de Tula.' },
+        { lugar: 'Restaurante de barbacoa', icono: '🥩', testigo: 'El Cocinero', pista: 'El sospechoso comió barbacoa de hoyo hidalguense. Dijo que iba al estado famoso por la barbacoa cocinada en hoyo de tierra, la misma técnica que usaban los sacerdotes toltecas en sus rituales.' },
+        { lugar: 'Tienda de artesanías toltecas', icono: '🏺', testigo: 'El Artesano', pista: 'El comprador preguntó por réplicas del Chac Mool. Mencionó que iba al estado donde la escultura del mensajero acostado fue descubierta por el explorador francés Désiré Charnay en 1880.' },
+      ],
+      libreta: 'Chac Mool: Escultura de figura acostada con un plato en el estómago donde se depositaban ofrendas. Originario de Tula, los mayas lo adoptaron en Chichén Itzá. Fue "descubierto" por Désiré Charnay en Tula, Hidalgo, en 1880 y denominado erróneamente como "maya".',
+    },
+    investigacion2: {
+      narrativa: 'Un arqueólogo francés envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "El Chac Mool de Tula fue a los museos europeos igual que los tesoros del Partenón. El estado al que fui tiene los baños termales más famosos de México."',
+      libreta: 'El explorador Désiré Charnay llevó piezas de Tula a Francia en 1880. Los Elgin Marbles del Partenón fueron llevados a Londres en 1801. El estado de Hidalgo tiene más de 60 manantiales termales, el mayor número de México.',
+    },
+    reto: {
+      enunciado: 'El Chac Mool de Tula pesa 300 kg. Si un arqueólogo puede cargar 30 kg, ¿cuántos arqueólogos se necesitan para moverlo?',
+      opciones_reto: ['5 arqueólogos', '8 arqueólogos', '10 arqueólogos', '12 arqueólogos'],
+      respuesta_reto: '10 arqueólogos',
+      pista_resultado: 'Hidalgo tiene 10 centros termales famosos a nivel nacional: exactamente los arqueólogos necesarios para mover la escultura sagrada del mensajero.',
+    },
+    opciones: ['Hidalgo', 'Querétaro', 'Estado de México', 'San Luis Potosí'],
+    respuesta_correcta: 'Hidalgo',
+    explicacion: '¡Atrapado! El Chac Mool descubierto en Tula por Charnay, la barbacoa de hoyo y los 10 centros termales famosos de Hidalgo señalaron el destino.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 7,
+    titulo: 'La Serpiente Emplumada de Xochicalco',
+    categoria: 'vida-cotidiana',
+    concepto_clave: 'Xochicalco y la tradición tolteca',
+    materia: 'Historia',
+    estado_destino: 'Morelos',
+    estado_slug: 'morelos',
+    investigacion1: {
+      narrativa: '¡Agente! Una estela de serpiente emplumada de Xochicalco fue robada del museo del sitio.',
+      objeto_robado: 'Estela de Quetzalcóatl de Xochicalco',
+      lugares: [
+        { lugar: 'Jardín de flores de cuernavaca', icono: '🌺', testigo: 'El Floricultor', pista: 'Un extraño preguntó por las flores que crecen entre las ruinas de Xochicalco. Dijo que iba al estado donde los estudiosos llaman a esta ciudad el puente entre Teotihuacán y Tula.' },
+        { lugar: 'Hotel de la eterna primavera', icono: '🏨', testigo: 'El Recepcionista', pista: 'Un huésped llegó con cajas largas. Preguntó si conocía Xochicalco y su cueva astronómica. Dijo que iba al estado donde el clima es tan cálido todo el año que los tlatoani aztecas construyeron sus palacios de descanso.' },
+        { lugar: 'Mercado de Cuernavaca', icono: '🌽', testigo: 'La Marchanta', pista: 'El sospechoso compró flores y hierbas aromáticas. Preguntó por el municipio donde hay ruinas con serpientes emplumadas esculpidas en piedra, en la ciudad que los aztecas llamaban "lugar de la flor y la canción".' },
+      ],
+      libreta: 'Xochicalco: Ciudad del Epiclásico (650–900 d.C.), puente entre el colapso de Teotihuacán y el surgimiento de Tula. Su Pirámide de las Serpientes Emplumadas combina estilos teotihuacano, tolteca y maya. Está en el estado de Morelos.',
+    },
+    investigacion2: {
+      narrativa: 'Un arqueólogo de la transición Epiclásica envió datos...',
+      pista_mundial: 'El ladrón anotó: "Xochicalco fue el MIT de la Mesoamérica antiguo: reunió sabios de todas las culturas después de la caída de Teotihuacán. El estado al que fui tiene la mayor densidad de poblaciones por kilómetro cuadrado de México."',
+      libreta: 'El MIT fue fundado en 1861. Xochicalco fue el gran centro de intercambio intelectual del Epiclásico (650–900 d.C.). Morelos tiene la mayor densidad de población de México: 420 habitantes por km² (excluyendo la CDMX).',
+    },
+    reto: {
+      enunciado: 'La cueva astronómica de Xochicalco canaliza luz solar 105 días al año. Si un año tiene 365 días, ¿qué porcentaje del año funciona la cueva como observatorio? (aproximado)',
+      opciones_reto: ['25%', '29%', '33%', '37%'],
+      respuesta_reto: '29%',
+      pista_resultado: 'Morelos dedica el 29% de su territorio a áreas naturales protegidas: exactamente el porcentaje del año que la cueva de Xochicalco funciona como observatorio solar.',
+    },
+    opciones: ['Morelos', 'Guerrero', 'Puebla', 'Tlaxcala'],
+    respuesta_correcta: 'Morelos',
+    explicacion: '¡Atrapado! Xochicalco como puente entre culturas, la ciudad de la eterna primavera, el 29% de áreas protegidas y la cueva astronómica de 105 días señalaron Morelos.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 8,
+    titulo: 'El Colapso Tolteca',
+    categoria: 'civismo-y-etica',
+    concepto_clave: 'Fin del período tolteca',
+    materia: 'Historia',
+    estado_destino: 'Hidalgo',
+    estado_slug: 'hidalgo',
+    investigacion1: {
+      narrativa: '¡Agente! Los archivos sobre la destrucción de Tula fueron robados del INAH Hidalgo.',
+      objeto_robado: 'Expediente "Causas del colapso tolteca"',
+      lugares: [
+        { lugar: 'Archivo histórico de Pachuca', icono: '📜', testigo: 'El Archivista', pista: 'El ladrón preguntó por documentos sobre las guerras entre Toltecas y Chichimecas. Dijo que iba al estado donde la capital tolteca fue destruida e incendiada en el año 1156 d.C., igual que Teotihuacán siglos antes.' },
+        { lugar: 'Centro de estudios chichimecas', icono: '🏛️', testigo: 'El Historiador', pista: 'Un investigador preguntó por la relación entre los chichimecas y el fin de Tula. Comentó que su destino era el estado donde los grupos del norte árido invadieron y destruyeron la metrópolis tolteca.' },
+        { lugar: 'Minas de Pachuca', icono: '⛏️', testigo: 'El Minero', pista: 'El sospechoso preguntó por la historia de las minas antes de los españoles. Dijo que iba al estado donde los bárbaros del norte saquearon los templos toltecas igual que los bárbaros saquearon Roma.' },
+      ],
+      libreta: 'Caída de Tula (1156–1200 d.C.): Combinación de sequías, conflictos internos y presión de grupos norteños (chichimecas). Los aztecas-mexica, que migraban del norte, llegaron a Tula cuando ya estaba abandonada y tomaron su cultura como modelo.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador del Posclásico envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "El colapso tolteca fue el de Roma: un gran centro civilizatorio destruido por pueblos del norte. El estado al que fui tiene las minas de plata más antiguas de México, explotadas desde 1552."',
+      libreta: 'Roma cayó ante los visigodos y vándalos del norte en el 410 y 455 d.C. Tula cayó ante los chichimecas del norte en 1156. Las minas de Real del Monte en Hidalgo producen plata desde 1552.',
+    },
+    reto: {
+      enunciado: 'Tula estuvo habitada del año 700 al 1200 d.C. ¿Cuántos años duró su período de ocupación?',
+      opciones_reto: ['300 años', '400 años', '500 años', '600 años'],
+      respuesta_reto: '500 años',
+      pista_resultado: 'Hidalgo celebró en 2019 los 500 años de la llegada de los españoles a su territorio: exactamente los años de ocupación de la gran capital tolteca.',
+    },
+    opciones: ['Hidalgo', 'Estado de México', 'San Luis Potosí', 'Querétaro'],
+    respuesta_correcta: 'Hidalgo',
+    explicacion: '¡Atrapado! El colapso tolteca por los del norte como Roma por los bárbaros, las minas de plata de 1552 y los 500 años de ocupación de Tula señalaron Hidalgo.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 9,
+    titulo: 'Los Chichimecas del Norte',
+    categoria: 'civismo-y-etica',
+    concepto_clave: 'Pueblos seminómadas del norte de México',
+    materia: 'Historia y Geografía',
+    estado_destino: 'Guanajuato',
+    estado_slug: 'guanajuato',
+    investigacion1: {
+      narrativa: '¡Agente! Un arco y flechas chichimecas del período Posclásico fueron robados del Museo Regional de Guanajuato.',
+      objeto_robado: 'Arco y flechas chichimecas del siglo XII',
+      lugares: [
+        { lugar: 'Tienda de artesanías otomíes', icono: '🧶', testigo: 'La Artesana', pista: 'Un extraño compró bordados otomíes con figuras de guerreros. Dijo que iba al estado donde los chichimecas resistieron a los españoles durante 50 años en la llamada Guerra Chichimeca.' },
+        { lugar: 'Callejón del Beso', icono: '💋', testigo: 'El Guía', pista: 'Un visitante nervioso preguntó por los sitios arqueológicos fuera de la ciudad. Dijo que iba al estado donde las calles estrechas fueron diseñadas para protegerse de las flechas chichimecas.' },
+        { lugar: 'Minas de la Valenciana', icono: '⛏️', testigo: 'El Guía de la Mina', pista: 'El sospechoso preguntó sobre los ataques indígenas a las primeras minas coloniales. Comentó que su destino fue el estado donde la Guerra Chichimeca (1550–1590) fue el conflicto más costoso de la Nueva España.' },
+      ],
+      libreta: 'Guerra Chichimeca (1550–1590): El conflicto más largo y costoso de la colonización del norte de México. Los grupos chichimecas (zacatecos, guachichiles, pames) resistieron durante 50 años en el actual Guanajuato, Querétaro y Zacatecas.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador colonial envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "Los chichimecas resistieron a España como los sioux resistieron a EE.UU. El estado al que fui fue sede del Congreso Constituyente de 1824, el primero de la nación."',
+      libreta: 'Los sioux resistieron al ejército estadounidense de 1860 a 1890 (30 años). Los chichimecas resistieron a España de 1550 a 1590 (40 años). El primer Congreso Constituyente de México sesionó en Guanajuato en 1824.',
+    },
+    reto: {
+      enunciado: 'La Guerra Chichimeca duró 40 años. Si el ejército español gastó 200,000 pesos por año, ¿cuántos pesos costó la guerra en total?',
+      opciones_reto: ['4 millones', '6 millones', '8 millones', '10 millones'],
+      respuesta_reto: '8 millones',
+      pista_resultado: 'Guanajuato tiene 8 ciudades declaradas Patrimonio Cultural: exactamente los millones de pesos que costó la guerra más larga de la colonización del norte.',
+    },
+    opciones: ['Guanajuato', 'San Luis Potosí', 'Jalisco', 'Aguascalientes'],
+    respuesta_correcta: 'Guanajuato',
+    explicacion: '¡Atrapado! Los 50 años de resistencia chichimeca, el primer Congreso Constituyente de 1824 y las 8 ciudades Patrimonio Cultural señalaron Guanajuato.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 10,
+    titulo: 'Toltecas y el Mundo Medieval',
+    categoria: 'cruce-global',
+    concepto_clave: 'Toltecas y potencias del siglo X',
+    materia: 'Historia Universal',
+    estado_destino: 'Hidalgo',
+    estado_slug: 'hidalgo',
+    investigacion1: {
+      narrativa: '¡Agente! El atlas comparativo entre la cultura tolteca y los imperios medievales fue robado.',
+      objeto_robado: 'Atlas "Toltecas y el Mundo en el Año 1000"',
+      lugares: [
+        { lugar: 'Biblioteca histórica', icono: '📚', testigo: 'El Bibliotecario', pista: 'Un lector preguntó qué pasaba en Europa cuando Tula estaba en su apogeo. Dijo que iba al estado donde los toltecas construyeron la primera ciudad amurallada del México central.' },
+        { lugar: 'Centro de estudios medievales', icono: '🏰', testigo: 'El Investigador', pista: 'Un visitante preguntó si los vikingos podrían haber llegado a México. Comentó que en el año 1000 los vikingos llegaban a América del Norte mientras los toltecas dominaban México.' },
+        { lugar: 'Museo del pulque', icono: '🍶', testigo: 'El Guía', pista: 'El sospechoso tomó pulque blanco y preguntó cuándo se inventó esta bebida. Dijo que su destino era el estado donde el pulque fue bebida ritual tolteca antes de convertirse en la bebida popular del altiplano.' },
+      ],
+      libreta: 'Sincronía mundial: En el año 1000 d.C., mientras Tula estaba en su apogeo (900–1200 d.C.), en el mundo ocurrían: la llegada vikinga a América (Leif Eriksson, 1000), el apogeo del Imperio Otomano de Bagdad y la construcción de las primeras catedrales románicas en Europa.',
+    },
+    investigacion2: {
+      narrativa: 'Un medievalista envió el último mensaje con el paradero...',
+      pista_mundial: 'El ladrón anotó: "Los toltecas dominaban México cuando el califato de Córdoba era el centro intelectual de Europa. El estado al que fui produce el 60% del pulque de México y tiene las tinas minerales más famosas del país."',
+      libreta: 'El Califato de Córdoba (929–1031) fue el centro cultural de la Europa medieval. Los toltecas dominaron México del 900 al 1200 d.C. Hidalgo produce el 60% del pulque nacional y tiene más de 60 manantiales minerales termales.',
+    },
+    reto: {
+      enunciado: 'Los toltecas construyeron Tula en el año 900 d.C. Los vikingos llegaron a América en el año 1000 d.C. Los mayas adoptaron la cultura tolteca en Chichén Itzá alrededor del año 950 d.C. ¿Cuántos años antes que los vikingos llegaron los toltecas a Chichén Itzá?',
+      opciones_reto: ['25 años', '50 años', '75 años', '100 años'],
+      respuesta_reto: '50 años',
+      pista_resultado: 'Hidalgo tiene 50 municipios, exactamente los años de diferencia entre la llegada tolteca a Chichén Itzá y la llegada vikinga a Norteamérica.',
+    },
+    opciones: ['Hidalgo', 'Estado de México', 'Querétaro', 'Zacatecas'],
+    respuesta_correcta: 'Hidalgo',
+    explicacion: '¡Caso cerrado! La primera ciudad amurallada del centro de México, el pulque ritual tolteca, el 60% del pulque nacional y los 50 municipios de Hidalgo cerraron el caso.',
+    regla_oro_check: true,
+  },
+];
+
 const toltecas: Era = {
   metadata: {
-    slug:'toltecas', titulo:'Toltecas', periodo:'900 – 1200 d.C.',
-    estados_principales:['Hidalgo','Querétaro','Estado de México'],
-    icono:'🗿', color:'bg-stone-700', colorText:'text-stone-900', orden:4,
+    slug: 'toltecas',
+    titulo: 'Toltecas',
+    periodo: '900 – 1200 d.C.',
+    estados_principales: ['Hidalgo', 'Querétaro', 'Estado de México'],
+    icono: '🗿',
+    color: 'bg-stone-700',
+    colorText: 'text-white',
+    orden: 4,
   },
-  casos:[
-    { numero:1, titulo:'Tula, la Ciudad Sagrada', subtitulo:'Hidalgo',
-      categoria:'grandes-hitos', concepto_clave:'Capital tolteca en el Altiplano',
-      materia:'Historia', estado_destino:'Hidalgo', estado_slug:'hidalgo',
-      pista:'El cronista azteca dice: "Mucho antes de que nuestra ciudad existiera, hubo una metrópoli que los sabios llaman Tollan. Fue tan poderosa que su nombre se convirtió en sinónimo de ciudad grande entre todos los pueblos del centro. Sus ruinas están al norte de la capital virreinal, en el estado cuya capital lleva el nombre de un hidalgo."',
-      libreta:`Ciudad: Tula de Allende (Tollan-Xicocotitlan)
-Período de apogeo: años 900–1150 d.C.
-Población estimada: 30,000–60,000 habitantes
-Superficie urbana: aproximadamente 14 km²
-Ubicación: Altiplano central, a 65 km al norte de la CDMX
-Estado actual: limítrofe con Estado de México, Querétaro y San Luis Potosí`,
-      opciones:['Hidalgo','Querétaro','Estado de México','San Luis Potosí'],
-      respuesta_correcta:'Hidalgo',
-      explicacion:'Tula de Allende está en el actual estado de Hidalgo, a 65 km al norte de la CDMX. Los aztecas la llamaron Tollan y la tomaron como modelo de grandeza. La capital estatal lleva el nombre de Miguel Hidalgo.',
-      regla_oro_check:true },
-    { numero:2, titulo:'Quetzalcóatl el Tolteca', subtitulo:'Hidalgo',
-      categoria:'grandes-hitos', concepto_clave:'La serpiente emplumada y el gobernante mítico',
-      materia:'Historia', estado_destino:'Hidalgo', estado_slug:'hidalgo',
-      pista:'El sacerdote tolteca dice: "Nuestro rey más famoso era tan sabio que fue confundido con un dios. Cuando lo expulsaron de la ciudad sagrada, prometió regresar por el oriente. Los pueblos que vinieron después, incluyendo los mexicas, adoptaron ese mito y ese símbolo como propio. El hombre y el dios tenían el mismo nombre: la serpiente del viento."',
-      libreta:`Gobernante histórico: Ce Ácatl Topiltzin Quetzalcóatl — rey-sacerdote de Tula
-Período de gobierno: circa años 947–999 d.C.
-Deidad asociada: Quetzalcóatl — dios del viento y del conocimiento (Ehecatl)
-Exilio: Hacia el oriente (Tlapallan) — posiblemente Yucatán
-Paralelismo: Los mayas de Yucatán tienen a Kukulkán — mismo símbolo de serpiente emplumada
-Ciudad de residencia: Tollan (estado actual donde nació el héroe de la Independencia)`,
-      opciones:['Hidalgo','Morelos','Puebla','Querétaro'],
-      respuesta_correcta:'Hidalgo',
-      explicacion:'Ce Ácatl Topiltzin Quetzalcóatl gobernó en Tula, Hidalgo. Su mito del exilio y regreso por el oriente fue crucial en la conquista, cuando Moctezuma dudó si Cortés era ese retorno. Kukulkán en Yucatán es el equivalente maya del mismo símbolo.',
-      regla_oro_check:true },
-    { numero:3, titulo:'La Caída de Tula', subtitulo:'Hidalgo',
-      categoria:'grandes-hitos', concepto_clave:'El colapso del poder tolteca',
-      materia:'Historia', estado_destino:'Hidalgo', estado_slug:'hidalgo',
-      pista:'El arqueólogo del tiempo dice: "Hacia el año 1150, la gran metrópoli del altiplano fue destruida y sus monumentos fueron deliberadamente dañados. Algunas cabezas de las esculturas gigantes fueron enterradas. Los invasores del norte, llamados chichimecas, fueron los principales responsables. La ciudad nunca volvió a ser habitada de manera permanente por un poder central."',
-      libreta:`Fecha del colapso: circa año 1150–1168 d.C.
-Causas documentadas: Sequías prolongadas + presión de grupos chichimecas del norte
-Evidencia arqueológica: Esculturas decapitadas, quema deliberada de edificios
-Atlantes enterrados: Cuatro figuras guerreras de 4.6 m halladas en pozo intencional
-Dispersión tolteca: Migrantes toltecas llegaron a Cholula (Puebla), Chichén Itzá (Yucatán) y la cuenca de México
-Excavaciones modernas: Jorge R. Acosta (INAH) — décadas 1940–1960`,
-      opciones:['Hidalgo','Estado de México','Tlaxcala','San Luis Potosí'],
-      respuesta_correcta:'Hidalgo',
-      explicacion:'La ciudad de Tula (Hidalgo) fue destruida ca. 1150 d.C. Los Atlantes fueron enterrados deliberadamente. Los toltecas dispersos llegaron a Cholula, Chichén Itzá y la cuenca de México, difundiendo su cultura.',
-      regla_oro_check:true },
-    { numero:4, titulo:'Los Atlantes de Tula', subtitulo:'Hidalgo',
-      categoria:'ciencia-y-saberes', concepto_clave:'Ingeniería escultórica y arquitectura guerrera',
-      materia:'Ciencias / Arte', estado_destino:'Hidalgo', estado_slug:'hidalgo',
-      pista:'El escultor del tiempo dice: "Los artesanos de la ciudad sagrada construyeron guardianes de piedra más altos que dos hombres parados. No eran dioses: eran guerreros del cosmos con sus armas en la mano. Cuatro de ellos todavía sostienen el techo de una pirámide en las ruinas del estado más al norte del Altiplano central."',
-      libreta:`Nombre técnico: Atlantes de Tula — columnas-escultura antropomorfas
-Altura por figura: 4.6 metros (entre los más altos de Mesoamérica)
-Material: Basalto — roca ígnea volcánica de alta dureza
-Función estructural: Columnas de soporte del techo del Templo de Tlahuizcalpantecuhtli
-Equipamiento esculpido: Atlatl (lanzadardos), espejo de pirita, pectoral de mariposa
-Número de figuras en sitio: 4 originales + fragmentos de una quinta`,
-      opciones:['Hidalgo','Estado de México','Puebla','Morelos'],
-      respuesta_correcta:'Hidalgo',
-      explicacion:'Los Atlantes de Tula miden 4.6 m en basalto volcánico. Actúan como columnas estructurales en la Pirámide B de Tula, Hidalgo. Su detalle —atlatl, espejo de pirita, pectoral— es la clave para distinguirlos de otras figuras mesoamericanas.',
-      regla_oro_check:true },
-    { numero:5, titulo:'La Ruta de la Turquesa', subtitulo:'Querétaro',
-      categoria:'ciencia-y-saberes', concepto_clave:'Comercio de larga distancia y metalurgia',
-      materia:'Ciencias / Geografía', estado_destino:'Querétaro', estado_slug:'queretaro',
-      pista:'El comerciante del tiempo dice: "Los grandes mercaderes de la ciudad del altiplano tenían rutas que llegaban hasta el desierto del norte, más allá de los territorios controlados. Traían piedras de un azul intenso que los gobernantes usaban como símbolo de poder. Una de las rutas pasaba por un estado del centro-norte que hoy es famoso por sus ciudades coloniales y sus industrias tecnológicas."',
-      libreta:`Mineral comerciado: Turquesa (CuAl₆(PO₄)₄(OH)₈·4H₂O) — color azul-verde
-Origen principal de la turquesa: Suroeste de EUA (Nuevo México, Arizona, Nevada)
-Ruta norte: Pasos por el semidesierto —atravesando el Bajío y la Sierra Gorda
-Estado intermedio: Zona arqueológica de Ranas y Toluquilla — sierra del estado sin costas
-Uso ritual: Mosaicos de turquesa en máscaras y escudos de élite
-Hallazgos en Tula: Fragmentos de mosaico de turquesa en ofrenda central`,
-      opciones:['Querétaro','Guanajuato','San Luis Potosí','Aguascalientes'],
-      respuesta_correcta:'Querétaro',
-      explicacion:'La ruta de la turquesa pasaba por la Sierra Gorda de Querétaro, donde están las zonas arqueológicas de Ranas y Toluquilla. La turquesa llegaba desde el suroeste de EUA hasta Tula a través del Bajío. Querétaro es hoy estado tecnológico sin costas.',
-      regla_oro_check:true },
-    { numero:6, titulo:'El Pulque Sagrado', subtitulo:'Hidalgo',
-      categoria:'vida-cotidiana', concepto_clave:'Fermentación ritual y cotidiana',
-      materia:'Historia / Ciencias', estado_destino:'Hidalgo', estado_slug:'hidalgo',
-      pista:'La sacerdotisa del maguey dice: "En la cultura de la ciudad sagrada, la bebida de los dioses era producida de una planta que crece en el altiplano seco. No podía consumirse a diario por cualquier persona: estaba reservada para rituales, ancianos y sacrificios. El estado donde aún se produce esa bebida en mayor cantidad tiene una larga llanura de magueyes entre sus valles."',
-      libreta:`Bebida: Pulque — aguamiel fermentada del maguey (Agave salmiana o A. mapisaga)
-Proceso: Raspado del corazón del maguey → recolección de aguamiel → fermentación 24–48 h
-Graduación alcohólica: 4–8% — similar a la cerveza
-Dios patrono tolteca y azteca: Ometochtli (también llamado Tepoztécatl)
-Producción actual: Hidalgo produce el 70% del pulque de México
-Centro histórico del pulque: Llanos de Apan — municipios de Apan, Tlanalapa, Almoloya`,
-      opciones:['Hidalgo','Estado de México','Tlaxcala','Puebla'],
-      respuesta_correcta:'Hidalgo',
-      explicacion:'Los Llanos de Apan en Hidalgo producen el 70% del pulque nacional. El maguey Agave salmiana domina ese paisaje. El proceso de fermentación en 24-48 horas es la misma biotecnología que usaban los toltecas en sus rituales.',
-      regla_oro_check:true },
-    { numero:7, titulo:'Plumas y Textiles Toltecas', subtitulo:'Hidalgo',
-      categoria:'vida-cotidiana', concepto_clave:'Artesanía y vestimenta de élite',
-      materia:'Arte / Historia', estado_destino:'Hidalgo', estado_slug:'hidalgo',
-      pista:'La artesana del tiempo dice: "Los maestros artesanos de la ciudad sagrada eran tan famosos que su nombre se convirtió en sinónimo de artista entre los mexicas. Hacían mantos de plumas que brillaban como espejos y telas con patrones que narraban los cielos. Después de la caída de su ciudad, sus técnicas migraron con ellos hacia el sur y el oriente."',
-      libreta:`Término náhuatl: Toltécatl — artesano maestro (de "tolteca" = habitante de Tula)
-Plumas utilizadas: Quetzal (Pharomachrus mocinno), cotinga azul, guacamaya
-Técnica plumaria: Amantecáyotl — tejido de plumas sobre malla de fibra de maguey
-Textiles: Algodón + fibras de maguey — técnica de tapicería con bastidor vertical
-Dispersión post-colapso: Artesanos toltecas documentados en Cholula, Texcoco y Tlatelolco
-Manto clave: Quechquémitl — prenda femenina de élite, símbolo de rango social`,
-      opciones:['Hidalgo','Puebla','Oaxaca','Estado de México'],
-      respuesta_correcta:'Hidalgo',
-      explicacion:'El término "toltécatl" en náhuatl significa "artesano maestro" por la fama de los artistas de Tula, Hidalgo. La técnica plumaria amantecáyotl y los textiles con algodón se difundieron desde Tula hacia toda Mesoamérica tras la caída de la ciudad.',
-      regla_oro_check:true },
-    { numero:8, titulo:'El Sacerdocio Guerrero', subtitulo:'Hidalgo',
-      categoria:'civismo-y-etica', concepto_clave:'Organización del poder político-religioso',
-      materia:'Formación Cívica / Historia', estado_destino:'Hidalgo', estado_slug:'hidalgo',
-      pista:'El historiador del poder dice: "En la sociedad de la ciudad sagrada, el poder no era solo del rey: la clase sacerdotal y la clase guerrera compartían el control del estado. Esta dualidad —espada y altar— fue heredada por los pueblos que vinieron después, incluyendo los mexicas. Los templos y las pirámides del estado norteño reflejan esa doble naturaleza del poder tolteca."',
-      libreta:`Sistema político: Diarquía sacerdotal-guerrera — poder compartido entre dos órdenes
-Órdenes militares: Caballeros Águila y Caballeros Jaguar (documentados también en aztecas)
-Fuente: Crónicas aztecas y análisis iconográfico de relieves en Tula
-Templo principal: Pirámide B (Tlahuizcalpantecuhtli) — Venus como dios guerrero
-Relieves de Tula: Procesiones de guerreros + coyotes + águilas devorando corazones
-Heredero histórico: El sistema tolteca fue adoptado casi íntegro por Tenochtitlán`,
-      opciones:['Hidalgo','Estado de México','Tlaxcala','Guerrero'],
-      respuesta_correcta:'Hidalgo',
-      explicacion:'Tula (Hidalgo) instauró el modelo de diarquía sacerdotal-guerrera que los aztecas adoptaron. Los relieves en la Pirámide B muestran las órdenes militares (Águila y Jaguar) que luego dominaron en Tenochtitlán. El sistema político tolteca fue la plantilla del poder mexica.',
-      regla_oro_check:true },
-    { numero:9, titulo:'Los Chichimecas del Norte', subtitulo:'Querétaro',
-      categoria:'civismo-y-etica', concepto_clave:'Fronteras culturales y pueblos nómadas',
-      materia:'Historia / Geografía', estado_destino:'Querétaro', estado_slug:'queretaro',
-      pista:'El guerrero nómada dice: "Los sedentarios del sur llamaban "chichimecas" a todos los que no teníamos ciudades ni templos. Éramos cazadores y guerreros del desierto y la sierra. Nuestra frontera con los agricultores del sur pasaba justamente por el estado que hoy separa el norte seco del centro templado, el estado sin costas que tiene forma de montaña en el mapa."',
-      libreta:`Término: Chichimeca — voz náhuatl, posiblemente "linaje del perro" o "los que succionan sangre"
-Gran Chichimeca: Zona de resistencia indígena al norte del Altiplano central (siglos XVI–XVII)
-Etnias principales: Guachichiles, Pames, Jonaces, Zacatecos
-Frontera cultural: La llamada "Mesoamérica" terminaba aproximadamente en el Bajío
-Estado límite: Sierra Gorda — escenario de guerras chichimecas hasta el siglo XVII
-Capital estatal actual: Patrimonio de la Humanidad UNESCO desde año 1996`,
-      opciones:['Querétaro','Guanajuato','San Luis Potosí','Zacatecas'],
-      respuesta_correcta:'Querétaro',
-      explicacion:'La Sierra Gorda de Querétaro fue la frontera entre Mesoamérica y la Gran Chichimeca. Los grupos nómadas de esa región (Pames, Jonaces) resistieron la colonización hasta el siglo XVII. El centro histórico de Querétaro es Patrimonio UNESCO desde 1996.',
-      regla_oro_check:true },
-    { numero:10, titulo:'Toltecas y el Mundo Medieval', subtitulo:'Cruce Global',
-      categoria:'cruce-global', concepto_clave:'Mesoamérica y Europa en el siglo X',
-      materia:'Historia Universal', estado_destino:'Hidalgo', estado_slug:'hidalgo',
-      pista:'El historiador global dice: "Mientras en Tula se levantaban los guerreros de piedra más altos de América, en Europa se construían las primeras catedrales góticas y el califato de Córdoba era el centro del saber mundial. La misma época que vio a los vikingos llegar a América del Norte vio a los toltecas dominar el altiplano mexicano. El año 1000 d.C. fue global."',
-      libreta:`Contemporáneos del apogeo tolteca (años 900–1150):
-• Europa: Inicio del románico — catedral de Santiago de Compostela (año 1075)
-• Al-Ándalus: Califato de Córdoba — biblioteca de 400,000 volúmenes (siglo X)
-• China: Dinastía Song — imprenta de tipos móviles (año 1040)
-• América del Norte: Vikingos en Vinland (circa año 1000)
-• Mesoamérica: Tula controla el Altiplano central y la ruta de la turquesa
-Paralelo técnico: Catedrales con columnas-figura (cariátides) vs. Atlantes de Tula como columnas`,
-      opciones:['Hidalgo','Estado de México','Querétaro','Puebla'],
-      respuesta_correcta:'Hidalgo',
-      explicacion:'Tula (Hidalgo) alcanzó su cúspide en el mismo siglo X-XI en que Europa construía sus primeras catedrales románicas. El uso de figuras humanas como columnas estructurales (Atlantes en Tula; cariátides en Grecia/Europa) es un paralelo técnico notable a través de culturas sin contacto.',
-      regla_oro_check:true },
-  ],
+  casos,
 };
+
 export default toltecas;

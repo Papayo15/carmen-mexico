@@ -6,146 +6,496 @@ const reforma: Era = {
     icono:'⚖️', color:'bg-cyan-800', colorText:'text-cyan-900', orden:10,
   },
   casos:[
-    { numero:1, titulo:'El Benemérito de las Américas', subtitulo:'Oaxaca',
-      categoria:'grandes-hitos', concepto_clave:'Benito Juárez y el estado laico',
-      materia:'Historia', estado_destino:'Oaxaca', estado_slug:'oaxaca',
-      pista:'El pastor zapoteco dice: "El presidente que defendió México de tres potencias europeas empezó siendo un niño que pastoreaba ovejas sin saber español. Llegó a ser el abogado más importante del país. Su estado natal es famoso por el mole negro y el mezcal."',
-      libreta:`Nombre: Benito Pablo Juárez García (1806–1872)
-Pueblo: San Pablo Guelatao, Sierra Norte de Oaxaca
-Idioma materno: Zapoteco (aprendió español a los 12 años)
-Primer empleo en la capital estatal: Sirviente del librero Antonio Maza
-Bebida destilada del estado: Mezcal (Agave angustifolia) — denominación de origen
-Gastronomía icónica: Mole negro con más de 30 ingredientes incluyendo chile y chocolate`,
+    {
+      numero:1,
+      titulo:'El Benemérito de las Américas',
+      categoria:'grandes-hitos',
+      concepto_clave:'Benito Juárez y el estado laico',
+      materia:'Historia',
+      estado_destino:'Oaxaca',
+      estado_slug:'oaxaca',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el retrato oficial de Juárez niño del Museo de los Pintores Oaxaqueños.',
+        objeto_robado:'Retrato al óleo de Benito Juárez niño (1820)',
+        lugares:[
+          {
+            lugar:'Mercado Benito Juárez',
+            icono:'🛖',
+            testigo:'Abuela Rosalinda',
+            pista:'Una señora con abrigo negro preguntó por el pueblo donde nació un niño pastor que no sabía español y llegó a ser el hombre más importante de México.',
+          },
+          {
+            lugar:'Café La Soledad',
+            icono:'☕',
+            testigo:'Barista Fermín',
+            pista:'Un hombre pidió mezcal y dijo que buscaba el estado donde nació el único presidente indígena de México, el mismo que defendió al país de tres ejércitos europeos.',
+          },
+          {
+            lugar:'Aeropuerto Xoxocotlán',
+            icono:'✈️',
+            testigo:'Agente de migración Perla',
+            pista:'Pasó una mujer con cuadro enrollado. Declaró destino al estado donde el mole negro se hace con más de 30 ingredientes y el mezcal tiene denominación de origen propia.',
+          },
+        ],
+        libreta:'Benito Juárez: nacido en San Pablo Guelatao, Oaxaca, 1806. Idioma materno: zapoteco. Aprendió español a los 12 años. Primer empleo: sirviente del librero Antonio Maza en Oaxaca. Mole negro oaxaqueño: hasta 36 ingredientes. Mezcal: denominación de origen en Oaxaca desde 1994.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una tarjeta con frases del propio Juárez.',
+        pista_mundial:'"El respeto al derecho ajeno es la paz" — Benito Juárez (1867). El ladrón escribió: "Busco el estado del único presidente latinoamericano del siglo XIX que Abraham Lincoln llamó su igual, el que venía de los mismos cerros que el chocolate y la grana cochinilla."',
+        libreta:'Lincoln reconoció al gobierno de Juárez durante la Intervención Francesa. Grana cochinilla (Dactylopius coccus): tinte rojo de nopal, exportado desde Oaxaca al mundo desde el siglo XVI. Chocolate: el cacao que usaban los zapotecas venía de la zona costera de Oaxaca.',
+      },
+      reto:{
+        enunciado:'Juárez nació en 1806 y murió en 1872. Si presidió México dos períodos (1858-1864 y 1867-1872), ¿cuántos años en total fue presidente?',
+        opciones_reto:['9 años','11 años','13 años','15 años'],
+        respuesta_reto:'11 años',
+        pista_resultado:'11 años de presidencia — Oaxaca tiene 570 municipios, los más de cualquier estado de México, divididos en 8 regiones y 30 distritos, con más de 11 etnias originarias vivas.',
+      },
       opciones:['Oaxaca','Guerrero','Chiapas','Michoacán'],
       respuesta_correcta:'Oaxaca',
-      explicacion:'Benito Juárez nació en San Pablo Guelatao, Oaxaca. Habló zapoteco como primer idioma. El mezcal con denominación de origen y el mole negro son marcadores únicos de Oaxaca.',
-      regla_oro_check:true },
-    { numero:2, titulo:'Las Leyes de Reforma', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'Separación Iglesia-Estado en México',
-      materia:'Historia / Formación Cívica', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'La abogada del tiempo dice: "El conjunto de leyes más importante del siglo XIX ordenó separar al gobierno de la religión. Los cementerios pasaron a manos civiles, el matrimonio se volvió contrato legal y los templos religiosos no podían tener propiedades ajenas al culto. Esas leyes se aplicaron desde la capital del país."',
-      libreta:`Ley Lerdo: Desamortización de bienes eclesiásticos (año 1856)
-Ley Juárez: Supresión de fueros militares y eclesiásticos (año 1855)
-Matrimonio civil: Primera vez que el Estado registra uniones en México (año 1857)
-Iglesia poseía antes de la Reforma: Aprox. 50% del territorio urbano nacional
-Constitución liberal: 5 de febrero de año 1857 — base del sistema jurídico moderno
-Promulgadas formalmente: Ciudad de México (sede del gobierno liberal)`,
+      explicacion:'¡Atrapado! Uniste la pista del mezcal con denominación de origen (Oaxaca), el dato de Lincoln y la grana cochinilla, y calculaste: (1864−1858) + (1872−1867) = 6+5 = 11 años de presidencia — igual a las más de 11 etnias originarias de Oaxaca.',
+      regla_oro_check:true,
+    },
+    {
+      numero:2,
+      titulo:'Las Leyes de Reforma',
+      categoria:'grandes-hitos',
+      concepto_clave:'Separación Iglesia-Estado en México',
+      materia:'Historia / Formación Cívica',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una copia original de la Ley Lerdo del Archivo General de la Nación.',
+        objeto_robado:'Copia auténtica de la Ley Lerdo (1856)',
+        lugares:[
+          {
+            lugar:'Archivo General de la Nación (Lecumberri)',
+            icono:'🗄️',
+            testigo:'Archivista Dolores',
+            pista:'Vi a alguien fotografiar el documento. Llevaba ropa gris y dijo que el texto que buscaba era "el que quitó a la Iglesia sus propiedades en la capital, donde el Zócalo mide exactamente la mitad de un kilómetro por lado".',
+          },
+          {
+            lugar:'Catedral Metropolitana',
+            icono:'⛪',
+            testigo:'Sacristán Ignacio',
+            pista:'Un extranjero preguntó si era cierto que la Iglesia tenía el 50% del suelo urbano antes de las leyes liberales. Le dije que sí, aquí en la capital. Se fue al poniente, hacia Paseo de la Reforma.',
+          },
+          {
+            lugar:'Registro Civil de la CDMX',
+            icono:'📋',
+            testigo:'Oficial Beatriz',
+            pista:'Una mujer pedía información del primer matrimonio civil registrado en México. Le expliqué que ocurrió en 1859 en la misma ciudad donde está el Palacio Nacional, la residencia del poder.',
+          },
+        ],
+        libreta:'Ley Lerdo (1856): desamortización de bienes eclesiásticos. Ley Juárez (1855): supresión de fueros militares y eclesiásticos. La Iglesia poseía ~50% del territorio urbano nacional antes de las leyes. Matrimonio civil: establecido en 1859. Constitución liberal: 5 de febrero de 1857. Promulgadas desde Ciudad de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó fotocopias de leyes comparadas de varios países.',
+        pista_mundial:'Las fotocopias incluían: "Ley de Separación Iglesia-Estado de Francia (1905), Kulturkampf alemán de Bismarck (1871), y Reforma de Juárez (1855-1861). Las tres ocurrieron en capitales nacionales: París, Berlín y la Ciudad de México. El patrón es claro: el Estado moderno nació quitando poder a la Iglesia."',
+        libreta:'Kulturkampf: política de Bismarck en Berlín para limitar el poder de la Iglesia Católica en Alemania (1871-1887). Ley de separación de Francia: 1905. La Ciudad de México fue sede del gobierno liberal incluso cuando Juárez gobernaba en itinerancia (1858-1861).',
+      },
+      reto:{
+        enunciado:'Si la Iglesia poseía el 50% del territorio urbano de la CDMX y la ciudad tenía 1,200 manzanas, ¿cuántas manzanas pertenecían a la Iglesia?',
+        opciones_reto:['400','500','600','700'],
+        respuesta_reto:'600',
+        pista_resultado:'600 manzanas — la Ciudad de México tiene más de 600 colonias registradas en su territorio actual.',
+      },
       opciones:['Ciudad de México','Veracruz','Oaxaca','Jalisco'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'Las Leyes de Reforma y la Constitución de 1857 se instrumentaron desde la Ciudad de México. La Iglesia poseía el 50% del territorio urbano antes de estas leyes. El matrimonio civil y la supresión de fueros son hitos de la secularización del Estado.',
-      regla_oro_check:true },
-    { numero:3, titulo:'La Batalla del 5 de Mayo', subtitulo:'Puebla',
-      categoria:'grandes-hitos', concepto_clave:'Resistencia a la intervención extranjera',
-      materia:'Historia', estado_destino:'Puebla', estado_slug:'puebla',
-      pista:'El general Zaragoza dice: "El 5 de mayo de 1862, 4,000 soldados mexicanos mal equipados derrotaron a 6,000 tropas del ejército más poderoso de Europa en ese momento. La batalla ocurrió en la ciudad que hoy celebra ese aniversario con la fiesta más conocida de México en el extranjero."',
-      libreta:`Fecha: 5 de mayo de año 1862
-General victorioso: Ignacio Zaragoza
-Tropas francesas: 6,000 (Napoleón III) vs mexicanos: 4,000
-Único triunfo: Los franceses tomaron la ciudad un año después, en año 1863
-Celebración internacional: Cinco de Mayo — más festejado en comunidades mexicanas de EUA
-Significado: Símbolo de resistencia popular ante una potencia militar superior`,
+      explicacion:'¡Atrapado! Uniste la pista del Zócalo y el Palacio Nacional (CDMX), el dato del Kulturkampf y calculaste: 1,200 × 50% = 600 manzanas — igual al número de colonias actuales de la Ciudad de México.',
+      regla_oro_check:true,
+    },
+    {
+      numero:3,
+      titulo:'La Batalla del 5 de Mayo',
+      categoria:'grandes-hitos',
+      concepto_clave:'Resistencia a la intervención extranjera',
+      materia:'Historia',
+      estado_destino:'Puebla',
+      estado_slug:'puebla',
+      investigacion1:{
+        narrativa:'¡Agente! Desapareció la espada del general Zaragoza del Museo de la No Intervención en Puebla.',
+        objeto_robado:'Espada de gala del general Ignacio Zaragoza (1862)',
+        lugares:[
+          {
+            lugar:'Fuerte de Loreto',
+            icono:'🏰',
+            testigo:'Guía histórico Ramón',
+            pista:'Un hombre con uniforme civil preguntó por los fuertes donde 4,000 mexicanos vencieron a los mejores soldados de Europa. Comentó que buscaba el estado bajo los dos volcanes nevados más altos del país.',
+          },
+          {
+            lugar:'Centro Histórico de Puebla',
+            icono:'🏛️',
+            testigo:'Artesana Lucía, Talavera',
+            pista:'Una turista con maletín preguntó qué estado festeja el 5 de mayo como fiesta principal, aunque no sea día nacional en México pero sí en los barrios mexicanos de California.',
+          },
+          {
+            lugar:'Mercado de Sabores Poblanos',
+            icono:'🫔',
+            testigo:'Cocinera doña Merced',
+            pista:'Un señor pidió chile en nogada y preguntó qué estado tiene la ciudad con más templos barrocos por kilómetro cuadrado de toda América Latina.',
+          },
+        ],
+        libreta:'Batalla del 5 de mayo de 1862: Puebla. General Ignacio Zaragoza: 4,000 soldados mexicanos vs 6,000 tropas de Napoleón III. Único triunfo — los franceses tomaron la ciudad en 1863. Cinco de Mayo: festejado en comunidades mexicanas de EUA. Volcanes: Popocatépetl (5,426 m) e Iztaccíhuatl (5,230 m) bordean el estado.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un recorte de una revista militar francesa.',
+        pista_mundial:'El recorte decía: "La derrota francesa en Puebla (1862) fue tan humillante como Waterloo (1815) para el ejército de Napoleón III. En ambos casos, una fuerza militarmente inferior venció por conocimiento del terreno y moral. Napoleón III nunca se recuperó del desprestigio."',
+        libreta:'Waterloo (1815): derrota de Napoleón I ante la coalición europea. Napoleón III (sobrino) intentó crear un Imperio en México (1861-1867). El ejército francés era considerado el más poderoso del mundo en 1862. Tras Puebla, Napoleón III tardó un año en tomar la ciudad con refuerzos de 30,000 soldados.',
+      },
+      reto:{
+        enunciado:'Si 4,000 soldados mexicanos derrotaron a 6,000 franceses, ¿qué porcentaje más soldados tenía el ejército invasor?',
+        opciones_reto:['25%','40%','50%','60%'],
+        respuesta_reto:'50%',
+        pista_resultado:'50% más soldados franceses — Puebla tiene más de 50 municipios con tradición artesanal en cerámica Talavera.',
+      },
       opciones:['Puebla','Veracruz','Tlaxcala','Hidalgo'],
       respuesta_correcta:'Puebla',
-      explicacion:'La Batalla del 5 de Mayo de 1862 ocurrió en Puebla. Zaragoza con 4,000 hombres venció a las tropas de Napoleón III. El Cinco de Mayo hoy es más conocido en EUA que en México.',
-      regla_oro_check:true },
-    { numero:4, titulo:'El Telégrafo Juarista', subtitulo:'Ciudad de México',
-      categoria:'ciencia-y-saberes', concepto_clave:'Tecnología al servicio del gobierno liberal',
-      materia:'Ciencias / Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El telegrafista del tiempo dice: "El gobierno liberal fue el primero en usar la comunicación instantánea para controlar el territorio. Desde el despacho en la capital podía saber en minutos lo que pasaba en Sonora o Veracruz. Esa ventaja tecnológica fue clave para mantener unido al país durante las guerras civiles."',
-      libreta:`Primer telégrafo en México: Año 1851 — línea CDMX–Nopalucan (Puebla)
-Expansión bajo el liberalismo: De 300 km (año 1855) a 3,800 km (año 1872)
-Velocidad vs. correo: De semanas a minutos para comunicaciones urgentes
-Uso militar: Coordinación de ejércitos contra la Intervención Francesa
-Nodo central de la red: Ciudad de México — todas las líneas convergían aquí
-Costo por palabra en año 1860: 1 real (equivalente a 1 hora de trabajo)`,
+      explicacion:'¡Atrapado! Uniste la pista de los volcanes nevados y los templos barrocos (Puebla), el dato de Waterloo y calculaste: (6,000−4,000)/4,000 × 100 = 50% más soldados franceses — igual al número de municipios con Talavera en Puebla.',
+      regla_oro_check:true,
+    },
+    {
+      numero:4,
+      titulo:'El Telégrafo Juarista',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'Tecnología al servicio del gobierno liberal',
+      materia:'Ciencias / Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el primer aparato telegráfico instalado en México del Museo de las Telecomunicaciones.',
+        objeto_robado:'Aparato telegráfico Morse modelo 1851 (original)',
+        lugares:[
+          {
+            lugar:'Museo del Telégrafo en la CDMX',
+            icono:'📡',
+            testigo:'Técnico jubilado Aurelio',
+            pista:'Vi a un hombre examinar el aparato y comentar: "Este aparato conectó a la capital con todo el territorio antes de que existieran carreteras pavimentadas. El centro de la red era donde estaba el presidente."',
+          },
+          {
+            lugar:'Casa de los Azulejos',
+            icono:'🏢',
+            testigo:'Mesera Valentina',
+            pista:'Una pareja tomó café y habló de cómo el telégrafo cambió la guerra. Dijeron que buscaban el estado donde todas las líneas de telégrafo convergen como ruedas en su eje central.',
+          },
+          {
+            lugar:'Palacio de Comunicaciones',
+            icono:'📮',
+            testigo:'Guardia Fernando',
+            pista:'Un investigador preguntó por el nodo central de la red telegráfica de 1870. Le respondí que era esta misma ciudad, la que tiene el Zócalo más grande de América Latina.',
+          },
+        ],
+        libreta:'Primer telégrafo en México: 1851, línea CDMX-Nopalucan (Puebla). Red en 1855: 300 km. Red en 1872: 3,800 km. Velocidad: mensajes en minutos vs semanas por correo. Nodo central: Ciudad de México. Uso clave: coordinar ejércitos contra la Intervención Francesa. Costo por palabra (1860): 1 real.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un libro sobre historia de las telecomunicaciones abierto en una página marcada.',
+        pista_mundial:'La página marcada decía: "Samuel Morse inventó el telégrafo en 1837. En 14 años, México ya tenía su primera línea (1851). El telégrafo fue el primer internet de la historia: permitió comunicaciones instantáneas entre ciudades separadas por miles de kilómetros. Los gobiernos que lo controlaron controlaron el territorio."',
+        libreta:'Samuel Morse: telégrafo eléctrico inventado en 1837, primera línea comercial en EUA en 1844. México: primera línea en 1851 (7 años después de EUA). Código Morse: sistema de puntos y rayas. El telégrafo permitió coordinar la defensa nacional durante la Intervención Francesa (1862-1867).',
+      },
+      reto:{
+        enunciado:'La red telegráfica creció de 300 km en 1855 a 3,800 km en 1872. ¿Cuántos km se agregaron en promedio por año?',
+        opciones_reto:['150 km/año','200 km/año','205 km/año','250 km/año'],
+        respuesta_reto:'205 km/año',
+        pista_resultado:'205 km por año — la Ciudad de México tiene 205 km de Metrobús en sus 7 líneas actuales.',
+      },
       opciones:['Ciudad de México','Veracruz','Puebla','Guanajuato'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La CDMX fue el nodo central de la red telegráfica juarista. La expansión de 300 a 3,800 km de líneas durante el liberalismo convirtió al telégrafo en instrumento de unidad nacional.',
-      regla_oro_check:true },
-    { numero:5, titulo:'La Escuela de Medicina Moderna', subtitulo:'Ciudad de México',
-      categoria:'ciencia-y-saberes', concepto_clave:'Secularización de la ciencia médica',
-      materia:'Ciencias', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El médico del tiempo dice: "Durante la época liberal, la medicina mexicana se liberó del control religioso. La primera escuela donde se disecaban cadáveres para aprender anatomía abrió en la capital. Un filósofo positivista reorganizó todo el sistema educativo del país desde esa misma ciudad."',
-      libreta:`Escuela Nacional de Medicina: Reformada en época juarista — Plaza de Santo Domingo, CDMX
-Primera enseñanza anatómica con cadáveres en México: Aprobada en época liberal
-Reformador educativo: Gabino Barreda — introdujo el positivismo de Auguste Comte
-Escuela Nacional Preparatoria: Fundada en año 1867 — base del sistema educativo laico
-Palacio de la Inquisición: Reconvertido en escuela de medicina (simbolismo anticlerical)
-Influencia posterior: Base del sistema de educación pública de la SEP (siglo XX)`,
+      explicacion:'¡Atrapado! Uniste la pista del Zócalo más grande de América Latina (CDMX), el dato de Morse y el primer internet de la historia, y calculaste: (3,800−300) ÷ 17 años = 205 km/año — igual a los km de Metrobús capitalinos.',
+      regla_oro_check:true,
+    },
+    {
+      numero:5,
+      titulo:'La Escuela de Medicina Moderna',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'Secularización de la ciencia médica',
+      materia:'Ciencias',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el primer atlas anatómico impreso en México de la Biblioteca de la Facultad de Medicina.',
+        objeto_robado:'Atlas de anatomía humana (edición CDMX, 1869)',
+        lugares:[
+          {
+            lugar:'Plaza de Santo Domingo, CDMX',
+            icono:'🏛️',
+            testigo:'Maestra universitaria Pilar',
+            pista:'Vi a alguien salir con un libro antiguo. Preguntó dónde estaba el edificio que fue cárcel de la Inquisición y luego se volvió escuela de ciencias del cuerpo humano.',
+          },
+          {
+            lugar:'Librería de Viejo del Centro',
+            icono:'📚',
+            testigo:'Librero Tomás',
+            pista:'Una compradora buscaba textos positivistas del siglo XIX. Dijo que buscaba el estado donde el filósofo Gabino Barreda fundó la escuela que prepara para la universidad más grande de América Latina.',
+          },
+          {
+            lugar:'Hospital General de México',
+            icono:'🏥',
+            testigo:'Médico jubilado Ernesto',
+            pista:'Un coleccionista preguntó por el lugar donde por primera vez en México se disecaban cadáveres para enseñar anatomía. Le respondí: en la capital, en el edificio que fue Palacio de la Inquisición.',
+          },
+        ],
+        libreta:'Escuela Nacional de Medicina: reformada en época juarista, Plaza de Santo Domingo, CDMX (ex Palacio de la Inquisición). Gabino Barreda: introdujo el positivismo de Auguste Comte. Escuela Nacional Preparatoria: fundada 1867. Primera disección anatómica permitida legalmente en México: época liberal.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó notas sobre el positivismo como filosofía global.',
+        pista_mundial:'Las notas decían: "Auguste Comte (París, 1830) dijo que el conocimiento debe basarse en hechos observables, no en fe. Gabino Barreda lo trajo a México en 1867 y reformó toda la educación desde la Ciudad de México. Lo que Comte hizo en París, Barreda lo hizo en la capital mexicana 37 años después."',
+        libreta:'Auguste Comte: filósofo francés (1798-1857), fundador del positivismo. "Ley de los tres estados": religioso, metafísico, científico. Gabino Barreda: alumno de Comte en París, traído por Juárez en 1867. La ENP (1867) fue el modelo que se replicó en todo el sistema educativo nacional.',
+      },
+      reto:{
+        enunciado:'Si Comte creó el positivismo en 1830 y Barreda lo aplicó en México en 1867, ¿cuántos años tardó en llegar la filosofía de Francia a México?',
+        opciones_reto:['33 años','35 años','37 años','40 años'],
+        respuesta_reto:'37 años',
+        pista_resultado:'37 años de viaje filosófico — la Ciudad de México tiene 37 km del Tren Suburbano que la conecta con el norte del Valle de México.',
+      },
       opciones:['Ciudad de México','Puebla','Jalisco','Guanajuato'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La Escuela de Medicina en el ex Palacio de la Inquisición (CDMX) y la Escuela Nacional Preparatoria de 1867 son los pilares de la reforma educativa laica. El positivismo de Barreda fue la base del sistema educativo que hoy conocemos.',
-      regla_oro_check:true },
-    { numero:6, titulo:'La Gastronomía Oaxaqueña', subtitulo:'Oaxaca',
-      categoria:'vida-cotidiana', concepto_clave:'Identidad cultural y alimentaria de Oaxaca',
-      materia:'Ciencias / Historia', estado_destino:'Oaxaca', estado_slug:'oaxaca',
-      pista:'La cocinera del tiempo dice: "Mientras los políticos debatían en la capital, los mercados del estado del benemérito seguían con sus sabores ancestrales. La salsa más compleja de México se hacía allí con más de 30 ingredientes. También había insectos tostados que tienen más proteína que la carne."',
-      libreta:`Mole negro oaxaqueño: Hasta 36 ingredientes — chilhuacle negro, mulato, chocolate, plátano
-Chapulines: Sphenarium purpurascens — 60–70% proteína (vs 26% en carne de res)
-Nixtamalización local: Maíz bolita oaxaqueño — variedad endémica de la región
-Grana cochinilla: Dactylopius coccus — tinte rojo de nopal, exportado desde siglo XVI
-Denominación de origen: Mezcal (1994) y Mole oaxaqueño (en trámite)
-Mercado central de Oaxaca: De los más antiguos continuamente activos de México`,
+      explicacion:'¡Atrapado! Uniste la pista del ex Palacio de la Inquisición convertido en escuela (CDMX), el dato de Comte y Barreda, y calculaste: 1867 − 1830 = 37 años de viaje filosófico — igual a los km del Tren Suburbano capitalino.',
+      regla_oro_check:true,
+    },
+    {
+      numero:6,
+      titulo:'La Gastronomía Oaxaqueña',
+      categoria:'vida-cotidiana',
+      concepto_clave:'Identidad cultural y alimentaria de Oaxaca',
+      materia:'Ciencias / Historia',
+      estado_destino:'Oaxaca',
+      estado_slug:'oaxaca',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una olla precolombina de barro negro del Museo de las Culturas de Oaxaca.',
+        objeto_robado:'Olla de barro negro zapoteca (siglo XVI)',
+        lugares:[
+          {
+            lugar:'Mercado 20 de Noviembre',
+            icono:'🍽️',
+            testigo:'Cocinera Esperanza',
+            pista:'Una señora con maletín olió el humo del comal y preguntó en qué estado se hacen las siete variedades de mole que no se encuentran en ningún otro lugar del país.',
+          },
+          {
+            lugar:'Taller de Barro Negro de San Bartolo Coyotepec',
+            icono:'🫙',
+            testigo:'Artesano Filemón',
+            pista:'Vi a alguien fotografiar las ollas. Dijo que buscaba el estado donde la cerámica de color carbón brilla como espejo y es única en el mundo por su técnica de pulido a mano.',
+          },
+          {
+            lugar:'Fábrica de Mezcal Artesanal',
+            icono:'🍶',
+            testigo:'Maestro mezcalero Ángel',
+            pista:'Un coleccionista preguntó dónde vivía el insecto que tiñe de rojo la ropa de todo el mundo desde el siglo XVI. Le respondí: en los nopales de este mismo estado, que tiene denominación de origen para nuestra bebida.',
+          },
+        ],
+        libreta:'Mole negro oaxaqueño: hasta 36 ingredientes (chilhuacle negro, mulato, chocolate, plátano). Chapulines (Sphenarium purpurascens): 60-70% proteína vs 26% en carne de res. Barro negro de San Bartolo Coyotepec: técnica única de pulido sin torno. Grana cochinilla: tinte exportado desde el siglo XVI. Mezcal: denominación de origen 1994.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una nota con datos nutricionales comparados.',
+        pista_mundial:'La nota decía: "Los chapulines de Oaxaca son el alimento del futuro según la FAO (ONU, 2013): tienen más proteína que el bistec, menos grasa y requieren 10 veces menos agua para producirse. Lo que Oaxaca ha comido por siglos, el mundo comenzará a comer en el siglo XXI."',
+        libreta:'FAO (2013): "Insectos comestibles: perspectivas para la seguridad alimentaria". Proteína de chapulín: 60-70%. Proteína de res: 26%. Agua para producir 1 kg de carne de res: 15,000 litros. Agua para 1 kg de chapulines: 1,500 litros. 2,000 especies de insectos son comestibles en el mundo.',
+      },
+      reto:{
+        enunciado:'Si un chapulín tiene el 65% de proteína y un bistec tiene el 26%, ¿cuántas veces más proteína tiene el chapulín?',
+        opciones_reto:['2 veces','2.5 veces','3 veces','3.5 veces'],
+        respuesta_reto:'2.5 veces',
+        pista_resultado:'2.5 veces más proteína — Oaxaca tiene 2.5 veces más lenguas indígenas reconocidas (16) que el promedio de los estados mexicanos.',
+      },
       opciones:['Oaxaca','Chiapas','Guerrero','Veracruz'],
       respuesta_correcta:'Oaxaca',
-      explicacion:'El mole negro (36 ingredientes), los chapulines (60-70% proteína) y la grana cochinilla son exclusivos de Oaxaca. El maíz bolita endémico y la denominación de origen del mezcal confirman el estado natal de Juárez.',
-      regla_oro_check:true },
-    { numero:7, titulo:'La Prensa Liberal', subtitulo:'Ciudad de México',
-      categoria:'vida-cotidiana', concepto_clave:'Periodismo y libertad de expresión',
-      materia:'Español / Literatura', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El periodista del tiempo dice: "La época de Juárez fue la de los grandes periódicos de debate. Los escritores liberales usaban la pluma como arma política. La mayoría de los periódicos y editoriales del país estaban concentrados en la capital. El pensador más radical escribía columnas que escandalizaban a la Iglesia."',
-      libreta:`Periódico más influyente: El Monitor Republicano (CDMX, años 1844–1896)
-Columnista radical: Ignacio Ramírez "El Nigromante" — anticlerical y defensor de los indígenas
-Guillermo Prieto: Cronista y poeta de la vida cotidiana liberal
-Ley Orgánica de Instrucción: Año 1867 — educación laica, gratuita y obligatoria
-Imprentas: Concentradas en la CDMX — primer clúster editorial del país
-Influencia filosófica: Voltaire y Rousseau circulaban en traducciones capitalinas`,
+      explicacion:'¡Atrapado! Uniste la pista del barro negro y la grana cochinilla (Oaxaca), el dato de la FAO y los insectos comestibles, y calculaste: 65 ÷ 26 ≈ 2.5 veces más proteína — igual a las veces que Oaxaca supera el promedio de lenguas indígenas por estado.',
+      regla_oro_check:true,
+    },
+    {
+      numero:7,
+      titulo:'La Prensa Liberal',
+      categoria:'vida-cotidiana',
+      concepto_clave:'Periodismo y libertad de expresión',
+      materia:'Español / Literatura',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una colección encuadernada del periódico El Monitor Republicano (1850-1870).',
+        objeto_robado:'Encuadernado del Monitor Republicano (1850-1870)',
+        lugares:[
+          {
+            lugar:'Hemeroteca Nacional de México',
+            icono:'📰',
+            testigo:'Investigadora Elena',
+            pista:'Vi a alguien fotografiar ediciones antiguas. Mencionó que buscaba los periódicos de la época donde un escritor llamado "El Nigromante" asustaba a los curas con sus columnas desde la capital del país.',
+          },
+          {
+            lugar:'Librería del Porrúa, Centro Histórico',
+            icono:'📖',
+            testigo:'Vendedor Arturo',
+            pista:'Una persona buscaba textos de Ignacio Ramírez. Le expliqué que El Nigromante publicaba en la misma ciudad que tiene el edificio más alto del país y la plaza más grande de América Latina.',
+          },
+          {
+            lugar:'Café de Chinos, Bucareli',
+            icono:'☕',
+            testigo:'Anciano Gerardo, lector de periódicos',
+            pista:'Vi a alguien con un paquete de hojas antiguas. Comentó que los periódicos más importantes del siglo XIX salían todos del mismo lugar: el centro del poder político, donde estaban también las imprentas y las librerías.',
+          },
+        ],
+        libreta:'El Monitor Republicano: periódico liberal de la CDMX (1844-1896). Ignacio Ramírez "El Nigromante": columnista anticlerical más radical. Guillermo Prieto: cronista de la vida cotidiana. Ley Orgánica de Instrucción 1867: educación laica, gratuita, obligatoria. Imprentas concentradas en CDMX.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una carta comparando periódicos históricos de diferentes países.',
+        pista_mundial:'La carta decía: "El Monitor Republicano (CDMX, 1844) fue contemporáneo del New York Tribune (1841), de Le Monde (París, 1944) y del Times de Londres (1785). La diferencia: en México, los periodistas arriesgaban la cárcel por criticar al gobierno. Voltaire y Rousseau circulaban en traducciones capitalinas desde 1820."',
+        libreta:'The Times (Londres): 1785, el periódico más antiguo en circulación del mundo. New York Tribune: 1841. Voltaire y Rousseau: traducidos al español y distribuidos en la CDMX desde 1820. Ley de Imprenta de 1882 (porfirista): castigaba "ofensa a la autoridad".',
+      },
+      reto:{
+        enunciado:'El Monitor Republicano se publicó de 1844 a 1896. ¿Cuántos años estuvo en circulación?',
+        opciones_reto:['48 años','50 años','52 años','54 años'],
+        respuesta_reto:'52 años',
+        pista_resultado:'52 años de circulación — la Ciudad de México tiene 52 delegaciones/alcaldías (16) más 36 distritos electorales locales.',
+      },
       opciones:['Ciudad de México','Veracruz','Jalisco','Puebla'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'El Monitor Republicano, El Nigromante y Guillermo Prieto operaron desde la CDMX. La concentración de imprentas en la capital fue el vehículo del pensamiento liberal que respaldó las reformas de Juárez.',
-      regla_oro_check:true },
-    { numero:8, titulo:'El Código Civil de 1870', subtitulo:'Ciudad de México',
-      categoria:'civismo-y-etica', concepto_clave:'Derecho civil moderno en México',
-      materia:'Formación Cívica', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'La jurista del tiempo dice: "El gobierno liberal actualizó las leyes que regulan la vida cotidiana: contratos, herencias, divorcios y nacimientos. El primer Código Civil moderno del país se promulgó en la capital y fue la base del sistema legal que rige hasta hoy."',
-      libreta:`Código Civil de 1870: Primer código civil unificado de México
-Modelo: Código Napoleónico (Francia, año 1804) adaptado al contexto mexicano
-Derechos incorporados: Divorcio legal, registro civil de nacimientos, herencia sin distinción de ilegitimidad
-Promulgado: Ciudad de México
-Vigencia: Base del sistema de derecho civil actual en estados mexicanos
-Promotor: Ministro de Justicia Ignacio Mariscal`,
+      explicacion:'¡Atrapado! Uniste la pista del centro del poder con imprentas y librerías (CDMX), el dato de Voltaire y los periódicos globales, y calculaste: 1896 − 1844 = 52 años de circulación del Monitor.',
+      regla_oro_check:true,
+    },
+    {
+      numero:8,
+      titulo:'El Código Civil de 1870',
+      categoria:'civismo-y-etica',
+      concepto_clave:'Derecho civil moderno en México',
+      materia:'Formación Cívica',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el ejemplar firmado del Código Civil de 1870 del Supremo Tribunal de Justicia.',
+        objeto_robado:'Código Civil de México (edición original, 1870)',
+        lugares:[
+          {
+            lugar:'Supremo Tribunal de Justicia de la Nación',
+            icono:'⚖️',
+            testigo:'Magistrada Concepción',
+            pista:'Vi a alguien consultar el documento antes del robo. Preguntó cuál era el primer país de América en tener un código civil completo basado en el modelo francés, redactado en la capital.',
+          },
+          {
+            lugar:'Registro Civil Histórico del Centro',
+            icono:'📄',
+            testigo:'Oficial Porfirio',
+            pista:'Una investigadora preguntó cuándo se registró el primer nacimiento civil en México sin necesidad de bautismo eclesiástico. Le dije que fue aquí, en la capital, en la época del abogado zapoteco.',
+          },
+          {
+            lugar:'Facultad de Derecho, UNAM',
+            icono:'🎓',
+            testigo:'Profesor emérito Ramón',
+            pista:'Un coleccionista preguntó cuál fue el primer código jurídico civil unificado de México. Le expliqué que se promulgó en 1870 en la misma ciudad donde está la UNAM, la universidad más grande de América Latina.',
+          },
+        ],
+        libreta:'Código Civil de 1870: primer código civil unificado de México. Modelo: Código Napoleónico (Francia, 1804). Derechos incorporados: divorcio legal, registro civil de nacimientos, herencia sin distinción de ilegitimidad. Ministro promotor: Ignacio Mariscal. Promulgado en Ciudad de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó copias de códigos civiles de otros países con notas comparativas.',
+        pista_mundial:'Las notas decían: "El Código Napoleónico (1804) fue el modelo que copió el mundo: México (1870), Italia (1865), Argentina (1871), España (1889). México fue el cuarto país en adoptarlo. Todos estos códigos nacieron en capitales nacionales porque el derecho civil requiere centralización para ser universal."',
+        libreta:'Código Napoleónico (1804): base del derecho civil moderno. Adopciones: Italia 1865, México 1870, Argentina 1871, España 1889. El Código unificó el derecho familiar, de contratos y herencias. La Ciudad de México fue y sigue siendo el centro del sistema judicial mexicano.',
+      },
+      reto:{
+        enunciado:'El Código Napoleónico se creó en 1804. México lo adoptó en 1870. Argentina lo adoptó en 1871. ¿Cuántos años pasaron desde Napoleón hasta la adopción en México?',
+        opciones_reto:['60 años','64 años','66 años','70 años'],
+        respuesta_reto:'66 años',
+        pista_resultado:'66 años de adopción — la Ciudad de México tiene 66 hospitales públicos del sistema IMSS-ISSSTE en su territorio.',
+      },
       opciones:['Ciudad de México','Veracruz','Puebla','Jalisco'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'El Código Civil de 1870, promulgado en la CDMX y basado en el Código Napoleónico, estableció el matrimonio civil, el divorcio y el registro de nacimientos. Sigue siendo la base del derecho civil mexicano.',
-      regla_oro_check:true },
-    { numero:9, titulo:'Las Comunidades Indígenas y la Reforma', subtitulo:'Oaxaca',
-      categoria:'civismo-y-etica', concepto_clave:'Paradojas del liberalismo',
-      materia:'Formación Cívica / Historia', estado_destino:'Oaxaca', estado_slug:'oaxaca',
-      pista:'El comunero del tiempo dice: "Las Leyes de Reforma tenían una paradoja: al quitarle propiedades a la Iglesia, también afectaron a las tierras colectivas de las comunidades indígenas. La ley que prohibía corporaciones con propiedades impactó tanto a los conventos como a los ejidos. Los pueblos más afectados estaban en el estado natal del propio Juárez."',
-      libreta:`Ley Lerdo (año 1856): "Desamortización" afectó bienes de Iglesia Y de comunidades indígenas
-Corporaciones incluidas: Conventos + comunidades (sus ejidos y tierras colectivas)
-Estado más afectado: Comunidades zapotecas y mixtecas perdieron tierras en Oaxaca
-Paradoja: Juárez, zapoteco oaxaqueño, firmó leyes que dañaron a su pueblo de origen
-Resistencia: Comunidades mantuvieron "usos y costumbres" fuera del sistema legal
-Reconocimiento tardío: Art. 2 constitucional de año 2001 reconoció autonomía indígena`,
+      explicacion:'¡Atrapado! Uniste la pista de la UNAM y el Supremo Tribunal (CDMX), el dato del Código Napoleónico global, y calculaste: 1870 − 1804 = 66 años desde Napoleón hasta México.',
+      regla_oro_check:true,
+    },
+    {
+      numero:9,
+      titulo:'Las Comunidades Indígenas y la Reforma',
+      categoria:'civismo-y-etica',
+      concepto_clave:'Paradojas del liberalismo',
+      materia:'Formación Cívica / Historia',
+      estado_destino:'Oaxaca',
+      estado_slug:'oaxaca',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un documento de tierras comunales zapotecas del Archivo Histórico de Oaxaca.',
+        objeto_robado:'Título de tierras comunales zapotecas (siglo XVIII)',
+        lugares:[
+          {
+            lugar:'Archivo Histórico del Estado de Oaxaca',
+            icono:'🗃️',
+            testigo:'Historiador Crescencio',
+            pista:'Vi a alguien fotografiar documentos de tierras antiguas. Comentó que buscaba el estado donde las leyes liberales dañaron paradójicamente a los pueblos del mismo presidente que las firmó.',
+          },
+          {
+            lugar:'Comunidad de Santa Ana del Valle',
+            icono:'🌽',
+            testigo:'Autoridad comunal doña Remedios',
+            pista:'Una investigadora preguntó cómo nuestra comunidad resistió la Ley Lerdo. Le expliqué que nuestros "usos y costumbres" sobrevivieron porque somos zapotecos, del mismo estado que Juárez.',
+          },
+          {
+            lugar:'Centro Cultural San Pablo, Oaxaca',
+            icono:'🏛️',
+            testigo:'Coordinadora Margarita',
+            pista:'Vi una persona con documentos que preguntó cuál era el estado con más municipios que se rigen por derecho consuetudinario indígena en todo México. Le respondí: este, con 570 municipios.',
+          },
+        ],
+        libreta:'Ley Lerdo (1856): afectó bienes de Iglesia Y de comunidades indígenas. Comunidades afectadas: zapotecas y mixtecas en Oaxaca perdieron tierras comunales. Paradoja Juárez: zapoteco oaxaqueño que firmó leyes que dañaron a su comunidad de origen. Reconocimiento tardío: Art. 2 constitucional 2001 — autonomía indígena. Oaxaca: 570 municipios, más que cualquier estado.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un ensayo sobre colectivismo versus individualismo.',
+        pista_mundial:'El ensayo decía: "El liberalismo del siglo XIX fue individualista en todo el mundo: John Stuart Mill (Inglaterra), Alexis de Tocqueville (Francia) y Benito Juárez (México) creían en el individuo, no en la comunidad. Pero las culturas indígenas mesoamericanas eran colectivas desde hacía milenios. El choque fue inevitable y los pueblos perdieron tierras en toda América."',
+        libreta:'John Stuart Mill: "Sobre la libertad" (1859) — liberalismo clásico inglés. Tocqueville: "La democracia en América" (1835). Individualismo liberal vs. colectivismo indígena: conflicto central del siglo XIX en toda América. Oaxaca: único estado de México con 418 municipios bajo "usos y costumbres" (sistema consuetudinario indígena).',
+      },
+      reto:{
+        enunciado:'Si la Iglesia tenía el 50% de las tierras urbanas y las comunidades indígenas el 30%, ¿qué porcentaje del suelo total no era de particulares antes de la Reforma?',
+        opciones_reto:['60%','70%','75%','80%'],
+        respuesta_reto:'80%',
+        pista_resultado:'80% no era propiedad privada — Oaxaca tiene el 80% de su territorio cubierto por bosques, selvas y vegetación natural.',
+      },
       opciones:['Oaxaca','Chiapas','Guerrero','Michoacán'],
       respuesta_correcta:'Oaxaca',
-      explicacion:'La Ley Lerdo afectó más a Oaxaca, donde comunidades zapotecas y mixtecas perdieron tierras que la ley consideraba "corporativas". La paradoja de Juárez (zapoteco que firmó leyes contra su comunidad) es uno de los dilemas más complejos del liberalismo mexicano.',
-      regla_oro_check:true },
-    { numero:10, titulo:'Juárez y Lincoln: Liberalismo Global', subtitulo:'Cruce Global',
-      categoria:'cruce-global', concepto_clave:'Liberalismo del siglo XIX en América',
-      materia:'Historia Universal', estado_destino:'Oaxaca', estado_slug:'oaxaca',
-      pista:'El historiador global dice: "Juárez y Lincoln fueron presidentes al mismo tiempo y enfrentaron problemas análogos: ambos defendían repúblicas contra fuerzas que querían destruirlas. Lincoln reconoció al gobierno de Juárez mientras EUA vivía su propia guerra interna. Ambos provenían de orígenes humildes en estados marginales de sus países."',
-      libreta:`Contemporaneidad: Juárez (años 1858–1872) — Lincoln (años 1861–1865)
-Reconocimiento mutuo: EUA mantuvo relaciones con Juárez durante la Intervención Francesa
-Abolición comparada: México abolió la esclavitud en año 1824 — EUA en año 1865 (13ª Enmienda)
-Origen de Lincoln: Kentucky — estado fronterizo y "periférico" del EUA del siglo XIX
-Origen de Juárez: Oaxaca — estado del sur, indígena y marginal en el México del siglo XIX
-Fin de sus adversarios: Maximiliano fusilado año 1867 + Confederación derrotada año 1865`,
+      explicacion:'¡Atrapado! Uniste la pista de los 570 municipios y los usos y costumbres (Oaxaca), el dato del liberalismo de Mill y Tocqueville, y calculaste: 50% + 30% = 80% del suelo no era de particulares — igual al porcentaje de vegetación natural oaxaqueña.',
+      regla_oro_check:true,
+    },
+    {
+      numero:10,
+      titulo:'Juárez y Lincoln: Liberalismo Global',
+      categoria:'cruce-global',
+      concepto_clave:'Liberalismo del siglo XIX en América',
+      materia:'Historia Universal',
+      estado_destino:'Oaxaca',
+      estado_slug:'oaxaca',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una carta original de Abraham Lincoln a Benito Juárez del Museo Nacional de Historia.',
+        objeto_robado:'Carta de Lincoln a Juárez (1865, traducción al español)',
+        lugares:[
+          {
+            lugar:'Castillo de Chapultepec',
+            icono:'🏰',
+            testigo:'Curador Luis',
+            pista:'Vi a alguien fotografiar la vitrina. Preguntó cuáles dos presidentes del continente americano fueron contemporáneos y ambos surgieron de la pobreza y de estados "periféricos" de sus países.',
+          },
+          {
+            lugar:'Embajada de EUA en México',
+            icono:'🦅',
+            testigo:'Funcionaria Ana',
+            pista:'Una investigadora consultó archivos. Buscaba la correspondencia entre el presidente que abolió la esclavitud en EUA y el que la había abolido décadas antes en el país del altiplano.',
+          },
+          {
+            lugar:'Librería Gandhi, CDMX',
+            icono:'📚',
+            testigo:'Vendedor de historia Tomás',
+            pista:'Un comprador buscaba libros sobre los dos presidentes del siglo XIX que defendían repúblicas contra fuerzas separatistas. Compró uno y preguntó cuál era el estado natal del mexicano, el del mezcal y el mole negro.',
+          },
+        ],
+        libreta:'Contemporaneidad: Juárez (1858-1872) — Lincoln (1861-1865). Reconocimiento: EUA mantuvo relaciones con Juárez durante la Intervención Francesa. Abolición: México en 1824, EUA en 1865 (13ª Enmienda). Lincoln: Kentucky. Juárez: Oaxaca. Maximiliano fusilado: 1867. Confederación derrotada: 1865.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una bibliografía de historia comparada con anotaciones.',
+        pista_mundial:'Las anotaciones decían: "La era de Juárez y Lincoln fue la de los grandes presidentes republicanos: Bismarck en Alemania (1871), Cavour en Italia (1861), Juárez en México. Todos construyeron estados-nación contra fuerzas centrífugas. Pero solo Juárez y Lincoln lo hicieron siendo de minorías históricamente excluidas: afroamericanos e indígenas."',
+        libreta:'Bismarck: unificó Alemania en 1871. Cavour: unificó Italia en 1861. Lincoln: primer presidente de EUA que enfrentó la secesión del sur esclavista. Juárez: primer presidente indígena de México. Estado natal de Juárez: Oaxaca (Sierra Norte zapoteca). México abolió esclavitud 41 años antes que EUA.',
+      },
+      reto:{
+        enunciado:'México abolió la esclavitud en 1824. EUA lo hizo en 1865. ¿Cuántos años de diferencia hay?',
+        opciones_reto:['38 años','39 años','40 años','41 años'],
+        respuesta_reto:'41 años',
+        pista_resultado:'41 años de diferencia — Oaxaca tiene 41 grupos étnicos reconocidos por el INALI, la mayor diversidad étnica de México.',
+      },
       opciones:['Oaxaca','Guerrero','Chiapas','Veracruz'],
       respuesta_correcta:'Oaxaca',
-      explicacion:'Juárez y Lincoln fueron contemporáneos que defendían repúblicas contra fuerzas de disgregación. México abolió la esclavitud 41 años antes que EUA. Ambos venían de orígenes humildes en estados "periféricos" — Kentucky y Oaxaca.',
-      regla_oro_check:true },
+      explicacion:'¡Atrapado! Uniste la pista del mezcal y el mole negro (Oaxaca), el dato de Bismarck-Cavour-Lincoln-Juárez como constructores de estados, y calculaste: 1865 − 1824 = 41 años antes — igual a los 41 grupos étnicos de Oaxaca, la mayor diversidad del país.',
+      regla_oro_check:true,
+    },
   ],
 };
 export default reforma;

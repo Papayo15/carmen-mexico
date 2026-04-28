@@ -6,147 +6,496 @@ const revolucion: Era = {
     icono:'⚔️', color:'bg-red-800', colorText:'text-red-900', orden:12,
   },
   casos:[
-    { numero:1, titulo:'El Plan de San Luis', subtitulo:'San Luis Potosí',
-      categoria:'grandes-hitos', concepto_clave:'Documento que inició la Revolución',
-      materia:'Historia', estado_destino:'San Luis Potosí', estado_slug:'san-luis-potosi',
-      pista:'El periodista del tiempo dice: "El hacendado que desafió al dictador lanzó su llamado a la rebelión desde la prisión. Su documento se llamó igual que la ciudad donde estaba encerrado su autor. Su lema era sencillo: las elecciones habían sido un fraude."',
-      libreta:`Documento: Plan de San Luis Potosí — 5 de octubre de año 1910
-Autor: Francisco I. Madero — encarcelado tras las elecciones fraudulentas
-Convocatoria: 20 de noviembre de año 1910 como fecha de inicio del levantamiento
-Lema: Sufragio Efectivo, No Reelección
-Estado: Centro del país, sin costas, famoso por minas de plata y arquitectura colonial
-El nombre del estado y del documento son idénticos`,
+    {
+      numero:1,
+      titulo:'El Plan de San Luis',
+      categoria:'grandes-hitos',
+      concepto_clave:'Documento que inició la Revolución',
+      materia:'Historia',
+      estado_destino:'San Luis Potosí',
+      estado_slug:'san-luis-potosi',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el ejemplar original del Plan de San Luis Potosí del Archivo Histórico del estado.',
+        objeto_robado:'Plan de San Luis Potosí (original, 5 de octubre de 1910)',
+        lugares:[
+          {
+            lugar:'Penitenciaría Antigua de San Luis',
+            icono:'🏛️',
+            testigo:'Ex-custodio Hilario',
+            pista:'Vi a alguien fotografiar la celda donde estuvo preso el señor de los bigotes. Preguntó en qué estado del centro del país escribió el hombre rico que desafió al dictador su llamado a la rebelión.',
+          },
+          {
+            lugar:'Museo Nacional de la Máscara, SLP',
+            icono:'🎭',
+            testigo:'Curadora Constanza',
+            pista:'Una investigadora preguntó en qué ciudad estaba encarcelado el hombre que convocó la Revolución para el 20 de noviembre. Le respondí que en la capital del estado que le dio nombre al documento que cambió México.',
+          },
+          {
+            lugar:'Teatro de la Paz, SLP',
+            icono:'🎼',
+            testigo:'Funcionario cultural Damián',
+            pista:'Un turista preguntó cuál era el estado del centro del país, sin costas, con minas de plata y arquitectura colonial rosa, donde nació el documento más importante de la Revolución.',
+          },
+        ],
+        libreta:'Plan de San Luis Potosí: 5 de octubre de 1910. Autor: Francisco I. Madero, encarcelado en San Luis Potosí. Convocatoria: 20 de noviembre de 1910 como fecha del levantamiento. Lema: "Sufragio Efectivo, No Reelección". San Luis Potosí: estado del centro-norte sin costas, famoso por cantera rosa y minas de plata (Real de Catorce).',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una lista de manifiestos históricos con paralelos marcados.',
+        pista_mundial:'La lista decía: "Plan de San Luis (México, 1910) — Declaración de Independencia de EUA (1776) — Manifiesto Comunista (Europa, 1848). Los tres son documentos que convocaron a la acción revolucionaria. El de México fue el único que dio nombre a la ciudad donde nació: el estado del altiplano central."',
+        libreta:'Declaración de Independencia de EUA: 4 de julio de 1776. Manifiesto Comunista (Marx-Engels): 1848. Plan de San Luis: octubre de 1910. Los tres documentos marcaron el inicio de transformaciones políticas mayores. San Luis Potosí: capital del estado homónimo, 1,850 metros sobre el nivel del mar.',
+      },
+      reto:{
+        enunciado:'Madero publicó el Plan el 5 de octubre y convocó la Revolución para el 20 de noviembre. ¿Cuántos días de diferencia hay entre ambas fechas?',
+        opciones_reto:['40 días','45 días','46 días','50 días'],
+        respuesta_reto:'46 días',
+        pista_resultado:'46 días de espera — San Luis Potosí tiene 46 municipios en su territorio estatal.',
+      },
       opciones:['San Luis Potosí','Coahuila','Tamaulipas','Zacatecas'],
       respuesta_correcta:'San Luis Potosí',
-      explicacion:'El Plan de San Luis fue redactado mientras Madero estaba preso en la ciudad de San Luis Potosí. El lema "Sufragio Efectivo, No Reelección" y el 20 de noviembre de 1910 como fecha confirman el documento fundacional.',
-      regla_oro_check:true },
-    { numero:2, titulo:'La División del Norte', subtitulo:'Chihuahua',
-      categoria:'grandes-hitos', concepto_clave:'Pancho Villa y la guerrilla norteña',
-      materia:'Historia', estado_destino:'Chihuahua', estado_slug:'chihuahua',
-      pista:'El Centauro del Norte dice: "Mi ejército tomó la ciudad fronteriza más importante del norte en mayo de 1911 y eso obligó al dictador a renunciar. Recorrí a caballo el estado más grande del país. La sierra me protegía cuando los federales me perseguían."',
-      libreta:`Formación: División del Norte — año 1913
-Comandante: Francisco Villa (Doroteo Arango)
-Primera victoria: Toma de Ciudad Juárez — 10 de mayo de año 1911
-Superficie del estado: 247,455 km² — el más extenso de México
-Sierra de refugio: Sierra Madre Occidental al poniente
-Colindancias: EUA al norte (Nuevo México y Texas)`,
+      explicacion:'¡Atrapado! Uniste la pista de la cantera rosa y las minas de plata (San Luis Potosí), el dato de los manifiestos históricos y calculaste: del 5 de oct al 20 de nov = 46 días de espera — igual al número de municipios potosinos.',
+      regla_oro_check:true,
+    },
+    {
+      numero:2,
+      titulo:'La División del Norte',
+      categoria:'grandes-hitos',
+      concepto_clave:'Pancho Villa y la guerrilla norteña',
+      materia:'Historia',
+      estado_destino:'Chihuahua',
+      estado_slug:'chihuahua',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el sombrero de batalla de Pancho Villa del Museo de la Revolución en Ciudad Juárez.',
+        objeto_robado:'Sombrero de campaña de Francisco Villa (réplica certificada, 1914)',
+        lugares:[
+          {
+            lugar:'Museo de la Revolución, Ciudad Juárez',
+            icono:'🏛️',
+            testigo:'Guía Roberto',
+            pista:'Vi a alguien salir con el sombrero. Preguntó cuál era el estado más extenso de México donde el Centauro del Norte tomó la ciudad fronteriza que obligó al dictador a renunciar.',
+          },
+          {
+            lugar:'Aduana Fronteriza de Ciudad Juárez',
+            icono:'🚧',
+            testigo:'Agente Fernanda',
+            pista:'Un investigador preguntó en qué estado fronterizo del norte se formó el ejército más poderoso de la Revolución. Le respondí: en el estado más grande del país, frontera con Nuevo México y Texas.',
+          },
+          {
+            lugar:'Sierra Madre Occidental, Chihuahua',
+            icono:'⛰️',
+            testigo:'Guardabosques Leobardo',
+            pista:'Una historiadora preguntó dónde se refugiaba Villa cuando los federales lo perseguían. Le respondí: en las sierras del oeste del estado más grande de México, donde los cañones son tan profundos que puedes desaparecer semanas.',
+          },
+        ],
+        libreta:'División del Norte: formada en 1913. Comandante: Francisco Villa (Doroteo Arango). Primera victoria: Toma de Ciudad Juárez, 10 de mayo de 1911. Chihuahua: 247,455 km², el estado más extenso de México. Sierra Madre Occidental: refugio natural de Villa. Colindancias: Nuevo México y Texas al norte.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una revista militar con comparaciones de ejércitos revolucionarios.',
+        pista_mundial:'La revista decía: "La División del Norte de Villa (1913-1915) fue contemporánea de los ejércitos de la Revolución Rusa (1917) y de las trincheras de la I Guerra Mundial (1914-1918). Villa fue el primer líder latinoamericano en usar trenes para mover 10,000 soldados como unidad táctica — táctica que Napoleón usó en Europa un siglo antes."',
+        libreta:'Napoleón Bonaparte: primer general en usar ferrocarriles para mover tropas masivamente (Europa, 1800s). Villa: 10,000 soldados en trenes en el norte de México (1914). I Guerra Mundial: uso masivo de trenes para movilización (1914-1918). John Reed cubrió a Villa en Chihuahua en 1914 (libro: "México insurgente").',
+      },
+      reto:{
+        enunciado:'Chihuahua tiene 247,455 km². Si la Sierra Madre Occidental cubre el 30% del estado, ¿cuántos km² abarca la sierra?',
+        opciones_reto:['64,000 km²','70,000 km²','74,237 km²','80,000 km²'],
+        respuesta_reto:'74,237 km²',
+        pista_resultado:'74,237 km² de sierra — Chihuahua tiene más de 74,000 km de barrancas y cañones catalogados por la SEMARNAT.',
+      },
       opciones:['Chihuahua','Sonora','Durango','Coahuila'],
       respuesta_correcta:'Chihuahua',
-      explicacion:'La División del Norte operó en Chihuahua, el estado más grande del país. La toma de Ciudad Juárez (frontera con EUA) fue el primer gran triunfo que precipitó la renuncia de Díaz.',
-      regla_oro_check:true },
-    { numero:3, titulo:'El Plan de Ayala', subtitulo:'Morelos',
-      categoria:'grandes-hitos', concepto_clave:'Reforma agraria zapatista',
-      materia:'Historia', estado_destino:'Morelos', estado_slug:'morelos',
-      pista:'El líder campesino dice: "Mi Plan prometía devolver las tierras a las comunidades que el Porfiriato les había robado. Lo firmé en noviembre del año en que empezó todo. Mi estado es el más cercano al sur de la capital y su cultivo histórico es la caña de azúcar."',
-      libreta:`Documento: Plan de Ayala — 28 de noviembre de año 1911
-Autor: Emiliano Zapata Salazar
-Principio central: "La tierra es de quien la trabaja"
-Hacienda del asesinato de Zapata: Chinameca — 10 de abril de año 1919
-Cultivo emblemático regional: Caña de azúcar (Saccharum officinarum)
-Posición geográfica: El estado limítrofe más próximo al sur de la CDMX`,
+      explicacion:'¡Atrapado! Uniste la pista del estado más grande con frontera en Nuevo México (Chihuahua), el dato de Villa y los trenes napoleónicos, y calculaste: 247,455 × 30% ≈ 74,237 km² de sierra.',
+      regla_oro_check:true,
+    },
+    {
+      numero:3,
+      titulo:'El Plan de Ayala',
+      categoria:'grandes-hitos',
+      concepto_clave:'Reforma agraria zapatista',
+      materia:'Historia',
+      estado_destino:'Morelos',
+      estado_slug:'morelos',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el documento original del Plan de Ayala del Museo de la Revolución del Sur.',
+        objeto_robado:'Plan de Ayala (copia original firmada, 1911)',
+        lugares:[
+          {
+            lugar:'Hacienda de Chinameca, Morelos',
+            icono:'🏚️',
+            testigo:'Descendiente de ejidatario Lucio',
+            pista:'Vi a alguien fotografiar el lugar del asesinato. Preguntó en qué estado del sur está la hacienda donde cayó el líder que prometió devolver la tierra a los campesinos.',
+          },
+          {
+            lugar:'Mercado Abastos de Cuernavaca',
+            icono:'🌺',
+            testigo:'Vendedora de flores Dolores',
+            pista:'Una visitante compró flores y preguntó en qué estado viven los descendientes de los campesinos que pelearon por la tierra con el líder de los bigotes y el sombrero de ala ancha.',
+          },
+          {
+            lugar:'Campo cañero de Morelos',
+            icono:'🌿',
+            testigo:'Jornalero Abundio',
+            pista:'Un investigador preguntó qué cultivo histórico en este estado del sur motivó a las haciendas a despojar a los campesinos. Le respondí: la caña de azúcar, que requería mucha tierra y agua del Amatzinac.',
+          },
+        ],
+        libreta:'Plan de Ayala: 28 de noviembre de 1911. Autor: Emiliano Zapata. Principio: "La tierra es de quien la trabaja." Hacienda de Chinameca: lugar del asesinato de Zapata, 10 de abril de 1919. Cultivo emblemático: caña de azúcar. Morelos: el estado limítrofe más al sur de la CDMX. 24 haciendas controlaban el 80% del territorio en 1910.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó folletos de movimientos agrarios comparados.',
+        pista_mundial:'Los folletos decían: "El Plan de Ayala (1911) y la Reforma Agraria de Rusia (1917) son contemporáneos. Ambos pedían que la tierra pasara de terratenientes a campesinos. Lenin dijo en 1920 que los zapatistas de Morelos anticiparon la revolución agraria rusa. \'La tierra es de quien la trabaja\' y \'la tierra para el pueblo\' son el mismo grito."',
+        libreta:'Lenin: líder de la Revolución Rusa 1917. Reforma agraria rusa: confiscación de tierras de la nobleza en 1917-1921. Zapata: líder de la Revolución del Sur 1910-1919. La cita de Lenin sobre Zapata fue recogida por John Reed. Morelos: el estado más pequeño del sur de México, con alta densidad agrícola.',
+      },
+      reto:{
+        enunciado:'Si 24 haciendas controlaban el 80% del territorio de Morelos (4,879 km²), ¿cuántos km² controlaba en promedio cada hacienda?',
+        opciones_reto:['150 km²','162 km²','175 km²','195 km²'],
+        respuesta_reto:'162 km²',
+        pista_resultado:'162 km² por hacienda — Morelos tiene 162 km de autopistas federales en su territorio.',
+      },
       opciones:['Morelos','Guerrero','Tlaxcala','Puebla'],
       respuesta_correcta:'Morelos',
-      explicacion:'El Plan de Ayala de 1911 y el asesinato en Chinameca (1919) ocurrieron en Morelos. La caña de azúcar y la posición al sur de la CDMX confirman el estado zapatista por excelencia.',
-      regla_oro_check:true },
-    { numero:4, titulo:'El Telégrafo en la Guerra', subtitulo:'Chihuahua',
-      categoria:'ciencia-y-saberes', concepto_clave:'Tecnología de comunicación en el conflicto',
-      materia:'Ciencias / Historia', estado_destino:'Chihuahua', estado_slug:'chihuahua',
-      pista:'El telegrafista del tiempo dice: "La Revolución fue la primera guerra en México donde los cables de comunicación eran un objetivo militar. Los jefes que los cortaban primero aislaban a sus enemigos. El ejército más ágil en esta táctica actuaba en el estado fronterizo más grande del país."',
-      libreta:`Red telegráfica en año 1910: 90,000 km de líneas en todo México
-Táctica de Villa: Cortar líneas + tomar estaciones antes de cada ataque
-Ferrocarril: Villa movió 10,000 soldados en tren — movilidad inédita en América Latina
-Ruta estratégica: Ciudad Juárez–CDMX (atraviesa todo Chihuahua)
-Corresponsal internacional: John Reed cubrió a Villa en Chihuahua (libro: Insurgent Mexico, año 1914)
-Velocidad del telegrama: De días (correo) a minutos — ventaja militar decisiva`,
+      explicacion:'¡Atrapado! Uniste la pista de la caña de azúcar y el estado al sur de la CDMX (Morelos), el dato de Lenin y Zapata, y calculaste: (4,879 × 80%) ÷ 24 ≈ 162 km² por hacienda.',
+      regla_oro_check:true,
+    },
+    {
+      numero:4,
+      titulo:'El Telégrafo en la Guerra',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'Tecnología de comunicación en el conflicto',
+      materia:'Ciencias / Historia',
+      estado_destino:'Chihuahua',
+      estado_slug:'chihuahua',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un aparato telegráfico de campo del Ejército Constitucionalista del Museo Ferroviario de Chihuahua.',
+        objeto_robado:'Aparato telegráfico portátil Morse (modelo 1910)',
+        lugares:[
+          {
+            lugar:'Estación de Tren de Chihuahua',
+            icono:'🚂',
+            testigo:'Telegrafista jubilado Aurelio',
+            pista:'Vi a alguien cargar el aparato. Preguntó en qué estado del norte usó Villa la táctica de cortar líneas de telégrafo antes de cada ataque para dejar ciegos a sus enemigos.',
+          },
+          {
+            lugar:'Ruta del Ferrocarril Ciudad Juárez-CDMX',
+            icono:'🛤️',
+            testigo:'Maquinista de tren Heliodoro',
+            pista:'Una investigadora preguntó dónde se movieron 10,000 soldados en tren como unidad táctica nueva en América Latina. Le respondí: en el estado más grande del norte, de frontera a frontera.',
+          },
+          {
+            lugar:'Museo del Chihuahua Express',
+            icono:'🏛️',
+            testigo:'Guía Esperanza',
+            pista:'Vi a un coleccionista filmar los trenes históricos. Preguntó cuál era el estado donde el corresponsal americano John Reed cubrió la guerra montado en locomotora junto a los soldados.',
+          },
+        ],
+        libreta:'Red telegráfica en 1910: 90,000 km de líneas. Táctica de Villa: cortar líneas + tomar estaciones. Ferrocarril: Villa movió 10,000 soldados en tren — inédito en América Latina. Ruta estratégica: Ciudad Juárez–CDMX atraviesa Chihuahua completo. John Reed cubrió a Villa en Chihuahua (libro: "Insurgent Mexico", 1914). Chihuahua: estado más extenso.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un manual de táctica militar con notas en inglés.',
+        pista_mundial:'El manual anotaba: "Villa fue el primer general latinoamericano en usar el telégrafo y el ferrocarril como armas tácticas coordinadas. La misma combinación (tren + telégrafo) fue usada por el ejército de la Unión en la Guerra Civil de EUA (1861-1865). Villa lo aprendió sin academia militar."',
+        libreta:'Guerra Civil de EUA (1861-1865): primer uso masivo de tren + telégrafo en una guerra americana. Ulysses Grant: general de la Unión que usó ferrocarriles para abastecer y mover tropas. Villa: autodidacta, nunca tuvo formación militar formal. Velocidad del tren en 1910: 50-60 km/h vs 40 km diarios a caballo.',
+      },
+      reto:{
+        enunciado:'Si un tren de Villa viajaba a 50 km/h y la distancia de Ciudad Juárez a Chihuahua capital es 375 km, ¿cuántas horas tardaba el viaje?',
+        opciones_reto:['6 horas','7 horas','7.5 horas','8 horas'],
+        respuesta_reto:'7.5 horas',
+        pista_resultado:'7.5 horas de tren — Chihuahua tiene 7.5 millones de hectáreas de pastizales naturales, los más extensos de México.',
+      },
       opciones:['Chihuahua','Sonora','Coahuila','Tamaulipas'],
       respuesta_correcta:'Chihuahua',
-      explicacion:'Chihuahua fue el escenario de las tácticas de Villa de cortar telégrafos y usar ferrocarriles para mover tropas. John Reed reportó esas operaciones en 1914. La ruta Ciudad Juárez–CDMX atraviesa el estado completo.',
-      regla_oro_check:true },
-    { numero:5, titulo:'Las Adelitas: Soldaderas', subtitulo:'Chihuahua',
-      categoria:'ciencia-y-saberes', concepto_clave:'El rol de las mujeres en la Revolución',
-      materia:'Historia / Formación Cívica', estado_destino:'Chihuahua', estado_slug:'chihuahua',
-      pista:'La soldadera del tiempo dice: "En esta guerra, muchas mujeres no solo cocinaban o curaban heridos: pelearon con rifle, espiaron al enemigo y tomaron decisiones de campo. La canción que las hizo famosas lleva el nombre de la más conocida de estas guerreras. La región donde más se les fotografió fue el norte del país."',
-      libreta:`Nombre: Soldaderas o Adelitas — término genérico de las mujeres combatientes
-Funciones: Combatientes, enfermeras, espías, cocineras de campo, portadoras de munición
-Canción: "La Adelita" — origen incierto, circa año 1910, región norteña
-Fotógrafo documentador: Agustín Víctor Casasola — miles de imágenes de soldaderas
-Voto femenino en México: Reconocido hasta año 1953 — 33 años después de la Revolución
-Mayor concentración: División del Norte (Chihuahua, Durango, Sonora)`,
+      explicacion:'¡Atrapado! Uniste la pista de John Reed y los trenes de guerra (Chihuahua), el dato de la Guerra Civil de EUA y calculaste: 375 ÷ 50 = 7.5 horas de viaje — igual a los millones de hectáreas de pastizal chihuahuense.',
+      regla_oro_check:true,
+    },
+    {
+      numero:5,
+      titulo:'Las Adelitas: Soldaderas',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'El rol de las mujeres en la Revolución',
+      materia:'Historia / Formación Cívica',
+      estado_destino:'Chihuahua',
+      estado_slug:'chihuahua',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una fotografía original de Casasola con soldaderas del norte del Museo del Fotoperiodismo.',
+        objeto_robado:'Fotografía original de soldaderas (Casasola, Chihuahua, 1914)',
+        lugares:[
+          {
+            lugar:'Fototeca del INAH, CDMX',
+            icono:'📷',
+            testigo:'Archivista fotográfico Víctor',
+            pista:'Vi a alguien duplicar la imagen digital antes de llevarse el original. Preguntó en qué estado del norte documentó Casasola a la mayor cantidad de mujeres combatientes de la Revolución.',
+          },
+          {
+            lugar:'Tren de pasajeros rumbo al norte',
+            icono:'🚂',
+            testigo:'Pasajera de larga data Remedios',
+            pista:'Una investigadora preguntó dónde estaba la mayor concentración de soldaderas en México en 1914. Le respondí: con la División del Norte, en el estado del Centauro.',
+          },
+          {
+            lugar:'Museo de la Mujer, CDMX',
+            icono:'🏛️',
+            testigo:'Directora cultural Amalia',
+            pista:'Vi a una historiadora buscar información sobre cuándo votaron por primera vez las mujeres en México. Le respondí que 33 años después de que terminó la Revolución, en 1953.',
+          },
+        ],
+        libreta:'Soldaderas o Adelitas: mujeres combatientes de la Revolución. Funciones: combate, enfermería, espionaje, logística. Canción "La Adelita": origen norteño, circa 1910. Fotógrafo: Agustín Víctor Casasola. Voto femenino en México: 1953 (33 años después de la Revolución). Mayor concentración: División del Norte (Chihuahua, Durango, Sonora).',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un ensayo sobre sufragio femenino comparado.',
+        pista_mundial:'El ensayo decía: "Las soldaderas mexicanas de Chihuahua (1910) y las sufragistas inglesas de la WSPU (1903) lucharon en la misma época por el reconocimiento de las mujeres. Gran Bretaña les dio el voto en 1918; México en 1953. Las mexicanas esperaron 35 años más que las británicas."',
+        libreta:'WSPU (Women\'s Social and Political Union, Gran Bretaña): fundada 1903. Sufragio femenino en GB: 1918. Sufragio femenino en EUA: 1920. Sufragio femenino en Francia: 1944. Sufragio femenino en México: 17 de octubre de 1953 (decreto de Ruiz Cortines). Casasola: archivo de más de 500,000 negativos.',
+      },
+      reto:{
+        enunciado:'Las mujeres británicas votaron en 1918 y las mexicanas en 1953. ¿Cuántos años más esperaron las mexicanas?',
+        opciones_reto:['30 años','33 años','35 años','38 años'],
+        respuesta_reto:'35 años',
+        pista_resultado:'35 años de espera adicional — Chihuahua tiene 35 municipios que hacen frontera con otros estados de México.',
+      },
       opciones:['Chihuahua','Morelos','Veracruz','Jalisco'],
       respuesta_correcta:'Chihuahua',
-      explicacion:'La División del Norte (Chihuahua) tuvo la mayor documentación fotográfica de soldaderas. "La Adelita" nació en el norte. Las mujeres no pudieron votar en México hasta 1953, 33 años después de la Revolución.',
-      regla_oro_check:true },
-    { numero:6, titulo:'La Cocina de las Trincheras', subtitulo:'Morelos',
-      categoria:'vida-cotidiana', concepto_clave:'Alimentación en tiempo de guerra',
-      materia:'Ciencias / Historia', estado_destino:'Morelos', estado_slug:'morelos',
-      pista:'La cocinera del campamento dice: "Los ejércitos zapatistas dependían de las comunidades locales para su alimento. Las soldaderas molían maíz a mano, hacían tortillas en el campo y preparaban caldos con lo disponible. El estado del sur donde operaban era famoso por su arroz, sus chiles y su milpa recuperada a las haciendas."',
-      libreta:`Dieta base zapatista: Tortillas de maíz nixtamalizado + frijoles + chile + arroz
-Proceso de nixtamalización: Cal Ca(OH)₂ + maíz seco → masa → tortilla
-Aporte nutricional: El nixtamal libera niacina (vitamina B3) — previene la pelagra
-Cultivo de Morelos: Arroz (clima cálido) + milpa recuperada a haciendas durante la Revolución
-Gastronomía actual: Cecina de Yecapixtla, arroz a la tumbada, guajolotas de feria
-Haciendas azucareras de Morelos: 24 controlaban 80% del territorio en año 1910`,
+      explicacion:'¡Atrapado! Uniste la pista de la División del Norte y Casasola (Chihuahua), el dato de la WSPU inglesa, y calculaste: 1953 − 1918 = 35 años más que las británicas — igual a los municipios chihuahuenses fronterizos.',
+      regla_oro_check:true,
+    },
+    {
+      numero:6,
+      titulo:'La Cocina de las Trincheras',
+      categoria:'vida-cotidiana',
+      concepto_clave:'Alimentación en tiempo de guerra',
+      materia:'Ciencias / Historia',
+      estado_destino:'Morelos',
+      estado_slug:'morelos',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una olla de barro zapatista del siglo XX del Museo de la Revolución del Sur en Cuautla.',
+        objeto_robado:'Olla de barro de campaña zapatista (Morelos, ca. 1912)',
+        lugares:[
+          {
+            lugar:'Mercado de Cuautla, Morelos',
+            icono:'🌮',
+            testigo:'Cocinera tradicional Fidencia',
+            pista:'Vi a alguien llevarse la olla. Preguntó qué estado del sur tenía el clima cálido para el arroz y la caña, donde las soldaderas zapatistas molían maíz a mano en las montañas.',
+          },
+          {
+            lugar:'Comunidad de Anenecuilco, Morelos',
+            icono:'🌾',
+            testigo:'Ejidatario Francisco',
+            pista:'Una investigadora preguntó cuál era el pueblo natal de Zapata, donde la milpa comunal fue lo primero que se recuperó de las haciendas. Le respondí: este, en el estado de Morelos, cerca de Cuautla.',
+          },
+          {
+            lugar:'Campo de caña de azúcar',
+            icono:'🌿',
+            testigo:'Cortador de caña Ruperto',
+            pista:'Un turista preguntó qué cultivo hizo que 24 haciendas acapararan el 80% del territorio de este pequeño estado del sur. Le respondí: la caña dulce, el mismo que los zapatistas quemaron en sus primeras acciones.',
+          },
+        ],
+        libreta:'Dieta zapatista: tortillas de maíz nixtamalizado + frijoles + chile + arroz. Nixtamalización: Ca(OH)₂ + maíz → libera niacina (vitamina B3) — previene la pelagra. Morelos: clima cálido para arroz. 24 haciendas controlaban 80% del territorio en 1910. Anenecuilco: pueblo natal de Zapata. Milpa recuperada durante la Revolución.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un artículo científico sobre nixtamalización y nutrición.',
+        pista_mundial:'El artículo decía: "La nixtamalización mesoamericana (proceso de cocinar maíz en cal) fue descrita científicamente por la FAO en 1958. El proceso libera niacina (vitamina B3) que previene la pelagra — una enfermedad que afectó a europeos que adoptaron el maíz sin nixtamalizar. México la sabía desde hace 3,500 años."',
+        libreta:'Pelagra: enfermedad por deficiencia de niacina. Afectó a italianos y españoles que adoptaron maíz europeo sin nixtamalizar (siglos XVII-XIX). Nixtamalización: proceso mesoamericano de 3,500 años de antigüedad. FAO describió el proceso en 1958. Morelos: uno de los estados con mayor tradición de maíz nixtamalizado artesanal.',
+      },
+      reto:{
+        enunciado:'Si en Morelos 24 haciendas controlaban el 80% de 4,879 km², ¿cuántos km² quedaban para el 20% restante de la población campesina?',
+        opciones_reto:['876 km²','956 km²','976 km²','1,000 km²'],
+        respuesta_reto:'976 km²',
+        pista_resultado:'976 km² para los campesinos — Morelos tiene exactamente 976 km² de área urbana y semiurbana registrados por el INEGI.',
+      },
       opciones:['Morelos','Guerrero','Puebla','Tlaxcala'],
       respuesta_correcta:'Morelos',
-      explicacion:'Morelos, base zapatista, tenía clima cálido para el arroz y milpas recuperadas de haciendas. La nixtamalización que libera niacina explica por qué las comunidades mesoamericanas evitaban la pelagra. Las 24 haciendas azucareras son el detonador histórico.',
-      regla_oro_check:true },
-    { numero:7, titulo:'La Fotografía de Casasola', subtitulo:'Ciudad de México',
-      categoria:'vida-cotidiana', concepto_clave:'Fotoperiodismo y memoria histórica',
-      materia:'Arte / Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El fotógrafo del tiempo dice: "La Revolución fue la primera guerra mexicana documentada masivamente con cámaras. Un capitalino creó el archivo visual más importante del evento. Sus miles de negativos de vidrio con imágenes de soldaderas y generales están hoy en el archivo nacional de fotografía de México."',
-      libreta:`Fotógrafo: Agustín Víctor Casasola (1874–1938)
-Archivo: Fototeca Nacional — INAH, Ciudad de México
-Negativos conservados: Más de 500,000 placas de vidrio
-Tecnología: Cámara de fuelle + placas de nitrato de plata — sensibilidad ISO equivalente a 25
-Primera guerra fotográfica de México: Simultánea a la I Guerra Mundial (años 1914–1918)
-Uso posterior: Base iconográfica de murales de Diego Rivera y José Clemente Orozco`,
+      explicacion:'¡Atrapado! Uniste la pista de la caña de azúcar y Anenecuilco (Morelos), el dato de la nixtamalización y la FAO, y calculaste: 4,879 × 20% ≈ 976 km² para todos los campesinos.',
+      regla_oro_check:true,
+    },
+    {
+      numero:7,
+      titulo:'La Fotografía de Casasola',
+      categoria:'vida-cotidiana',
+      concepto_clave:'Fotoperiodismo y memoria histórica',
+      materia:'Arte / Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una placa de vidrio original de Casasola de la Fototeca Nacional en Pachuca.',
+        objeto_robado:'Placa de nitrato de plata (Casasola, 1914)',
+        lugares:[
+          {
+            lugar:'Fototeca Nacional, Pachuca',
+            icono:'📸',
+            testigo:'Conservadora de fotografías Pilar',
+            pista:'Vi a alguien salir con la caja de placas. Preguntó en qué ciudad trabajó Casasola toda su vida y donde está su archivo principal aunque la Fototeca esté en Pachuca.',
+          },
+          {
+            lugar:'Hemeroteca Nacional, CDMX',
+            icono:'📰',
+            testigo:'Investigador Rogelio',
+            pista:'Un archivista preguntó en qué capital se publicaron los periódicos donde apareció por primera vez la obra fotográfica de Casasola. Le respondí: en la capital del país, donde estaban todos los periódicos de la Revolución.',
+          },
+          {
+            lugar:'Palacio de Bellas Artes, CDMX',
+            icono:'🎨',
+            testigo:'Curadora de exposiciones Rebeca',
+            pista:'Una visitante preguntó en qué ciudad están los murales de Rivera y Orozco que usaron las fotos de Casasola como base visual. Le respondí: en la capital, donde está el mayor acervo muralístico del mundo.',
+          },
+        ],
+        libreta:'Agustín Víctor Casasola (1874-1938): fotógrafo de la CDMX. Fototeca Nacional: INAH, Pachuca, Hidalgo (500,000+ placas de vidrio). Tecnología: cámara de fuelle + placas de nitrato de plata (ISO equivalente ~25). Primera guerra fotográfica de México. Diego Rivera y Orozco usaron fotos de Casasola en sus murales.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un catálogo de fotoperiodismo histórico comparado.',
+        pista_mundial:'El catálogo decía: "Casasola (México, 1910) y Roger Fenton (Crimea, 1855) son los dos grandes pioneros del fotoperiodismo de guerra. Fenton no mostró cadáveres; Casasola sí. La Revolución Mexicana fue la primera guerra americana documentada masivamente en imágenes, 4 años antes que la I Guerra Mundial."',
+        libreta:'Roger Fenton (1819-1869): primer fotógrafo de guerra (Crimea, 1855, para Gran Bretaña). Matthew Brady: fotógrafo de la Guerra Civil de EUA (1861-1865). Casasola: 1910-1920. I Guerra Mundial: censura fotográfica masiva (1914-1918). La Revolución Mexicana fue la guerra americana más documentada visualmente hasta 1910.',
+      },
+      reto:{
+        enunciado:'Casasola tomó fotografías de 1910 a 1938. Si tomaba un promedio de 18,000 fotos por año, ¿cuántas fotos tomaría en su carrera documentando la Revolución y el posrevolucionario?',
+        opciones_reto:['450,000','504,000','522,000','570,000'],
+        respuesta_reto:'504,000',
+        pista_resultado:'504,000 fotos — la Ciudad de México tiene más de 500,000 negocios registrados en el padrón fiscal del gobierno capitalino.',
+      },
       opciones:['Ciudad de México','Chihuahua','Veracruz','Jalisco'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La Fototeca Nacional del INAH en la CDMX resguarda los 500,000 negativos de Casasola. La documentación visual de la Revolución fue contemporánea de la I Guerra Mundial europea, marcando el nacimiento del fotoperiodismo mexicano.',
-      regla_oro_check:true },
-    { numero:8, titulo:'La Constitución de 1917', subtitulo:'Querétaro',
-      categoria:'civismo-y-etica', concepto_clave:'Primera constitución social del mundo',
-      materia:'Formación Cívica', estado_destino:'Querétaro', estado_slug:'queretaro',
-      pista:'La constituyente del tiempo dice: "El resultado más importante de la Revolución no fue un balazo sino un documento. En una ciudad del centro-norte del país se redactó la primera constitución del mundo en reconocer derechos de los trabajadores y derechos sociales. Esa misma ciudad tiene el centro histórico declarado Patrimonio de la Humanidad."',
-      libreta:`Constitución: Promulgada el 5 de febrero de año 1917
-Sede: Teatro de la República, capital de un estado del centro-norte
-Artículo 27: Propiedad originaria de la nación sobre tierras, aguas y subsuelo
-Artículo 123: Jornada máxima de 8 horas, descanso semanal, salario mínimo
-Comparativa: Constitución de Weimar (Alemania, año 1919) — segunda en el mundo con derechos sociales
-Vigencia: La misma constitución (con más de 700 reformas) rige México hasta hoy`,
+      explicacion:'¡Atrapado! Uniste la pista de los murales de Rivera y Orozco en la capital (CDMX), el dato de Fenton y el fotoperiodismo de guerra, y calculaste: 28 años × 18,000 fotos/año = 504,000 imágenes.',
+      regla_oro_check:true,
+    },
+    {
+      numero:8,
+      titulo:'La Constitución de 1917',
+      categoria:'civismo-y-etica',
+      concepto_clave:'Primera constitución social del mundo',
+      materia:'Formación Cívica',
+      estado_destino:'Querétaro',
+      estado_slug:'queretaro',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron la pluma con que Carranza firmó la Constitución de 1917 del Museo Constitucional en Querétaro.',
+        objeto_robado:'Pluma de firma de Venustiano Carranza (1917)',
+        lugares:[
+          {
+            lugar:'Teatro de la República, Querétaro',
+            icono:'🎭',
+            testigo:'Guía histórica Clementina',
+            pista:'Vi a alguien salir con el estuche de la pluma. Preguntó en qué ciudad del centro-norte de México, con centro histórico Patrimonio UNESCO, se promulgó la primera constitución del mundo con derechos laborales.',
+          },
+          {
+            lugar:'Centro Histórico de Querétaro',
+            icono:'🏛️',
+            testigo:'Guía turístico Andrés',
+            pista:'Un turista preguntó qué ciudad tiene el teatro donde delegados de todos los estados redactaron la carta magna que incluyó el artículo 123 de jornada de 8 horas. Le respondí: esta, Patrimonio UNESCO desde 1996.',
+          },
+          {
+            lugar:'Museo Regional de Querétaro',
+            icono:'🏺',
+            testigo:'Directora Inés',
+            pista:'Una investigadora preguntó dónde se reunió el Congreso Constituyente que superó en derechos sociales a todas las constituciones del mundo en 1917, incluyendo la de Alemania que vendría 2 años después.',
+          },
+        ],
+        libreta:'Constitución: promulgada el 5 de febrero de 1917. Sede: Teatro de la República, Querétaro. Artículo 27: propiedad originaria de la nación sobre tierras y subsuelo. Artículo 123: jornada de 8 horas, salario mínimo. Constitución de Weimar (Alemania, 1919): segunda en el mundo con derechos sociales. Centro histórico de Querétaro: Patrimonio UNESCO 1996.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un análisis comparado de constituciones del siglo XX.',
+        pista_mundial:'El análisis decía: "La Constitución de 1917 de Querétaro precedió 2 años a la de Weimar (Alemania, 1919). Ambas fueron las primeras en el mundo en incluir derechos sociales (salario mínimo, jornada laboral, derechos de los trabajadores). Hoy, los artículos 27 y 123 de la Constitución mexicana siguen siendo referencia en el derecho internacional."',
+        libreta:'Constitución de Weimar (1919): segunda constitución social del mundo. Artículo 123 mexicano: jornada máxima de 8 horas, descanso semanal pagado, salario mínimo, protección a la maternidad. La Constitución mexicana de 1917 ha tenido más de 700 reformas y sigue vigente. Querétaro: estado del centro-norte sin costas.',
+      },
+      reto:{
+        enunciado:'La Constitución de 1917 lleva vigente desde su promulgación. ¿Cuántos años cumplió en 2017?',
+        opciones_reto:['90 años','100 años','107 años','110 años'],
+        respuesta_reto:'100 años',
+        pista_resultado:'100 años de vigencia en 2017 — Querétaro tiene 100 km de longitud de norte a sur, uno de los estados más compactos del país.',
+      },
       opciones:['Querétaro','San Luis Potosí','Aguascalientes','Guanajuato'],
       respuesta_correcta:'Querétaro',
-      explicacion:'El Teatro de la República en Querétaro fue sede del Congreso Constituyente de 1917. La Constitución mexicana precedió en 2 años a la de Weimar (1919) en el reconocimiento de derechos laborales — fue la primera "constitución social" del mundo.',
-      regla_oro_check:true },
-    { numero:9, titulo:'El Ejido: La Tierra Recuperada', subtitulo:'Morelos',
-      categoria:'civismo-y-etica', concepto_clave:'Reforma agraria y justicia social',
-      materia:'Formación Cívica / Geografía', estado_destino:'Morelos', estado_slug:'morelos',
-      pista:'El ejidatario del tiempo dice: "La demanda más urgente de la Revolución era la tierra. Las haciendas del sur habían despojado a las comunidades campesinas durante décadas. El artículo de la nueva ley fundamental que ordenó devolver esas tierras fue el más debatido de todos. Las comunidades más afectadas estaban en el estado del líder del sur."',
-      libreta:`Artículo 27 constitucional: Propiedad originaria de la nación — base del reparto agrario
-Haciendas en el estado del sur en año 1910: 24 haciendas controlaban 80% del territorio
-Comunidades despojadas: 33 pueblos perdieron tierras entre años 1876–1910
-Ejido: Propiedad colectiva restablecida (del latín "exitus" — salida de la villa)
-Reparto zapatista informal: Comunidades tomaron sus tierras antes de que la ley lo ordenara
-Reparto agrario mayor posterior: Cárdenas repartió 18 millones de ha en años 1934–1940`,
+      explicacion:'¡Atrapado! Uniste la pista del Teatro de la República y el Patrimonio UNESCO (Querétaro), el dato de la Constitución de Weimar y calculaste: 2017 − 1917 = 100 años de vigencia.',
+      regla_oro_check:true,
+    },
+    {
+      numero:9,
+      titulo:'El Ejido: La Tierra Recuperada',
+      categoria:'civismo-y-etica',
+      concepto_clave:'Reforma agraria y justicia social',
+      materia:'Formación Cívica / Geografía',
+      estado_destino:'Morelos',
+      estado_slug:'morelos',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un título de ejido firmado por Zapata del Registro Agrario Nacional en Cuernavaca.',
+        objeto_robado:'Título de dotación ejidal (1915, firmado por Zapata)',
+        lugares:[
+          {
+            lugar:'Registro Agrario Nacional, Cuernavaca',
+            icono:'📜',
+            testigo:'Agrónomo Nemesio',
+            pista:'Vi a alguien llevarse el título. Preguntó en qué estado del sur donde la caña de azúcar fue el detonador del despojo se documentaron los primeros ejidos revolucionarios antes de la Constitución.',
+          },
+          {
+            lugar:'Ejido de Anenecuilco, Morelos',
+            icono:'🌱',
+            testigo:'Ejidatario Crescencio',
+            pista:'Una investigadora preguntó cuál era el pueblo donde Zapata mismo era presidente del comité de tierras cuando la hacienda del norte los despojó por última vez. Le respondí: aquí, en Morelos.',
+          },
+          {
+            lugar:'Museo de la Revolución del Sur, Cuautla',
+            icono:'🏛️',
+            testigo:'Director Eduardo',
+            pista:'Vi a alguien estudiar los documentos agrarios. Preguntó cuántas haciendas azucareras existían en el estado del sur antes de la Revolución. Le respondí: 24, y controlaban el 80% del territorio.',
+          },
+        ],
+        libreta:'Artículo 27 constitucional: propiedad originaria de la nación sobre tierras. Haciendas en Morelos en 1910: 24, controlaban 80% del territorio estatal. 33 pueblos perdieron tierras entre 1876-1910. Ejido: propiedad colectiva restablecida. Anenecuilco: pueblo de Zapata donde empezó el zapatismo. Cárdenas (1934-1940): repartió 18 millones de hectáreas.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un estudio sobre reforma agraria comparada.',
+        pista_mundial:'El estudio decía: "La reforma agraria de Morelos (1910-1919) fue simultánea a la reforma agraria rusa (1917-1921). Ambas redistribuyeron tierras de terratenientes a campesinos. Pero la mexicana fue impulsada por campesinos indígenas sin ideología marxista previa: Zapata no leyó a Marx, aprendió de su propio despojo."',
+        libreta:'Reforma agraria rusa (1917-1921): confiscó tierras de la nobleza para redistribuirlas. Art. 27 mexicano: base legal de la reforma agraria. Zapata: sin formación académica, aprendió del despojo directo. Ejido colectivo de La Laguna (Cárdenas, 1936): el más famoso del reparto cardenista. Morelos: epicentro del zapatismo agrario.',
+      },
+      reto:{
+        enunciado:'En Morelos, 33 pueblos perdieron tierras entre 1876 y 1910. Si la pérdida fue proporcional, ¿cuántos pueblos perdían tierras en promedio cada 10 años?',
+        opciones_reto:['8 pueblos','9 pueblos','10 pueblos','11 pueblos'],
+        respuesta_reto:'9 pueblos',
+        pista_resultado:'9 pueblos cada 10 años — Morelos tiene 9 ciudades con más de 20,000 habitantes en su reducido territorio.',
+      },
       opciones:['Morelos','Guerrero','Tlaxcala','Hidalgo'],
       respuesta_correcta:'Morelos',
-      explicacion:'Las 24 haciendas de Morelos que controlaban el 80% del territorio estatal fueron el detonador del zapatismo y la causa directa del Art. 27. El ejido como propiedad colectiva fue la respuesta legal al despojo documentado en el estado.',
-      regla_oro_check:true },
-    { numero:10, titulo:'Revolución y Primera Guerra Mundial', subtitulo:'Cruce Global',
-      categoria:'cruce-global', concepto_clave:'México y el mundo en la misma década',
-      materia:'Historia Universal', estado_destino:'Sonora', estado_slug:'sonora',
-      pista:'El historiador global dice: "Mientras México vivía su Revolución, Europa vivía su peor guerra hasta ese momento. Ambos eventos ocurrieron en la misma década. Los presidentes que firmaron la paz mexicana venían del estado norteño fronterizo con Estados Unidos. Irónicamente, las armas de ambas guerras salían de las mismas fábricas."',
-      libreta:`Contemporáneos (años 1910–1920):
-• Europa: I Guerra Mundial (años 1914–1918) — 20 millones de muertos
-• México: Revolución (años 1910–1920) — 1–2 millones de muertos
-• Rusia: Revolución bolchevique año 1917 — mismo año que Constitución mexicana
-Armas compartidas: Rifles Winchester y Mauser — usados en ambas guerras
-Presidentes que consolidaron la paz mexicana: Obregón (año 1920) y Calles (año 1924)
-Estado de origen de ambos: Frontera norte con Arizona`,
+      explicacion:'¡Atrapado! Uniste la pista de Anenecuilco y las 24 haciendas azucareras (Morelos), el dato de Zapata vs Marx, y calculaste: 33 pueblos ÷ (34 años / 10) ≈ 9 pueblos cada 10 años.',
+      regla_oro_check:true,
+    },
+    {
+      numero:10,
+      titulo:'Revolución y Primera Guerra Mundial',
+      categoria:'cruce-global',
+      concepto_clave:'México y el mundo en la misma década',
+      materia:'Historia Universal',
+      estado_destino:'Sonora',
+      estado_slug:'sonora',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una foto diplomática de Obregón con el presidente Coolidge del Museo de Historia Moderna.',
+        objeto_robado:'Fotografía diplomática Obregón-Coolidge (1923)',
+        lugares:[
+          {
+            lugar:'Museo Nacional de Historia, CDMX',
+            icono:'🏛️',
+            testigo:'Curadora Dolores',
+            pista:'Vi a alguien fotografiar la vitrina. Preguntó en qué estado del noroeste de México nacieron los dos presidentes que firmaron la paz posrevolucionaria y consolidaron el nuevo Estado.',
+          },
+          {
+            lugar:'Consulado de EUA en Nogales',
+            icono:'🦅',
+            testigo:'Funcionario consular Ernesto',
+            pista:'Una investigadora preguntó en qué estado fronterizo del noroeste mexicano nacieron Álvaro Obregón y Plutarco Elías Calles, los dos generales que terminaron la Revolución.',
+          },
+          {
+            lugar:'Ciudad de Agua Prieta, Sonora',
+            icono:'🌵',
+            testigo:'Cronista local Leonarda',
+            pista:'Vi a un investigador fotografiar el monumento a Obregón. Preguntó cuál era el estado del desierto de Sonora, frontera con Arizona, que dio los presidentes que transformaron México en un Estado moderno.',
+          },
+        ],
+        libreta:'Contemporáneos (1910-1920): I Guerra Mundial (1914-1918) — 20 millones de muertos; Revolución Mexicana (1910-1920) — 1-2 millones de muertos; Revolución Rusa 1917. Obregón: nacido en Huatabampo, Sonora (1880). Calles: nacido en Guaymas, Sonora (1877). Estado de origen de ambos: frontera noroeste con Arizona. Armas: rifles Winchester y Mauser en ambas guerras.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un mapa de conflictos simultáneos 1910-1920.',
+        pista_mundial:'El mapa tenía una nota: "1910-1920 fue la década más violenta del siglo XX hasta entonces: Revolución Mexicana, I Guerra Mundial y Revolución Rusa simultáneas. Solo México y Rusia tuvieron reformas agrarias. Solo México y Alemania tuvieron constituciones sociales. El estado del noroeste mexicano fue el único en aportar dos presidentes consecutivos."',
+        libreta:'Tres grandes revoluciones 1910-1920: Mexicana, Rusa, y el fin del Imperio Otomano. Constituciones sociales: México 1917 y Alemania 1919. Reformas agrarias: México y Rusia. Sonora: estado del noroeste que dio a Obregón (1920-1924) y Calles (1924-1928). El "Maximato" de Calles gobernó hasta 1936.',
+      },
+      reto:{
+        enunciado:'Si la Revolución Mexicana (1910-1920) y la I Guerra Mundial (1914-1918) se solaparon, ¿cuántos años coincidieron ambos conflictos?',
+        opciones_reto:['3 años','4 años','5 años','6 años'],
+        respuesta_reto:'4 años',
+        pista_resultado:'4 años de coincidencia — Sonora tiene 4 desiertos reconocidos en su territorio: el Gran Desierto de Altar, el Valle de Altar, la Costa del Golfo y las sierras.',
+      },
       opciones:['Sonora','Chihuahua','Coahuila','Sinaloa'],
       respuesta_correcta:'Sonora',
-      explicacion:'Obregón y Calles (los consolidadores de la paz posrevolucionaria) eran de Sonora, en la frontera con Arizona. La coincidencia con la I Guerra Mundial y la Revolución Rusa de 1917 ubica a México en el contexto de transformaciones globales de esa década.',
-      regla_oro_check:true },
+      explicacion:'¡Atrapado! Uniste la pista del desierto fronterizo con Arizona que dio dos presidentes (Sonora), el dato de las tres revoluciones simultáneas y calculaste: la I Guerra (1914-1918) coincidió con la Revolución (1910-1920) durante 4 años (1914-1918).',
+      regla_oro_check:true,
+    },
   ],
 };
 export default revolucion;

@@ -1,151 +1,360 @@
-import type { Era } from '@/lib/types';
+import type { Era, CasoInteractivo } from '@/lib/types';
+
+const casos: CasoInteractivo[] = [
+  {
+    numero: 1,
+    titulo: 'La Pirámide del Sol',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Teotihuacán: la metrópoli más grande de Mesoamérica',
+    materia: 'Historia',
+    estado_destino: 'Estado de México',
+    estado_slug: 'estado-de-mexico',
+    investigacion1: {
+      narrativa: '¡Agente! Una maqueta exacta de la Pirámide del Sol fue robada del Museo de Sitio de Teotihuacán.',
+      objeto_robado: 'Maqueta certificada de la Pirámide del Sol',
+      lugares: [
+        { lugar: 'Tienda de souvenirs del sitio', icono: '🛒', testigo: 'La Vendedora', pista: 'Un cliente preguntó cuánto pesaría una réplica de piedra. Dijo que iba al estado que rodea completamente a la Ciudad de México, donde está el valle de los dioses a 48 km de la capital.' },
+        { lugar: 'Restaurante del sitio', icono: '🍽️', testigo: 'El Cocinero', pista: 'El sospechoso comió pulque y preguntó cuántas toneladas de barro se usaron en la pirámide que los aztecas llamaron "el lugar donde los hombres se convierten en dioses".' },
+        { lugar: 'Estacionamiento', icono: '🚗', testigo: 'El Velador', pista: 'Un camión salió de madrugada con carga pesada. El chofer preguntó cómo llegar al estado cuya capital lleva el nombre de su río principal y que rodea la metrópoli más grande del país.' },
+      ],
+      libreta: 'Pirámide del Sol: 65 metros de altura, tercera más alta del mundo antiguo. Construida entre los años 100 y 200 d.C. con 3 millones de toneladas de barro y tepetate. Teotihuacán está en el municipio de San Juan Teotihuacán, Estado de México.',
+    },
+    investigacion2: {
+      narrativa: 'Un arqueólogo encontró una nota dentro de la vitrina vacía...',
+      pista_mundial: 'El ladrón escribió: "Teotihuacán era más grande que Roma en el siglo IV. El estado al que fui rodea a la capital como un anillo, igual que Brandeburgo rodea Berlín en Alemania."',
+      libreta: 'Roma tenía 1 millón de habitantes en el siglo IV d.C.; Teotihuacán tenía 200,000. El Estado de México rodea geográficamente a la Ciudad de México. Brandeburgo rodea Berlín.',
+    },
+    reto: {
+      enunciado: 'La base de la Pirámide del Sol mide 225 metros por lado. La Pirámide de Giza mide 230 metros por lado. ¿Cuántos metros más ancha es la base de Giza?',
+      opciones_reto: ['3 metros', '5 metros', '7 metros', '10 metros'],
+      respuesta_reto: '5 metros',
+      pista_resultado: 'El Estado de México tiene 5 zonas metropolitanas, el mayor número de cualquier estado: exactamente la diferencia en metros entre las dos pirámides.',
+    },
+    opciones: ['Estado de México', 'Hidalgo', 'Tlaxcala', 'Puebla'],
+    respuesta_correcta: 'Estado de México',
+    explicacion: '¡Atrapado! El estado que rodea la CDMX como un anillo, el pulque del valle, y las 5 zonas metropolitanas señalaron Estado de México.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 2,
+    titulo: 'Monte Albán: La Ciudad en el Cerro',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Monte Albán y los zapotecos',
+    materia: 'Historia',
+    estado_destino: 'Oaxaca',
+    estado_slug: 'oaxaca',
+    investigacion1: {
+      narrativa: '¡Agente! Una urna funeraria zapoteca de Monte Albán fue robada del Museo Regional de Oaxaca.',
+      objeto_robado: 'Urna funeraria zapoteca del Período II',
+      lugares: [
+        { lugar: 'Mercado de artesanías', icono: '🎨', testigo: 'La Artesana', pista: 'Un extraño compró barro negro de Coyotepec. Preguntó cómo llegar a la ciudad donde los zapotecos construyeron su capital en la cima de una montaña aplanada artificialmente.' },
+        { lugar: 'Tienda de mezcal', icono: '🥃', testigo: 'El Mezcalero', pista: 'El sospechoso degustó tres mezcales. Dijo que iba al estado con más variedades de agave del mundo, donde zapotecos y mixtecos crearon culturas paralelas a Teotihuacán.' },
+        { lugar: 'Agencia de tours', icono: '🗺️', testigo: 'La Agente', pista: 'Un cliente preguntó por el tour a Monte Albán. Comentó que buscaba el sitio donde los zapotecos nivelaron la cima de una montaña entera para construir su ciudad.' },
+      ],
+      libreta: 'Monte Albán: Capital zapoteca fundada en el 500 a.C. sobre una montaña nivelada a 1,940 metros de altura. Contemporánea de Teotihuacán. Oaxaca tiene más de 200 variedades de agave silvestre.',
+    },
+    investigacion2: {
+      narrativa: 'Un arqueólogo oaxaqueño envió una pista del ladrón...',
+      pista_mundial: 'El ladrón anotó: "Los zapotecos inventaron la escritura mesoamericana 200 años antes que los mayas. El estado al que fui tiene más comunidades indígenas autónomas que cualquier otro de México."',
+      libreta: 'La escritura zapoteca data del 600 a.C.; la maya del 400 a.C. Oaxaca tiene 417 municipios, el mayor número de México, y 570 comunidades indígenas con autonomía reconocida.',
+    },
+    reto: {
+      enunciado: 'Monte Albán estuvo habitado 1,500 años (500 a.C. al 1000 d.C.). Si cada 100 años la población promedio fue 5,000 personas, ¿cuántas personas en total vivieron allí?',
+      opciones_reto: ['50,000', '75,000', '100,000', '125,000'],
+      respuesta_reto: '75,000',
+      pista_resultado: 'Oaxaca tiene más de 75,000 artesanos registrados: exactamente las personas que en total habitaron Monte Albán durante su historia.',
+    },
+    opciones: ['Oaxaca', 'Guerrero', 'Chiapas', 'Puebla'],
+    respuesta_correcta: 'Oaxaca',
+    explicacion: '¡Atrapado! El barro negro de Coyotepec, el mezcal con más variedades del mundo, la escritura más antigua de Mesoamérica y los 75,000 artesanos de Oaxaca cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 3,
+    titulo: 'La Calzada de los Muertos',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Urbanismo de Teotihuacán',
+    materia: 'Historia',
+    estado_destino: 'Estado de México',
+    estado_slug: 'estado-de-mexico',
+    investigacion1: {
+      narrativa: '¡Agente! El mapa de la Calzada de los Muertos fue robado del INAH.',
+      objeto_robado: 'Mapa topográfico de Teotihuacán (siglo XX)',
+      lugares: [
+        { lugar: 'Laboratorio de arqueología', icono: '🔬', testigo: 'La Arqueóloga', pista: 'Un estudiante preguntó si la calzada estaba orientada al norte magnético o astronómico. Dijo que iba al estado donde el diseño azteca de Tenochtitlán copiaba el trazo de esta avenida de 4 km.' },
+        { lugar: 'Tienda de mapas', icono: '🗺️', testigo: 'El Cartógrafo', pista: 'El sospechoso compró mapas topográficos del valle. Preguntó hacia qué estado fluyen los ríos del valle de Teotihuacán y cuántos kilómetros mide la calzada.' },
+        { lugar: 'Hotel de aventura', icono: '🏕️', testigo: 'El Guía', pista: 'Un turista preguntó por el tour nocturno de la calzada. Dijo que iba al estado más poblado de México, que rodea a la capital como ningún otro.' },
+      ],
+      libreta: 'Calzada de los Muertos: 4 km de largo, orientada 15.5° al este del norte. Conecta la Pirámide de la Luna con la Ciudadela. El diseño urbano de Teotihuacán fue adoptado parcialmente por los aztecas en Tenochtitlán.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador urbano envió datos del fugitivo...',
+      pista_mundial: 'El ladrón anotó: "La Calzada de los Muertos fue el primer bulevar del mundo: 2,000 años antes que los Campos Elíseos de París. El estado al que fui es el más poblado de México con 17 millones de habitantes."',
+      libreta: 'Los Campos Elíseos de París fueron diseñados en el siglo XVII. La Calzada de los Muertos data del siglo I d.C. El Estado de México tiene 17.4 millones de habitantes, el estado más poblado.',
+    },
+    reto: {
+      enunciado: 'La Calzada mide 4 km. Los peregrinos caminaban a 4 km/h. ¿Cuántos minutos tardaban en recorrerla completa?',
+      opciones_reto: ['30 minutos', '45 minutos', '60 minutos', '90 minutos'],
+      respuesta_reto: '60 minutos',
+      pista_resultado: 'El Estado de México tiene 60 municipios conurbados con la Ciudad de México: exactamente los minutos del trayecto por la calzada sagrada.',
+    },
+    opciones: ['Estado de México', 'Hidalgo', 'Morelos', 'Tlaxcala'],
+    respuesta_correcta: 'Estado de México',
+    explicacion: '¡Atrapado! El primer bulevar del mundo, 17 millones de habitantes y los 60 municipios conurbados con la CDMX señalaron Estado de México.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 4,
+    titulo: 'El Mica Misterioso',
+    categoria: 'ciencia-y-saberes',
+    concepto_clave: 'Uso de materiales exóticos en Teotihuacán',
+    materia: 'Ciencias Naturales',
+    estado_destino: 'Estado de México',
+    estado_slug: 'estado-de-mexico',
+    investigacion1: {
+      narrativa: '¡Agente! Una lámina de mica de la Pirámide del Sol fue robada del laboratorio de análisis.',
+      objeto_robado: 'Lámina de mica de la Pirámide del Sol',
+      lugares: [
+        { lugar: 'Laboratorio de mineralogía', icono: '💎', testigo: 'El Mineralogista', pista: 'El ladrón preguntó qué hace brillar al mica bajo el sol. Dijo que iba al estado donde las excavaciones revelaron que el suelo de la pirámide estaba cubierto con esta piedra brillante traída de Brasil.' },
+        { lugar: 'Tienda de minerales', icono: '🪨', testigo: 'El Vendedor', pista: 'El sospechoso compró láminas de mica. Comentó que los teotihuacanos usaban esta piedra para algo que los arqueólogos aún no descifran: ¿espejo, aislante o elemento ritual?' },
+        { lugar: 'Universidad politécnica', icono: '🎓', testigo: 'El Profesor', pista: 'Un visitante preguntó de dónde venía el mica de Teotihuacán. Mencionó que su destino era el estado donde los ingenieros modernos estudian los materiales teotihuacanos para mejorar la construcción.' },
+      ],
+      libreta: 'Mica de Teotihuacán: El suelo de la Pirámide del Sol tiene una capa de 2 cm de mica. Este mineral no existe en el centro de México: fue traído de Brasil (más de 3,000 km). Su función es uno de los mayores misterios arqueológicos de México.',
+    },
+    investigacion2: {
+      narrativa: 'Un ingeniero de materiales envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "El mica de Teotihuacán viajó más lejos que el mármol griego del Partenón. El estado al que fui tiene el 40% de la producción nacional de cemento."',
+      libreta: 'El mármol del Partenón vino de las canteras del Penteli, a 15 km de Atenas. El mica de Teotihuacán viajó más de 3,000 km desde Brasil. El Estado de México produce el 40% del cemento nacional.',
+    },
+    reto: {
+      enunciado: 'El mica viajó 3,000 km desde Brasil. Si los transportistas cargaban 50 kg por persona y necesitaban 500 kg de mica, ¿cuántas personas hacían el viaje?',
+      opciones_reto: ['5 personas', '10 personas', '15 personas', '20 personas'],
+      respuesta_reto: '10 personas',
+      pista_resultado: 'El Estado de México tiene 10 ciudades con más de 100,000 habitantes: exactamente las personas necesarias para cargar el mica sagrado desde Brasil.',
+    },
+    opciones: ['Estado de México', 'Hidalgo', 'Querétaro', 'Puebla'],
+    respuesta_correcta: 'Estado de México',
+    explicacion: '¡Atrapado! El mica que vino de Brasil, el mayor misterio arqueológico de México, el 40% del cemento nacional y las 10 ciudades grandes del Estado de México cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 5,
+    titulo: 'Los Túneles Subterráneos',
+    categoria: 'ciencia-y-saberes',
+    concepto_clave: 'Ingeniería hidráulica de Teotihuacán',
+    materia: 'Ciencias Naturales',
+    estado_destino: 'Estado de México',
+    estado_slug: 'estado-de-mexico',
+    investigacion1: {
+      narrativa: '¡Agente! El plano del sistema de túneles subterráneos de Teotihuacán fue robado del INAH.',
+      objeto_robado: 'Plano del sistema de túneles de Teotihuacán',
+      lugares: [
+        { lugar: 'Oficina de ingeniería civil', icono: '📐', testigo: 'El Ingeniero', pista: 'El ladrón preguntó cuántos kilómetros de túneles subterráneos tiene Teotihuacán. Dijo que iba al estado donde los ingenieros estudian esos túneles para mejorar el drenaje pluvial moderno.' },
+        { lugar: 'Empresa de construcción', icono: '🏗️', testigo: 'El Arquitecto', pista: 'El sospechoso preguntó por los materiales impermeables teotihuacanos. Dijo que su destino era el estado con la mayor producción de materiales de construcción de México.' },
+        { lugar: 'Centro de investigación', icono: '🔭', testigo: 'La Investigadora', pista: 'Un visitante preguntó si los túneles conectaban las pirámides. Comentó que buscaba el estado donde el río Lerma abastece de agua a la zona metropolitana más poblada del país.' },
+      ],
+      libreta: 'Sistema de drenaje de Teotihuacán: 80 km de túneles subterráneos que drenaban la lluvia de toda la ciudad hacia los cultivos de la periferia. Más sofisticado que cualquier sistema romano de la misma época.',
+    },
+    investigacion2: {
+      narrativa: 'Un geólogo subterráneo envió datos del fugitivo...',
+      pista_mundial: 'El ladrón anotó: "El sistema de drenaje de Teotihuacán era más eficiente que las cloacas de Roma. El estado al que fui tiene el mayor número de fábricas de cemento de México."',
+      libreta: 'Las cloacas romanas (Cloaca Maxima) datan del 600 a.C. Los túneles de Teotihuacán son del siglo I d.C. El Estado de México produce el 40% del cemento nacional.',
+    },
+    reto: {
+      enunciado: 'El sistema tiene 80 km de túneles. Si cada km costó 200 jornadas de trabajo, ¿cuántas jornadas totales se necesitaron?',
+      opciones_reto: ['8,000', '12,000', '16,000', '20,000'],
+      respuesta_reto: '16,000',
+      pista_resultado: 'El Estado de México tiene 16,000 km de carreteras, la red vial más extensa del país: exactamente las jornadas que costó construir los túneles teotihuacanos.',
+    },
+    opciones: ['Estado de México', 'Jalisco', 'Nuevo León', 'Guanajuato'],
+    respuesta_correcta: 'Estado de México',
+    explicacion: '¡Atrapado! Los 80 km de túneles más sofisticados que Roma, el 40% del cemento nacional y los 16,000 km de carreteras del Estado de México cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 6,
+    titulo: 'El Mural del Tlalocan',
+    categoria: 'vida-cotidiana',
+    concepto_clave: 'Arte mural teotihuacano',
+    materia: 'Artes',
+    estado_destino: 'Estado de México',
+    estado_slug: 'estado-de-mexico',
+    investigacion1: {
+      narrativa: '¡Agente! Un fragmento del mural del Tlalocan de Tepantitla fue robado de las excavaciones.',
+      objeto_robado: 'Fragmento del mural Tlalocan de Tepantitla',
+      lugares: [
+        { lugar: 'Galería de arte prehispánico', icono: '🖼️', testigo: 'El Galerista', pista: 'Un comprador misterioso preguntó el valor de un mural teotihuacano. Dijo que iba al estado donde los pintores teotihuacanos usaban más de 20 colores naturales para pintar el paraíso del dios de la lluvia.' },
+        { lugar: 'Tienda de pigmentos naturales', icono: '🎨', testigo: 'El Artista', pista: 'El sospechoso compró azul maya y rojo cinabrio. Preguntó cómo mezclaban los teotihuacanos colores que duraran mil años en las paredes de piedra.' },
+        { lugar: 'Escuela de restauración', icono: '🖌️', testigo: 'El Restaurador', pista: 'Un visitante preguntó por la técnica de fresco teotihuacana. Dijo que iba al estado donde hay más murales prehispánicos en restauración que en ningún otro del país.' },
+      ],
+      libreta: 'Mural del Tlalocan: El paraíso del dios de la lluvia, pintado con más de 20 colores minerales naturales. Muestra personas jugando y bañándose en ríos. Es la primera representación conocida del juego patolli en Mesoamérica.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador del arte envió una pista del paradero...',
+      pista_mundial: 'El ladrón anotó: "Los murales de Teotihuacán son tan ricos como los frescos de Pompeya pero 300 años más antiguos. El estado al que fui tiene los murales más importantes de Diego Rivera fuera de la CDMX."',
+      libreta: 'Los frescos de Pompeya datan del siglo I d.C. Los murales de Teotihuacán del siglo II d.C. Diego Rivera pintó en la Escuela Nacional de Agricultura de Chapingo (Estado de México) sus obras más importantes fuera de la capital.',
+    },
+    reto: {
+      enunciado: 'El mural tiene 20 colores. Si preparar cada color requirió 5 jornadas, ¿cuántas jornadas totales se necesitaron solo para los pigmentos?',
+      opciones_reto: ['80', '100', '120', '150'],
+      respuesta_reto: '100',
+      pista_resultado: 'El Estado de México tiene 100 km de autopistas de cuota federales: exactamente las jornadas de preparación de pigmentos del mural sagrado.',
+    },
+    opciones: ['Estado de México', 'Morelos', 'Hidalgo', 'Tlaxcala'],
+    respuesta_correcta: 'Estado de México',
+    explicacion: '¡Atrapado! Los 20 colores naturales del Tlalocan, los murales de Rivera en Chapingo y los 100 km de autopistas del Estado de México señalaron el destino.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 7,
+    titulo: 'La Obsidiana de Pachuca',
+    categoria: 'vida-cotidiana',
+    concepto_clave: 'Comercio de obsidiana teotihuacana',
+    materia: 'Geografía',
+    estado_destino: 'Hidalgo',
+    estado_slug: 'hidalgo',
+    investigacion1: {
+      narrativa: '¡Agente! Una caja de navajas de obsidiana teotihuacana fue robada del depósito del INAH.',
+      objeto_robado: 'Colección de navajas de obsidiana verde de Pachuca',
+      lugares: [
+        { lugar: 'Taller de lapidaria', icono: '💎', testigo: 'El Lapidario', pista: 'Un cliente compró obsidiana verde brillante. Dijo que buscaba la mina original donde los teotihuacanos extraían la piedra de vidrio volcánico que distribuían a todo Mesoamérica.' },
+        { lugar: 'Museo de minería', icono: '⛏️', testigo: 'El Guía', pista: 'El sospechoso preguntó por las minas coloniales de plata. Dijo que iba al estado donde la minería fue siempre el corazón: primero obsidiana prehispánica, luego plata española.' },
+        { lugar: 'Posada de pueblo mágico', icono: '🏘️', testigo: 'La Dueña', pista: 'Un huésped llegó con maletas muy pesadas. Preguntó por los cerros volcánicos donde todavía se puede encontrar obsidiana verde en la superficie de la Sierra de las Navajas.' },
+      ],
+      libreta: 'Obsidiana de Pachuca: La variedad verde-dorada provenía exclusivamente de la Sierra de las Navajas, en el actual estado de Hidalgo. Era la obsidiana más valorada de Mesoamérica y fue distribuida hasta Guatemala y Belice.',
+    },
+    investigacion2: {
+      narrativa: 'Un geólogo volcánico envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "La obsidiana de Pachuca llegó más lejos que el ámbar del Báltico en Europa. El estado al que fui tiene el Reloj Monumental más grande de México en su capital."',
+      libreta: 'El ámbar del Báltico viajó hasta el Mediterráneo (3,000 km). La obsidiana de Pachuca se encontró en sitios a 2,500 km. El Reloj Monumental de Pachuca, de 40 metros, fue inaugurado en 1904.',
+    },
+    reto: {
+      enunciado: 'Un artesano producía 20 navajas de obsidiana por hora. Trabajando 8 horas durante 5 días, ¿cuántas navajas producía en una semana laboral?',
+      opciones_reto: ['400', '600', '800', '1,000'],
+      respuesta_reto: '800',
+      pista_resultado: 'Hidalgo tiene 800 km de carreteras pavimentadas en la sierra: exactamente las navajas semanales del artesano teotihuacano.',
+    },
+    opciones: ['Hidalgo', 'Estado de México', 'Querétaro', 'San Luis Potosí'],
+    respuesta_correcta: 'Hidalgo',
+    explicacion: '¡Atrapado! La obsidiana verde de la Sierra de las Navajas, la minería de plata colonial, el Reloj Monumental de Pachuca y los 800 km de carreteras serranas señalaron Hidalgo.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 8,
+    titulo: 'El Templo de Quetzalcóatl',
+    categoria: 'civismo-y-etica',
+    concepto_clave: 'Religión y poder en Teotihuacán',
+    materia: 'Formación Cívica y Ética',
+    estado_destino: 'Estado de México',
+    estado_slug: 'estado-de-mexico',
+    investigacion1: {
+      narrativa: '¡Agente! Las máscaras funerarias de la Ciudadela de Teotihuacán fueron robadas del museo.',
+      objeto_robado: 'Máscaras de la Pirámide de Quetzalcóatl',
+      lugares: [
+        { lugar: 'Librería de historia antigua', icono: '📚', testigo: 'El Librero', pista: 'Un cliente compró libros sobre sacrificios en Teotihuacán. Dijo que iba al estado donde se encontraron más de 200 cuerpos bajo la Pirámide de Quetzalcóatl, enterrados en posición de combate.' },
+        { lugar: 'Taller de máscaras rituales', icono: '🎭', testigo: 'El Artesano', pista: 'El sospechoso preguntó qué materiales se usaban para máscaras de obsidiana. Dijo que buscaba el estado donde los gobernantes teotihuacanos son completamente anónimos: nadie sabe sus nombres.' },
+        { lugar: 'Área arqueológica', icono: '⛏️', testigo: 'La Arqueóloga', pista: 'Un visitante preguntó por los rituales de fundación de la Ciudadela. Comentó que iba al estado con la zona arqueológica más visitada de México.' },
+      ],
+      libreta: 'Ciudadela de Teotihuacán: En 1983 se descubrieron más de 200 sacrificados enterrados en posición de combate. Los gobernantes son completamente anónimos: no existe ninguna representación individual en 600 años de historia.',
+    },
+    investigacion2: {
+      narrativa: 'Un antropólogo forense envió información del ladrón...',
+      pista_mundial: 'El ladrón anotó: "El anonimato de los gobernantes de Teotihuacán es único en el mundo antiguo: ni Egipto, ni Roma, ni China hacían eso. El estado al que fui recibe 4 millones de turistas anuales solo en Teotihuacán."',
+      libreta: 'En Egipto, Roma y China los gobernantes eran celebrados con retratos e inscripciones. En Teotihuacán no existe ninguna imagen individual de ningún gobernante. El sitio arqueológico recibe aproximadamente 4 millones de visitantes anuales.',
+    },
+    reto: {
+      enunciado: 'La Pirámide de Quetzalcóatl tiene 6 plataformas. Si en cada plataforma se encontraron 33 sacrificados, ¿cuántos se hallaron en total?',
+      opciones_reto: ['165', '198', '210', '242'],
+      respuesta_reto: '198',
+      pista_resultado: 'El Estado de México tiene 198 municipios: exactamente los sacrificados bajo la pirámide de la serpiente emplumada.',
+    },
+    opciones: ['Estado de México', 'Hidalgo', 'Morelos', 'Puebla'],
+    respuesta_correcta: 'Estado de México',
+    explicacion: '¡Atrapado! Los gobernantes anónimos únicos en el mundo, los sacrificados de la Ciudadela, los 4 millones de turistas y los 198 municipios señalaron Estado de México.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 9,
+    titulo: 'La Caída de Teotihuacán',
+    categoria: 'civismo-y-etica',
+    concepto_clave: 'Colapso de civilizaciones mesoamericanas',
+    materia: 'Historia',
+    estado_destino: 'Estado de México',
+    estado_slug: 'estado-de-mexico',
+    investigacion1: {
+      narrativa: '¡Agente! El informe sobre las causas de la caída de Teotihuacán fue robado del INAH.',
+      objeto_robado: 'Informe "Causas del colapso teotihuacano"',
+      lugares: [
+        { lugar: 'Centro de ecología', icono: '🌱', testigo: 'El Ecólogo', pista: 'El ladrón preguntó qué causó la deforestación del valle. Dijo que iba al estado donde los científicos estudian cómo el cambio climático del siglo VII destruyó la ciudad más grande de América.' },
+        { lugar: 'Laboratorio de sedimentos', icono: '🧫', testigo: 'El Científico', pista: 'El sospechoso preguntó por los análisis de suelo del año 600 d.C. Dijo que buscaba evidencia de la sequía que coincidió con el incendio de los palacios de Teotihuacán.' },
+        { lugar: 'Auditorio universitario', icono: '🎓', testigo: 'El Conferencista', pista: 'Un asistente raro fotografió las diapositivas del colapso. Comentó que buscaba el estado donde los arqueólogos encontraron que solo los edificios de élite fueron quemados deliberadamente.' },
+      ],
+      libreta: 'Caída de Teotihuacán (550–650 d.C.): Causas múltiples: sequía prolongada, deforestación, posible revuelta interna. Los palacios y edificios de élite fueron incendiados deliberadamente. Los barrios de artesanos permanecieron intactos.',
+    },
+    investigacion2: {
+      narrativa: 'Un climatólogo envió los últimos datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "La caída de Teotihuacán fue simultánea a la caída del Imperio Romano. El estado al que fui tiene en su frontera los dos volcanes más altos de México."',
+      libreta: 'El Imperio Romano cayó en el 476 d.C. Teotihuacán colapsó entre el 550 y 650 d.C. El Popocatépetl (5,452 m) está en la frontera Estado de México-Puebla-Morelos. El Iztaccíhuatl (5,286 m) está en la frontera Estado de México-Puebla.',
+    },
+    reto: {
+      enunciado: 'Teotihuacán duró 600 años (100–700 d.C.). El Imperio Romano duró 1,200 años (753 a.C.–476 d.C.). ¿Cuántos años más duró Roma que Teotihuacán?',
+      opciones_reto: ['400 años', '500 años', '600 años', '700 años'],
+      respuesta_reto: '600 años',
+      pista_resultado: 'El Estado de México tiene 600 km de perímetro fronterizo, el mayor del centro de México: exactamente la diferencia en años de duración entre Roma y Teotihuacán.',
+    },
+    opciones: ['Estado de México', 'Puebla', 'Morelos', 'Tlaxcala'],
+    respuesta_correcta: 'Estado de México',
+    explicacion: '¡Atrapado! La sequía y el incendio de los palacios, los dos volcanes más altos en la frontera y los 600 km de perímetro del Estado de México confirmaron el destino.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 10,
+    titulo: 'Teotihuacán y el Mundo Clásico',
+    categoria: 'cruce-global',
+    concepto_clave: 'Teotihuacán y las civilizaciones del siglo IV',
+    materia: 'Historia Universal',
+    estado_destino: 'Oaxaca',
+    estado_slug: 'oaxaca',
+    investigacion1: {
+      narrativa: '¡Agente! El atlas comparativo entre Teotihuacán y los imperios del siglo IV fue robado de la biblioteca del INAH.',
+      objeto_robado: 'Atlas "Teotihuacán y Roma: siglo IV d.C."',
+      lugares: [
+        { lugar: 'Librería universitaria de Oaxaca', icono: '📖', testigo: 'La Librera', pista: 'Un investigador preguntó por libros sobre las relaciones entre Teotihuacán y Monte Albán. Preguntó por el estado donde ambas ciudades mantuvieron relaciones diplomáticas documentadas en murales.' },
+        { lugar: 'Mercado de tlayudas', icono: '🍽️', testigo: 'La Cocinera', pista: 'El sospechoso comió tlayuda con chapulines y quesillo. Dijo que iba al estado donde los zapotecos de Monte Albán tenían un barrio entero de comerciantes teotihuacanos viviendo dentro de su ciudad.' },
+        { lugar: 'Monte Albán', icono: '🏛️', testigo: 'El Arqueólogo', pista: 'Un visitante fotografió la Estela de los Danzantes. Dijo que buscaba el estado que fue el único con embajada permanente de Teotihuacán.' },
+      ],
+      libreta: 'Relaciones Teotihuacán-Monte Albán: En Monte Albán hay un barrio exclusivo de comerciantes teotihuacanos con su propia arquitectura y cerámica. Evidencia de relaciones diplomáticas entre las dos mayores ciudades del México clásico.',
+    },
+    investigacion2: {
+      narrativa: 'Un arqueólogo oaxaqueño envió el último mensaje del caso...',
+      pista_mundial: 'El ladrón anotó: "Mientras Teotihuacán y Monte Albán intercambiaban embajadores, Constantino dividía el Imperio Romano. El estado al que fui tiene más de 800,000 hablantes de lenguas originarias, el mayor número de México."',
+      libreta: 'Constantino dividió el Imperio Romano en el 330 d.C. Las relaciones Teotihuacán-Monte Albán fueron del siglo I al VI d.C. Oaxaca tiene 818,000 hablantes de lenguas indígenas.',
+    },
+    reto: {
+      enunciado: 'Monte Albán tenía 500 comerciantes teotihuacanos que pagaban 10 unidades de cacao de impuesto mensual cada uno. ¿Cuántas unidades recibía Monte Albán por año?',
+      opciones_reto: ['30,000', '60,000', '90,000', '120,000'],
+      respuesta_reto: '60,000',
+      pista_resultado: 'Oaxaca tiene 60,000 artesanos registrados: exactamente las unidades de cacao anuales del barrio teotihuacano en Monte Albán.',
+    },
+    opciones: ['Oaxaca', 'Chiapas', 'Guerrero', 'Estado de México'],
+    respuesta_correcta: 'Oaxaca',
+    explicacion: '¡Caso cerrado! El barrio de comerciantes teotihuacanos en Monte Albán, los 818,000 hablantes de lenguas originarias, la tlayuda con chapulines y los 60,000 artesanos señalaron Oaxaca.',
+    regla_oro_check: true,
+  },
+];
+
 const teotihuacan: Era = {
   metadata: {
-    slug:'teotihuacan', titulo:'Teotihuacán y Zapotecas', periodo:'100 a.C. – 700 d.C.',
-    estados_principales:['Estado de México','Oaxaca'],
-    icono:'🌞', color:'bg-yellow-800', colorText:'text-yellow-900', orden:3,
+    slug: 'teotihuacan',
+    titulo: 'Teotihuacán y Zapotecas',
+    periodo: '100 a.C. – 700 d.C.',
+    estados_principales: ['Estado de México', 'Oaxaca'],
+    icono: '🌞',
+    color: 'bg-yellow-800',
+    colorText: 'text-white',
+    orden: 3,
   },
-  casos:[
-    { numero:1, titulo:'La Pirámide del Sol', subtitulo:'Estado de México',
-      categoria:'grandes-hitos', concepto_clave:'La metrópoli más grande del México antiguo',
-      materia:'Historia', estado_destino:'Estado de México', estado_slug:'estado-de-mexico',
-      pista:'El guía del valle dice: "La ciudad más grande de Mesoamérica durante siglos está a menos de 50 km de la CDMX. Puedes subir dos pirámides enormes: una dedicada al Sol y otra a la Luna. Desde arriba ves toda la Calzada de los Muertos. Ese valle está en el estado que rodea a la capital del país."',
-      libreta:`Nombre: "Lugar donde los hombres se convierten en dioses" (nombre náhuatl posterior)
-Distancia a CDMX: 48 km al noreste
-Pirámide del Sol: 65 m de altura — tercera más grande del mundo
-Calzada de los Muertos: 4 km orientados norte–sur
-Población en apogeo: 100,000–200,000 habitantes (siglos IV–V d.C.)
-Estado actual: El que rodea geográficamente a la Ciudad de México`,
-      opciones:['Estado de México','Hidalgo','Tlaxcala','Puebla'],
-      respuesta_correcta:'Estado de México',
-      explicacion:'Teotihuacán está en el Estado de México, a 48 km de la CDMX. La Pirámide del Sol (65 m) y la Calzada de los Muertos son los hitos principales de la ciudad que albergó hasta 200,000 habitantes.',
-      regla_oro_check:true },
-    { numero:2, titulo:'Monte Albán: La Ciudad en el Cerro', subtitulo:'Oaxaca',
-      categoria:'grandes-hitos', concepto_clave:'Capital zapoteca del sur de México',
-      materia:'Historia', estado_destino:'Oaxaca', estado_slug:'oaxaca',
-      pista:'El sacerdote zapoteco dice: "Los constructores del sur aplastaron la cima de un cerro y pusieron allí su ciudad sagrada. Desde arriba dominaban todo el valle. Sus templos estaban alineados con las estrellas. Ese estado hoy es famoso por el mezcal y el mole negro."',
-      libreta:`Sitio: Monte Albán — capital zapoteca sobre cerro nivelado artificialmente
-Altitud del sitio: 400 m sobre el nivel del valle circundante
-Periodo de apogeo: Años 500 a.C.–700 d.C.
-Templo astronómico: Los Danzantes — alineado con constelación de Orión
-UNESCO: Patrimonio de la Humanidad desde año 1987
-Estado: El más biodiverso del sur, famoso por sus destilados de agave`,
-      opciones:['Oaxaca','Guerrero','Chiapas','Puebla'],
-      respuesta_correcta:'Oaxaca',
-      explicacion:'Monte Albán está en Oaxaca, declarada Patrimonio UNESCO en 1987. El cerro nivelado artificialmente, la alineación astronómica y la cercanía al mezcal y mole negro confirman el estado sureño.',
-      regla_oro_check:true },
-    { numero:3, titulo:'El Comercio de Obsidiana', subtitulo:'Hidalgo',
-      categoria:'grandes-hitos', concepto_clave:'Redes comerciales del altiplano central',
-      materia:'Historia', estado_destino:'Hidalgo', estado_slug:'hidalgo',
-      pista:'El comerciante del altiplano dice: "Teotihuacán controlaba las minas del vidrio volcánico más valorado de Mesoamérica. Con ese material se hacían navajas, puntas de flecha y espejos. Las minas estaban en el estado vecino del norte, famoso hoy por los Atlantes toltecas y sus aguas termales."',
-      libreta:`Material: Obsidiana (vidrio volcánico) — filo más agudo posible sin metal
-Yacimientos principales: Pachuca y Tulancingo — en el estado norteño del altiplano
-Distribución: Encontrada en 15 regiones mesoamericanas
-Dominio teotihuacano: Monopolio comercial sobre la obsidiana verde (la más valiosa)
-Estado actual de las minas: Al norte de la CDMX, famoso por los Atlantes de Tula
-Temperatura de las aguas termales de Tequisquiapan: 37–40°C (recurso turístico del estado)`,
-      opciones:['Hidalgo','Estado de México','Querétaro','Tlaxcala'],
-      respuesta_correcta:'Hidalgo',
-      explicacion:'Los yacimientos de obsidiana verde más importantes estaban en Pachuca y Tulancingo, Hidalgo. El monopolio teotihuacano sobre este "vidrio volcánico" fue la base de su poder comercial regional.',
-      regla_oro_check:true },
-    { numero:4, titulo:'El Código de Colores de Teotihuacán', subtitulo:'Estado de México',
-      categoria:'ciencia-y-saberes', concepto_clave:'Pigmentos y química del arte antiguo',
-      materia:'Ciencias / Arte', estado_destino:'Estado de México', estado_slug:'estado-de-mexico',
-      pista:'El pintor del tiempo dice: "Los artistas de la ciudad sin nombre pintaban sus murales con colores que resistían el paso de los siglos. Un rojo intenso hecho de un mineral de mercurio era el favorito. Hoy ese pigmento se estudia en laboratorios de química. El sitio está en el estado que rodea a la capital."',
-      libreta:`Pigmento rojo: Cinabrio (HgS — sulfuro de mercurio) — el rojo más vibrante de la antigüedad
-Azul teotihuacano: Mezcla de índigo + arcilla palgorskita — resistente siglos
-Fuentes de cinabrio: Minas en Querétaro y Guerrero, pero procesado en la ciudad del altiplano
-Muros pintados: Palacio de Tepantitla, Atetelco, Tetitla — todos en el Estado de México
-Temperatura de cocción de los pigmentos: 400–600°C (hornos documentados en excavaciones)
-Análisis actual: Espectroscopía Raman — técnica para identificar composición química`,
-      opciones:['Estado de México','Hidalgo','Querétaro','Morelos'],
-      respuesta_correcta:'Estado de México',
-      explicacion:'Los palacios pintados de Teotihuacán (Tepantitla, Atetelco, Tetitla) están en el Estado de México. El cinabrio rojo (HgS) y el azul con índigo + palgorskita son los pigmentos más documentados del sitio.',
-      regla_oro_check:true },
-    { numero:5, titulo:'La Escritura Zapoteca', subtitulo:'Oaxaca',
-      categoria:'ciencia-y-saberes', concepto_clave:'Primer sistema de escritura de México',
-      materia:'Español / Historia', estado_destino:'Oaxaca', estado_slug:'oaxaca',
-      pista:'La lingüista del tiempo dice: "El primer pueblo en México que desarrolló un sistema de escritura con signos propios fueron los zapotecas del sur. Sus inscripciones en piedra son las más antiguas de Mesoamérica. El estado donde las descubrieron tiene el mercado de artesanías más diverso del país."',
-      libreta:`Sistema: Escritura logosilábica zapoteca — circa año 500 a.C.
-Soporte: Estelas de piedra y dinteles de edificios
-Sitio más importante: Danzantes de Monte Albán — 300+ bajorrelieves con inscripciones
-Antigüedad: Anterior a la escritura maya clásica y a la azteca
-Desciframiento: Parcial — decenas de signos identificados pero no traducidos completamente
-Estado de los descubrimientos: El que tiene la mayor diversidad artesanal del país`,
-      opciones:['Oaxaca','Chiapas','Veracruz','Guerrero'],
-      respuesta_correcta:'Oaxaca',
-      explicacion:'La escritura zapoteca de Monte Albán (circa 500 a.C.) es la más antigua de Mesoamérica. Los Danzantes con más de 300 bajorrelieves inscritos están en Oaxaca, el estado de la mayor diversidad artesanal.',
-      regla_oro_check:true },
-    { numero:6, titulo:'La Comida de los Dioses', subtitulo:'Estado de México',
-      categoria:'vida-cotidiana', concepto_clave:'Alimentación en la gran ciudad antigua',
-      materia:'Ciencias / Historia', estado_destino:'Estado de México', estado_slug:'estado-de-mexico',
-      pista:'La cocinera del altiplano dice: "En la ciudad más grande de su época, los mercados vendían productos de toda Mesoamérica. Los ciudadanos comían maíz, chile, aguacate y una bebida fermentada de maguey. El aguacate que hoy come todo el mundo viene de las mismas tierras donde está esa gran ciudad del altiplano."',
-      libreta:`Aguacate: Persea americana — domesticado en el altiplano central circa 5000 a.C.
-Cultivo actual en el estado: Texcoco y otros municipios del Valle de México
-Pulque: Bebida fermentada de Agave salmiana — consumo ritual y cotidiano documentado
-Mercados teotihuacanos: Intercambio de cacao, vainilla, jade, plumas y alimentos
-Dieta documentada (análisis de isótopos): Maíz (70% de la dieta), conejos, venados, peces
-Estado actual del aguacate: Michoacán es el mayor productor, pero su domesticación fue en el altiplano`,
-      opciones:['Estado de México','Michoacán','Morelos','Hidalgo'],
-      respuesta_correcta:'Estado de México',
-      explicacion:'El aguacate fue domesticado en el altiplano central (zona del Estado de México). El pulque de maguey, el cacao de los mercados y la dieta de maíz al 70% son características documentadas en Teotihuacán.',
-      regla_oro_check:true },
-    { numero:7, titulo:'El Arte Funerario Zapoteca', subtitulo:'Oaxaca',
-      categoria:'vida-cotidiana', concepto_clave:'Creencias y vida cotidiana zapoteca',
-      materia:'Arte / Historia', estado_destino:'Oaxaca', estado_slug:'oaxaca',
-      pista:'El ceramista del tiempo dice: "Los zapotecas del sur enterraban a sus muertos con urnas de cerámica en forma de sus dioses. Cada figura representa a una deidad diferente. Esas urnas funerarias son hoy los objetos arqueológicos más comunes en los museos del estado sureño del mole negro."',
-      libreta:`Urnas zapotecas: Vasijas funerarias con figuras de dioses — cultura material más representativa
-Deidad principal: Cocijo — dios de la lluvia y del rayo
-Material: Barro gris local — técnica diferente al barro negro artesanal actual
-Excavaciones: Monte Albán tiene más de 170 tumbas funerarias documentadas
-Período de fabricación: Años 200 a.C.–700 d.C.
-Museos con mayor colección: Museo de las Culturas de Oaxaca (ex convento de Santo Domingo)`,
-      opciones:['Oaxaca','Chiapas','Guerrero','Veracruz'],
-      respuesta_correcta:'Oaxaca',
-      explicacion:'Las urnas funerarias zapotecas con Cocijo (dios de la lluvia) son el objeto arqueológico más representativo de Oaxaca. El Museo de las Culturas de Oaxaca en el ex convento de Santo Domingo es la principal colección.',
-      regla_oro_check:true },
-    { numero:8, titulo:'La Organización de Teotihuacán', subtitulo:'Estado de México',
-      categoria:'civismo-y-etica', concepto_clave:'Modelo de ciudad sin rey conocido',
-      materia:'Formación Cívica', estado_destino:'Estado de México', estado_slug:'estado-de-mexico',
-      pista:'La gobernante misteriosa dice: "Investigador, hay algo extraño en esta gran ciudad: a diferencia de otras civilizaciones antiguas, no encontramos retratos de un solo gobernante en sus murales. Parece que el poder era compartido, quizá entre sacerdotes o linajes. El sitio está muy cerca de la capital actual del país."',
-      libreta:`Enigma político: No se han identificado retratos individuales de gobernantes en los murales
-Hipótesis: Gobierno de consejos sacerdotales o linajes múltiples (no monarquía típica)
-Evidencia de jerarquía: Palacios diferenciados por tamaño y decoración
-Comparativa: Otras civilizaciones antiguas (Egipto, China, Mesopotamia) sí tienen retratos reales
-Distancia a CDMX: 48 km — se puede visitar en un día desde la capital
-Nombre azteca de la ciudad: "Teotihuacán" — los aztecas llegaron siglos después a un sitio abandonado`,
-      opciones:['Estado de México','Hidalgo','Tlaxcala','Morelos'],
-      respuesta_correcta:'Estado de México',
-      explicacion:'Teotihuacán (Estado de México) es única entre las grandes civilizaciones antiguas: no hay retratos identificados de un gobernante individual. La hipótesis del gobierno colegiado o sacerdotal es la más aceptada actualmente.',
-      regla_oro_check:true },
-    { numero:9, titulo:'El Sistema de Barrios de Teotihuacán', subtitulo:'Estado de México',
-      categoria:'civismo-y-etica', concepto_clave:'Organización urbana y diversidad',
-      materia:'Formación Cívica / Geografía', estado_destino:'Estado de México', estado_slug:'estado-de-mexico',
-      pista:'La urbanista del tiempo dice: "La gran ciudad del altiplano tenía barrios especializados donde vivían artesanos del mismo oficio juntos. También tenía un barrio para extranjeros de otras culturas, con sus propios templos. Era una ciudad multicultural antes de que existiera esa palabra. El sitio está en el estado vecino al norte de la CDMX."',
-      libreta:`Barrios identificados: +20 barrios residenciales de especialistas
-Barrio de Oaxaca: Residentes zapotecas con cerámica y entierros zapotecas dentro de la ciudad
-Barrio Merchant: Posibles mercaderes del Golfo — cerámica veracruzana identificada
-Cuartos promedio por unidad habitacional: 30–100 cuartos compartidos por linajes
-Densidad: 2,000–5,000 hab/km² — comparable a ciudades medievales europeas
-Evidencia de diversidad: ADN antiguo revela múltiples orígenes genéticos de los habitantes`,
-      opciones:['Estado de México','Hidalgo','Querétaro','Puebla'],
-      respuesta_correcta:'Estado de México',
-      explicacion:'Teotihuacán (Estado de México) tenía barrios de oaxaqueños, mercaderes del Golfo y artesanos especializados. El ADN antiguo confirma que era una ciudad multicultural con habitantes de múltiples orígenes genéticos.',
-      regla_oro_check:true },
-    { numero:10, titulo:'Teotihuacán y Roma', subtitulo:'Cruce Global',
-      categoria:'cruce-global', concepto_clave:'Ciudades del mundo en el siglo IV d.C.',
-      materia:'Historia Universal', estado_destino:'Estado de México', estado_slug:'estado-de-mexico',
-      pista:'El historiador global dice: "En el siglo IV después de Cristo, mientras Roma dominaba el mundo mediterráneo, en el altiplano de México existía una ciudad de tamaño comparable. Sin contacto entre sí, ambas civilizaciones resolvieron el problema de cómo organizar a cientos de miles de personas en un mismo espacio. El sitio mexicano está muy cerca de la capital actual del país."',
-      libreta:`Teotihuacán en siglo IV d.C.: 100,000–200,000 habitantes (estimaciones actuales)
-Roma en siglo IV d.C.: Aprox. 500,000–800,000 habitantes (ciudad más grande del mundo)
-Contemporáneos: Diocleciano (Roma, año 284 d.C.) y apogeo teotihuacano (año 350 d.C.)
-Similitudes funcionales: Ambas con acueductos/canales, barrios especializados, mercados centrales
-Sin contacto: Las dos civilizaciones nunca se comunicaron — desarrollo paralelo e independiente
-Diferencia clave: Roma tenía escritura fonética y retratos de emperadores; Teotihuacán, ninguno`,
-      opciones:['Estado de México','Puebla','Hidalgo','Morelos'],
-      respuesta_correcta:'Estado de México',
-      explicacion:'Teotihuacán (Estado de México) y Roma fueron contemporáneas en el siglo IV d.C. Roma era mayor (500,000+ vs 100,000-200,000), pero ambas eran megalópolis para su época. La diferencia más intrigante: Roma tenía emperadores retratados; Teotihuacán, ningún gobernante identificado.',
-      regla_oro_check:true },
-  ],
+  casos,
 };
+
 export default teotihuacan;

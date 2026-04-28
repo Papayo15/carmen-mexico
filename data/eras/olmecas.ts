@@ -1,173 +1,510 @@
-import type { Era } from '@/lib/types';
+import type { Era, CasoInteractivo } from '@/lib/types';
+
+const casos: CasoInteractivo[] = [
+  {
+    numero: 1,
+    titulo: 'El Misterio de la Cara de Piedra',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Cabezas Colosales',
+    materia: 'Historia',
+    estado_destino: 'Veracruz',
+    estado_slug: 'veracruz',
+    investigacion1: {
+      narrativa: '¡Agente! Alguien ha robado una de las cabezas gigantes del museo de sitio.',
+      objeto_robado: 'Cabeza Colosal No. 4',
+      lugares: [
+        {
+          lugar: 'Puerto Comercial',
+          icono: '🚢',
+          testigo: 'El Capitán',
+          pista: 'Vi a alguien subiendo cajas pesadas. Gritaba que iba a un lugar donde el suelo siempre está mojado y hay selvas que llegan hasta el mar.',
+        },
+        {
+          lugar: 'Mercado Local',
+          icono: '🍎',
+          testigo: 'Doña Lupe',
+          pista: 'Un extraño compró repelente para mosquitos. Dijo que iba a la tierra donde los ríos se vuelven anchos antes de tocar el Golfo.',
+        },
+        {
+          lugar: 'Caseta de Vigilancia',
+          icono: '👮',
+          testigo: 'Oficial Pérez',
+          pista: 'El camión olía a chapopote fresco. El conductor mencionó que buscaba el lugar donde sus ancestros fundaron la Villa Rica.',
+        },
+      ],
+      libreta: 'Ecosistema costero: Los humedales y selvas bajas dominan el litoral del Golfo. El chapopote era usado por culturas del Preclásico para sellar canoas.',
+    },
+    investigacion2: {
+      narrativa: 'Encontraste una nota en el suelo con una conexión internacional...',
+      pista_mundial: 'El ladrón escribió: "Mi destino es tan antiguo como las primeras ciudades de Mesopotamia. Busco el lugar donde comenzó el primer ayuntamiento de este continente".',
+      libreta: 'Mesopotamia floreció en el 3500 a.C. El primer cabildo español en América se fundó en 1519 en la zona de las llanuras de Sotavento.',
+    },
+    reto: {
+      enunciado: 'El ladrón viaja a 80 km/h. Si su destino está a 160 km de la Ciudad de México, ¿en cuántas horas llegará?',
+      opciones_reto: ['1 hora', '2 horas', '3 horas', '4 horas'],
+      respuesta_reto: '2 horas',
+      pista_resultado: 'El número 2 es clave: Veracruz tiene los 2 puertos más importantes del centro de México.',
+    },
+    opciones: ['Veracruz', 'Tabasco', 'Yucatán', 'Tamaulipas'],
+    respuesta_correcta: 'Veracruz',
+    explicacion: '¡Atrapado! Uniste la pista del chapopote (biología costera del Golfo) con el dato del primer ayuntamiento (1519, Villa Rica de la Vera Cruz) y confirmaste con el reto: 2 horas de viaje, 2 puertos clave de Veracruz.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 2,
+    titulo: 'El Jaguar Sagrado de La Venta',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Centro ceremonial olmeca',
+    materia: 'Historia',
+    estado_destino: 'Tabasco',
+    estado_slug: 'tabasco',
+    investigacion1: {
+      narrativa: '¡Agente! Una escultura del dios jaguar ha desaparecido del yacimiento de La Venta.',
+      objeto_robado: 'Altar del Jaguar-Hombre',
+      lugares: [
+        {
+          lugar: 'Embarcadero del río',
+          icono: '⛵',
+          testigo: 'El Pescador',
+          pista: 'Vi una lancha cargada con bultos envueltos en hojas de plátano. El capitán decía que iba a tierra de cacao y pantanos donde el río se hace enorme antes de perderse en el horizonte.',
+        },
+        {
+          lugar: 'Tienda de artesanías',
+          icono: '🛍️',
+          testigo: 'Señora Carmen',
+          pista: 'Un hombre nervioso preguntó por bolsas impermeables. Comentó que su destino huele a tierra mojada todo el año y que allá la gente bebe pozol de cacao en jícaras.',
+        },
+        {
+          lugar: 'Gasolinera',
+          icono: '⛽',
+          testigo: 'El Mecánico',
+          pista: 'El vehículo tenía barro rojizo en las llantas, del tipo que hay junto a los ríos caudalosos del sureste, donde la selva nunca se seca por completo.',
+        },
+      ],
+      libreta: 'La Venta: Centro ceremonial olmeca ubicado en el estado con mayor producción de cacao de México. El jaguar representaba el poder sobrenatural y la lluvia en la cosmogonía olmeca.',
+    },
+    investigacion2: {
+      narrativa: 'Un informante dejó un mensaje cifrado sobre el destino...',
+      pista_mundial: 'El ladrón anotó: "Voy al estado cuyo río fue navegado por los mayas antes de que los griegos construyeran el Partenón. Allá el agua dulce supera cualquier tesoro."',
+      libreta: 'El Partenón se construyó en el 447 a.C. El río Grijalva fue ruta comercial maya desde el 1000 a.C. Tabasco tiene la mayor proporción de agua dulce superficial de México: casi el 30% de los recursos hídricos nacionales.',
+    },
+    reto: {
+      enunciado: 'La Venta fue habitada durante 800 años (900 a.C. al 400 a.C.). Si cada generación dura 25 años, ¿cuántas generaciones vivieron allí?',
+      opciones_reto: ['16 generaciones', '24 generaciones', '32 generaciones', '40 generaciones'],
+      respuesta_reto: '32 generaciones',
+      pista_resultado: 'El número 32 °C es la temperatura promedio de Tabasco, el estado más cálido y húmedo de México donde huyó el ladrón.',
+    },
+    opciones: ['Tabasco', 'Veracruz', 'Chiapas', 'Campeche'],
+    respuesta_correcta: 'Tabasco',
+    explicacion: '¡Atrapado! El barro de ríos enormes, el cacao y el pozol, el río Grijalva navegado antes que el Partenón, y los 32 °C de temperatura media te llevaron a Tabasco.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 3,
+    titulo: 'La Máscara de Jade de Guerrero',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Red comercial olmeca',
+    materia: 'Historia',
+    estado_destino: 'Guerrero',
+    estado_slug: 'guerrero',
+    investigacion1: {
+      narrativa: '¡Agente! Una máscara olmeca tallada en jade verde fue robada del Museo Regional.',
+      objeto_robado: 'Máscara Olmeca de Xochipala',
+      lugares: [
+        {
+          lugar: 'Terminal de autobuses',
+          icono: '🚌',
+          testigo: 'La Taquillera',
+          pista: 'El sospechoso compró boleto a un lugar donde el sol quema diferente, entre sierras y playas del Pacífico. Dijo que iba a buscar la piedra verde de las montañas.',
+        },
+        {
+          lugar: 'Farmacia del centro',
+          icono: '💊',
+          testigo: 'El Farmacéutico',
+          pista: 'Compró crema para quemaduras solares. Comentó que su destino tiene costas bravas y montañas con minerales preciosos que los antiguos llamaban chalchihuitl.',
+        },
+        {
+          lugar: 'Taller de joyería',
+          icono: '💎',
+          testigo: 'Don Aurelio',
+          pista: 'Preguntó por pulidores de piedra verde. Mencionó que iba al estado donde nació el caudillo revolucionario que luchó desde las sierras más escarpadas del sur.',
+        },
+      ],
+      libreta: 'Jade olmeca: La piedra chalchihuitl más fina del Preclásico provino de las montañas de la Costa Grande. Las rutas comerciales olmecas conectaban la costa del Pacífico con el Golfo de México.',
+    },
+    investigacion2: {
+      narrativa: 'El ladrón dejó una nota con referencias históricas internacionales...',
+      pista_mundial: 'El ladrón escribió: "Mi destino tiene una bahía tan famosa como la de Río de Janeiro pero con historia más antigua. Los olmecas comerciaban allá cuando los fenicios apenas inventaban el alfabeto."',
+      libreta: 'Los fenicios inventaron el alfabeto en el 1050 a.C. Acapulco fue punto de comercio costero desde el 1200 a.C. La bahía de Acapulco fue el puerto más importante del Pacífico mexicano por más de 400 años.',
+    },
+    reto: {
+      enunciado: 'El jade costaba 3 veces más que la obsidiana. Si un collar de obsidiana valía 12 unidades de cacao y una máscara de jade tiene 4 piezas, ¿cuánto valía la máscara completa?',
+      opciones_reto: ['36 unidades', '144 unidades', '48 unidades', '108 unidades'],
+      respuesta_reto: '144 unidades',
+      pista_resultado: 'Guerrero tiene 144 municipios, el mayor número de cualquier estado mexicano, una coincidencia numérica perfecta con el valor de la máscara.',
+    },
+    opciones: ['Guerrero', 'Oaxaca', 'Michoacán', 'Jalisco'],
+    respuesta_correcta: 'Guerrero',
+    explicacion: '¡Atrapado! La piedra chalchihuitl de las sierras del Pacífico, la bahía de Acapulco, el caudillo revolucionario serrano y los 144 municipios de Guerrero confirmaron el destino.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 4,
+    titulo: 'El Sistema de Canales Perdido',
+    categoria: 'ciencia-y-saberes',
+    concepto_clave: 'Ingeniería hidráulica olmeca',
+    materia: 'Ciencias Naturales',
+    estado_destino: 'Veracruz',
+    estado_slug: 'veracruz',
+    investigacion1: {
+      narrativa: '¡Agente! Los planos de barro de los canales olmecas de San Lorenzo han sido robados del archivo del INAH.',
+      objeto_robado: 'Planos de drenaje de San Lorenzo',
+      lugares: [
+        {
+          lugar: 'Archivo municipal',
+          icono: '🗂️',
+          testigo: 'El Archivista',
+          pista: 'El ladrón olía a tierra húmeda y barro fresco. Preguntó cómo llegar al lugar donde los ríos forman una red como espinas de pez antes de desembocar en el mar verdoso.',
+        },
+        {
+          lugar: 'Librería universitaria',
+          icono: '📚',
+          testigo: 'La Librera',
+          pista: 'Compró mapas de cuencas hidrológicas del sureste. Dijo que buscaba el lugar con más lluvia costera del Atlántico mexicano, donde el suelo nunca se seca del todo.',
+        },
+        {
+          lugar: 'Ferretería',
+          icono: '🔧',
+          testigo: 'El Ferretero',
+          pista: 'Llevó palas y tubos de PVC. Dijo que iba a un lugar donde el subsuelo es tan suave que puedes cavar con las manos, igual que los constructores de hace tres mil años.',
+        },
+      ],
+      libreta: 'San Lorenzo Tenochtitlán: Primer gran centro olmeca. Su sistema de drenaje de basalto (1200–900 a.C.) es el más antiguo de América y evacuaba agua de lluvia con precisión milimétrica sobre una meseta artificial.',
+    },
+    investigacion2: {
+      narrativa: 'Un colega arqueólogo envió coordenadas y una referencia histórica...',
+      pista_mundial: 'La nota decía: "Los olmecas construyeron canales 500 años antes que los romanos perfeccionaran sus acueductos. El estado donde huyó el ladrón produce el 40% del petróleo nacional."',
+      libreta: 'Los acueductos romanos se perfeccionaron en el 312 a.C. San Lorenzo data del 1200 a.C. Veracruz concentra la mayor infraestructura petrolera del Golfo de México.',
+    },
+    reto: {
+      enunciado: 'San Lorenzo tenía 8 canales de drenaje, cada uno de 55 metros. ¿Cuántos metros de canal construyeron en total?',
+      opciones_reto: ['330 metros', '400 metros', '440 metros', '480 metros'],
+      respuesta_reto: '440 metros',
+      pista_resultado: 'Veracruz tiene 440 km de litoral en el Golfo de México: exactamente los metros de canal olmeca que construyeron en San Lorenzo.',
+    },
+    opciones: ['Veracruz', 'Tabasco', 'Oaxaca', 'Puebla'],
+    respuesta_correcta: 'Veracruz',
+    explicacion: '¡Atrapado! La red de ríos del Golfo, la mayor lluvia costera del Atlántico, el 40% del petróleo nacional y los 440 km de litoral confirmaron Veracruz.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 5,
+    titulo: 'El Calendario de Basalto',
+    categoria: 'ciencia-y-saberes',
+    concepto_clave: 'Astronomía olmeca',
+    materia: 'Matemáticas',
+    estado_destino: 'Tabasco',
+    estado_slug: 'tabasco',
+    investigacion1: {
+      narrativa: '¡Agente! Una piedra calendárica olmeca con marcas astronómicas fue sustraída de un sitio arqueológico en la selva.',
+      objeto_robado: 'Estela calendárica de Tres Zapotes',
+      lugares: [
+        {
+          lugar: 'Aeropuerto regional',
+          icono: '✈️',
+          testigo: 'La Agente de Seguridad',
+          pista: 'Un pasajero llevaba cajas selladas etiquetadas como equipaje de investigación. Preguntó si en su destino el cielo siempre estaba nublado al amanecer por la humedad.',
+        },
+        {
+          lugar: 'Restaurante tradicional',
+          icono: '🍛',
+          testigo: 'El Cocinero',
+          pista: 'El sospechoso comió platillos con mucho chile y pejelagarto asado. Dijo que extrañaba el sabor del sureste donde el pescado se cocina sobre leña de mangle.',
+        },
+        {
+          lugar: 'Museo regional',
+          icono: '🏛️',
+          testigo: 'El Guía',
+          pista: 'Un visitante preguntó por la sala de astronomía precolombina. Comentó que su destino era tan plano y pantanoso que se podía ver el horizonte completo, perfecto para observar estrellas.',
+        },
+      ],
+      libreta: 'Sistema calendárico olmeca: La cuenta larga maya tiene raíces olmecas. La estela C de Tres Zapotes (31 a.C.) es la inscripción más antigua del sistema de puntos y barras mesoamericano.',
+    },
+    investigacion2: {
+      narrativa: 'Un astrónomo aficionado envió un mensaje cifrado sobre el destino...',
+      pista_mundial: 'El ladrón anotó: "El horizonte más plano de México está en las llanuras del sureste, donde los olmecas podían medir con exactitud el solsticio de verano. Ese estado aporta 2 de los 4 ríos más caudalosos de México."',
+      libreta: 'Los ríos Grijalva y Usumacinta, que nacen en Chiapas y Guatemala, representan el 40% del caudal fluvial de México. Ambos desembocan en Tabasco, convirtiendo la llanura tabasqueña en el horizonte más plano y observado del sureste.',
+    },
+    reto: {
+      enunciado: 'El calendario olmeca tenía 365 días. El ciclo de Venus dura 584 días. ¿Cuántos calendarios solares completos caben en 2 ciclos de Venus? (1168 días ÷ 365, toma el número entero)',
+      opciones_reto: ['2 calendarios', '3 calendarios', '4 calendarios', '5 calendarios'],
+      respuesta_reto: '3 calendarios',
+      pista_resultado: 'Tabasco tiene 3 regiones naturales: sierra, llanura y costa. Los 3 calendarios en 2 ciclos de Venus son la clave del destino.',
+    },
+    opciones: ['Tabasco', 'Veracruz', 'Chiapas', 'Yucatán'],
+    respuesta_correcta: 'Tabasco',
+    explicacion: '¡Atrapado! El pejelagarto asado, el horizonte pantanoso para la astronomía, los ríos Grijalva y Usumacinta, y las 3 regiones naturales de Tabasco cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 6,
+    titulo: 'La Pelota de Hule Sagrada',
+    categoria: 'vida-cotidiana',
+    concepto_clave: 'Juego de pelota mesoamericano',
+    materia: 'Educación Física e Historia',
+    estado_destino: 'Chiapas',
+    estado_slug: 'chiapas',
+    investigacion1: {
+      narrativa: '¡Agente! Una pelota de hule olmeca de 3,000 años fue robada del Museo del Juego de Pelota.',
+      objeto_robado: 'Pelota Ritual Olmeca del Preclásico',
+      lugares: [
+        {
+          lugar: 'Tienda deportiva',
+          icono: '⚽',
+          testigo: 'El Vendedor',
+          pista: 'Un cliente preguntó por pelotas de hule natural. Dijo que iba a un lugar donde hay árboles que manan leche blanca y pegajosa, rodeados de selva alta y montañas con niebla.',
+        },
+        {
+          lugar: 'Escuela primaria',
+          icono: '🏫',
+          testigo: 'La Maestra',
+          pista: 'Un extraño preguntó cómo se jugaba la pelota mesoamericana. Comentó que en su destino comunidades indígenas en las montañas del sur conservan tradiciones del juego desde hace siglos.',
+        },
+        {
+          lugar: 'Biblioteca pública',
+          icono: '📖',
+          testigo: 'El Bibliotecario',
+          pista: 'Consultó libros sobre hule natural. Dijo que buscaba el estado donde los tzeltales y los tzotziles viven entre cafetales y selvas altas desde tiempos ancestrales.',
+        },
+      ],
+      libreta: 'Hule natural: Extraído del árbol Castilla elastica, el hule olmeca se vulcanizaba con jugo de convolvulácea. Las comunidades tzeltal y tzotzil de Chiapas mantienen tradiciones mesoamericanas milenarias.',
+    },
+    investigacion2: {
+      narrativa: 'Un arqueólogo envió una alerta con datos del fugitivo...',
+      pista_mundial: 'El ladrón dejó escrito: "Mi destino tiene la mayor biodiversidad vegetal de México. Los aztecas llamaban a esta región Chiapan, que significa río de la chía en náhuatl."',
+      libreta: 'Chiapas alberga el 30% de las especies vegetales de México. La chía (Salvia hispanica) fue cultivada desde el 3500 a.C. Chiapas proviene de Chiapan: "lugar de la chía en el agua".',
+    },
+    reto: {
+      enunciado: 'Una pelota olmeca pesa 4 kg. Si hay 3 pelotas de juego más 2 pelotas de reserva por equipo, y compiten 2 equipos, ¿cuántos kg de pelotas hay en total?',
+      opciones_reto: ['20 kg', '40 kg', '35 kg', '48 kg'],
+      respuesta_reto: '40 kg',
+      pista_resultado: 'Chiapas tiene 40% del agua dulce superficial del sureste mexicano, igual que los 40 kg totales de pelotas en el juego ritual.',
+    },
+    opciones: ['Chiapas', 'Oaxaca', 'Veracruz', 'Guerrero'],
+    respuesta_correcta: 'Chiapas',
+    explicacion: '¡Atrapado! El árbol de hule en selvas altas, los tzeltales y tzotziles, el nombre Chiapan (río de la chía) y el 40% del agua dulce del sureste señalaron Chiapas.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 7,
+    titulo: 'El Secreto del Chapopote',
+    categoria: 'vida-cotidiana',
+    concepto_clave: 'Uso del petróleo natural en Mesoamérica',
+    materia: 'Ciencias Naturales',
+    estado_destino: 'Veracruz',
+    estado_slug: 'veracruz',
+    investigacion1: {
+      narrativa: '¡Agente! Muestras de chapopote olmeca con análisis químico han sido robadas del laboratorio del INAH.',
+      objeto_robado: 'Muestras de chapopote arqueológico de San Lorenzo',
+      lugares: [
+        {
+          lugar: 'Laboratorio químico',
+          icono: '🧪',
+          testigo: 'La Química',
+          pista: 'El ladrón preguntó por petróleo superficial. Dijo que iba al lugar donde el suelo negro mana solo entre playas y manglares, sin necesidad de perforar.',
+        },
+        {
+          lugar: 'Cooperativa de pescadores',
+          icono: '🎣',
+          testigo: 'El Pescador Mayor',
+          pista: 'Alguien preguntó dónde encontrar playas con manchas negras naturales. Los viejos decían que en ese estado el chapopote aparecía en la orilla como un regalo del mar verde.',
+        },
+        {
+          lugar: 'Taller de impermeabilización',
+          icono: '🏗️',
+          testigo: 'El Maestro de Obras',
+          pista: 'El sospechoso preguntó si el asfalto antiguo era igual al moderno. Comentó que su destino fue el primer estado en explotar petróleo de forma industrial en México.',
+        },
+      ],
+      libreta: 'Chapopote arqueológico: Los olmecas usaban asfalto natural para impermeabilizar canoas y sellar cerámicas rituales. Las filtraciones naturales de petróleo en las costas del Golfo de Veracruz eran conocidas desde el 1200 a.C.',
+    },
+    investigacion2: {
+      narrativa: 'Una nota firmada por el ladrón fue encontrada en el laboratorio...',
+      pista_mundial: 'El ladrón escribió: "Mi destino produjo petróleo antes que cualquier país árabe. La primera explotación industrial en México fue 2 años antes que la famosa perforación Spindletop en Texas (1901)."',
+      libreta: 'El pozo petrolero "La Pez" en San Luis Potosí (1901) inició la era petrolera mexicana, pero la producción masiva arrancó en la región Tampico-Veracruz. Spindletop (Texas) fue en enero de 1901. Veracruz fue el gran productor del Golfo.',
+    },
+    reto: {
+      enunciado: 'Los olmecas usaban 3 litros de chapopote por canoa para impermeabilizarla. Si construyeron 15 canoas para un viaje comercial, ¿cuántos litros necesitaron en total?',
+      opciones_reto: ['30 litros', '45 litros', '60 litros', '75 litros'],
+      respuesta_reto: '45 litros',
+      pista_resultado: 'Veracruz tiene 45 municipios con costa sobre el Golfo de México, el estado con más litoral en el Atlántico mexicano.',
+    },
+    opciones: ['Veracruz', 'Tabasco', 'Tamaulipas', 'Campeche'],
+    respuesta_correcta: 'Veracruz',
+    explicacion: '¡Atrapado! El chapopote que mana solo en playas del Golfo, el primer estado en explotar petróleo industrialmente y los 45 municipios costeros confirmaron Veracruz.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 8,
+    titulo: 'El Trono del Gran Señor',
+    categoria: 'civismo-y-etica',
+    concepto_clave: 'Organización política olmeca',
+    materia: 'Formación Cívica y Ética',
+    estado_destino: 'Tabasco',
+    estado_slug: 'tabasco',
+    investigacion1: {
+      narrativa: '¡Agente! Un altar olmeca con inscripciones de poder político ha sido robado del sitio de La Venta.',
+      objeto_robado: 'Altar 4 de La Venta',
+      lugares: [
+        {
+          lugar: 'Palacio municipal',
+          icono: '🏛️',
+          testigo: 'El Secretario',
+          pista: 'Un hombre con documentos falsos preguntó por permisos de excavación. Dijo que buscaba el lugar donde se construyó la primera pirámide de tierra de América, hecha con barro apilado.',
+        },
+        {
+          lugar: 'Mercado de antigüedades',
+          icono: '🏺',
+          testigo: 'El Anticuario',
+          pista: 'Alguien preguntó cuánto valía un tronito de piedra. Comentó que venía del estado con más ríos navegables de México, donde los señores olmecas viajaban en canoa.',
+        },
+        {
+          lugar: 'Aeropuerto',
+          icono: '🛫',
+          testigo: 'La Agente de Aduana',
+          pista: 'Una caja enorme fue declarada como artesanía contemporánea. El pasajero sudaba y preguntó si en su destino hacía tanto calor como en la selva, pero sin las montañas.',
+        },
+      ],
+      libreta: 'La Venta: El sitio olmeca más importante de Tabasco. Su pirámide de tierra de 33 metros fue la primera gran estructura pública de América. El Altar 4 muestra al primer gobernante mesoamericano emergiendo de una cueva jaguar.',
+    },
+    investigacion2: {
+      narrativa: 'Un coleccionista anónimo envió una pista sobre la organización política...',
+      pista_mundial: 'La nota decía: "El concepto olmeca de jefe-sacerdote influyó en todos los imperios mesoamericanos, igual que los faraones egipcios inspiraron a los reyes helénicos. El estado al que fui produce el 70% del cacao de México."',
+      libreta: 'Tabasco produce el 70% del cacao de México. La organización teocrática olmeca (jefe-sacerdote con poder religioso y político) fue adoptada por mayas, teotihuacanos y aztecas. Los faraones egipcios datan del 3100 a.C.',
+    },
+    reto: {
+      enunciado: 'La pirámide de La Venta tiene 33 metros de altura. Si la base mide el doble de la altura y el perímetro es 4 veces la base, ¿cuántos metros mide el perímetro total?',
+      opciones_reto: ['132 metros', '198 metros', '264 metros', '330 metros'],
+      respuesta_reto: '264 metros',
+      pista_resultado: 'Tabasco tiene 264 km de litoral en el Golfo de México: el mismo número que el perímetro de la pirámide de La Venta en metros.',
+    },
+    opciones: ['Tabasco', 'Veracruz', 'Campeche', 'Chiapas'],
+    respuesta_correcta: 'Tabasco',
+    explicacion: '¡Atrapado! La primera pirámide de tierra de América, los ríos navegables, el 70% del cacao de México y los 264 km de litoral de Tabasco cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 9,
+    titulo: 'La Ruta del Jade Verde',
+    categoria: 'civismo-y-etica',
+    concepto_clave: 'Comercio interregional mesoamericano',
+    materia: 'Geografía',
+    estado_destino: 'Oaxaca',
+    estado_slug: 'oaxaca',
+    investigacion1: {
+      narrativa: '¡Agente! Un mapa olmeca de rutas comerciales tallado en piedra fue robado del Museo Regional de Oaxaca.',
+      objeto_robado: 'Mapa comercial olmeca de Oaxaca',
+      lugares: [
+        {
+          lugar: 'Mercado de Tlacolula',
+          icono: '🌽',
+          testigo: 'La Vendedora de Tlayudas',
+          pista: 'Un forastero compró chapulines y mezcal. Preguntó cómo llegar a los valles donde los antiguos mercaderes intercambiaban jade por obsidiana en tianguis que duraban semanas.',
+        },
+        {
+          lugar: 'Taller de alebrijes',
+          icono: '🦎',
+          testigo: 'El Artesano',
+          pista: 'Alguien pidió madera de copal para tallar. Dijo que su destino es el estado donde se hablan más lenguas indígenas que en ningún otro de México.',
+        },
+        {
+          lugar: 'Agencia de viajes',
+          icono: '🗺️',
+          testigo: 'La Agente',
+          pista: 'Un cliente preguntó por caminos de terracería hacia la sierra. Comentó que buscaba el lugar donde el mezcal se fabrica con más de 40 variedades de agave.',
+        },
+      ],
+      libreta: 'Red comercial olmeca: Los olmecas establecieron las primeras rutas de intercambio mesoamericanas desde el 1200 a.C. Oaxaca fue el nodo entre la costa del Golfo y el Pacífico, donde se intercambiaban jade, obsidiana, plumas de quetzal y cacao.',
+    },
+    investigacion2: {
+      narrativa: 'Un arqueólogo de Monte Albán envió coordenadas y un mensaje...',
+      pista_mundial: 'El ladrón escribió: "Mi destino tiene más variedades de maíz nativo que cualquier país europeo completo. Los olmecas llegaron aquí 200 años antes de que los asirios conquistaran Babilonia."',
+      libreta: 'Los asirios conquistaron Babilonia en el 689 a.C. Los olmecas llegaron a Oaxaca hacia el 900 a.C. Oaxaca conserva 35 variedades nativas de maíz, más que cualquier otra región de México.',
+    },
+    reto: {
+      enunciado: 'Una ruta comercial olmeca tenía 5 paradas. En cada parada intercambiaban el 20% de la mercancía. Si salieron con 100 piezas de jade, ¿cuántas piezas llegaron a Oaxaca (parada 5)?',
+      opciones_reto: ['25 piezas', '32 piezas', '40 piezas', '48 piezas'],
+      respuesta_reto: '32 piezas',
+      pista_resultado: 'Oaxaca tiene 32 distritos, la mayor división administrativa de cualquier estado mexicano: exactamente las piezas que sobrevivieron el viaje olmeca.',
+    },
+    opciones: ['Oaxaca', 'Puebla', 'Guerrero', 'Chiapas'],
+    respuesta_correcta: 'Oaxaca',
+    explicacion: '¡Atrapado! Los chapulines y el mezcal, las 35 variedades de maíz nativo, el nodo comercial Golfo-Pacífico, y los 32 distritos de Oaxaca cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 10,
+    titulo: 'Olmecas y el Mundo Antiguo',
+    categoria: 'cruce-global',
+    concepto_clave: 'Civilizaciones contemporáneas al mundo olmeca',
+    materia: 'Historia Universal',
+    estado_destino: 'Veracruz',
+    estado_slug: 'veracruz',
+    investigacion1: {
+      narrativa: '¡Agente! Un documento comparativo entre civilizaciones del Preclásico fue robado de la biblioteca universitaria.',
+      objeto_robado: 'Atlas comparativo "Civilizaciones del 1200 a.C."',
+      lugares: [
+        {
+          lugar: 'Facultad de Historia',
+          icono: '🎓',
+          testigo: 'El Profesor',
+          pista: 'Un estudiante raro preguntó si los olmecas conocían a los fenicios. Comentó que su destino era el lugar donde los olmecas dominaron el mar verde mientras los fenicios navegaban el Mediterráneo azul.',
+        },
+        {
+          lugar: 'Cafetería universitaria',
+          icono: '☕',
+          testigo: 'La Cajera',
+          pista: 'Un hombre nervioso tomó café amargo. Dijo que iba a un estado donde el primer café de México se cultivó en el siglo XVIII, en tierras que huelen a vainilla y canela.',
+        },
+        {
+          lugar: 'Librería de textos usados',
+          icono: '📕',
+          testigo: 'El Dueño',
+          pista: 'El sospechoso compró todo lo que había sobre civilizaciones del Mediterráneo antiguo. Mencionó que su destino fue el primer estado de México en recibir barcos europeos.',
+        },
+      ],
+      libreta: 'Sincronía mundial: Mientras los olmecas florecían en San Lorenzo (1200–900 a.C.), en el Mediterráneo coexistían los fenicios (1200–800 a.C.) y el inicio del Imperio Asirio. Veracruz fue el primer contacto europeo en México (1518, Juan de Grijalva).',
+    },
+    investigacion2: {
+      narrativa: 'Un académico internacional envió un mensaje cifrado sobre el paradero del ladrón...',
+      pista_mundial: 'El ladrón anotó: "Me escondo en el estado donde Hernán Cortés fundó la primera ciudad española de América continental en 1519. La misma costa que los olmecas llamaron hogar 2,700 años antes."',
+      libreta: 'Villa Rica de la Vera Cruz fue fundada el 22 de abril de 1519 por Hernán Cortés: el primer municipio de América continental. Los olmecas habitaron la región costera del Golfo desde el 1200 a.C.',
+    },
+    reto: {
+      enunciado: 'El período olmeca duró aproximadamente 1,200 años (1500 a.C. al 300 a.C.). Los fenicios dominaron el mar durante 700 años. ¿Cuántos años más duraron los olmecas que los fenicios?',
+      opciones_reto: ['300 años', '400 años', '500 años', '600 años'],
+      respuesta_reto: '500 años',
+      pista_resultado: 'En 2019 se cumplieron 500 años desde la fundación de Veracruz por Cortés: el mismo número de años de diferencia entre olmecas y fenicios.',
+    },
+    opciones: ['Veracruz', 'Tabasco', 'Campeche', 'Yucatán'],
+    respuesta_correcta: 'Veracruz',
+    explicacion: '¡Caso cerrado! El mar verde del Golfo, el café y la vainilla, el primer municipio de América continental (1519), y los 500 años de diferencia olmeca-fenicia señalaron Veracruz.',
+    regla_oro_check: true,
+  },
+];
 
 const olmecas: Era = {
   metadata: {
-    slug: 'olmecas', titulo: 'Cultura Olmeca', periodo: '1500 – 400 a.C.',
+    slug: 'olmecas',
+    titulo: 'Los Olmecas',
+    periodo: '1500 a.C. – 400 a.C.',
     estados_principales: ['Veracruz', 'Tabasco'],
-    icono: '🗿', color: 'bg-teal-800', colorText: 'text-teal-900', orden: 1,
+    icono: '🗿',
+    color: 'bg-stone-700',
+    colorText: 'text-white',
+    orden: 1,
   },
-  casos: [
-    {
-      numero: 1, titulo: 'El Misterio de La Venta', subtitulo: 'Tabasco',
-      categoria: 'grandes-hitos', concepto_clave: 'Capital olmeca tardía y centro ceremonial',
-      materia: 'Historia', estado_destino: 'Tabasco', estado_slug: 'tabasco',
-      pista: 'El informante Pájaro de Jade dice: "La ciudad más poderosa de la primera gran civilización de México se construyó en tierras pantanosas donde el agua dulce y el agua salada se mezclan. Sus líderes ordenaron mover bloques de piedra desde montañas muy lejanas para crear monumentos sagrados. Todavía hoy puedes ver sus altares y esculturas en ese estado."',
-      libreta: `Sitio: La Venta — asentamiento urbano olmeca tardío
-Periodo de apogeo: Años 900–400 a.C.
-Ubicación: Islote entre pantanos, al oeste de la entidad
-Monumentos: 4 altares, 3 tumbas, pirámide de barro de 30 m
-Materiales transportados: Basalto de las Tuxtlas (distancia: 90 km)
-Colindancia: Limítrofe con Veracruz al poniente`,
-      opciones: ['Tabasco', 'Campeche', 'Veracruz', 'Oaxaca'],
-      respuesta_correcta: 'Tabasco',
-      explicacion: 'La Venta está en Tabasco, en un islote entre pantanos. El transporte de basalto desde las Tuxtlas (Veracruz) a 90 km y los altares monumentales son marcadores exclusivos de este sitio tabasqueño.',
-      regla_oro_check: true,
-    },
-    {
-      numero: 2, titulo: 'Las Cabezas de Basalto', subtitulo: 'Veracruz',
-      categoria: 'grandes-hitos', concepto_clave: 'Arte monumental y logística prehispánica',
-      materia: 'Historia', estado_destino: 'Veracruz', estado_slug: 'veracruz',
-      pista: 'La anciana del mercado te susurra: "Cadete, busca el estado donde los escultores de la primera civilización tallaron retratos de sus gobernantes en roca volcánica tan pesada que necesitaban cientos de personas para moverla. Esas caras gigantes parecen guerreros con casco redondo. En ese mismo estado también está el puerto más activo de México."',
-      libreta: `Número de cabezas descubiertas: 17 en total (San Lorenzo: 10, La Venta: 4, Tres Zapotes: 2, Rancho la Cobata: 1)
-Peso promedio: 8–40 toneladas por escultura
-Material: Basalto olivínico de origen volcánico
-Sitios en la entidad: San Lorenzo Tenochtitlán y Tres Zapotes
-Puerto comercial activo: El más importante del Golfo de México
-Coordenadas de San Lorenzo: 17°49'N, 94°47'O`,
-      opciones: ['Veracruz', 'Tabasco', 'Chiapas', 'Oaxaca'],
-      respuesta_correcta: 'Veracruz',
-      explicacion: 'San Lorenzo (10 cabezas) y Tres Zapotes (2) están en Veracruz. Las coordenadas 17°49\'N, 94°47\'O y el puerto activo del Golfo confirman el estado. La Venta (4 cabezas) está en Tabasco.',
-      regla_oro_check: true,
-    },
-    {
-      numero: 3, titulo: 'El Jaguar de Jade', subtitulo: 'Guerrero',
-      categoria: 'grandes-hitos', concepto_clave: 'Influencia olmeca fuera del área nuclear',
-      materia: 'Historia', estado_destino: 'Guerrero', estado_slug: 'guerrero',
-      pista: 'El agente Serpiente Emplumada reporta: "La influencia de la primera gran cultura llegó mucho más lejos de sus ciudades principales. En las cuevas de un estado del sur, en las costas del Pacífico, pintaron figuras mitad humano mitad animal con características olmecas. Ese estado hoy es famoso por sus playas y por el puerto de Acapulco."',
-      libreta: `Sitio de influencia: Cueva de Oxtotitlán y Juxtlahuaca
-Tipo de evidencia: Pinturas rupestres con iconografía olmeca (figuras felinas)
-Ubicación: Sierra de Guerrero, a 700 km del núcleo olmeca del Golfo
-Producto de intercambio: Jade, ilmenita y magnetita
-Costa del estado: Pacífico (no Golfo)
-Ciudad costera famosa: Puerto turístico de fama internacional desde siglo XX`,
-      opciones: ['Guerrero', 'Oaxaca', 'Chiapas', 'Michoacán'],
-      respuesta_correcta: 'Guerrero',
-      explicacion: 'Las cuevas de Oxtotitlán y Juxtlahuaca, con pinturas olmecas, están en la Sierra de Guerrero, a 700 km del núcleo olmeca. La costa del Pacífico y Acapulco confirman el estado.',
-      regla_oro_check: true,
-    },
-    {
-      numero: 4, titulo: 'El Sistema de Riego', subtitulo: 'Veracruz',
-      categoria: 'ciencia-y-saberes', concepto_clave: 'Ingeniería hidráulica prehispánica',
-      materia: 'Ciencias', estado_destino: 'Veracruz', estado_slug: 'veracruz',
-      pista: 'El ingeniero del tiempo te dice: "Investigador, los primeros arquitectos de México resolvieron un problema enorme: vivían en tierras que se inundaban con las lluvias pero se secaban en temporada de calor. Construyeron canales y terrazas para guardar el agua cuando sobra y usarla cuando falta. Ese sistema permitió alimentar a miles de personas en la costa del Golfo."',
-      libreta: `Técnica: Drenaje y canalización de humedales — documentada en San Lorenzo
-Evidencia arqueológica: 8 km de canales de piedra en el sitio principal veracruzano
-Función: Control de inundaciones + almacenamiento de agua dulce
-Periodo: Años 1500–900 a.C. (anterior a la ingeniería hidráulica maya)
-Suelo: Vertisoles — arcillas expansivas con alta retención hídrica
-Cultivos principales: Maíz, frijol y calabaza (milpa)`,
-      opciones: ['Veracruz', 'Hidalgo', 'Guanajuato', 'Tlaxcala'],
-      respuesta_correcta: 'Veracruz',
-      explicacion: 'Los 8 km de canales de San Lorenzo (Veracruz) son la evidencia más antigua de ingeniería hidráulica en México. Los vertisoles del Golfo y la milpa confirman el estado costeño.',
-      regla_oro_check: true,
-    },
-    {
-      numero: 5, titulo: 'El Primer Calendario', subtitulo: 'Tabasco',
-      categoria: 'ciencia-y-saberes', concepto_clave: 'Astronomía y matemáticas prehispánicas',
-      materia: 'Matemáticas', estado_destino: 'Tabasco', estado_slug: 'tabasco',
-      pista: 'La astrónoma de la misión dice: "Agente, los primeros sabios de Mesoamérica ya observaban el movimiento del Sol y los ciclos de las lluvias para saber cuándo sembrar. En las estelas de su ciudad más importante dejaron grabados los primeros registros de fechas del continente americano. Esos monumentos están en el estado más plano y pantanoso del sureste."',
-      libreta: `Estela C de Tres Zapotes: Contiene fecha equivalente a 32 a.C. — más antigua de Mesoamérica
-Sistema: Cuenta Larga (puntos y barras para registrar días)
-Entidad con mayor concentración de estelas fechadas: La Venta
-Topografía: Planicie aluvial a menos de 10 m s.n.m.
-Fenómeno climático dominante: Inundaciones estacionales del Grijalva y Usumacinta
-Cultivo rector del calendario: Ciclo del maíz (120 días de siembra a cosecha)`,
-      opciones: ['Tabasco', 'Veracruz', 'Campeche', 'Yucatán'],
-      respuesta_correcta: 'Tabasco',
-      explicacion: 'La Estela C de Tres Zapotes y la concentración de registros calendáricos en La Venta ubican esta misión en Tabasco. La planicie a menos de 10 m s.n.m. y las inundaciones del Grijalva confirman el estado.',
-      regla_oro_check: true,
-    },
-    {
-      numero: 6, titulo: 'El Juego de la Pelota', subtitulo: 'Chiapas',
-      categoria: 'vida-cotidiana', concepto_clave: 'Deporte ritual y vida social mesoamericana',
-      materia: 'Educación Física / Historia', estado_destino: 'Chiapas', estado_slug: 'chiapas',
-      pista: 'El guía del museo te explica: "En la primera gran civilización de México ya practicaban un deporte donde no podías usar las manos para mover la pelota. La pelota era de hule natural y pesaba varios kilos. Las canchas más antiguas que se conocen de ese deporte aparecieron en una región selvática del sur, cerca de Guatemala."',
-      libreta: `Cancha más antigua conocida: Paso de la Amada, circa 1400 a.C.
-Ubicación: Costa de Chiapas, cerca de la frontera sur del país
-Material de la pelota: Caucho natural (Castilla elastica) vulcanizado
-Peso de la pelota: 3–4 kg
-Reglas básicas: Golpear con caderas, codos o rodillas — sin manos
-Dimensión de las canchas olmecas: 80 m de longitud`,
-      opciones: ['Chiapas', 'Guerrero', 'Oaxaca', 'Puebla'],
-      respuesta_correcta: 'Chiapas',
-      explicacion: 'Paso de la Amada, en la costa de Chiapas, tiene las canchas del juego de pelota más antiguas de Mesoamérica (1400 a.C.). La frontera con Guatemala y la selva selvática confirman el estado sureño.',
-      regla_oro_check: true,
-    },
-    {
-      numero: 7, titulo: 'El Chapopote y el Hule', subtitulo: 'Veracruz',
-      categoria: 'vida-cotidiana', concepto_clave: 'Primeros usos del petróleo y el caucho',
-      materia: 'Ciencias / Historia', estado_destino: 'Veracruz', estado_slug: 'veracruz',
-      pista: 'El químico del tiempo dice: "Los olmecas fueron los primeros en usar una sustancia negra y viscosa que brotaba del suelo para impermeabilizar sus barcos y antorchas. También mezclaban plantas con otro material elástico para hacer pelotas que rebotaban. Esas materias primas naturales abundan en la costa del Golfo de México."',
-      libreta: `Chapopote (asfalto natural): Nombre náhuatl del petróleo aflorante
-Uso documentado: Impermeabilizante, adhesivo, incienso ritual y pintura
-Hule: Látex de Castilla elastica mezclado con jugo de Ipomoea alba
-Proceso: Vulcanización artesanal — descubierta 3,000 años antes que Goodyear (siglo XIX)
-Región productora: Costa del Golfo (cuenca petrolera actual de México)
-Sitio de evidencia: San Lorenzo — bolas de chapopote en contextos arqueológicos`,
-      opciones: ['Veracruz', 'Tabasco', 'Campeche', 'Tamaulipas'],
-      respuesta_correcta: 'Veracruz',
-      explicacion: 'San Lorenzo (Veracruz) tiene la evidencia más clara del uso de chapopote como impermeabilizante. La cuenca petrolera del Golfo, donde aún hoy se extrae petróleo, y las plantas de Castilla elastica confirman Veracruz como destino.',
-      regla_oro_check: true,
-    },
-    {
-      numero: 8, titulo: 'El Cacique y Su Pueblo', subtitulo: 'Tabasco',
-      categoria: 'civismo-y-etica', concepto_clave: 'Primeras formas de organización política',
-      materia: 'Formación Cívica', estado_destino: 'Tabasco', estado_slug: 'tabasco',
-      pista: 'El politólogo del tiempo dice: "La primera gran sociedad organizada de México ya no era igualitaria. Había un gobernante poderoso que se hacía retratar en monumentos enormes, artesanos especializados, agricultores y guerreros. Ese tipo de sociedad con capas se llama cacicazgo complejo. Las evidencias más claras están en la zona más pantanosa del sureste."',
-      libreta: `Tipo de sociedad: Cacicazgo complejo — entre tribu y Estado
-Evidencia de jerarquía: Tumbas diferenciadas por riqueza en La Venta
-Capas sociales identificadas: Gobernante, sacerdotes-artesanos, agricultores, posibles esclavos
-Área de control de La Venta: Aprox. 1,000 km² de territorio tributario
-Planicie del sureste: Altitud promedio 5 m s.n.m. — inundable en temporada de lluvias
-Ríos de la zona: Tributarios del Golfo de México que desembocan en ese estado`,
-      opciones: ['Tabasco', 'Veracruz', 'Chiapas', 'Oaxaca'],
-      respuesta_correcta: 'Tabasco',
-      explicacion: 'Las tumbas diferenciadas de La Venta (Tabasco) son la prueba más clara de jerarquía social olmeca. La planicie a 5 m s.n.m., inundable, y los ríos del Golfo confirman el estado tabasqueño.',
-      regla_oro_check: true,
-    },
-    {
-      numero: 9, titulo: 'Las Rutas de Comercio', subtitulo: 'Oaxaca',
-      categoria: 'civismo-y-etica', concepto_clave: 'Redes comerciales prehispánicas',
-      materia: 'Geografía / Historia', estado_destino: 'Oaxaca', estado_slug: 'oaxaca',
-      pista: 'La mercader del tiempo dice: "Los olmecas no vivían solos: tenían redes de intercambio con pueblos muy lejanos. En un estado del sur, en valles montañosos, dejaron figurillas y hachas de jade olmeca. A cambio recibían minerales preciosos como la magnetita y la ilmenita que brillaban como espejos. Ese estado sureño hoy es famoso por su artesanía y sus ruinas zapotecas."',
-      libreta: `Objeto de intercambio olmeca: Hachas ceremoniales de jade verde (celtas)
-Objetos recibidos: Magnetita (Fe₃O₄), ilmenita (FeTiO₃) y espejo de pirita
-Sitio receptor: San José Mogote — valle de Oaxaca
-Función de los minerales: Espejos de chamanes y ornamentos rituales
-Ruta comercial estimada: 700 km desde el Golfo hasta los valles centrales del sur
-Ruinas zapotecas del estado receptor: Monte Albán (construida siglos después)`,
-      opciones: ['Oaxaca', 'Guerrero', 'Puebla', 'Morelos'],
-      respuesta_correcta: 'Oaxaca',
-      explicacion: 'San José Mogote, en el valle central de Oaxaca, recibió hachas de jade olmeca y exportó magnetita e ilmenita. Las ruinas de Monte Albán (zapoteca, posterior) y la artesanía son marcadores de Oaxaca.',
-      regla_oro_check: true,
-    },
-    {
-      numero: 10, titulo: 'Olmecas y el Mundo Antiguo', subtitulo: 'Cruce Global',
-      categoria: 'cruce-global', concepto_clave: '¿Por qué distintas civilizaciones hacen pirámides?',
-      materia: 'Historia Universal', estado_destino: 'Veracruz', estado_slug: 'veracruz',
-      pista: 'La historiadora global dice: "Investigador, mientras los olmecas construían su ciudad de barro en el trópico americano, al otro lado del planeta los faraones del Imperio Nuevo egipcio edificaban templos en el desierto y los chinos de la dinastía Zhou desarrollaban su filosofía. Todas estas culturas surgieron de forma independiente, sin contacto entre sí. El estado donde los olmecas tuvieron mayor presencia hoy concentra la industria petrolera más importante de México."',
-      libreta: `Contemporáneos olmecas (años 1200–400 a.C.):
-• Egipto: Imperio Nuevo → Ramsés II (siglo XIII a.C.)
-• China: Dinastía Zhou → Confucio (siglo VI a.C.)
-• Grecia: Período Arcaico → Pitágoras (siglo VI a.C.)
-• Mesoamérica: Olmeca → La Venta (900–400 a.C.)
-Razón de las pirámides: Forma estable + visibilidad ritual — convergencia funcional, no contacto
-Estado con mayor legado arqueológico olmeca Y mayor producción petrolera actual: Costa del Golfo`,
-      opciones: ['Veracruz', 'Yucatán', 'Chihuahua', 'Baja California'],
-      respuesta_correcta: 'Veracruz',
-      explicacion: 'Las pirámides de culturas sin contacto (Egipto, olmecas, mayas, chinas) son convergencia funcional: la forma triangular es estructuralmente estable y visualmente imponente. Veracruz tiene el mayor legado arqueológico olmeca (San Lorenzo, Tres Zapotes) y hoy es también el centro de la industria petrolera del Golfo.',
-      regla_oro_check: true,
-    },
-  ],
+  casos,
 };
+
 export default olmecas;

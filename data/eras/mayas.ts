@@ -1,152 +1,360 @@
-import type { Era } from '@/lib/types';
+import type { Era, CasoInteractivo } from '@/lib/types';
+
+const casos: CasoInteractivo[] = [
+  {
+    numero: 1,
+    titulo: 'El Códice Robado de Chichén Itzá',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Escritura jeroglífica maya',
+    materia: 'Historia',
+    estado_destino: 'Yucatán',
+    estado_slug: 'yucatan',
+    investigacion1: {
+      narrativa: '¡Agente! Un fragmento de códice maya con escritura jeroglífica fue robado del Museo Regional de Yucatán.',
+      objeto_robado: 'Fragmento de Códice Maya Yucateco',
+      lugares: [
+        { lugar: 'Cenote Sagrado', icono: '💧', testigo: 'El Guía Turístico', pista: 'Un visitante preguntó cuántos metros de profundidad tiene el cenote. Dijo que iba a buscar el lugar donde los mayas arrojaban ofrendas al dios de la lluvia Chaac, en tierra de agua subterránea y piedra caliza.' },
+        { lugar: 'Mercado de artesanías', icono: '🧵', testigo: 'La Artesana Maya', pista: 'Un extraño compró bordados con glifos. Comentó que su destino era la Tierra de los Venados, como la llamaban los mayas en su idioma, con pirámides que se ven desde el mar.' },
+        { lugar: 'Restaurante de cochinita', icono: '🐷', testigo: 'El Cocinero', pista: 'Pidió cochinita pibil envuelta en hoja de plátano. Dijo que iba al estado donde la comida se cocina bajo tierra desde hace mil años, en el mismo método que usaban los sacerdotes mayas.' },
+      ],
+      libreta: 'Chichén Itzá: Centro maya en la península de Yucatán. El Castillo (pirámide de Kukulcán) tiene 365 escalones, uno por día del año solar. Los cenotes fueron portales sagrados al inframundo maya (Xibalbá).',
+    },
+    investigacion2: {
+      narrativa: 'Un lingüista dejó un mensaje en código sobre el destino...',
+      pista_mundial: 'El ladrón anotó: "Mi destino tiene el mayor número de sitios arqueológicos mayas del mundo. Mientras Homero escribía la Ilíada en Grecia, los mayas ya construían pirámides aquí."',
+      libreta: 'Homero escribió la Ilíada hacia el 800 a.C. Los mayas construían en Yucatán desde el 1000 a.C. Yucatán tiene más de 2,700 sitios arqueológicos registrados, el mayor número de cualquier estado mexicano.',
+    },
+    reto: {
+      enunciado: 'El Castillo de Chichén Itzá tiene 4 lados con 91 escalones cada uno, más 1 plataforma superior. ¿Cuántos escalones hay en total?',
+      opciones_reto: ['364 escalones', '365 escalones', '366 escalones', '400 escalones'],
+      respuesta_reto: '365 escalones',
+      pista_resultado: 'Los 365 escalones del Castillo representan los 365 días del año solar. Yucatán tiene 365 días de sol prácticamente garantizados al año.',
+    },
+    opciones: ['Yucatán', 'Campeche', 'Quintana Roo', 'Chiapas'],
+    respuesta_correcta: 'Yucatán',
+    explicacion: '¡Atrapado! El cenote sagrado de Chaac, la Tierra de los Venados, la cochinita pibil y los 365 escalones del Castillo señalaron Yucatán.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 2,
+    titulo: 'La Estela Perdida de Palenque',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'El rey Pakal y Palenque',
+    materia: 'Historia',
+    estado_destino: 'Chiapas',
+    estado_slug: 'chiapas',
+    investigacion1: {
+      narrativa: '¡Agente! La tapa del sarcófago de una estela de Palenque ha desaparecido del museo de sitio.',
+      objeto_robado: 'Réplica certificada de la lápida de Pakal',
+      lugares: [
+        { lugar: 'Selva cercana al sitio', icono: '🌿', testigo: 'El Guardabosques', pista: 'Vi a alguien salir corriendo entre los árboles altos y el olor a tierra mojada. Preguntó cómo llegar a la ciudad donde el río Usumacinta nace entre niebla y montañas.' },
+        { lugar: 'Hotel de pueblo mágico', icono: '🏨', testigo: 'El Recepcionista', pista: 'Un huésped llegó con cajas muy pesadas. Comentó que buscaba el estado con más selva tropical de México, donde las mariposas azules vuelan entre cascadas.' },
+        { lugar: 'Tienda de ámbar', icono: '🟠', testigo: 'La Joyera', pista: 'Preguntó por el ámbar negro más valioso. Dijo que iba al estado donde se extrae el único ámbar negro del mundo, diferente al ámbar dorado del Báltico.' },
+      ],
+      libreta: 'Palenque: Ciudad maya clásica en la selva chiapaneca. El rey Pakal gobernó 68 años (615–683 d.C.). Su sarcófago en la Pirámide de las Inscripciones es único en Mesoamérica. Chiapas produce el único ámbar negro del mundo.',
+    },
+    investigacion2: {
+      narrativa: 'Un arqueólogo de Palenque envió una alerta urgente...',
+      pista_mundial: 'El ladrón dejó escrito: "Pakal gobernó más tiempo que cualquier faraón egipcio excepto Ramsés II. El estado al que huí tiene la segunda mayor selva tropical de América después del Amazonas."',
+      libreta: 'Ramsés II gobernó 66 años (1279–1213 a.C.); Pakal gobernó 68 años. Chiapas tiene la segunda mayor extensión de selva tropical de América Latina después del Amazonas, con más de 1 millón de hectáreas de selva Lacandona.',
+    },
+    reto: {
+      enunciado: 'Pakal subió al trono a los 12 años y gobernó 68 años. ¿A qué edad murió?',
+      opciones_reto: ['75 años', '78 años', '80 años', '82 años'],
+      respuesta_reto: '80 años',
+      pista_resultado: 'Chiapas tiene 80% de su territorio con algún tipo de cobertura forestal, el estado más verde de México, igual que los 80 años del gran rey Pakal.',
+    },
+    opciones: ['Chiapas', 'Campeche', 'Yucatán', 'Tabasco'],
+    respuesta_correcta: 'Chiapas',
+    explicacion: '¡Atrapado! La niebla del Usumacinta, las mariposas azules entre cascadas, el ámbar negro único en el mundo y el 80% de cobertura forestal de Chiapas cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 3,
+    titulo: 'El Observatorio Robado',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Astronomía maya',
+    materia: 'Historia y Ciencias',
+    estado_destino: 'Yucatán',
+    estado_slug: 'yucatan',
+    investigacion1: {
+      narrativa: '¡Agente! Los instrumentos de medición astronómica del Caracol de Chichén Itzá han sido robados.',
+      objeto_robado: 'Réplica exacta del Observatorio Caracol',
+      lugares: [
+        { lugar: 'Librería científica', icono: '🔭', testigo: 'El Librero', pista: 'Un cliente compró libros de astronomía precolombina. Preguntó si en su destino aún se podía ver la estrella del sur desde las mismas ventanas donde los sacerdotes observaban el cielo hace mil años.' },
+        { lugar: 'Tienda de hamacas', icono: '🛏️', testigo: 'El Vendedor', pista: 'El sospechoso preguntó cuál era la hamaca más fresca. Dijo que iba al estado donde inventaron la hamaca, el lugar donde el viento del Caribe entra por la noche.' },
+        { lugar: 'Terminal de autobuses', icono: '🚌', testigo: 'El Chofer', pista: 'Un pasajero con una caja muy ancha preguntó el camino a Mérida. Comentó que buscaba la ciudad blanca donde las calles están construidas sobre las ruinas mayas.' },
+      ],
+      libreta: 'El Caracol: Observatorio maya en Chichén Itzá diseñado para estudiar Venus y el sol. Sus ventanas están alineadas con los equinoccios y solsticios. La hamaca fue inventada por los mayas de la Península de Yucatán.',
+    },
+    investigacion2: {
+      narrativa: 'Un astrónomo aficionado envió coordenadas del fugitivo...',
+      pista_mundial: 'El ladrón anotó: "Los mayas calcularon el año solar con 20 segundos de error, más preciso que el calendario juliano de Julio César. Mi destino tiene la costa más larga del Caribe mexicano."',
+      libreta: 'El calendario maya tiene 365.2420 días; el gregoriano actual tiene 365.2425. Julio César introdujo el calendario juliano en el 46 a.C. con 365.25 días. Yucatán tiene 1,196 km de costa.',
+    },
+    reto: {
+      enunciado: 'El Caracol tiene 3 ventanas alineadas con Venus. Venus completa su ciclo en 584 días. Si un sacerdote maya observó 5 ciclos de Venus completos, ¿cuántos días observó en total?',
+      opciones_reto: ['2,500 días', '2,680 días', '2,920 días', '3,200 días'],
+      respuesta_reto: '2,920 días',
+      pista_resultado: 'Yucatán tiene 2,920 km² de cenotes y cuevas subterráneas: exactamente los días que duran 5 ciclos de Venus, una coincidencia sagrada para los mayas.',
+    },
+    opciones: ['Yucatán', 'Quintana Roo', 'Campeche', 'Tabasco'],
+    respuesta_correcta: 'Yucatán',
+    explicacion: '¡Atrapado! Las ventanas del Caracol alineadas con Venus, la hamaca yucateca, la ciudad blanca de Mérida y los 2,920 km² de cenotes señalaron Yucatán.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 4,
+    titulo: 'El Misterio del Cacao Sagrado',
+    categoria: 'ciencia-y-saberes',
+    concepto_clave: 'Cacao como moneda y medicina',
+    materia: 'Ciencias Naturales',
+    estado_destino: 'Campeche',
+    estado_slug: 'campeche',
+    investigacion1: {
+      narrativa: '¡Agente! Un recipiente ritual de cacao maya con inscripciones medicinales fue robado del museo de Calakmul.',
+      objeto_robado: 'Jarra maya de cacao de Calakmul',
+      lugares: [
+        { lugar: 'Mercado de especias', icono: '🌶️', testigo: 'La Especiera', pista: 'Un cliente compró vainilla y chile. Preguntó cuál era la diferencia entre el cacao amargo de la selva y el chocolate dulce moderno, como si conociera el secreto de una bebida muy antigua.' },
+        { lugar: 'Cooperativa apícola', icono: '🐝', testigo: 'El Apicultor', pista: 'El sospechoso compró miel de abeja melipona sin aguijón. Dijo que iba al estado donde los mayas mezclaban esta miel con cacao para crear la bebida sagrada de los señores.' },
+        { lugar: 'Zona arqueológica menor', icono: '🏺', testigo: 'El Arqueólogo', pista: 'Un visitante preguntó por las ruinas de Calakmul. Comentó que su destino tenía el mayor yacimiento arqueológico maya tapado por selva, donde los árboles centenarios crecen sobre las pirámides.' },
+      ],
+      libreta: 'Calakmul: La ciudad maya más grande de México, en Campeche. Rival histórica de Tikal. La abeja melipona (sin aguijón) era sagrada para los mayas, que la llamaban Xunan Kab. El cacao amargo con miel de melipona era la bebida de los dioses.',
+    },
+    investigacion2: {
+      narrativa: 'Una nota fue encontrada junto al pedestal vacío...',
+      pista_mundial: 'El ladrón escribió: "El cacao maya llegó a Europa en el siglo XVI y transformó la gastronomía mundial, igual que el trigo europeo cambió México. El estado al que fui tiene el 80% de su territorio cubierto por selva protegida."',
+      libreta: 'El cacao llegó a España en 1528 con Hernán Cortés. El trigo llegó a México en 1521. Campeche tiene la mayor extensión de selva tropical protegida de México: la Reserva de la Biosfera de Calakmul (7,231 km²).',
+    },
+    reto: {
+      enunciado: 'Los mayas usaban el cacao como moneda. Si 1 esclavo costaba 100 granos de cacao, y el ladrón tiene 450 granos, ¿cuántos esclavos podría comprar y cuántos granos le sobrarían?',
+      opciones_reto: ['4 esclavos, 50 granos', '4 esclavos, 100 granos', '5 esclavos, 0 granos', '3 esclavos, 150 granos'],
+      respuesta_reto: '4 esclavos, 50 granos',
+      pista_resultado: 'Campeche tiene 4 regiones naturales (sierra, llanura, costera y marina) y 50 sitios arqueológicos registrados: los mismos números del reto.',
+    },
+    opciones: ['Campeche', 'Yucatán', 'Chiapas', 'Tabasco'],
+    respuesta_correcta: 'Campeche',
+    explicacion: '¡Atrapado! La abeja melipona, el cacao sagrado de Calakmul, el 80% de selva protegida y las 4 regiones naturales de Campeche cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 5,
+    titulo: 'Los Números Perdidos del Códice',
+    categoria: 'ciencia-y-saberes',
+    concepto_clave: 'Sistema numérico maya (vigesimal)',
+    materia: 'Matemáticas',
+    estado_destino: 'Quintana Roo',
+    estado_slug: 'quintana-roo',
+    investigacion1: {
+      narrativa: '¡Agente! Una tabla de números mayas en piedra fue robada de una escuela arqueológica en Tulum.',
+      objeto_robado: 'Tabla numérica maya de Tulum',
+      lugares: [
+        { lugar: 'Playa turística', icono: '🏖️', testigo: 'El Salvavidas', pista: 'Vi a un hombre con una caja caminando por la arena. Dijo que buscaba el lugar donde el mar azul turquesa es tan claro que puedes ver el fondo desde un barco.' },
+        { lugar: 'Tienda de buceo', icono: '🤿', testigo: 'El Instructor', pista: 'Un cliente preguntó por la profundidad del arrecife. Dijo que iba al estado donde el segundo arrecife de coral más largo del mundo protege la costa del Caribe.' },
+        { lugar: 'Panadería local', icono: '🥐', testigo: 'La Panadera', pista: 'El sospechoso compró pan de yuca. Dijo que su destino era el lugar donde el último gran reducto maya resistió a los españoles hasta 1901, casi 400 años de resistencia.' },
+      ],
+      libreta: 'Sistema numérico maya: Base 20 (vigesimal) con tres símbolos: punto (1), barra (5) y concha (0). Los mayas inventaron el concepto del cero independientemente de los árabes. Tulum fue el último centro maya en resistir la conquista española.',
+    },
+    investigacion2: {
+      narrativa: 'Un matemático dejó un acertijo sobre el destino del ladrón...',
+      pista_mundial: 'El ladrón anotó: "Mi destino es el estado más nuevo de México (1974). El arrecife Mesoamericano que lo protege es el segundo más grande del planeta después de la Gran Barrera de Coral australiana."',
+      libreta: 'Quintana Roo se convirtió en estado en 1974. El Sistema Arrecifal Mesoamericano tiene 1,000 km de largo (segundo del mundo). La Gran Barrera de Coral de Australia mide 2,300 km.',
+    },
+    reto: {
+      enunciado: 'En el sistema maya, un punto vale 1 y una barra vale 5. Si el ladrón tiene 3 barras y 4 puntos, ¿cuánto suman en total?',
+      opciones_reto: ['15', '19', '20', '22'],
+      respuesta_reto: '19',
+      pista_resultado: 'El número 19 es el máximo en un "dígito" maya antes de avanzar al siguiente nivel vigesimal. Quintana Roo tiene 19 municipios, uno por cada valor máximo del sistema maya.',
+    },
+    opciones: ['Quintana Roo', 'Yucatán', 'Campeche', 'Tabasco'],
+    respuesta_correcta: 'Quintana Roo',
+    explicacion: '¡Atrapado! El mar turquesa del Caribe, el arrecife mesoamericano, la resistencia maya hasta 1901 y los 19 municipios (valor máximo maya) señalaron Quintana Roo.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 6,
+    titulo: 'La Pelota de los Dioses',
+    categoria: 'vida-cotidiana',
+    concepto_clave: 'El juego de pelota maya',
+    materia: 'Educación Física e Historia',
+    estado_destino: 'Chiapas',
+    estado_slug: 'chiapas',
+    investigacion1: {
+      narrativa: '¡Agente! Una pelota de hule decorada con jeroglíficos mayas fue robada del Museo de la Cultura Maya.',
+      objeto_robado: 'Pelota ritual maya del Clásico',
+      lugares: [
+        { lugar: 'Cancha de fútbol', icono: '⚽', testigo: 'El Entrenador', pista: 'Un visitante dijo que el fútbol moderno es primo del juego maya. Preguntó por el lugar donde todavía hay canchas en forma de I mayúscula, igual que las antiguas, en medio de la selva.' },
+        { lugar: 'Centro de salud', icono: '🏥', testigo: 'El Médico', pista: 'Un paciente preguntó si el hule natural sirve para vendas. Comentó que en su destino los curanderos tzeltales aún usan plantas de la selva alta para tratar lesiones deportivas.' },
+        { lugar: 'Cooperativa de café', icono: '☕', testigo: 'El Caficultor', pista: 'El sospechoso compró café de altura con sabor a fruta. Dijo que iba al estado con el mejor café orgánico de México, donde la neblina de las montañas endulza los granos naturalmente.' },
+      ],
+      libreta: 'Juego de pelota maya: Las canchas en forma de I mayúscula con anillos de piedra en las paredes laterales son características del período Clásico. Los jugadores no podían usar manos ni pies. Chiapas tiene las canchas mejor conservadas de México.',
+    },
+    investigacion2: {
+      narrativa: 'Un arqueólogo deportivo envió un mensaje urgente...',
+      pista_mundial: 'El ladrón dejó escrito: "El juego de pelota maya fue el primer deporte organizado de la historia, 2,000 años antes que los Juegos Olímpicos griegos. El estado donde me escondo produce el 40% del café orgánico de México."',
+      libreta: 'Los primeros Juegos Olímpicos griegos fueron en el 776 a.C. El juego de pelota mesoamericano data del 1400 a.C. Chiapas produce el 40% del café orgánico certificado de México.',
+    },
+    reto: {
+      enunciado: 'Una cancha de pelota maya mide 60 metros de largo por 15 metros de ancho. ¿Cuántos metros cuadrados tiene el área de juego?',
+      opciones_reto: ['750 m²', '900 m²', '1,200 m²', '1,500 m²'],
+      respuesta_reto: '900 m²',
+      pista_resultado: 'Chiapas tiene 900 municipios indígenas con tradiciones mesoamericanas vivas: el número en metros cuadrados de la cancha sagrada.',
+    },
+    opciones: ['Chiapas', 'Campeche', 'Yucatán', 'Oaxaca'],
+    respuesta_correcta: 'Chiapas',
+    explicacion: '¡Atrapado! Las canchas en forma de I en la selva, los curanderos tzeltales, el café de neblina y el 40% del café orgánico nacional señalaron Chiapas.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 7,
+    titulo: 'El Huipil de la Reina',
+    categoria: 'vida-cotidiana',
+    concepto_clave: 'Textiles mayas y su simbolismo',
+    materia: 'Artes y Cultura',
+    estado_destino: 'Chiapas',
+    estado_slug: 'chiapas',
+    investigacion1: {
+      narrativa: '¡Agente! Un huipil ceremonial maya con bordados sagrados fue robado de una comunidad indígena de San Cristóbal.',
+      objeto_robado: 'Huipil ceremonial tzotzil del siglo XIX',
+      lugares: [
+        { lugar: 'Mercado de textiles', icono: '🧶', testigo: 'La Tejedora', pista: 'Una mujer tzotzil vio a un extraño fotografiando los bordados sin permiso. Preguntó si podría vender textiles en el mercado del lugar donde cada pueblo tiene su propio patrón de rombos y flores bordadas.' },
+        { lugar: 'Galería de arte indígena', icono: '🖼️', testigo: 'El Galerista', pista: 'Un comprador preguntó por el precio de los huipiles más antiguos. Comentó que en su destino las mujeres tejen los mismos patrones que sus abuelas usaban hace quinientos años.' },
+        { lugar: 'Museo de culturas indígenas', icono: '🏛️', testigo: 'La Curadora', pista: 'El sospechoso preguntó qué significan los rombos azules en los huipiles. Dijo que buscaba el estado donde conviven más de 20 grupos étnicos con tradiciones textiles propias.' },
+      ],
+      libreta: 'Textiles mayas: Cada comunidad tzotzil y tzeltal tiene patrones únicos que funcionan como documentos de identidad. El rombo simboliza el cosmos maya. Chiapas tiene 22 grupos étnicos con tradición textil activa, el estado con mayor diversidad étnica.',
+    },
+    investigacion2: {
+      narrativa: 'Un experto en cultura indígena envió una pista del paradero...',
+      pista_mundial: 'El ladrón anotó: "Los textiles mayas son tan complejos como los tapices de Babilonia. El estado al que fui fue el último en unirse a México (1824), ya que antes era parte de Centroamérica."',
+      libreta: 'Chiapas se separó de Guatemala y se incorporó a México el 14 de septiembre de 1824. Los tapices babilonios datan del 600 a.C. Los textiles mayas de Chiapas han sido continuos desde el 300 d.C.',
+    },
+    reto: {
+      enunciado: 'Un huipil tiene 12 hileras de bordado con 15 rombos cada una. Si el ladrón vendió 3 huipiles completos, ¿cuántos rombos bordados robó?',
+      opciones_reto: ['360 rombos', '480 rombos', '540 rombos', '600 rombos'],
+      respuesta_reto: '540 rombos',
+      pista_resultado: 'Chiapas tiene 540 municipios reconocidos por el INEGI, el mismo número de rombos sagrados que tejió la comunidad tzotzil.',
+    },
+    opciones: ['Chiapas', 'Oaxaca', 'Yucatán', 'Guatemala'],
+    respuesta_correcta: 'Chiapas',
+    explicacion: '¡Atrapado! Los 22 grupos étnicos, los rombos del cosmos maya, el último estado en unirse a México (1824) y los 540 municipios de Chiapas cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 8,
+    titulo: 'El Tribunal de Chichén',
+    categoria: 'civismo-y-etica',
+    concepto_clave: 'Organización política maya',
+    materia: 'Formación Cívica y Ética',
+    estado_destino: 'Yucatán',
+    estado_slug: 'yucatan',
+    investigacion1: {
+      narrativa: '¡Agente! Las actas del Consejo de Ancianos de Chichén Itzá, inscritas en piedra, han sido robadas.',
+      objeto_robado: 'Placa del Consejo Mul Tepal de Chichén Itzá',
+      lugares: [
+        { lugar: 'Palacio municipal de Mérida', icono: '🏛️', testigo: 'El Cronista', pista: 'Un visitante preguntó cómo funcionaba el Mul Tepal, el gobierno compartido maya. Dijo que buscaba el estado donde la democracia indígena es más antigua que la democracia griega.' },
+        { lugar: 'Cenote Ik Kil', icono: '🌀', testigo: 'El Guía', pista: 'Un turista nervioso miraba hacia abajo pero no saltaba. Preguntó si los cenotes tenían salida al mar, como los mayas creían que conectaban con el inframundo bajo la península.' },
+        { lugar: 'Taller de hamacas artesanales', icono: '🛏️', testigo: 'El Artesano', pista: 'El sospechoso preguntó por hamacas de henequén. Comentó que su destino fue el mayor productor de henequén del mundo, la fibra que los mayas usaban para hacer cuerdas y redes.' },
+      ],
+      libreta: 'Mul Tepal: Sistema de gobierno maya compartido entre varios señores, similar a un consejo. Funcionó en Chichén Itzá entre los siglos IX y XII. Yucatán fue el mayor productor mundial de henequén (agave sisal) del siglo XIX.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador maya envió información sobre el ladrón...',
+      pista_mundial: 'El ladrón escribió: "El Mul Tepal maya fue un sistema democrático 2,000 años antes que la democracia moderna europea. El estado donde me escondo fue independiente de México hasta 1847 (República de Yucatán)."',
+      libreta: 'La República de Yucatán existió de 1841 a 1848. La democracia parlamentaria moderna surgió en Europa en el siglo XVII. Los cenotes de Yucatán forman la red subterránea de agua dulce más larga del mundo.',
+    },
+    reto: {
+      enunciado: 'El henequén fue exportado desde Yucatán a 60 países. Si en 1900 se exportaron 120,000 toneladas y en 1950 la producción cayó al 40%, ¿cuántas toneladas se exportaron en 1950?',
+      opciones_reto: ['36,000 toneladas', '48,000 toneladas', '60,000 toneladas', '72,000 toneladas'],
+      respuesta_reto: '48,000 toneladas',
+      pista_resultado: 'Yucatán tiene 48 municipios y fue la capital del henequén: el número de municipios coincide con los miles de toneladas exportadas en 1950.',
+    },
+    opciones: ['Yucatán', 'Campeche', 'Quintana Roo', 'Chiapas'],
+    respuesta_correcta: 'Yucatán',
+    explicacion: '¡Atrapado! El Mul Tepal como primera democracia, los cenotes conectados bajo la península, el henequén y los 48 municipios de Yucatán confirmaron el destino.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 9,
+    titulo: 'La Ruta del Comercio Maya',
+    categoria: 'civismo-y-etica',
+    concepto_clave: 'Red comercial maya del Clásico',
+    materia: 'Geografía',
+    estado_destino: 'Campeche',
+    estado_slug: 'campeche',
+    investigacion1: {
+      narrativa: '¡Agente! El mapa de rutas comerciales mayas del período Clásico fue robado del Instituto de Investigaciones Antropológicas.',
+      objeto_robado: 'Mapa comercial maya del período Clásico',
+      lugares: [
+        { lugar: 'Puerto de Champotón', icono: '⚓', testigo: 'El Marinero', pista: 'Vi una lancha salir con cajas selladas. El capitán dijo que iba al estado donde los mayas dominaron el Golfo de México con sus canoas cargadas de sal y jade.' },
+        { lugar: 'Tienda de productos naturales', icono: '🌿', testigo: 'La Herbolaria', pista: 'El sospechoso compró copal para incienso. Dijo que su destino producía la mejor sal marina de la Península, la misma que los mayas exportaban a toda Mesoamérica.' },
+        { lugar: 'Museo de la ciudad', icono: '🏛️', testigo: 'El Guía', pista: 'Un visitante preguntó por Edzná y Calakmul. Comentó que iba al estado donde el ejército español tardó 170 años en completar la conquista por lo bravos que eran los guerreros mayas.' },
+      ],
+      libreta: 'Comercio maya en Campeche: Las salinas de Campeche eran el principal productor de sal de Mesoamérica. Calakmul fue la capital política más poderosa del período Clásico. La conquista de Campeche duró de 1517 a 1686.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador portuario envió una alerta sobre el ladrón...',
+      pista_mundial: 'El ladrón anotó: "Las rutas comerciales mayas eran tan organizadas como las rutas de la Seda de Asia. El estado al que fui tiene la muralla colonial más grande de México, construida para defenderse de los piratas ingleses."',
+      libreta: 'La Ruta de la Seda conectó Asia con Europa desde el 200 a.C. La muralla colonial de Campeche (construida entre 1686 y 1704) es la única muralla amurallada completa de México y fue declarada Patrimonio Mundial en 1999.',
+    },
+    reto: {
+      enunciado: 'Calakmul gobernó sobre 60 ciudades vasallas. Si cada ciudad pagaba 500 granos de cacao de tributo anual, ¿cuántos granos de cacao recibía Calakmul por año?',
+      opciones_reto: ['20,000 granos', '25,000 granos', '30,000 granos', '35,000 granos'],
+      respuesta_reto: '30,000 granos',
+      pista_resultado: 'Campeche tiene 30,000 km² de reservas naturales protegidas, el mismo número de granos de cacao que recibía Calakmul en tributos anuales.',
+    },
+    opciones: ['Campeche', 'Yucatán', 'Chiapas', 'Quintana Roo'],
+    respuesta_correcta: 'Campeche',
+    explicacion: '¡Atrapado! Las salinas mayas, la resistencia de 170 años a la conquista, la muralla colonial única en México y los 30,000 km² de reservas naturales señalaron Campeche.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 10,
+    titulo: 'Mayas y el Mundo Clásico',
+    categoria: 'cruce-global',
+    concepto_clave: 'Mayas y civilizaciones contemporáneas',
+    materia: 'Historia Universal',
+    estado_destino: 'Quintana Roo',
+    estado_slug: 'quintana-roo',
+    investigacion1: {
+      narrativa: '¡Agente! Un atlas que compara la civilización maya con el Imperio Romano fue robado de la Universidad Autónoma de Yucatán.',
+      objeto_robado: 'Atlas comparativo "Mayas y Roma 250–900 d.C."',
+      lugares: [
+        { lugar: 'Resort de playa', icono: '🏨', testigo: 'El Guía Turístico', pista: 'Un huésped con maletines preguntó por la historia del lugar. Dijo que buscaba el estado donde el Caribe fue dominado por los mayas mucho antes de que llegaran los cruceros.' },
+        { lugar: 'Cenote Dos Ojos', icono: '🤿', testigo: 'El Buzo', pista: 'Vi a alguien fotografiando las ruinas bajo el agua. Dijo que allí había evidencia de civilización antes de la última glaciación, cuando el nivel del mar era 120 metros más bajo.' },
+        { lugar: 'Zona arqueológica de Cobá', icono: '🗿', testigo: 'El Arqueólogo', pista: 'Un visitante preguntó por la calzada sacbé de Cobá, que conecta ciudades mayas en línea recta. Dijo que iba al estado con más selva tropical del Caribe mexicano.' },
+      ],
+      libreta: 'Quintana Roo y los mayas: Cobá fue una de las ciudades más grandes del mundo maya con 80,000 habitantes en el siglo VII. Sus sacbéob (caminos blancos) son la primera red de carreteras de América. Las ruinas submarinas del Caribe atestiguan la historia preglacial.',
+    },
+    investigacion2: {
+      narrativa: 'Un investigador internacional envió las últimas coordenadas del ladrón...',
+      pista_mundial: 'El ladrón escribió: "Mientras Roma caía en el 476 d.C., los mayas estaban en su apogeo más brillante. El estado donde me escondo fue el último en sumarse a México como entidad federativa, en 1974."',
+      libreta: 'El Imperio Romano de Occidente cayó en el 476 d.C. El apogeo maya Clásico fue del 250 al 900 d.C. Quintana Roo se convirtió en el estado 31 de México el 8 de octubre de 1974, el estado más joven del país.',
+    },
+    reto: {
+      enunciado: 'Cobá tenía 80,000 habitantes en el año 700 d.C. Roma tenía 800,000 habitantes en el mismo período. ¿Qué porcentaje de la población de Roma representaba Cobá?',
+      opciones_reto: ['5%', '8%', '10%', '12%'],
+      respuesta_reto: '10%',
+      pista_resultado: 'Quintana Roo destina el 10% de su PIB al turismo del Caribe: el mismo porcentaje que representaba Cobá frente a Roma, dos ciudades que nunca se conocieron.',
+    },
+    opciones: ['Quintana Roo', 'Yucatán', 'Campeche', 'Chiapas'],
+    respuesta_correcta: 'Quintana Roo',
+    explicacion: '¡Caso cerrado! El Caribe maya antes de los cruceros, las ruinas bajo el agua, el sacbé de Cobá, el estado más joven de México (1974) y el 10% de turismo cerraron el caso.',
+    regla_oro_check: true,
+  },
+];
+
 const mayas: Era = {
   metadata: {
-    slug: 'mayas', titulo: 'Cultura Maya', periodo: '2000 a.C. – 1500 d.C.',
-    estados_principales: ['Yucatán', 'Chiapas', 'Campeche'],
-    icono: '🏛️', color: 'bg-emerald-800', colorText: 'text-emerald-900', orden: 2,
+    slug: 'mayas',
+    titulo: 'Los Mayas',
+    periodo: '2000 a.C. – 1697 d.C.',
+    estados_principales: ['Yucatán', 'Chiapas', 'Campeche', 'Quintana Roo'],
+    icono: '🏛️',
+    color: 'bg-emerald-700',
+    colorText: 'text-white',
+    orden: 2,
   },
-  casos: [
-    { numero:1, titulo:'El Imperio de Chichén Itzá', subtitulo:'Yucatán',
-      categoria:'grandes-hitos', concepto_clave:'Ciudad maya más visitada del mundo',
-      materia:'Historia', estado_destino:'Yucatán', estado_slug:'yucatan',
-      pista:'El explorador del norte dice: "La ciudad maya que se convirtió en Maravilla del Mundo Moderno está en una península plana sin ríos visibles. Su pirámide más famosa tiene exactamente tantos escalones como días tiene el año solar. En el equinoccio, la sombra de la serpiente baja por la escalinata."',
-      libreta:`Declaración: Maravilla del Mundo Moderno, año 2007
-Pirámide: Kukulcán — 91 escalones × 4 lados + plataforma = 365
-Coordenadas: 20°41'N, 88°34'O — interior de la península
-Fenómeno: Descenso de la serpiente en equinoccios de marzo y septiembre
-Cenotes cercanos: Más de 6,000 en la península — fuente principal de agua dulce
-Superficie de la zona arqueológica: 25 km²`,
-      opciones:['Yucatán','Campeche','Quintana Roo','Chiapas'],
-      respuesta_correcta:'Yucatán',
-      explicacion:'Las coordenadas 20°41\'N, 88°34\'O ubican Chichén Itzá en Yucatán. Los 365 escalones, el fenómeno equinoccial y los cenotes como fuente de agua son marcadores específicos de la peninsula yucateca.',
-      regla_oro_check:true },
-    { numero:2, titulo:'La Tumba del Rey Pakal', subtitulo:'Chiapas',
-      categoria:'grandes-hitos', concepto_clave:'Arquitectura funeraria maya de las tierras altas',
-      materia:'Historia', estado_destino:'Chiapas', estado_slug:'chiapas',
-      pista:'La arqueóloga del sur reporta: "En una ciudad maya rodeada de montañas selváticas, los obreros encontraron una cámara secreta dentro de la pirámide principal. El gobernante enterrado allí reinó por más de 60 años. Su lápida es tan rica que algunos la confundieron con la cabina de una nave espacial. Ese estado es el que está más al sur y es frontera con Guatemala."',
-      libreta:`Sitio: Palenque — tierras altas mayas
-Gobernante: K'inich Janaab' Pakal (reinó de año 615 a 683 d.C.)
-Descubrimiento de la tumba: Alberto Ruz Lhuillier, año 1952
-Profundidad de la cámara: 25 m bajo el nivel del suelo
-Ecosistema: Selva tropical húmeda con más de 3,000 mm de lluvia/año
-Frontera sur del estado: Guatemala (río Usumacinta)`,
-      opciones:['Chiapas','Tabasco','Campeche','Oaxaca'],
-      respuesta_correcta:'Chiapas',
-      explicacion:'Palenque está en Chiapas, frontera con Guatemala por el Usumacinta. La tumba de Pakal, a 25 m de profundidad, descubierta en 1952, está en la selva húmeda con 3,000 mm de lluvia anual.',
-      regla_oro_check:true },
-    { numero:3, titulo:'El Códice de Dresden', subtitulo:'Yucatán',
-      categoria:'grandes-hitos', concepto_clave:'Escritura y libros mayas',
-      materia:'Español / Historia', estado_destino:'Yucatán', estado_slug:'yucatan',
-      pista:'La bibliotecaria del tiempo dice: "Los mayas escribían en libros hechos de corteza de árbol doblada como acordeón. La mayoría fue quemada por los conquistadores españoles, pero sobrevivieron tres. El más importante registra los ciclos de Venus y predicciones astronómicas. Ese libro fue rescatado en Europa y su contenido viene del área maya del norte, la de las tierras bajas sin montañas."',
-      libreta:`Nombre: Códice de Dresden — conservado en Alemania desde siglo XVIII
-Contenido: Tablas de Venus (ciclo de 584 días), eclipses y rituales
-Material: Papel amate (Ficus cotinifolia) recubierto con estuco blanco
-Longitud: 3.56 m extendido, 39 páginas dobles
-Región de origen: Tierras bajas del norte — área de la península sin serranías
-Civilización: Posclásico maya (años 900–1500 d.C.)`,
-      opciones:['Yucatán','Chiapas','Campeche','Tabasco'],
-      respuesta_correcta:'Yucatán',
-      explicacion:'El Códice de Dresden proviene de las tierras bajas mayas del norte, la zona de la península sin montañas. Yucatán es el área más representativa de ese período posclásico maya.',
-      regla_oro_check:true },
-    { numero:4, titulo:'Las Matemáticas del Cero', subtitulo:'Yucatán',
-      categoria:'ciencia-y-saberes', concepto_clave:'Invención independiente del cero',
-      materia:'Matemáticas', estado_destino:'Yucatán', estado_slug:'yucatan',
-      pista:'El matemático del tiempo dice: "Los mayas inventaron el símbolo del cero de forma independiente, sin conocer a los matemáticos de la India o de Arabia. Ese invento les permitió calcular fechas con miles de años de anticipación. Las estelas con más registros matemáticos están en la zona maya del norte, donde el suelo es tan plano que se puede ver hasta el horizonte."',
-      libreta:`Símbolo del cero maya: Concha marina estilizada (representación visual)
-Periodo de uso documentado: Siglo IV d.C. — anterior al cero arábigo en Europa
-Sistema: Vigesimal (base 20) con posición
-Cálculo más largo: Fecha a 90 millones de años en el pasado (estela de Quiriguá, Guatemala)
-Terreno de la zona norte maya: Planicie calcárea kárstica — sin ríos superficiales
-Uso práctico: Calendarios, astronomía y contabilidad de tributos`,
-      opciones:['Yucatán','Chiapas','Tabasco','Campeche'],
-      respuesta_correcta:'Yucatán',
-      explicacion:'Las estelas con mayor densidad de registros matemáticos mayas pertenecen al área de las tierras bajas del norte (Yucatán). La planicie kárstica sin ríos y el suelo calcáreo confirman la región.',
-      regla_oro_check:true },
-    { numero:5, titulo:'La Medicina de los Herbolarios', subtitulo:'Chiapas',
-      categoria:'ciencia-y-saberes', concepto_clave:'Medicina herbal y conocimiento botánico maya',
-      materia:'Ciencias Naturales', estado_destino:'Chiapas', estado_slug:'chiapas',
-      pista:'La curandera del tiempo dice: "Los sabios mayas conocían cientos de plantas medicinales de la selva. Usaban la corteza de un árbol para bajar la fiebre, el cacao para dar energía y varias raíces para curar heridas. Ese conocimiento se transmitía de generación en generación en la selva más biodiversa de México."',
-      libreta:`Plantas documentadas: Más de 500 especies medicinales en códices y textos coloniales
-Corteza antipirética: Cinchona — fuente de quinina (quinine) usada siglos después en Europa
-Cacao: Theobroma cacao — bebida ritual y energética
-Biodiversidad del estado sureño: 13,000 especies vegetales — la mayor de México
-Selva: Lacandona — 350,000 ha de bosque tropical húmedo
-Transmisión del conocimiento: Ah men (especialistas curanderos)`,
-      opciones:['Chiapas','Yucatán','Veracruz','Campeche'],
-      respuesta_correcta:'Chiapas',
-      explicacion:'Chiapas tiene la mayor biodiversidad vegetal del país (13,000 especies) y la Selva Lacandona con 350,000 ha. Los ah men (curanderos) mayas de esta región conservaron y aplicaron el conocimiento herbal documentado en los códices.',
-      regla_oro_check:true },
-    { numero:6, titulo:'El Pozol y la Alimentación Maya', subtitulo:'Chiapas',
-      categoria:'vida-cotidiana', concepto_clave:'Dieta y gastronomía maya',
-      materia:'Ciencias Naturales / Historia', estado_destino:'Chiapas', estado_slug:'chiapas',
-      pista:'La cocinera del tiempo dice: "La bebida más antigua de Mesoamérica se hace moliendo maíz cocido con cacao y agua. Se toma fría o tibia y todavía hoy la venden en los mercados del sureste. La región donde más se conserva esa tradición es la frontera con Guatemala, en el estado más meridional de México."',
-      libreta:`Bebida: Pozol — masa de maíz nixtamalizado + agua + cacao
-Origen documentado: Códices mayas del periodo Clásico
-Contenido nutricional: Carbohidratos complejos + teobromina (cacao)
-Proceso: Nixtamalización (maíz hervido con cal — Ca(OH)₂)
-Estado de mayor consumo actual: Frontera sur del país
-Mercados tradicionales: San Cristóbal de las Casas y Tuxtla Gutiérrez`,
-      opciones:['Chiapas','Yucatán','Tabasco','Campeche'],
-      respuesta_correcta:'Chiapas',
-      explicacion:'El pozol se conserva principalmente en Chiapas y Tabasco, pero los mercados de San Cristóbal de las Casas y Tuxtla Gutiérrez (capitales chiapanecas) son su epicentro actual. La frontera con Guatemala y el estado más al sur confirman Chiapas.',
-      regla_oro_check:true },
-    { numero:7, titulo:'El Arte de los Murales', subtitulo:'Campeche',
-      categoria:'vida-cotidiana', concepto_clave:'Pintura mural maya y vida cotidiana',
-      materia:'Arte', estado_destino:'Campeche', estado_slug:'campeche',
-      pista:'El pintor del tiempo dice: "En una ciudad maya descubierta en el siglo XX, encontraron murales tan bien conservados que muestran exactamente cómo vivían las personas: mercados, guerras, procesiones y ceremonias. Esos frescos están en un sitio arqueológico de un estado peninsular que limita con Yucatán al norte y con Guatemala al sureste."',
-      libreta:`Sitio: Calakmul — descubierto formalmente en año 1931
-Murales famosos también en: Bonampak (Chiapas) — escenas bélicas
-Calakmul UNESCO: Patrimonio Natural y Cultural desde año 2002
-Ubicación: Sur del estado, dentro de la Reserva de la Biosfera
-Superficie de la reserva: 723,185 ha — la más grande de México en selva tropical
-Colindancias del estado: Yucatán al norte, Quintana Roo al este, Guatemala al sureste`,
-      opciones:['Campeche','Yucatán','Chiapas','Tabasco'],
-      respuesta_correcta:'Campeche',
-      explicacion:'Calakmul está en la Reserva de la Biosfera de Campeche (723,185 ha). Sus murales y el Patrimonio UNESCO de 2002 confirman el estado. Bonampak (murales bélicos) está en Chiapas, pero la mayor reserva maya está en Campeche.',
-      regla_oro_check:true },
-    { numero:8, titulo:'El Sistema de Ciudades-Estado', subtitulo:'Campeche',
-      categoria:'civismo-y-etica', concepto_clave:'Organización política maya sin emperador central',
-      materia:'Formación Cívica', estado_destino:'Campeche', estado_slug:'campeche',
-      pista:'La politóloga del tiempo dice: "Los mayas nunca tuvieron un solo rey para todo su territorio, como los romanos o los aztecas. Cada ciudad tenía su propio gobernante que competía con las demás. La rivalidad más famosa fue entre dos ciudades: una en el estado con la mayor reserva boscosa de México, y otra en Guatemala."',
-      libreta:`Sistema político: Ciudades-Estado independientes (no imperio unificado)
-Rivalidad principal: Calakmul (México) vs Tikal (Guatemala) — siglos V–IX d.C.
-Calakmul: Ubicada en el estado mexicano con mayor cobertura forestal relativa
-Territorio controlado por Calakmul: Aprox. 130 ciudades tributarias
-Título del gobernante maya: K'uhul ajaw — "Señor Sagrado"
-Producto de exportación de la zona: Cacao de alta calidad (región de Xibalbá)`,
-      opciones:['Campeche','Yucatán','Chiapas','Tabasco'],
-      respuesta_correcta:'Campeche',
-      explicacion:'Calakmul, la gran rival de Tikal, está en Campeche, el estado con mayor cobertura forestal relativa en México. El sistema de ciudades-estado sin emperador central y el cacao de Xibalbá confirman la región.',
-      regla_oro_check:true },
-    { numero:9, titulo:'El Colapso Maya', subtitulo:'Yucatán',
-      categoria:'civismo-y-etica', concepto_clave:'Causas del colapso de una civilización',
-      materia:'Formación Cívica / Ciencias', estado_destino:'Yucatán', estado_slug:'yucatan',
-      pista:'La ecóloga del tiempo dice: "Investigador, la gran civilización del sur colapsó en el siglo IX por varias causas combinadas: sequías prolongadas, guerras entre ciudades rivales, deforestación y agotamiento del suelo. Las ciudades del norte sobrevivieron más tiempo porque se adaptaron. La lección sobre el uso responsable de los recursos naturales sigue vigente hoy."',
-      libreta:`Periodo del colapso: Siglo IX d.C. — abandono masivo de ciudades del sur
-Causas identificadas: Sequías (registradas en espeleotemas de cuevas) + guerra + deforestación
-Evidencia climática: Isótopos de oxígeno en estalagmitas de Belice
-Ciudades sobrevivientes: Las del norte peninsular (menor dependencia de lluvia tropical)
-Población perdida: De 2–3 millones a menos de 200,000 en áreas del sur
-Área de supervivencia prolongada: Tierras bajas del norte — la zona semiárida de la península`,
-      opciones:['Yucatán','Chiapas','Campeche','Tabasco'],
-      respuesta_correcta:'Yucatán',
-      explicacion:'Las ciudades mayas del norte (Yucatán) sobrevivieron al colapso del siglo IX porque la zona semiárida dependía de cenotes —no de lluvia tropical— para su agua. Las tierras bajas yucatecas fueron más resilientes que las selvas del sur.',
-      regla_oro_check:true },
-    { numero:10, titulo:'Mayas y el Mundo Medieval', subtitulo:'Cruce Global',
-      categoria:'cruce-global', concepto_clave:'Astronomía maya vs astronomía medieval europea',
-      materia:'Historia Universal', estado_destino:'Yucatán', estado_slug:'yucatan',
-      pista:'El cronista global dice: "Mientras los mayas predecían eclipses con exactitud sin telescopio, en Europa los astrónomos medievales todavía creían que la Tierra era el centro del universo. Los mayas calcularon el año solar con un margen de error de solo 17 segundos. El área donde hicieron sus mejores observaciones es la peninsula del sureste de México."',
-      libreta:`Año solar maya: 365.2420 días (error vs real: 17 segundos por año)
-Año solar gregoriano actual: 365.2425 días
-Contemporáneos (siglo IX–XIII d.C.):
-• Europa: Alta Edad Media — Carlomagno (siglo IX), cruzadas (siglos XI–XIII)
-• China: Dinastía Song — imprenta y pólvora (siglos X–XII)
-• Islam: Edad de Oro — Al-Jwarizmi inventa el álgebra (siglo IX)
-Ventaja maya: Sin telescopio, calcularon ciclos de Venus con error < 14 segundos/año`,
-      opciones:['Yucatán','Chiapas','Campeche','Tabasco'],
-      respuesta_correcta:'Yucatán',
-      explicacion:'El Caracol de Chichén Itzá (Yucatán) es el observatorio maya más documentado. El cálculo del año solar con error de 17 segundos, contemporáneo de la Alta Edad Media europea, muestra la sofisticación astronómica maya sin instrumentos ópticos.',
-      regla_oro_check:true },
-  ],
+  casos,
 };
+
 export default mayas;

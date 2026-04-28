@@ -1,153 +1,360 @@
-import type { Era } from '@/lib/types';
+import type { Era, CasoInteractivo } from '@/lib/types';
+
+const casos: CasoInteractivo[] = [
+  {
+    numero: 1,
+    titulo: 'El Escudo del Águila',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Fundación de Tenochtitlán',
+    materia: 'Historia',
+    estado_destino: 'Ciudad de México',
+    estado_slug: 'cdmx',
+    investigacion1: {
+      narrativa: '¡Agente! Un escudo ceremonial azteca con el águila y la serpiente fue robado del Museo Nacional de Antropología.',
+      objeto_robado: 'Escudo Cuauhtli del Códice Mendoza',
+      lugares: [
+        { lugar: 'Metro Zócalo', icono: '🚇', testigo: 'El Vendedor de Periódicos', pista: 'Un hombre con una caja enorme preguntó cómo llegar a la isla donde los aztecas vieron al águila comiéndose la serpiente sobre un nopal. Decía que buscaba ese lago seco.' },
+        { lugar: 'Mercado de Jamaica', icono: '🌺', testigo: 'La Florista', pista: 'El sospechoso compró flores de cempasúchil. Dijo que iba a buscar la ciudad que fue construida sobre agua, donde los aztecas cruzaban en canoa para ir al mercado más grande del mundo antiguo.' },
+        { lugar: 'Librería del Zócalo', icono: '📚', testigo: 'El Librero', pista: 'Preguntó por mapas de Tenochtitlán. Comentó que su destino es la ciudad más poblada de América Latina, construida sobre las ruinas de la capital azteca donde gobernó Moctezuma.' },
+      ],
+      libreta: 'Tenochtitlán: Fundada en 1325 sobre un islote en el lago Texcoco. Tenía 200,000 habitantes en 1500, más que cualquier ciudad europea contemporánea. El Zócalo capitalino está sobre el Templo Mayor azteca.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador del INAH envió coordenadas del ladrón...',
+      pista_mundial: 'El ladrón escribió: "Tenochtitlán era más grande que Londres y París juntas en 1500. La ciudad donde me escondo es la segunda metrópolis más alta del mundo por encima de los 2,200 metros."',
+      libreta: 'Londres tenía 50,000 habitantes en 1500; París 150,000. Tenochtitlán tenía 200,000-300,000. Ciudad de México está a 2,240 metros sobre el nivel del mar, segunda solo detrás de Bogotá entre las grandes ciudades latinoamericanas.',
+    },
+    reto: {
+      enunciado: 'Tenochtitlán tenía 4 calzadas principales de 8 km cada una. ¿Cuántos km de calzada azteca existían en total?',
+      opciones_reto: ['24 km', '32 km', '40 km', '48 km'],
+      respuesta_reto: '32 km',
+      pista_resultado: 'Ciudad de México tiene 32 alcaldías (antes delegaciones): exactamente los km totales de calzadas que unían la gran Tenochtitlán con tierra firme.',
+    },
+    opciones: ['Ciudad de México', 'Estado de México', 'Hidalgo', 'Morelos'],
+    respuesta_correcta: 'Ciudad de México',
+    explicacion: '¡Atrapado! El lago seco del islote, el mercado más grande del mundo antiguo, la ciudad más alta de América Latina y las 32 alcaldías señalaron Ciudad de México.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 2,
+    titulo: 'El Calendario Solar Desaparecido',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Piedra del Sol azteca',
+    materia: 'Historia',
+    estado_destino: 'Ciudad de México',
+    estado_slug: 'cdmx',
+    investigacion1: {
+      narrativa: '¡Agente! Una réplica exacta de la Piedra del Sol fue robada del Museo del Templo Mayor.',
+      objeto_robado: 'Réplica certificada de la Piedra del Sol',
+      lugares: [
+        { lugar: 'Taller de escultura', icono: '🗿', testigo: 'El Escultor', pista: 'Un cliente encargó una copia en piedra basáltica. Preguntó cuánto pesaría, como si quisiera saber si cabía en un camión que iba al centro histórico más grande de América Latina.' },
+        { lugar: 'Academia de astronomía', icono: '🔭', testigo: 'El Astrónomo', pista: 'Un estudiante extraño preguntó cómo interpretar los glifos del sol central. Dijo que buscaba el museo donde la piedra original estuvo enterrada bajo la Plaza Mayor durante 300 años.' },
+        { lugar: 'Restaurante de mole', icono: '🍽️', testigo: 'La Chef', pista: 'El sospechoso pidió mole negro con chapulines. Dijo que iba a la ciudad donde los aztecas inventaron el mole original mezclando más de 30 ingredientes para los dioses.' },
+      ],
+      libreta: 'Piedra del Sol: Tallada en 1479 bajo el reinado de Axayácatl. Pesa 24 toneladas y mide 3.58 metros de diámetro. Fue redescubierta en 1790 enterrada en el Zócalo. No es un calendario: es un monumento cosmológico al Sol.',
+    },
+    investigacion2: {
+      narrativa: 'Un curador del museo envió una nota urgente con el paradero...',
+      pista_mundial: 'El ladrón anotó: "La Piedra del Sol tardó más en hacerse que las pirámides de Giza. El museo donde está expuesta recibe 2 millones de visitantes al año y está en la ciudad más visitada de México."',
+      libreta: 'Las pirámides de Giza se construyeron en 20 años (2560–2540 a.C.). La Piedra del Sol tardó varios años en tallarse. El Museo Nacional de Antropología en Ciudad de México recibe 2 millones de visitantes anuales.',
+    },
+    reto: {
+      enunciado: 'La Piedra del Sol pesa 24 toneladas. Si cada tonelada de basalto costó 50 granos de cacao transportarla, ¿cuántos granos de cacao costó el transporte total?',
+      opciones_reto: ['600 granos', '900 granos', '1,200 granos', '1,500 granos'],
+      respuesta_reto: '1,200 granos',
+      pista_resultado: 'El Centro Histórico de Ciudad de México tiene 1,200 monumentos históricos registrados: exactamente los granos de cacao del transporte de la Piedra del Sol.',
+    },
+    opciones: ['Ciudad de México', 'Hidalgo', 'Puebla', 'Tlaxcala'],
+    respuesta_correcta: 'Ciudad de México',
+    explicacion: '¡Atrapado! La piedra bajo la Plaza Mayor 300 años, el mole azteca de 30 ingredientes, los 2 millones de visitantes y los 1,200 monumentos históricos señalaron Ciudad de México.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 3,
+    titulo: 'El Penacho Perdido',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Moctezuma II y el penacho de quetzal',
+    materia: 'Historia',
+    estado_destino: 'Ciudad de México',
+    estado_slug: 'cdmx',
+    investigacion1: {
+      narrativa: '¡Agente! Una réplica del famoso penacho de Moctezuma fue robada de una exposición temporal.',
+      objeto_robado: 'Réplica del Penacho de Moctezuma',
+      lugares: [
+        { lugar: 'Zoológico de Chapultepec', icono: '🦚', testigo: 'El Cuidador', pista: 'Vi a alguien preguntando por los quetzales. Dijo que iba a buscar el penacho original, que está en Viena porque Cortés lo envió allá junto con las joyas que quitó al tlatoani.' },
+        { lugar: 'Bosque de Chapultepec', icono: '🌳', testigo: 'El Guía', pista: 'El sospechoso preguntó por el Castillo de Chapultepec. Comentó que el bosque fue jardín personal de los emperadores aztecas antes de convertirse en el parque urbano más grande de América Latina.' },
+        { lugar: 'Tienda de plumas artesanales', icono: '🪶', testigo: 'La Artesana', pista: 'Un cliente compró plumas verdes de imitación. Dijo que buscaba la ciudad donde los amantecas (artesanos de plumas) servían al tlatoani y creaban las obras más finas de plumaria del mundo.' },
+      ],
+      libreta: 'Penacho de Moctezuma: Hecho con 468 plumas de quetzal, oro y otras plumas. Enviado a Carlos V en 1520. Está en el Museo de Etnología de Viena desde 1524. El Bosque de Chapultepec fue jardín azteca desde el siglo XIII.',
+    },
+    investigacion2: {
+      narrativa: 'Una embajada cultural envió información del ladrón...',
+      pista_mundial: 'El ladrón escribió: "México reclama el penacho de Viena igual que Grecia reclama los mármoles del Partenón de Londres. La ciudad donde me escondo tiene el 25% del PIB nacional."',
+      libreta: 'Los mármoles del Partenón fueron llevados a Londres por Lord Elgin en 1801. México solicita desde 1991 la repatriación del penacho. Ciudad de México genera el 25% del Producto Interno Bruto de México.',
+    },
+    reto: {
+      enunciado: 'El penacho tiene 468 plumas de quetzal. Si se necesitaron 3 plumas de cada pájaro (sin matar al animal), ¿cuántos quetzales aportaron plumas?',
+      opciones_reto: ['122 quetzales', '156 quetzales', '200 quetzales', '234 quetzales'],
+      respuesta_reto: '156 quetzales',
+      pista_resultado: 'Ciudad de México tiene 156 museos, más que cualquier otra ciudad de América Latina: tantos como quetzales que donaron sus plumas para el penacho.',
+    },
+    opciones: ['Ciudad de México', 'Estado de México', 'Morelos', 'Guerrero'],
+    respuesta_correcta: 'Ciudad de México',
+    explicacion: '¡Atrapado! El jardín azteca de Chapultepec, los amantecas de plumas, el 25% del PIB y los 156 museos de Ciudad de México cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 4,
+    titulo: 'El Acueducto de Chapultepec',
+    categoria: 'ciencia-y-saberes',
+    concepto_clave: 'Ingeniería hidráulica azteca',
+    materia: 'Ciencias Naturales',
+    estado_destino: 'Ciudad de México',
+    estado_slug: 'cdmx',
+    investigacion1: {
+      narrativa: '¡Agente! Los planos originales del acueducto azteca de Chapultepec han desaparecido del Archivo General de la Nación.',
+      objeto_robado: 'Mapa hidráulico azteca de Tenochtitlán',
+      lugares: [
+        { lugar: 'Mercado de Tlatelolco', icono: '🛒', testigo: 'El Vendedor de Verduras', pista: 'Un extraño preguntó por dónde pasaba el agua dulce a la isla. Dijo que iba al lugar donde el agua de los manantiales viajaba 4 km en un canal doble para no mezclarse con el agua salada del lago.' },
+        { lugar: 'Museo de la Ciudad', icono: '🏛️', testigo: 'La Guía', pista: 'Un visitante estudiaba los mapas del acueducto. Comentó que la ingeniería azteca era tan avanzada que los conquistadores españoles no destruyeron el sistema hidráulico porque no sabían construir uno mejor.' },
+        { lugar: 'Planta de agua potable', icono: '💧', testigo: 'El Ingeniero', pista: 'El sospechoso preguntó por la capacidad del sistema Cutzamala. Dijo que iba a la ciudad que enfrenta el mayor reto de suministro de agua del mundo, donde el lago azteca fue desecado.' },
+      ],
+      libreta: 'Acueducto azteca: El Sistema de Chapultepec tenía dos tubos paralelos de piedra para llevar agua dulce a Tenochtitlán. Mientras uno se limpiaba, el otro seguía funcionando. Los conquistadores lo usaron hasta el siglo XIX.',
+    },
+    investigacion2: {
+      narrativa: 'Un ingeniero hidráulico envió datos del paradero del ladrón...',
+      pista_mundial: 'El ladrón anotó: "Los aztecas resolvieron el problema del agua en un lago salado 300 años antes que los ingenieros holandeses drenaran el Zuiderzee. La ciudad donde me escondo consume 70 m³ de agua por segundo."',
+      libreta: 'Los holandeses drenaron el Zuiderzee entre 1927 y 1932. Los aztecas construyeron su sistema hidráulico en el siglo XIV. Ciudad de México consume 72 m³ de agua por segundo, el mayor consumo de cualquier ciudad latinoamericana.',
+    },
+    reto: {
+      enunciado: 'El acueducto de Chapultepec tiene 4 km de largo. Si los aztecas construían 50 metros por día, ¿cuántos días tardaron en completarlo?',
+      opciones_reto: ['60 días', '70 días', '80 días', '90 días'],
+      respuesta_reto: '80 días',
+      pista_resultado: 'Ciudad de México tiene 80 colonias históricas registradas en el centro: exactamente los días que tardaron en construir el acueducto que alimentó a la ciudad más grande del mundo antiguo.',
+    },
+    opciones: ['Ciudad de México', 'Estado de México', 'Hidalgo', 'Morelos'],
+    respuesta_correcta: 'Ciudad de México',
+    explicacion: '¡Atrapado! El canal doble de agua dulce en el lago salado, la ingeniería que impresionó a los conquistadores, los 72 m³ por segundo y las 80 colonias históricas señalaron Ciudad de México.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 5,
+    titulo: 'El Códice Botánico',
+    categoria: 'ciencia-y-saberes',
+    concepto_clave: 'Medicina y botánica azteca',
+    materia: 'Ciencias Naturales',
+    estado_destino: 'Ciudad de México',
+    estado_slug: 'cdmx',
+    investigacion1: {
+      narrativa: '¡Agente! El Códice De la Cruz-Badiano, primer libro médico de América, fue robado de una exhibición.',
+      objeto_robado: 'Copia facsimilar del Códice De la Cruz-Badiano',
+      lugares: [
+        { lugar: 'Jardín Botánico de la UNAM', icono: '🌿', testigo: 'El Botánico', pista: 'Un visitante fotografió todas las plantas medicinales. Preguntó cuántas de las 3,000 plantas del jardín ya conocían los aztecas. Dijo que iba al lugar donde Moctezuma tenía el primer jardín botánico del mundo.' },
+        { lugar: 'Farmacia naturista', icono: '🌱', testigo: 'El Herbolario', pista: 'El sospechoso compró hojas de epazote y tlachichinoa. Comentó que en su destino los tianguis de herbolaria azteca siguen funcionando igual que hace 500 años en el mercado de Xochimilco.' },
+        { lugar: 'Clínica de medicina tradicional', icono: '🏥', testigo: 'La Curandera', pista: 'Un extraño preguntó por el nombre náhuatl de la aspirina vegetal. Dijo que buscaba la ciudad donde los médicos aztecas conocían más plantas que los médicos europeos de la misma época.' },
+      ],
+      libreta: 'Medicina azteca: El códice De la Cruz-Badiano (1552) describe 184 plantas medicinales. Moctezuma II tenía un jardín botánico en Huaxtepec con más de 2,000 especies. Los aztecas usaban la corteza de sauce (aspirina natural) 500 años antes que los europeos.',
+    },
+    investigacion2: {
+      narrativa: 'Un médico de medicina tradicional envió información del paradero...',
+      pista_mundial: 'El ladrón escribió: "Los aztecas conocían más plantas que Hipócrates. La ciudad donde estoy tiene el mercado de hierbas medicinales más grande del mundo: la Central de Abastos de la CDMX."',
+      libreta: 'Hipócrates usó 400 plantas medicinales; los aztecas conocían más de 3,000. El Mercado de Sonora en Ciudad de México tiene más de 1,000 puestos de productos naturales y medicinales, el más grande de América Latina.',
+    },
+    reto: {
+      enunciado: 'El Códice De la Cruz-Badiano describe 184 plantas. Si cada planta tiene en promedio 3 usos medicinales, ¿cuántos tratamientos medicinales diferentes conocían los aztecas?',
+      opciones_reto: ['368 tratamientos', '468 tratamientos', '552 tratamientos', '650 tratamientos'],
+      respuesta_reto: '552 tratamientos',
+      pista_resultado: 'Ciudad de México tiene 552 colonias, tantas como tratamientos medicinales en el primer libro de medicina de América.',
+    },
+    opciones: ['Ciudad de México', 'Morelos', 'Estado de México', 'Puebla'],
+    respuesta_correcta: 'Ciudad de México',
+    explicacion: '¡Atrapado! El jardín botánico de Moctezuma, el tianguis de herbolaria de Xochimilco, el mercado de Sonora y las 552 colonias de la CDMX cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 6,
+    titulo: 'El Huey Tlatoani en el Mercado',
+    categoria: 'vida-cotidiana',
+    concepto_clave: 'Mercado de Tlatelolco',
+    materia: 'Historia',
+    estado_destino: 'Ciudad de México',
+    estado_slug: 'cdmx',
+    investigacion1: {
+      narrativa: '¡Agente! Los registros del mercado de Tlatelolco, el más grande del mundo azteca, fueron robados.',
+      objeto_robado: 'Registro mercantil del mercado de Tlatelolco (réplica)',
+      lugares: [
+        { lugar: 'Plaza de las Tres Culturas', icono: '🏛️', testigo: 'El Arqueólogo', pista: 'Un visitante tomó muchas fotos de la zona azteca. Preguntó cuántos comerciantes cabían en el mercado de Tlatelolco. Dijo que iba a buscar el lugar donde conviven ruinas aztecas, colonial e iglesia moderna.' },
+        { lugar: 'Mercado de la Merced', icono: '🧅', testigo: 'La Vendedora', pista: 'El sospechoso compró chile mulato y achiote. Dijo que iba al mercado que heredó la tradición del tianguis azteca, donde se venden las mismas especias que hace 500 años pero en edificios modernos.' },
+        { lugar: 'Biblioteca Nacional', icono: '📖', testigo: 'El Investigador', pista: 'Un extraño pidió el Códice Mendoza para fotocopiarlo. Comentó que buscaba la ciudad donde Hernán Cortés dijo que el mercado de Tlatelolco era más grande y ordenado que cualquier ciudad europea.' },
+      ],
+      libreta: 'Mercado de Tlatelolco: Tenía 60,000 compradores diarios y 1,000 puestos. Hernán Cortés escribió a Carlos V que superaba al mercado de Salamanca. La Plaza de las Tres Culturas hoy ocupa ese espacio con ruinas aztecas, iglesia colonial y edificios modernos.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador económico envió una pista del ladrón...',
+      pista_mundial: 'El ladrón anotó: "El mercado de Tlatelolco fue el Wall Street del siglo XVI. La ciudad donde estoy tiene el mercado de Sonora donde aún se venden los mismos productos rituales que en Tlatelolco."',
+      libreta: 'La Bolsa de Nueva York (NYSE) fue fundada en 1792. El mercado de Tlatelolco funcionó desde el siglo XIV. El Mercado de Sonora en Ciudad de México vende hierbas, animales rituales y artesanías con raíces prehispánicas.',
+    },
+    reto: {
+      enunciado: 'El mercado de Tlatelolco tenía 60,000 visitantes diarios. Si operaba 300 días al año, ¿cuántos visitantes recibía al año?',
+      opciones_reto: ['12 millones', '15 millones', '18 millones', '20 millones'],
+      respuesta_reto: '18 millones',
+      pista_resultado: 'Ciudad de México recibe 18 millones de turistas anuales: exactamente los visitantes del mercado de Tlatelolco multiplicados por el año, demostrando que la capital siempre fue el centro comercial de México.',
+    },
+    opciones: ['Ciudad de México', 'Estado de México', 'Jalisco', 'Puebla'],
+    respuesta_correcta: 'Ciudad de México',
+    explicacion: '¡Atrapado! La Plaza de las Tres Culturas, el tianguis azteca vivo en La Merced, la carta de Cortés a Carlos V y los 18 millones de turistas anuales señalaron Ciudad de México.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 7,
+    titulo: 'El Arte Plumario Desaparecido',
+    categoria: 'vida-cotidiana',
+    concepto_clave: 'Amantecas y arte azteca',
+    materia: 'Artes',
+    estado_destino: 'Ciudad de México',
+    estado_slug: 'cdmx',
+    investigacion1: {
+      narrativa: '¡Agente! Una obra de arte plumario azteca fue robada de la colección del Museo Nacional de Arte.',
+      objeto_robado: 'Escudo amanteca con mosaico de plumas (réplica)',
+      lugares: [
+        { lugar: 'Tienda de arte popular', icono: '🎨', testigo: 'La Artesana', pista: 'Un comprador preguntó por artesanías de pluma. Dijo que iba al lugar donde los amantecas aztecas formaban un gremio tan respetado como los orfebres de Florencia en el Renacimiento.' },
+        { lugar: 'Universidad de Arte', icono: '🎓', testigo: 'El Profesor', pista: 'Un estudiante extraño preguntó si la técnica de mosaico plumario se seguía enseñando. Dijo que buscaba la ciudad donde Durero viajó expresamente para ver las obras de arte mexica enviadas a Europa.' },
+        { lugar: 'Taller de restauración', icono: '🖌️', testigo: 'El Restaurador', pista: 'El sospechoso preguntó qué pegamento usaban los aztecas. Comentó que iba a la ciudad donde quedan menos de 10 artistas que dominan la técnica del mosaico de plumas que vio Moctezuma.' },
+      ],
+      libreta: 'Arte plumario azteca: Los amantecas usaban plumas de quetzal, colibrí y otras aves para crear mosaicos. Alberto Durero vio las obras enviadas a Carlos V y escribió que nunca había visto nada tan maravilloso. La técnica casi desapareció con la conquista.',
+    },
+    investigacion2: {
+      narrativa: 'Un curador de arte internacional envió información del ladrón...',
+      pista_mundial: 'El ladrón anotó: "El arte plumario azteca impresionó a Durero igual que el arte florentino impresionó al mundo. La ciudad donde estoy tiene más museos que cualquier otra de América Latina."',
+      libreta: 'Alberto Durero vio las obras aztecas en Bruselas en 1520 y escribió: "Nunca he visto nada en toda mi vida que alegre tanto mi corazón como estas cosas." Ciudad de México tiene más de 150 museos, el mayor número de América Latina.',
+    },
+    reto: {
+      enunciado: 'Un escudo plumario tiene 1,500 plumas de colores. Si se usan 3 colores en partes iguales, ¿cuántas plumas de cada color tiene?',
+      opciones_reto: ['400 plumas', '500 plumas', '600 plumas', '750 plumas'],
+      respuesta_reto: '500 plumas',
+      pista_resultado: 'Ciudad de México tiene 500 años de historia desde la fundación de la Ciudad de México colonial sobre Tenochtitlán (1521–2021): 500 como las plumas de cada color en el escudo sagrado.',
+    },
+    opciones: ['Ciudad de México', 'Puebla', 'Oaxaca', 'Michoacán'],
+    respuesta_correcta: 'Ciudad de México',
+    explicacion: '¡Atrapado! Los amantecas comparados con los orfebres de Florencia, la admiración de Durero, los 150 museos y los 500 años de la ciudad colonial señalaron Ciudad de México.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 8,
+    titulo: 'El Calpulli y la Justicia',
+    categoria: 'civismo-y-etica',
+    concepto_clave: 'Organización social azteca',
+    materia: 'Formación Cívica y Ética',
+    estado_destino: 'Ciudad de México',
+    estado_slug: 'cdmx',
+    investigacion1: {
+      narrativa: '¡Agente! Los documentos del Calmécac (escuela azteca para nobles) fueron robados del Archivo General de la Nación.',
+      objeto_robado: 'Registro del Calmécac de Tlatelolco',
+      lugares: [
+        { lugar: 'Archivo General de la Nación', icono: '📜', testigo: 'El Archivista', pista: 'El ladrón preguntó si había registros de la educación azteca obligatoria. Dijo que iba a buscar el lugar donde los aztecas tenían escuelas para todos los niños, ricos y pobres, 500 años antes que Francia.' },
+        { lugar: 'Escuela primaria histórica', icono: '🏫', testigo: 'La Directora', pista: 'Un visitante preguntó si esta escuela estaba donde había un Telpochcalli azteca. Comentó que en su destino la educación pública fue obligatoria antes que en cualquier país europeo.' },
+        { lugar: 'Museo de la Educación', icono: '📐', testigo: 'El Guía', pista: 'El sospechoso preguntó cuántos alumnos tenía el Calmécac. Dijo que buscaba la ciudad donde los aztecas tenían escuelas separadas: Calmécac para nobles y Telpochcalli para el pueblo.' },
+      ],
+      libreta: 'Sistema educativo azteca: El primero del mundo en hacer la educación obligatoria para todos (siglo XV). El Calmécac enseñaba astronomía, historia, canto y religión a nobles. El Telpochcalli enseñaba guerra y oficios al pueblo. Francia decretó educación obligatoria en 1882.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador de la educación envió datos del ladrón...',
+      pista_mundial: 'El ladrón escribió: "Los aztecas inventaron la educación pública 400 años antes que Prusia (1763). La ciudad donde me escondo alberga la universidad más antigua de América del Norte: la UNAM."',
+      libreta: 'La UNAM fue fundada en 1551 (como Real y Pontificia Universidad de México), 100 años antes que Harvard (1636). El primer sistema de educación obligatoria en Europa fue el de Prusia en 1763. Los aztecas lo tenían desde el siglo XV.',
+    },
+    reto: {
+      enunciado: 'El Calmécac tenía 200 estudiantes nobles y el Telpochcalli tenía 800 estudiantes del pueblo. ¿Qué porcentaje de los estudiantes eran nobles?',
+      opciones_reto: ['15%', '20%', '25%', '30%'],
+      respuesta_reto: '20%',
+      pista_resultado: 'Ciudad de México concentra el 20% de la población universitaria de México: el mismo porcentaje de nobles en las escuelas aztecas, demostrando la continuidad educativa.',
+    },
+    opciones: ['Ciudad de México', 'Nuevo León', 'Jalisco', 'Puebla'],
+    respuesta_correcta: 'Ciudad de México',
+    explicacion: '¡Atrapado! La educación obligatoria 400 años antes que Europa, el Calmécac y Telpochcalli, la UNAM (la más antigua de Norteamérica) y el 20% de universitarios señalaron Ciudad de México.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 9,
+    titulo: 'El Pochteca y sus Rutas',
+    categoria: 'civismo-y-etica',
+    concepto_clave: 'Comerciantes aztecas y sus redes',
+    materia: 'Geografía',
+    estado_destino: 'Tlaxcala',
+    estado_slug: 'tlaxcala',
+    investigacion1: {
+      narrativa: '¡Agente! El mapa de las rutas comerciales de los pochtecas fue robado del Museo Regional de Tlaxcala.',
+      objeto_robado: 'Códice de rutas pochtecas de Tlaxcala',
+      lugares: [
+        { lugar: 'Mercado artesanal', icono: '🧶', testigo: 'La Artesana', pista: 'Un forastero compró sarapes de colores brillantes. Preguntó cuál era el estado que nunca fue conquistado por los aztecas, el único que mantuvo su independencia frente a Tenochtitlán.' },
+        { lugar: 'Restaurante de mole', icono: '🍽️', testigo: 'El Cocinero', pista: 'El sospechoso probó el mole prieto tlaxcalteca. Dijo que iba al estado más pequeño de México donde los indígenas aliados con Cortés decidieron la caída del Imperio azteca.' },
+        { lugar: 'Centro histórico', icono: '🏛️', testigo: 'El Guía', pista: 'Un visitante preguntó por las pinturas murales de Cacaxtla. Comentó que buscaba el estado con las pinturas murales prehispánicas más coloridas de México, rivales de los frescos italianos del Renacimiento.' },
+      ],
+      libreta: 'Tlaxcala: El único estado jamás conquistado por el Imperio azteca. Los tlaxcaltecas eran rivales eternos de Tenochtitlán. Su alianza con Cortés en 1519 fue decisiva para la caída del Imperio. Cacaxtla tiene las pinturas murales prehispánicas mejor conservadas de México.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador de la conquista envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "Tlaxcala fue la Suiza del México azteca: neutral y soberana entre imperios. El estado al que fui es el más pequeño de México continental y la primera aliada de España."',
+      libreta: 'Suiza mantuvo su neutralidad durante las guerras napoleónicas. Tlaxcala fue el único estado que nunca pagó tributo azteca. Con 3,991 km², Tlaxcala es el estado más pequeño de México, pero fue el que determinó la historia del país.',
+    },
+    reto: {
+      enunciado: 'Los pochtecas viajaban 30 km por día. Si la ruta de Tenochtitlán a Tlaxcala era de 120 km, ¿cuántos días tardaban en llegar?',
+      opciones_reto: ['2 días', '3 días', '4 días', '5 días'],
+      respuesta_reto: '4 días',
+      pista_resultado: 'Tlaxcala tiene 4 provincias históricas (Tlaxcala, Ocotelolco, Quiahuiztlan y Tizatlan): exactamente los días que tardaban los pochtecas en llegar desde Tenochtitlán.',
+    },
+    opciones: ['Tlaxcala', 'Puebla', 'Hidalgo', 'Morelos'],
+    respuesta_correcta: 'Tlaxcala',
+    explicacion: '¡Atrapado! El único estado no conquistado por los aztecas, el mole prieto, las pinturas de Cacaxtla y las 4 provincias históricas de Tlaxcala cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 10,
+    titulo: 'Aztecas y el Imperio Global',
+    categoria: 'cruce-global',
+    concepto_clave: 'Aztecas y potencias contemporáneas del mundo',
+    materia: 'Historia Universal',
+    estado_destino: 'Morelos',
+    estado_slug: 'morelos',
+    investigacion1: {
+      narrativa: '¡Agente! El atlas comparativo entre el Imperio Azteca y los imperios del siglo XV fue robado de la Biblioteca José Vasconcelos.',
+      objeto_robado: 'Atlas "Imperios del siglo XV: Aztecas, Otomanos y Ming"',
+      lugares: [
+        { lugar: 'Biblioteca José Vasconcelos', icono: '📚', testigo: 'La Bibliotecaria', pista: 'Un lector preguntó qué tan grande era el Imperio azteca comparado con el otomano. Dijo que iba a buscar el estado donde nació el caudillo que cambió México en el siglo XX, en tierra de volcanes y flores.' },
+        { lugar: 'Jardín de flores', icono: '🌸', testigo: 'El Floricultor', pista: 'El sospechoso compró dalias, la flor nacional de México. Dijo que su destino era el estado donde se cultivan las dalias más hermosas del país, en los valles entre los volcanes Popocatépetl e Iztaccíhuatl.' },
+        { lugar: 'Museo de la Revolución', icono: '🎖️', testigo: 'El Guía', pista: 'Un visitante preguntó por Zapata. Comentó que buscaba el estado natal del líder que gritó "la tierra es de quien la trabaja", igual que los campesinos aztecas reclamaban sus parcelas del calpulli.' },
+      ],
+      libreta: 'Imperio azteca en contexto mundial: En 1500, el Imperio azteca tenía 5-10 millones de habitantes. El Imperio otomano tenía 20 millones. La Dinastía Ming de China tenía 65 millones. Morelos es el estado natal de Emiliano Zapata y líder de la Revolución Agraria.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador internacional envió el último mensaje con la ubicación del ladrón...',
+      pista_mundial: 'El ladrón anotó: "El sistema de tierras azteca (calpulli) fue tan revolucionario como el sistema feudal europeo. El estado donde estoy fue el corazón de la Revolución Agraria que cambió el sistema de tierras de México en 1917."',
+      libreta: 'El sistema feudal europeo asignaba tierras a señores, no al pueblo. El calpulli azteca asignaba parcelas a familias dentro de la comunidad. La Revolución Zapatista de Morelos llevó al Artículo 27 de la Constitución de 1917, que devolvió tierras a los campesinos.',
+    },
+    reto: {
+      enunciado: 'El Imperio azteca tenía 5 millones de habitantes y el Imperio otomano tenía 20 millones. ¿Qué porcentaje del Imperio otomano representaba el azteca?',
+      opciones_reto: ['15%', '20%', '25%', '30%'],
+      respuesta_reto: '25%',
+      pista_resultado: 'Morelos destina el 25% de su territorio a la agricultura, honrando el legado del calpulli azteca y de Zapata: la tierra para quien la trabaja.',
+    },
+    opciones: ['Morelos', 'Guerrero', 'Puebla', 'Tlaxcala'],
+    respuesta_correcta: 'Morelos',
+    explicacion: '¡Caso cerrado! Las dalias entre volcanes, Emiliano Zapata, el calpulli azteca comparado con el feudalismo europeo, y el 25% de tierra agrícola de Morelos cerraron el caso.',
+    regla_oro_check: true,
+  },
+];
+
 const aztecas: Era = {
   metadata: {
-    slug:'aztecas', titulo:'Imperio Azteca', periodo:'1300 – 1521 d.C.',
-    estados_principales:['Ciudad de México'],
-    icono:'🦅', color:'bg-orange-800', colorText:'text-orange-900', orden:5,
+    slug: 'aztecas',
+    titulo: 'Los Aztecas',
+    periodo: '1325 – 1521 d.C.',
+    estados_principales: ['Ciudad de México', 'Estado de México', 'Morelos', 'Tlaxcala'],
+    icono: '🦅',
+    color: 'bg-red-800',
+    colorText: 'text-white',
+    orden: 5,
   },
-  casos:[
-    { numero:1, titulo:'Tenochtitlán en el Lago', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'Capital azteca y fundación de la CDMX',
-      materia:'Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El cronista náhuatl dice: "El dios del Sol ordenó a su pueblo fundar la capital donde vieran un águila devorando una serpiente sobre un nopal, en medio de un lago. Esa ciudad creció hasta tener 200,000 habitantes y cuatro grandes calzadas que la conectaban a tierra. Hoy es la capital del país."',
-      libreta:`Fundación: Año 1325 d.C. (año 2-Casa según calendario azteca)
-Extensión: 13 km² en isla artificial, lago de Texcoco
-Calzadas: Tepeyac (norte), Iztapalapa (sur), Tlacopan (poniente) — 4 accesos
-Población al colapso: 200,000–300,000 (mayor que Londres en año 1500)
-Símbolo actual: El águila, la serpiente y el nopal están en la Bandera de México
-Zócalo actual: Exactamente sobre el centro ceremonial azteca`,
-      opciones:['Ciudad de México','Estado de México','Hidalgo','Morelos'],
-      respuesta_correcta:'Ciudad de México',
-      explicacion:'La Ciudad de México está construida sobre Tenochtitlán. El Zócalo, el Templo Mayor y las cuatro calzadas estaban donde hoy es la capital. El símbolo de la bandera nacional proviene directamente de la leyenda fundacional azteca.',
-      regla_oro_check:true },
-    { numero:2, titulo:'El Templo Mayor', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'Arquitectura religiosa azteca',
-      materia:'Historia / Arte', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'La arqueóloga de la capital dice: "En el corazón de la ciudad más grande del país, debajo de edificios coloniales, estaba el templo más importante del mundo azteca. Lo descubrieron accidentalmente en el siglo XX cuando estaban haciendo obras para el sistema eléctrico. Hoy puedes visitarlo a solo pasos del Zócalo."',
-      libreta:`Nombre original: Huey Teocalli ("Gran Casa de Dios")
-Descubrimiento moderno: Año 1978 — trabajadores eléctricos hallaron la Coyolxauhqui
-Altura estimada: 60 m (reconstrucción de la fase más reciente)
-Advocaciones: Huitzilopochtli (sol/guerra) al sur + Tláloc (lluvia/agricultura) al norte
-Museo del Templo Mayor: Inaugurado en año 1987
-Coordenadas: 19°26'N, 99°7'O — a 200 m del Zócalo`,
-      opciones:['Ciudad de México','Estado de México','Tlaxcala','Puebla'],
-      respuesta_correcta:'Ciudad de México',
-      explicacion:'El Templo Mayor está a 200 m del Zócalo de la CDMX (19°26\'N, 99°7\'O). Descubierto en 1978, el monolito de Coyolxauhqui es uno de los hallazgos arqueológicos más importantes del siglo XX en México.',
-      regla_oro_check:true },
-    { numero:3, titulo:'La Triple Alianza', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'Sistema político de la Triple Alianza',
-      materia:'Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El embajador del tiempo dice: "El imperio azteca no era de un solo pueblo sino de una alianza de tres ciudades que compartían el control del territorio. La ciudad más poderosa de las tres era la que estaba en la isla del lago. Las otras dos estaban en las orillas. Juntas controlaban desde el Golfo hasta el Pacífico."',
-      libreta:`Alianza formada: Año 1428 d.C. — Tenochtitlán + Texcoco + Tlacopan
-Reparto de tributos: 2/5 para cada ciudad principal, 1/5 para Tlacopan
-Provincias tributarias: 38 (según Matrícula de Tributos)
-Ciudad dominante: Tenochtitlán — 200,000+ habitantes (hoy Ciudad de México)
-Territorio controlado: Costa del Golfo, Oaxaca, Puebla, partes de Guerrero y Veracruz
-Exclusiones: Tlaxcala, Yopitzinco — nunca sometidos`,
-      opciones:['Ciudad de México','Texcoco','Tlacopan','Tlaxcala'],
-      respuesta_correcta:'Ciudad de México',
-      explicacion:'Tenochtitlán, la ciudad dominante de la Triple Alianza, es hoy la Ciudad de México. Controlaba 38 provincias tributarias desde el Golfo hasta el Pacífico. Tlaxcala fue el único territorio que nunca se sometió.',
-      regla_oro_check:true },
-    { numero:4, titulo:'Las Chinampas: Huertos sobre el Agua', subtitulo:'Ciudad de México',
-      categoria:'ciencia-y-saberes', concepto_clave:'Agricultura hidráulica azteca',
-      materia:'Ciencias', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El agrónomo del tiempo dice: "Los aztecas resolvieron el problema de tener su ciudad en medio de un lago: construyeron islas artificiales ancladas con raíces de árbol sauce en las que sembraban verduras y flores. Ese sistema agrícola todavía existe en funcionamiento en la misma ciudad donde estuvo Tenochtitlán."',
-      libreta:`Técnica: Chinampas — islotes de vegetación + lodo lacustre + raíces de ahuehuete
-Rendimiento: 2–3 cosechas al año (mayor productividad agrícola prehispánica)
-Extensión en apogeo: 12,000 hectáreas en el lago de Texcoco y Xochimilco
-Chinampas actuales: Xochimilco, CDMX — Patrimonio Mundial UNESCO desde año 1987
-Sistema de canales: 100 km navegables en Xochimilco hoy
-Especie ancla: Ahuehuete (Taxodium mucronatum) — árbol nacional de México`,
-      opciones:['Ciudad de México','Estado de México','Morelos','Puebla'],
-      respuesta_correcta:'Ciudad de México',
-      explicacion:'Las chinampas de Xochimilco (CDMX) son la herencia viva del sistema azteca, declaradas Patrimonio UNESCO en 1987. Los 100 km de canales actuales y el ahuehuete (árbol nacional) confirman la capital.',
-      regla_oro_check:true },
-    { numero:5, titulo:'La Medicina Azteca', subtitulo:'Ciudad de México',
-      categoria:'ciencia-y-saberes', concepto_clave:'Herbolaria y cirugía prehispánica',
-      materia:'Ciencias Naturales', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El médico del tiempo dice: "Los curanderos aztecas conocían miles de plantas y realizaban operaciones como sacar flechas sin anestesia química. Tenían hospitales donde atendían a los guerreros heridos. Su conocimiento fue tan impresionante que los españoles enviaron un naturalista para estudiarlo y documentarlo en el siglo XVI."',
-      libreta:`Herbolario documentado: Códice de la Cruz-Badiano, año 1552 (primer libro médico de América)
-Plantas documentadas: 251 especies con indicaciones terapéuticas
-Naturalista enviado: Francisco Hernández — recorrió México de años 1571 a 1577
-Tizici (médicos): Especialistas diferenciados (huesos, ojos, partos, plantas)
-Planta anestésica: Datura stramonium (toloache) — usada en procedimientos quirúrgicos
-Institución de atención: Telpochcalli y casas para guerreros heridos`,
-      opciones:['Ciudad de México','Morelos','Veracruz','Oaxaca'],
-      respuesta_correcta:'Ciudad de México',
-      explicacion:'El Códice de la Cruz-Badiano (1552), primer libro médico de América, fue elaborado en la CDMX. Francisco Hernández llegó a la misma ciudad para documentar 251 plantas medicinales aztecas. El toloache como anestésico es un hallazgo farmacológico de primer orden.',
-      regla_oro_check:true },
-    { numero:6, titulo:'El Mercado de Tlatelolco', subtitulo:'Ciudad de México',
-      categoria:'vida-cotidiana', concepto_clave:'Comercio y vida económica azteca',
-      materia:'Historia / Economía', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El mercader del tiempo dice: "El mercado más grande de Mesoamérica estaba en la ciudad gemela de Tenochtitlán. Hernán Cortés lo describió como superior a los mercados de Sevilla y Salamanca juntos. Allí vendían desde esclavos y plumas de quetzal hasta comida y medicamentos. Ese lugar hoy es una plaza famosa por otro evento histórico del siglo XX."',
-      libreta:`Nombre del mercado: Tianguis de Tlatelolco
-Visitantes diarios: 25,000–60,000 según cronistas españoles
-Productos: 700 categorías documentadas (esclavos, plumas, jade, cacao-moneda)
-Moneda de cambio: Semillas de cacao y mantas de algodón (quachtli)
-Descripción: Hernán Cortés, Carta de Relación año 1519
-Plaza actual: Plaza de las Tres Culturas — escenario del 2 de octubre de año 1968`,
-      opciones:['Ciudad de México','Texcoco','Puebla','Tlaxcala'],
-      respuesta_correcta:'Ciudad de México',
-      explicacion:'El Tianguis de Tlatelolco estaba en lo que hoy es la Plaza de las Tres Culturas, Ciudad de México. Cortés lo describió en 1519 como superior a los mercados europeos. El cacao como moneda y las 700 categorías de productos confirman su sofisticación.',
-      regla_oro_check:true },
-    { numero:7, titulo:'La Poesía Náhuatl', subtitulo:'Ciudad de México',
-      categoria:'vida-cotidiana', concepto_clave:'Literatura y filosofía azteca',
-      materia:'Español / Literatura', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'La poeta del tiempo dice: "Los aztecas tenían una tradición de poesía filosófica que preguntaba sobre el significado de la vida. Su poeta más famoso escribió sobre la brevedad de la existencia usando la metáfora de flores y cantos. Sus palabras sobrevivieron porque un fraile franciscano las escribió en papel europeo. Ese sabio vivió en la capital del poder azteca."',
-      libreta:`Poeta: Nezahualcoyotl — rey de Texcoco (años 1402–1472)
-Obra conservada: 36 poemas en náhuatl, copiados en siglo XVI por Sahagún
-Tema central: "Flor y canto" (xochitl in cuicatl) — metáfora de arte y poesía
-Frase emblemática: "¿Acaso de verdad se vive en la tierra?"
-Fraile compilador: Bernardino de Sahagún — Historia General de las Cosas de Nueva España
-Archivos: Conservados en Biblioteca Medicea Laurenziana, Florencia (Códice Florentino)`,
-      opciones:['Ciudad de México','Texcoco','Tlaxcala','Puebla'],
-      respuesta_correcta:'Ciudad de México',
-      explicacion:'Aunque Nezahualcoyotl reinó en Texcoco, su obra fue compilada por Sahagún en el centro de la CDMX (Tlatelolco). La poesía náhuatl sobrevivió en el Códice Florentino, obra del centro del poder colonial que sustituyó a Tenochtitlán.',
-      regla_oro_check:true },
-    { numero:8, titulo:'Las Leyes de Tenochtitlán', subtitulo:'Ciudad de México',
-      categoria:'civismo-y-etica', concepto_clave:'Sistema legal azteca',
-      materia:'Formación Cívica', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'La jueza del tiempo dice: "El pueblo azteca tenía un sistema de leyes escritas y jueces especializados. Los castigos eran muy severos: el robo podía pagarse con esclavitud, y la embriaguez pública estaba prohibida para los jóvenes. El palacio de justicia estaba en el centro del poder político, que hoy es la plaza principal del país."',
-      libreta:`Sistema: Huehuetlatolli (código de conducta oral) + jueces permanentes
-Tribunal supremo: Cihuacoatl — segundo en poder tras el tlatoani
-Penas documentadas: Esclavitud por deudas, muerte por traición, rapado por ebriedad
-Embriaguez: Prohibida para menores de 52 años excepto en ceremonias
-Cárceles: Documentadas en el Palacio Real de Tenochtitlán
-Apelaciones: Sistema de revisión por jueces de mayor rango`,
-      opciones:['Ciudad de México','Texcoco','Morelos','Hidalgo'],
-      respuesta_correcta:'Ciudad de México',
-      explicacion:'El Tribunal Supremo (Cihuacoatl) y el Palacio Real con cárceles estaban en Tenochtitlán, hoy Ciudad de México. El sistema legal azteca con apelaciones y jueces especializados era comparable en sofisticación a sistemas europeos contemporáneos.',
-      regla_oro_check:true },
-    { numero:9, titulo:'El Sistema de Educación', subtitulo:'Ciudad de México',
-      categoria:'civismo-y-etica', concepto_clave:'Educación obligatoria prehispánica',
-      materia:'Formación Cívica', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'La maestra del tiempo dice: "El pueblo azteca tenía escuelas obligatorias para todos los niños, sin importar si eran hijos de guerreros o de campesinos. Los hijos de nobles iban a la escuela del templo y los demás a la escuela del barrio. Ese sistema de educación obligatoria existió siglos antes que en Europa. Las instituciones estaban en la capital del poder azteca."',
-      libreta:`Escuelas: Calmecac (nobles + sacerdotes) y Telpochcalli (resto del pueblo)
-Obligatoriedad: Todos los varones desde los 15 años — sin excepción de clase
-Materias: Historia, calendario, religión, música, artes marciales y oficios
-Cuicacalli: Escuela de canto y danza — asistencia mixta (hombres y mujeres)
-Sistema análogo europeo: La educación obligatoria llegó a Europa en siglo XIX
-Ubicación institucional: Barrios y templos de Tenochtitlán (actual CDMX)`,
-      opciones:['Ciudad de México','Texcoco','Tlaxcala','Puebla'],
-      respuesta_correcta:'Ciudad de México',
-      explicacion:'El Calmecac y el Telpochcalli, las escuelas aztecas obligatorias para todos los varones, estaban en Tenochtitlán (CDMX). El sistema azteca de educación universal precedió en siglos a la educación obligatoria europea del siglo XIX.',
-      regla_oro_check:true },
-    { numero:10, titulo:'Aztecas y el Renacimiento Europeo', subtitulo:'Cruce Global',
-      categoria:'cruce-global', concepto_clave:'México y Europa al momento del contacto',
-      materia:'Historia Universal', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El cronista global dice: "En el año en que Hernán Cortés llegó a México, Miguel Ángel ya había pintado el techo de la Capilla Sixtina y Maquiavelo acababa de escribir El Príncipe. Mientras Europa vivía su Renacimiento, en el Altiplano Central de México florecía la civilización más grande de América. El centro de ese mundo era la ciudad más poblada del continente."',
-      libreta:`Año del encuentro: 1519 d.C.
-Contemporáneos mundiales:
-• Europa: Alto Renacimiento — Miguel Ángel, Leonardo, Erasmo
-• Capilla Sixtina: Pintada años 1508–1512
-• El Príncipe: Maquiavelo, año 1513
-• Imperio Otomano: Selim I conquistó Egipto en año 1517
-Tenochtitlán en año 1519: 200,000–300,000 habitantes (mayor que cualquier ciudad europea)
-Comparativa: Londres tenía 50,000 habitantes; París, 200,000 en ese periodo`,
-      opciones:['Ciudad de México','Guadalajara','Monterrey','Puebla'],
-      respuesta_correcta:'Ciudad de México',
-      explicacion:'Tenochtitlán en 1519 tenía 200,000-300,000 habitantes, comparable a París y mayor que Londres. La Ciudad de México es el heredero directo de esa metrópoli. El encuentro con el Renacimiento europeo transformó a ambas civilizaciones.',
-      regla_oro_check:true },
-  ],
+  casos,
 };
+
 export default aztecas;

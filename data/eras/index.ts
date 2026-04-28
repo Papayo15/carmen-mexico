@@ -1,4 +1,4 @@
-import type { Era, EraSlug, Caso } from '@/lib/types';
+import type { Era, EraSlug, CasoInteractivo } from '@/lib/types';
 
 import olmecas from './olmecas';
 import mayas from './mayas';
@@ -46,7 +46,7 @@ export function getEra(slug: EraSlug): Era {
   return era;
 }
 
-export function getCaso(slug: EraSlug, numero: number): Caso {
+export function getCaso(slug: EraSlug, numero: number): CasoInteractivo {
   const era = getEra(slug);
   const caso = era.casos.find((c) => c.numero === numero);
   if (!caso) throw new Error(`Caso ${numero} no encontrado en era: ${slug}`);

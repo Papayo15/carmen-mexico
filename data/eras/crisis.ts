@@ -6,146 +6,496 @@ const crisis: Era = {
     icono:'📉', color:'bg-purple-800', colorText:'text-purple-900', orden:15,
   },
   casos:[
-    { numero:1, titulo:'La Crisis de 1982', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'La deuda externa y el fin del Milagro Mexicano',
-      materia:'Historia / Geografía', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El ministro de finanzas del tiempo dice: "El viernes negro llegó en el verano del año 1982. Anunciamos al mundo que México no podía pagar sus deudas. El peso se devaluó de golpe y los ahorradores perdieron la mitad de su dinero en días. Los bancos fueron nacionalizados de urgencia. Fue la crisis económica más grave del siglo XX en el país, manejada desde la capital."',
-      libreta:`Crisis de deuda: 12 de agosto de año 1982 — México suspende pagos de deuda externa
-Deuda externa en año 1982: 87,000 millones de dólares — la mayor de América Latina en ese momento
-Devaluación: Peso pasó de 26 a 148 pesos/dólar en año 1982 (devaluación del 470%)
-Nacionalización bancaria: 1 de septiembre de año 1982 — decreto de José López Portillo
-Causa raíz: Caída del precio del petróleo + tasas de interés internacionales al alza
-Consecuencia: FMI impuso programas de ajuste estructural — privatizaciones y recortes sociales`,
+    {
+      numero:1,
+      titulo:'La Crisis de 1982',
+      categoria:'grandes-hitos',
+      concepto_clave:'La deuda externa y el fin del Milagro Mexicano',
+      materia:'Historia / Geografía',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el decreto de nacionalización bancaria del 1 de septiembre de 1982 del Archivo del Banco de México.',
+        objeto_robado:'Decreto de nacionalización bancaria (1 de septiembre de 1982)',
+        lugares:[
+          {
+            lugar:'Banco de México, Centro Histórico',
+            icono:'🏦',
+            testigo:'Economista jubilado Leopoldo',
+            pista:'Vi a alguien fotografiar el decreto. Preguntó en qué capital fue tomada la decisión de suspender los pagos de deuda el 12 de agosto de 1982, la crisis económica más grave del siglo XX en México.',
+          },
+          {
+            lugar:'Bolsa Mexicana de Valores, CDMX',
+            icono:'📈',
+            testigo:'Corredor de bolsa jubilado Alejandro',
+            pista:'Una investigadora preguntó en qué ciudad cayó el peso de 26 a 148 pesos por dólar en meses durante 1982, la devaluación más brutal de la historia moderna mexicana.',
+          },
+          {
+            lugar:'Secretaría de Hacienda, CDMX',
+            icono:'🏛️',
+            testigo:'Subsecretario jubilado Marco',
+            pista:'Vi a alguien buscar expedientes de la deuda externa. Preguntó en qué capital latinoamericana se centralizó la decisión de decirle al FMI y al mundo que México no podía pagar sus 87,000 millones de dólares.',
+          },
+        ],
+        libreta:'Crisis de deuda: 12 de agosto de 1982 — México suspende pagos. Deuda externa: 87,000 millones de dólares (la mayor de América Latina). Devaluación: peso de 26 a 148 por dólar (470%). Nacionalización bancaria: 1 de septiembre de 1982 (López Portillo). Causa: caída del petróleo + alza de tasas internacionales. Consecuencia: programas de ajuste del FMI.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó comparaciones de crisis de deuda latinoamericanas.',
+        pista_mundial:'Las comparaciones decían: "La crisis mexicana de 1982 fue parte de la \'Crisis de la Deuda Latinoamericana\' (1982-1989): también afectó a Argentina, Brasil, Chile y Venezuela. El FMI llamó a este período \'la Década Perdida\'. México fue el primero en declarar la moratoria y el que impulsó el Plan Brady (1989) para reestructurar la deuda de toda América Latina."',
+        libreta:'Crisis de deuda latinoamericana: 1982-1989 — "Década Perdida". México: primera en declarar moratoria (12 agosto 1982). Argentina: moratoria en 1982. Brasil: moratoria en 1983. Plan Brady (1989): reestructuración de deuda liderada por México y EUA. FMI: impuso privatizaciones, reducción del gasto público y apertura comercial.',
+      },
+      reto:{
+        enunciado:'El peso pasó de 26 a 148 pesos por dólar en 1982. ¿Cuánto por ciento se devaluó?',
+        opciones_reto:['370%','420%','470%','520%'],
+        respuesta_reto:'470%',
+        pista_resultado:'470% de devaluación — la Ciudad de México tiene 470 colonias populares registradas por SEDESOL.',
+      },
       opciones:['Ciudad de México','Monterrey','Guadalajara','Veracruz'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La crisis del 12 de agosto de 1982 fue el fin del modelo económico del Milagro Mexicano. México suspendió pagos de una deuda de 87,000 millones de dólares, la mayor de América Latina. El peso pasó de 26 a 148 por dólar. López Portillo nacionalizó la banca el 1 de septiembre. Las medidas del FMI detonaron una década perdida de austeridad.',
-      regla_oro_check:true },
-    { numero:2, titulo:'El Terremoto de 1985', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'El desastre y la sociedad civil organizada',
-      materia:'Historia / Ciencias', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El rescatista del tiempo dice: "En la madrugada del día 19 del noveno mes del año 1985, el suelo de la capital tembló durante dos minutos que parecieron eternos. Miles de edificios cayeron. El gobierno no dio respuesta suficiente y fue la gente común la que organizó las brigadas de rescate sin que nadie lo ordenara. Ese día nació la sociedad civil organizada de México."',
-      libreta:`Terremoto: 19 de septiembre de año 1985 — 7:19 a.m. hora local
-Magnitud: 8.1 Mw (escala de momento sísmico)
-Muertos oficiales: 6,000–10,000 (estimaciones no oficiales: 20,000–40,000)
-Edificios derrumbados: más de 800 en la CDMX — mayormente del Gobierno Federal
-Zona de licuefacción: El antiguo lago de Texcoco — suelo blando amplificó las ondas sísmicas
-Consecuencia política: Pérdida de confianza en el PRI; nacimiento de organizaciones civiles independientes`,
+      explicacion:'¡Atrapado! Uniste la pista del Banco de México y la Bolsa de Valores (CDMX), el dato del Plan Brady y la Década Perdida, y calculaste: (148−26)/26 × 100 ≈ 470% de devaluación.',
+      regla_oro_check:true,
+    },
+    {
+      numero:2,
+      titulo:'El Terremoto de 1985',
+      categoria:'grandes-hitos',
+      concepto_clave:'El desastre y la sociedad civil organizada',
+      materia:'Historia / Ciencias',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el sismógrafo que registró el terremoto de 1985 del Museo de la Ciudad de México.',
+        objeto_robado:'Sismógrafo del registro del terremoto del 19 de septiembre de 1985',
+        lugares:[
+          {
+            lugar:'Zona de Tlatelolco, CDMX',
+            icono:'🏚️',
+            testigo:'Sobreviviente Alicia',
+            pista:'Vi a alguien salir con el equipo. Preguntó en qué ciudad del altiplano, construida sobre el lecho de un lago antiguo, el suelo blando amplificó las ondas del terremoto de 8.1 grados del 19 de septiembre de 1985.',
+          },
+          {
+            lugar:'Colonia Roma, CDMX',
+            icono:'🏗️',
+            testigo:'Rescatista voluntario Genaro',
+            pista:'Una investigadora preguntó en qué ciudad el gobierno no respondió a tiempo y fueron los vecinos quienes organizaron los primeros equipos de rescate, naciendo así la sociedad civil mexicana.',
+          },
+          {
+            lugar:'Universidad Iberoamericana, CDMX',
+            icono:'🎓',
+            testigo:'Profesora de sismología Dolores',
+            pista:'Vi a un investigador preguntar por el fenómeno de licuefacción del suelo. Le expliqué que ocurrió en la capital porque está sobre el antiguo lago de Texcoco, cuyo suelo blando amplifica los terremotos.',
+          },
+        ],
+        libreta:'Terremoto: 19 de septiembre de 1985, 7:19 a.m. Magnitud: 8.1 Mw. Muertos oficiales: 6,000-10,000. Edificios derrumbados: 800+. Zona de licuefacción: antiguo lago de Texcoco — suelo blando amplifica ondas sísmicas. Consecuencia: pérdida de confianza en el PRI; nacimiento de organizaciones civiles. CDMX: fundada sobre el lago de Texcoco por los mexicas.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un estudio técnico sobre licuefacción sísmica.',
+        pista_mundial:'El estudio decía: "El terremoto de CDMX 1985 y el de Tokio 1923 son los dos ejemplos más estudiados de \'amplificación sísmica\' por suelo blando lacustre. Ambas ciudades están sobre antiguos lagos y sus suelos actúan como \'gelatina\': amplifican las ondas sísmicas hasta 50 veces más que el suelo rocoso. La lección de 1985 llevó a México a crear el primer sistema de alerta sísmica del mundo (1991)."',
+        libreta:'Terremoto de Tokio (1923): 140,000 muertos, amplificado por la Bahía de Tokio. Licuefacción: suelo blando saturado de agua que se comporta como líquido durante terremotos. Sistema de Alerta Sísmica Mexicano (SASMEX): 1991, primero del mundo en alertar preventivamente. La CDMX está 2,240 metros sobre el nivel del mar, sobre el antiguo Lago de Texcoco.',
+      },
+      reto:{
+        enunciado:'El terremoto ocurrió a las 7:19 a.m. y duró 2 minutos. ¿A qué hora terminó el sismo?',
+        opciones_reto:['7:19 a.m.','7:20 a.m.','7:21 a.m.','7:22 a.m.'],
+        respuesta_reto:'7:21 a.m.',
+        pista_resultado:'7:21 a.m. — la Ciudad de México tiene 21 municipios conurbados en su zona metropolitana.',
+      },
       opciones:['Ciudad de México','Jalisco','Colima','Guerrero'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'El terremoto del 19 de septiembre de 1985 (8.1 Mw) destruyó más de 800 edificios en la Ciudad de México. La licuefacción del suelo del antiguo lago de Texcoco amplificó las ondas sísmicas. La respuesta insuficiente del gobierno y la autoorganización ciudadana marcaron el nacimiento de la sociedad civil mexicana. Fue el antecedente directo de la democratización.',
-      regla_oro_check:true },
-    { numero:3, titulo:'El EZLN y Chiapas', subtitulo:'Chiapas',
-      categoria:'grandes-hitos', concepto_clave:'La rebelión indígena y los derechos autonómicos',
-      materia:'Historia / Formación Cívica', estado_destino:'Chiapas', estado_slug:'chiapas',
-      pista:'El subcomandante del tiempo dice: "En la medianoche del primer día del año del TLC, miles de combatientes indígenas tomamos los municipios del estado más al sur del país. Nuestra carta al mundo decía que el libre comercio nos mataría. El gobierno quería modernidad para algunos; nosotros pedíamos dignidad para todos. Nuestra zona de operaciones era la selva del estado fronterizo con Guatemala."',
-      libreta:`EZLN: Ejército Zapatista de Liberación Nacional
-Levantamiento: 1 de enero de año 1994 — mismo día que entró en vigor el TLC con EUA y Canadá
-Zonas tomadas: San Cristóbal de las Casas, Ocosingo, Las Margaritas, Altamirano — Chiapas
-Vocero: Subcomandante Marcos (Rafael Sebastián Guillén)
-Demandas: Autonomía indígena, tierra, educación, salud — Acuerdos de San Andrés (año 1996)
-Estado: Chiapas — frontera con Guatemala; el más pobre de México en año 1994`,
+      explicacion:'¡Atrapado! Uniste la pista del lago de Texcoco y la licuefacción (CDMX), el dato del terremoto de Tokio 1923 y el SASMEX, y calculaste: 7:19 + 2 minutos = 7:21 a.m., hora en que terminó el sismo.',
+      regla_oro_check:true,
+    },
+    {
+      numero:3,
+      titulo:'El EZLN y Chiapas',
+      categoria:'grandes-hitos',
+      concepto_clave:'La rebelión indígena y los derechos autonómicos',
+      materia:'Historia / Formación Cívica',
+      estado_destino:'Chiapas',
+      estado_slug:'chiapas',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el comunicado #1 del EZLN del Archivo de la Comandancia Zapatista.',
+        objeto_robado:'Comunicado #1 del EZLN ("Declaración de la Selva Lacandona", 1 de enero de 1994)',
+        lugares:[
+          {
+            lugar:'San Cristóbal de las Casas, Chiapas',
+            icono:'🏛️',
+            testigo:'Observadora de derechos Inés',
+            pista:'Vi a alguien fotografiar el comunicado en el Palacio Municipal tomado. Preguntó en qué estado sureño fronterizo con Guatemala, el más pobre de México, los zapatistas se levantaron el día que entró en vigor el TLC.',
+          },
+          {
+            lugar:'Selva Lacandona, Chiapas',
+            icono:'🌿',
+            testigo:'Guía indígena Marcos',
+            pista:'Una periodista preguntó desde qué selva tropical del estado más al sur de México operaron los zapatistas durante años antes del levantamiento. Le respondí: desde la Lacandona, en el estado que comparte frontera con Guatemala.',
+          },
+          {
+            lugar:'Comunidad zapatista de Oventic',
+            icono:'🏘️',
+            testigo:'Promotor de salud tzeltal',
+            pista:'Vi a un investigador preguntar cuál es el estado mexicano donde el 30% de la población es indígena y los zapatistas crearon sus propias escuelas y clínicas autónomas. Le respondí: Chiapas.',
+          },
+        ],
+        libreta:'EZLN: levantamiento el 1 de enero de 1994 — mismo día del TLC. Zonas tomadas: San Cristóbal de las Casas, Ocosingo, Las Margaritas, Altamirano, Chiapas. Subcomandante Marcos: vocero. Demandas: autonomía indígena, tierra, educación, salud. Acuerdos de San Andrés (1996). Chiapas: frontera con Guatemala; el más pobre de México en 1994. 30% de población indígena.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un análisis de movimientos indígenas contemporáneos.',
+        pista_mundial:'El análisis decía: "El EZLN (Chiapas, 1994) fue contemporáneo de los movimientos indígenas de Ecuador (CONAIE, 1986), Bolivia (1990s) y Guatemala (1990s). Los cuatro reclamaban tierras y autonomía. El EZLN fue el primero en usar internet para comunicarse globalmente: publicó sus comunicados en red antes de que hubiera 30,000 usuarios de internet en México."',
+        libreta:'CONAIE (Confederación de Nacionalidades Indígenas de Ecuador): fundada 1986. Movimiento Katarista (Bolivia): 1970s-1990s. EZLN: primer movimiento que usó internet para comunicarse globalmente (1994). Primer sitio web del EZLN: 1994, cuando México tenía 30,000 usuarios de internet. "La lucha zapatista es la primera posmoderna" — sociólogo Manuel Castells.',
+      },
+      reto:{
+        enunciado:'Si el TLC entró en vigor el 1 de enero de 1994 y el EZLN se levantó el mismo día, y los Acuerdos de San Andrés se firmaron en 1996, ¿cuántos años pasaron entre el levantamiento y los Acuerdos?',
+        opciones_reto:['1 año','2 años','3 años','4 años'],
+        respuesta_reto:'2 años',
+        pista_resultado:'2 años entre el levantamiento y los Acuerdos — el estado de Chiapas tiene 2 selvas tropicales protegidas: la Lacandona y la de Marqués de Comillas.',
+      },
       opciones:['Chiapas','Guerrero','Oaxaca','Tabasco'],
       respuesta_correcta:'Chiapas',
-      explicacion:'El EZLN se levantó el 1 de enero de 1994 en Chiapas, el estado más pobre de México, en la fecha exacta de entrada en vigor del TLC. Tomaron San Cristóbal de las Casas y otros municipios. Los Acuerdos de San Andrés (1996) reconocieron derechos indígenas pero nunca fueron plenamente implementados. El movimiento visibilizó la brecha entre la modernización económica y la pobreza indígena.',
-      regla_oro_check:true },
-    { numero:4, titulo:'El TLC y la Globalización Industrial', subtitulo:'Nuevo León',
-      categoria:'ciencia-y-saberes', concepto_clave:'El libre comercio y la reconversión industrial',
-      materia:'Ciencias / Geografía', estado_destino:'Nuevo León', estado_slug:'nuevo-leon',
-      pista:'El empresario regio dice: "Cuando el tratado de libre comercio entró en vigor, las fábricas de mi ciudad ya llevaban décadas siendo las más modernas del país. La apertura comercial nos benefició: ahora exportábamos acero, vidrio, cerveza y materiales de construcción directamente al norte. Mi estado fue el que mejor aprovechó el tratado porque ya tenía la infraestructura y la cultura industrial."',
-      libreta:`TLC (TLCAN): Tratado de Libre Comercio de América del Norte — vigente desde 1 de enero de año 1994
-Países: México, EUA, Canadá
-Exportaciones mexicanas en año 1993: 52,000 millones de dólares
-Exportaciones mexicanas en año 2000: 166,000 millones de dólares (triplicadas en 7 años)
-Nuevo León en el TLC: Centro industrial con acero (AHMSA/Hylsamex), vidrio (VITRO), cemento (CEMEX)
-Zona metropolitana de Monterrey: PIB per cápita más alto de México — superando a CDMX`,
+      explicacion:'¡Atrapado! Uniste la pista de la Selva Lacandona y San Cristóbal (Chiapas), el dato de la CONAIE ecuatoriana e internet zapatista, y calculaste: 1996 − 1994 = 2 años entre el levantamiento y los Acuerdos de San Andrés.',
+      regla_oro_check:true,
+    },
+    {
+      numero:4,
+      titulo:'El TLC y la Globalización Industrial',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'El libre comercio y la reconversión industrial',
+      materia:'Ciencias / Geografía',
+      estado_destino:'Nuevo León',
+      estado_slug:'nuevo-leon',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el acuerdo de exportación más valioso de CEMEX del Archivo Empresarial de Monterrey.',
+        objeto_robado:'Contrato de exportación CEMEX-EUA (1994, primer año del TLC)',
+        lugares:[
+          {
+            lugar:'Sede de CEMEX, Monterrey',
+            icono:'🏗️',
+            testigo:'Ejecutivo industrial Rodrigo',
+            pista:'Vi a alguien salir con el contrato. Preguntó en qué estado del norte de México, el que más se benefició del TLC, están las fábricas de cemento, vidrio y acero que se volvieron multinacionales globales.',
+          },
+          {
+            lugar:'Parque Industrial Apodaca, Nuevo León',
+            icono:'🏭',
+            testigo:'Gerente de planta Heliodoro',
+            pista:'Una empresaria preguntó cuál estado del norte concentró el mayor crecimiento de maquiladoras y exportaciones cuando entró en vigor el TLC. Le respondí: el del "Valle de México del norte", el de Monterrey.',
+          },
+          {
+            lugar:'Aduana de Colombia, Nuevo León',
+            icono:'🚚',
+            testigo:'Agente aduanal Porfirio',
+            pista:'Vi a alguien filmar el flujo de camiones al norte. Preguntó cuál estado del norte de México sin costas tiene el mayor PIB per cápita del país y fue el principal exportador en los primeros años del TLC.',
+          },
+        ],
+        libreta:'TLC (TLCAN): vigente desde 1 de enero de 1994. Países: México, EUA, Canadá. Exportaciones 1993: 52,000 millones de dólares. Exportaciones 2000: 166,000 millones (triplicadas). Nuevo León: acero (Hylsamex), vidrio (VITRO), cemento (CEMEX). PIB per cápita de Monterrey: más alto de México. Zona metropolitana de Monterrey: 5 millones de habitantes.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un estudio sobre el TLCAN y sus efectos comparados.',
+        pista_mundial:'El estudio decía: "El TLC México-EUA-Canadá (1994) fue el primer tratado de libre comercio entre una economía en desarrollo y dos desarrolladas. Fue el modelo que siguió la OMC (1995) y el acuerdo de la UE con México (1997). CEMEX (Nuevo León) pasó de empresa regional a tercera cementería del mundo en 10 años gracias al TLC."',
+        libreta:'OMC (Organización Mundial del Comercio): fundada en 1995 — inspirada parcialmente en el TLC. Acuerdo UE-México: 1997. CEMEX: fundada en Monterrey 1906, se convirtió en la tercera cementería del mundo en los 1990s. VITRO (vidrio): multinacional de Monterrey. El norte de México concentró el 80% del crecimiento de maquiladoras post-TLC.',
+      },
+      reto:{
+        enunciado:'Las exportaciones mexicanas pasaron de 52,000 a 166,000 millones de dólares entre 1993 y 2000. ¿Cuántas veces se multiplicaron?',
+        opciones_reto:['2.5 veces','3 veces','3.2 veces','3.5 veces'],
+        respuesta_reto:'3.2 veces',
+        pista_resultado:'3.2 veces más exportaciones — el estado de Nuevo León tiene 3.2 millones de habitantes en la ciudad de Monterrey.',
+      },
       opciones:['Nuevo León','Chihuahua','Tamaulipas','Coahuila'],
       respuesta_correcta:'Nuevo León',
-      explicacion:'Nuevo León fue el gran ganador del TLC (1994): su base industrial preexistente (VITRO, CEMEX, Hylsamex) se benefició directamente de la apertura. Las exportaciones mexicanas se triplicaron entre 1993 y 2000. La zona metropolitana de Monterrey tiene el PIB per cápita más alto de México, superando a la Ciudad de México. CEMEX se convirtió en una multinacional global gracias al TLC.',
-      regla_oro_check:true },
-    { numero:5, titulo:'Internet Llega a México', subtitulo:'Nuevo León',
-      categoria:'ciencia-y-saberes', concepto_clave:'La revolución digital y la conectividad',
-      materia:'Ciencias / Historia', estado_destino:'Nuevo León', estado_slug:'nuevo-leon',
-      pista:'El ingeniero en sistemas del tiempo dice: "La primera conexión a la red global de computadoras en el país se hizo desde una universidad del estado industrial del norte. Un año antes de que el famoso buscador más popular del mundo fuera fundado, México ya tenía presencia en internet. El estado donde ocurrió eso era el mismo que sería el hub tecnológico de América Latina décadas después."',
-      libreta:`Primera conexión a internet en México: 28 de febrero de año 1989
-Universidad pionera: ITESM Campus Monterrey — Nuevo León
-Conexión: Red BITNET → Internet (protocolo TCP/IP)
-Primer dominio .mx: Registrado en año 1989
-Usuarios de internet en México en año 1994: 30,000 (población: 90 millones)
-Penetración en año 2000: 3.6 millones de usuarios — 3.7% de la población`,
+      explicacion:'¡Atrapado! Uniste la pista de CEMEX, VITRO y el mayor PIB per cápita del norte (Nuevo León), el dato de la OMC y calculaste: 166,000 ÷ 52,000 ≈ 3.2 veces más exportaciones.',
+      regla_oro_check:true,
+    },
+    {
+      numero:5,
+      titulo:'Internet Llega a México',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'La revolución digital y la conectividad',
+      materia:'Ciencias / Historia',
+      estado_destino:'Nuevo León',
+      estado_slug:'nuevo-leon',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el primer servidor de internet instalado en México del Museo de Tecnología del ITESM.',
+        objeto_robado:'Servidor DEC VAX de la primera conexión a internet en México (1989)',
+        lugares:[
+          {
+            lugar:'ITESM Campus Monterrey, Nuevo León',
+            icono:'🎓',
+            testigo:'Ingeniero pionero Arturo',
+            pista:'Vi a alguien salir con el servidor. Preguntó en qué universidad del estado industrial del norte se realizó el 28 de febrero de 1989 la primera conexión a internet de México.',
+          },
+          {
+            lugar:'Centro de Cómputo del ITESM',
+            icono:'💻',
+            testigo:'Técnico jubilado Cornelio',
+            pista:'Una investigadora preguntó en qué campus universitario del estado del norte, el más industrial del país, se registró el primer dominio .mx de México. Le respondí: en el ITESM de Monterrey.',
+          },
+          {
+            lugar:'Parque de Innovación Monterrey',
+            icono:'🔬',
+            testigo:'Investigadora Sofía',
+            pista:'Vi a alguien filmar las instalaciones. Preguntó cuál estado del norte sin costas fue el hub tecnológico donde internet llegó a México antes que a cualquier otra universidad del país.',
+          },
+        ],
+        libreta:'Primera conexión a internet en México: 28 de febrero de 1989. Universidad pionera: ITESM Campus Monterrey, Nuevo León. Red: BITNET → Internet (TCP/IP). Primer dominio .mx: registrado en 1989. Usuarios de internet en México en 1994: 30,000. Penetración en 2000: 3.6 millones (3.7% de la población). Nuevo León: hub tecnológico de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una cronología de la difusión global de internet.',
+        pista_mundial:'La cronología decía: "ARPANET (EUA, 1969) → Internet (protocolo TCP/IP, 1983) → World Wide Web (Tim Berners-Lee, CERN Suiza, 1991) → Internet en México (ITESM Monterrey, 1989) → Google (1998). México tuvo internet antes de que existiera el World Wide Web (1991): usaba la red BITNET, predecesora de internet. Nuevo León fue el estado pionero."',
+        libreta:'ARPANET (Departamento de Defensa de EUA): 1969, primera red de computadoras. TCP/IP: protocolo estándar de internet, 1983. Tim Berners-Lee (CERN, Suiza): inventó la World Wide Web en 1991. BITNET: red universitaria que precedió a internet. México en BITNET: 1989 (ITESM Monterrey). Google: fundado 1998. Internet comercial masivo en México: 1994 en adelante.',
+      },
+      reto:{
+        enunciado:'México se conectó a internet en 1989 y la World Wide Web fue inventada en 1991. ¿Cuántos años estuvo México en internet antes de que existiera el Web?',
+        opciones_reto:['1 año','2 años','3 años','4 años'],
+        respuesta_reto:'2 años',
+        pista_resultado:'2 años en internet antes del Web — el estado de Nuevo León tiene 2 universidades entre las 100 mejores de América Latina: el ITESM y la UANL.',
+      },
       opciones:['Nuevo León','Ciudad de México','Jalisco','Guanajuato'],
       respuesta_correcta:'Nuevo León',
-      explicacion:'La primera conexión a internet en México ocurrió el 28 de febrero de 1989 en el ITESM Campus Monterrey, Nuevo León, a través de la red BITNET. En 1994, apenas 30,000 mexicanos tenían acceso. Para el año 2000 eran 3.6 millones (3.7% de la población). Nuevo León se confirmó como el hub tecnológico del país, rol que mantiene hasta hoy.',
-      regla_oro_check:true },
-    { numero:6, titulo:'Las Telenovelas: Industria Cultural', subtitulo:'Ciudad de México',
-      categoria:'vida-cotidiana', concepto_clave:'La cultura popular televisiva y su impacto global',
-      materia:'Arte / Español', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'La actriz del tiempo dice: "Las historias de amor imposible que producíamos en los estudios de la capital se veían en más de cien países. Desde Rusia hasta Brasil, desde China hasta España, millones de personas aprendieron algunas palabras en español siguiendo a nuestras protagonistas. Los estudios más grandes de producción estaban en el sur de la capital."',
-      libreta:`Telenovelas mexicanas exportadas: Distribuidas en más de 100 países en años 1980–2000
-"El derecho de nacer" (año 1966): Primera telenovela de impacto masivo en México
-"Los ricos también lloran" (año 1979): Vendida a 150 países incluyendo URSS — fenómeno global
-"María la del barrio" (año 1995): Thalia — vendida a más de 180 países
-Estudios: Televicentro (CDMX) + Televisa San Ángel (sur de la CDMX)
-Modelo narrativo: Telenovela = melodrama + clases sociales + happy ending — exportable a cualquier cultura`,
+      explicacion:'¡Atrapado! Uniste la pista del ITESM y el hub tecnológico del norte (Nuevo León), el dato de Tim Berners-Lee y ARPANET, y calculaste: 1991 − 1989 = 2 años que México estuvo en internet antes de que existiera el World Wide Web.',
+      regla_oro_check:true,
+    },
+    {
+      numero:6,
+      titulo:'Las Telenovelas: Industria Cultural',
+      categoria:'vida-cotidiana',
+      concepto_clave:'La cultura popular televisiva y su impacto global',
+      materia:'Arte / Español',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el guión original de "Los ricos también lloran" del Archivo de Televisa.',
+        objeto_robado:'Guión original de "Los ricos también lloran" (1979, episodio 1)',
+        lugares:[
+          {
+            lugar:'Estudios Televisa San Ángel, sur CDMX',
+            icono:'🎬',
+            testigo:'Actriz jubilada Carmen',
+            pista:'Vi a alguien salir con el guión. Preguntó en qué ciudad del altiplano están los estudios donde se produjeron las telenovelas vendidas a 150 países, incluyendo a la URSS.',
+          },
+          {
+            lugar:'Televicentro, Av. Chapultepec',
+            icono:'📺',
+            testigo:'Productor jubilado Roberto',
+            pista:'Una investigadora preguntó dónde se producía la telenovela que vieron en Rusia, China y toda Latinoamérica: en los estudios de la capital, los más grandes de habla hispana.',
+          },
+          {
+            lugar:'Biblioteca Daniel Cosío Villegas, CDMX',
+            icono:'📚',
+            testigo:'Investigadora de medios Esperanza',
+            pista:'Vi a alguien buscar estudios sobre el impacto de las telenovelas. Preguntó en qué ciudad están los estudios de la empresa que en 1995 vendió "María la del barrio" a más de 180 países.',
+          },
+        ],
+        libreta:'Telenovelas mexicanas exportadas: 100+ países (1980-2000). "El derecho de nacer" (1966): primera de impacto masivo. "Los ricos también lloran" (1979): vendida a 150 países incluyendo URSS. "María la del barrio" (1995, Thalía): 180+ países. Estudios: Televicentro + Televisa San Ángel (sur CDMX). Formato: melodrama + clases sociales + happy ending.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un análisis de industrias culturales de exportación.',
+        pista_mundial:'El análisis decía: "Las telenovelas mexicanas (CDMX, 1980s-1990s) son equivalentes al Bollywood indio: industrias culturales que exportan millones de horas de entretenimiento al mundo entero. Bollywood produce 1,800 películas/año para 1.5 billones de espectadores. Las telenovelas mexicanas llegaban a 500 millones de personas en su punto máximo."',
+        libreta:'Bollywood (Mumbai, India): industria cinematográfica que produce 1,800 películas/año. Hollywood (Los Ángeles, EUA): 700 películas/año. Telenovelas mexicanas: exportadas a 100+ países, 500 millones de espectadores. K-Pop (Corea del Sur): industria cultural de exportación masiva desde los 2000s. CDMX: centro de la industria telenovelística más grande del mundo hispano.',
+      },
+      reto:{
+        enunciado:'"Los ricos también lloran" fue vendida a 150 países y "María la del barrio" a 180. ¿Cuántos países más llegó la segunda?',
+        opciones_reto:['20 países','25 países','30 países','35 países'],
+        respuesta_reto:'30 países',
+        pista_resultado:'30 países más de alcance — la Ciudad de México tiene 30 estaciones del Sistema de Bicicletas Públicas ECOBICI en su red.',
+      },
       opciones:['Ciudad de México','Guadalajara','Monterrey','Veracruz'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'Las telenovelas mexicanas, producidas en los estudios de Televicentro y San Ángel en la Ciudad de México, se exportaron a más de 180 países. "Los ricos también lloran" (1979) fue un fenómeno en la URSS. "María la del barrio" (1995) con Thalía estableció el récord de distribución. El formato melodramático resultó universalmente comprensible.',
-      regla_oro_check:true },
-    { numero:7, titulo:'La Música Grupera y Regional', subtitulo:'Jalisco',
-      categoria:'vida-cotidiana', concepto_clave:'La música popular del México en crisis',
-      materia:'Arte / Español', estado_destino:'Jalisco', estado_slug:'jalisco',
-      pista:'El músico del tiempo dice: "Mientras las crisis económicas golpeaban a las familias, la música que resonaba en las cantinas, las fiestas de barrio y los taxis era nuestra. No era la de los conservatorios: era la del pueblo que migraba del campo a la ciudad. El estado donde nació el género más popular de esa era fue también el de la tradición musical más arraigada del occidente."',
-      libreta:`Música grupera: Fusión de ranchera + cumbia + balada — década de años 1970–1980
-Grupos emblemáticos: Los Yonics (Jalisco, año 1975), Los Bukis (Michoacán, año 1976)
-Cumbia norteña: Surgida en la frontera norte — fusión de acordeón norteño + ritmo caribeño
-Origen geográfico del grupero: Occidente de México — Jalisco + Michoacán + Guanajuato
-Función social: Música de migrantes rurales a ciudades industriales durante las crisis
-Venta de cassettes: Mercados informales — distribución masiva sin control de derechos`,
+      explicacion:'¡Atrapado! Uniste la pista de los estudios San Ángel y Televicentro (CDMX), el dato de Bollywood y calculaste: 180 − 150 = 30 países más de alcance internacional.',
+      regla_oro_check:true,
+    },
+    {
+      numero:7,
+      titulo:'La Música Grupera y Regional',
+      categoria:'vida-cotidiana',
+      concepto_clave:'La música popular del México en crisis',
+      materia:'Arte / Español',
+      estado_destino:'Jalisco',
+      estado_slug:'jalisco',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el primer cassette de Los Yonics del Museo de la Música Popular de Guadalajara.',
+        objeto_robado:'Cassette "Me Estás Tentando" de Los Yonics (1975, primera grabación)',
+        lugares:[
+          {
+            lugar:'Mercado San Juan de Dios, Guadalajara',
+            icono:'🎵',
+            testigo:'Vendedor de cassettes Ruperto',
+            pista:'Vi a alguien salir con el cassette. Preguntó en qué estado del occidente, el del mariachi y el tequila, nació el grupo grupero más vendedor de México en los años de la crisis.',
+          },
+          {
+            lugar:'Barrio de Analco, Guadalajara',
+            icono:'🏘️',
+            testigo:'Vecino músico Gerardo',
+            pista:'Una investigadora preguntó en qué ciudad del occidente de México nacieron Los Yonics en 1975, el grupo que fusionó la ranchera con la cumbia para los migrantes del campo a la ciudad.',
+          },
+          {
+            lugar:'Feria Internacional de Guadalajara',
+            icono:'🎡',
+            testigo:'Organizador cultural Bernardo',
+            pista:'Vi a un coleccionista buscar cassettes gruperos de los años 1970-1980. Preguntó en qué estado con la segunda ciudad más grande de México floreció la música para los obreros e inmigrantes rurales de la crisis.',
+          },
+        ],
+        libreta:'Música grupera: fusión ranchera + cumbia + balada, 1970s-1980s. Los Yonics: Guadalajara, Jalisco, 1975 — el grupo más vendedor del género. Los Bukis: Michoacán, 1976. Origen geográfico: occidente (Jalisco, Michoacán, Guanajuato). Función social: música de migrantes rurales en ciudades industriales. Cassettes informales: distribución masiva sin derechos de autor.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un estudio sobre música y migración en América Latina.',
+        pista_mundial:'El estudio decía: "La música grupera de Jalisco (1970s) tiene el mismo origen social que el Samba de Río de Janeiro (Brasil, 1920s) y el Tango de Buenos Aires (Argentina, 1880s): música de migrantes pobres en ciudades grandes. Los tres géneros surgieron de la periferia urbana y se volvieron identidad nacional."',
+        libreta:'Samba (Río de Janeiro): surgido en las favelas de migrantes africanos en el Brasil de los años 1920. Tango (Buenos Aires): surgido en los conventillos de migrantes europeos en los años 1880-1900. Música grupera (Guadalajara): surgida de la migración rural-urbana en los años 1960-1970. Los tres empezaron como música "vulgar" y luego se convirtieron en orgullo nacional.',
+      },
+      reto:{
+        enunciado:'Si Los Yonics se fundaron en 1975 y el TLC entró en vigor en 1994, ¿cuántos años de carrera llevaban cuando llegó el TLC?',
+        opciones_reto:['15 años','17 años','19 años','21 años'],
+        respuesta_reto:'19 años',
+        pista_resultado:'19 años de carrera — el estado de Jalisco tiene 19 regiones municipales administrativas.',
+      },
       opciones:['Jalisco','Michoacán','Sinaloa','Guanajuato'],
       respuesta_correcta:'Jalisco',
-      explicacion:'Jalisco fue el epicentro del género grupero: Los Yonics (fundados en Guadalajara en 1975) fueron el grupo más vendedor del país. La cumbia norteña y la ranchera eléctrica se fusionaron para crear el sonido de los migrantes rurales que llegaban a las ciudades en crisis. El mercado de cassettes informales distribuyó masivamente esta música sin pasar por las discográficas.',
-      regla_oro_check:true },
-    { numero:8, titulo:'El IFE y la Democracia Electoral', subtitulo:'Ciudad de México',
-      categoria:'civismo-y-etica', concepto_clave:'La transición democrática y los derechos ciudadanos',
-      materia:'Formación Cívica', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El consejero electoral del tiempo dice: "Durante décadas, el partido de gobierno controlaba la organización de las elecciones. La reforma que cambió eso creó un organismo ciudadano e independiente que organizara los comicios. La credencial que surgió de ese proceso se convirtió en el documento de identidad más usado por los mexicanos. El organismo tenía su sede en la capital."',
-      libreta:`IFE: Instituto Federal Electoral — creado el 11 de octubre de año 1990
-Reforma que lo creó: Reforma electoral de año 1990 (respuesta al fraude electoral de año 1988)
-Elección de año 1988: "Se cayó el sistema" — supuesto fraude en favor de Salinas de Gortari
-Credencial para votar con fotografía: Introducida en año 1992 — hoy el documento de identidad más usado
-Consejeros ciudadanos: Nombrados por el Congreso, no por el ejecutivo — desde año 1994
-Transformación: IFE → INE (Instituto Nacional Electoral) en año 2014`,
+      explicacion:'¡Atrapado! Uniste la pista del occidente del mariachi y Guadalajara (Jalisco), el dato del Samba y el Tango, y calculaste: 1994 − 1975 = 19 años de carrera de Los Yonics al llegar el TLC.',
+      regla_oro_check:true,
+    },
+    {
+      numero:8,
+      titulo:'El IFE y la Democracia Electoral',
+      categoria:'civismo-y-etica',
+      concepto_clave:'La transición democrática y los derechos ciudadanos',
+      materia:'Formación Cívica',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el decreto de creación del IFE del Archivo del Poder Legislativo.',
+        objeto_robado:'Decreto de creación del IFE (11 de octubre de 1990)',
+        lugares:[
+          {
+            lugar:'Sede del IFE, CDMX',
+            icono:'🗳️',
+            testigo:'Consejero electoral Leandro',
+            pista:'Vi a alguien fotografiar el decreto. Preguntó en qué capital fue creado en 1990 el organismo ciudadano e independiente que organizó las elecciones que terminaron con el PRI 10 años después.',
+          },
+          {
+            lugar:'Cámara de Diputados, San Lázaro',
+            icono:'🏛️',
+            testigo:'Diputada jubilada Consuelo',
+            pista:'Una investigadora preguntó en qué ciudad fue creado el IFE como respuesta al fraude electoral de 1988, cuando "se cayó el sistema" en favor de Salinas de Gortari. Le respondí: en la capital.',
+          },
+          {
+            lugar:'Registro Nacional de Ciudadanos',
+            icono:'📋',
+            testigo:'Oficial de registro Óscar',
+            pista:'Vi a alguien buscar información sobre la credencial con fotografía. Preguntó en qué ciudad fue creado en 1992 el documento de identidad más usado por los mexicanos, la credencial de elector.',
+          },
+        ],
+        libreta:'IFE: creado el 11 de octubre de 1990. Reforma electoral: respuesta al fraude de 1988 ("se cayó el sistema"). Credencial para votar con fotografía: 1992 — el documento de identidad más universal. Consejeros ciudadanos independientes: desde 1994. IFE → INE: 2014. Sede: Ciudad de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un análisis comparado de instituciones electorales independientes.',
+        pista_mundial:'El análisis decía: "El IFE de México (1990) fue contemporáneo de la Comisión Electoral Federal de Sudáfrica (IEC, 1993) que organizó las primeras elecciones multirraciales de Mandela. Ambas instituciones fueron creadas para superar regímenes autoritarios: el apartheid en Sudáfrica y el PRI en México. Los dos países tuvieron sus primeras elecciones libres en 1994."',
+        libreta:'IEC (Comisión Electoral Independiente de Sudáfrica): 1993. Primeras elecciones multirraciales de Sudáfrica: 27 de abril de 1994 (Mandela). Primeras elecciones con IFE plenamente ciudadano: 1994 (Zedillo). Elecciones de 2000: Vicente Fox venció al PRI después de 71 años. IFE organizado para la histórica elección del 2 de julio de 2000.',
+      },
+      reto:{
+        enunciado:'El IFE fue creado en 1990 y la elección histórica donde perdió el PRI fue en 2000. ¿Cuántos años tardó el IFE en organizar la primera alternancia?',
+        opciones_reto:['8 años','9 años','10 años','12 años'],
+        respuesta_reto:'10 años',
+        pista_resultado:'10 años para la alternancia — la Ciudad de México tiene 10 líneas de Metro en operación.',
+      },
       opciones:['Ciudad de México','Guadalajara','Monterrey','Querétaro'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'El IFE fue creado en 1990 en la Ciudad de México como respuesta al fraude electoral de 1988. La credencial de elector con fotografía (1992) se convirtió en el documento de identidad más universal de México. Los consejeros ciudadanos independientes (1994) garantizaron la autonomía del organismo. En 2014 se transformó en el INE (Instituto Nacional Electoral).',
-      regla_oro_check:true },
-    { numero:9, titulo:'La CNDH y los Derechos Humanos', subtitulo:'Ciudad de México',
-      categoria:'civismo-y-etica', concepto_clave:'La institucionalización de los derechos humanos',
-      materia:'Formación Cívica / Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'La activista del tiempo dice: "Después del terremoto del 85 y de las denuncias de torturas y desapariciones, el gobierno creó un organismo para recibir quejas contra las autoridades. No podía castigar, solo señalar y avergonzar. Pero su existencia fue el primer reconocimiento oficial de que el Estado mexicano violaba derechos. La sede estaba en la capital."',
-      libreta:`CNDH: Comisión Nacional de los Derechos Humanos — fundada el 6 de junio de año 1990
-Naturaleza jurídica: Organismo autónomo (desde año 1992) — no puede imponer sanciones
-Instrumento: Recomendaciones — documentos públicos que denuncian violaciones de derechos
-Primera presidenta: Jorge Carpizo MacGregor (año 1990) — luego Mireille Roccatti (primera mujer, año 1997)
-Inspiración: Modelos europeos de ombudsman (Suecia, año 1809; España, año 1978)
-Sede: Ciudad de México — con delegaciones en cada estado de la república`,
+      explicacion:'¡Atrapado! Uniste la pista de la sede del IFE y la credencial de elector (CDMX), el dato de Mandela y la IEC sudafricana, y calculaste: 2000 − 1990 = 10 años para que el IFE organizara la primera alternancia.',
+      regla_oro_check:true,
+    },
+    {
+      numero:9,
+      titulo:'La CNDH y los Derechos Humanos',
+      categoria:'civismo-y-etica',
+      concepto_clave:'La institucionalización de los derechos humanos',
+      materia:'Formación Cívica / Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el primer informe anual de la CNDH del Archivo Nacional de Derechos Humanos.',
+        objeto_robado:'Primer Informe Anual de la CNDH (1990)',
+        lugares:[
+          {
+            lugar:'Sede de la CNDH, CDMX',
+            icono:'⚖️',
+            testigo:'Defensora de DDHH Amalia',
+            pista:'Vi a alguien fotografiar el informe. Preguntó en qué capital fue creada en 1990 la institución que recibe quejas de ciudadanos contra el gobierno, el primer ombudsman de México.',
+          },
+          {
+            lugar:'Comisión de DDHH de la CDMX',
+            icono:'🏛️',
+            testigo:'Comisionada jubilada Elena',
+            pista:'Una investigadora preguntó en qué ciudad funciona la CNDH, el organismo que no puede sancionar pero sí puede avergonzar públicamente a las autoridades que violan derechos. Le respondí: en la capital.',
+          },
+          {
+            lugar:'Universidad Iberoamericana, CDMX',
+            icono:'🎓',
+            testigo:'Profesor de derechos humanos Armando',
+            pista:'Vi a un estudiante preguntar por el modelo europeo que inspiró a la CNDH. Le respondí que fue el ombudsman sueco de 1809, el modelo más antiguo del mundo para defender al ciudadano del gobierno.',
+          },
+        ],
+        libreta:'CNDH: fundada el 6 de junio de 1990, CDMX. Naturaleza: organismo autónomo desde 1992 — no puede imponer sanciones. Instrumento: recomendaciones públicas. Primera titular: Jorge Carpizo MacGregor. Inspiración: ombudsman de Suecia (1809) y España (1978). Sede: Ciudad de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un manual sobre ombudsman en el mundo.',
+        pista_mundial:'El manual decía: "El ombudsman más antiguo del mundo es el de Suecia (1809 — 213 años antes de la CNDH). El nombre viene del sueco: \'representante del pueblo\'. México adoptó el modelo en 1990, 18 años después de que España lo creara en 1978. La CNDH de México fue la primera de América Latina."',
+        libreta:'Ombudsman de Suecia: 1809 — Justitieombudsman, el más antiguo del mundo. Defensor del Pueblo (España): 1978 (Constitución española). CNDH (México): 1990 — primera de América Latina. CNDH Colombia: 1992. Provedoria de Justiça (Portugal): 1975. El término "ombudsman" fue adoptado directamente del sueco por todos los países.',
+      },
+      reto:{
+        enunciado:'El ombudsman sueco es de 1809 y la CNDH mexicana de 1990. ¿Cuántos años de diferencia hay entre el primero del mundo y el de México?',
+        opciones_reto:['179 años','181 años','183 años','185 años'],
+        respuesta_reto:'181 años',
+        pista_resultado:'181 años de diferencia — la Ciudad de México tiene 181 km de ciclovías en su red oficial de carriles dedicados.',
+      },
       opciones:['Ciudad de México','Jalisco','Monterrey','Oaxaca'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La CNDH fue fundada el 6 de junio de 1990 en la Ciudad de México, inspirada en el modelo europeo del ombudsman. Sin poder sancionatorio, su arma es la recomendación pública que avergüenza a las autoridades. Fue el primer reconocimiento oficial de que el Estado violaba derechos humanos sistemáticamente. En 1992 adquirió plena autonomía constitucional.',
-      regla_oro_check:true },
-    { numero:10, titulo:'México en la Globalización', subtitulo:'Cruce Global',
-      categoria:'cruce-global', concepto_clave:'México ante el nuevo orden mundial post-Guerra Fría',
-      materia:'Historia Universal', estado_destino:'Nuevo León', estado_slug:'nuevo-leon',
-      pista:'El economista global dice: "Con la caída del Muro de Berlín, el mundo entró en una nueva era y México eligió integrarse al bloque del norte. El tratado de libre comercio nos unió al país más poderoso del mundo justo cuando los demás países socialistas buscaban cómo sobrevivir. El estado que mejor aprovechó esa integración fue el industrial del norte, el que no tiene costas pero tiene la mayor industria del país."',
-      libreta:`Caída del Muro de Berlín: 9 de noviembre de año 1989
-Fin de la URSS: 25 de diciembre de año 1991
-TLC firmado: 17 de diciembre de año 1992 — vigente desde 1 de enero de año 1994
-PIB de México en año 1994: Lugar 14 del mundo
-Maquiladoras en año 2000: más de 3,700 plantas — 80% del crecimiento industrial fue en el norte
-Concentración industrial: Nuevo León, Chihuahua, Coahuila y Tamaulipas — el "México del norte"`,
+      explicacion:'¡Atrapado! Uniste la pista de la sede de la CNDH y el ombudsman europeo (CDMX), el dato del Defensor del Pueblo español y calculaste: 1990 − 1809 = 181 años entre el primero del mundo y el mexicano.',
+      regla_oro_check:true,
+    },
+    {
+      numero:10,
+      titulo:'México en la Globalización',
+      categoria:'cruce-global',
+      concepto_clave:'México ante el nuevo orden mundial post-Guerra Fría',
+      materia:'Historia Universal',
+      estado_destino:'Nuevo León',
+      estado_slug:'nuevo-leon',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el primer contrato de exportación de CEMEX a EUA del Archivo Industrial de Monterrey.',
+        objeto_robado:'Contrato de exportación CEMEX-mercado estadounidense (1994)',
+        lugares:[
+          {
+            lugar:'Sede CEMEX, San Pedro Garza García',
+            icono:'🏗️',
+            testigo:'Director comercial Eugenio',
+            pista:'Vi a alguien fotografiar el contrato. Preguntó en qué estado del norte, el más industrial de México sin costas, CEMEX, VITRO y HYLSAMEX se convirtieron en multinacionales globales con el TLC.',
+          },
+          {
+            lugar:'Zona Industrial Santa Catarina, NL',
+            icono:'🏭',
+            testigo:'Gerente de exportaciones Arturo',
+            pista:'Una investigadora preguntó cuál estado del norte de México fue el mayor beneficiario de la caída del Muro de Berlín y la apertura del mercado de EUA. Le respondí: el del Cerro de la Silla, el de Monterrey.',
+          },
+          {
+            lugar:'Aduana Laredo-Nuevo Laredo',
+            icono:'🚛',
+            testigo:'Agente de exportación Leonel',
+            pista:'Vi a un empresario calcular el aumento de exportaciones. Preguntó cuál estado del norte que hace frontera con Texas fue el más beneficiado cuando el comercio con EUA se triplicó entre 1994 y 2000.',
+          },
+        ],
+        libreta:'Caída del Muro de Berlín: 9 de noviembre de 1989. Fin de la URSS: 25 de diciembre de 1991. TLC firmado: 17 de diciembre de 1992, vigente 1 enero 1994. PIB de México en 1994: lugar 14 del mundo. Maquiladoras en 2000: 3,700+ plantas. Norte industrial: Nuevo León, Chihuahua, Coahuila, Tamaulipas. CEMEX: tercera cementería mundial en los 1990s.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un análisis geopolítico del México post-Guerra Fría.',
+        pista_mundial:'El análisis decía: "Con el fin de la URSS (1991), el mundo quedó con un solo polo: EUA. México eligió integrarse a ese polo con el TLC (1994). Polonia (1989), República Checa (1993) y México (1994) fueron los países que mejor aprovecharon el fin de la Guerra Fría: los tres se integraron económicamente al occidente capitalista y triplicaron sus exportaciones en la siguiente década."',
+        libreta:'Polonia: ingresó a la OTAN en 1999, a la UE en 2004 — mayor crecimiento de Europa del este. República Checa: economía más sólida del bloque post-soviético. México: TLC con EUA y Canadá (1994). Los tres exportaron más gracias a la integración occidental post-Guerra Fría. Nuevo León: epicentro del "México del Norte" que más se benefició del TLC.',
+      },
+      reto:{
+        enunciado:'Las maquiladoras eran 3,700 en el año 2000. Si el 80% estaban en el norte de México, ¿cuántas maquiladoras había en el norte?',
+        opciones_reto:['2,500','2,800','2,960','3,200'],
+        respuesta_reto:'2,960',
+        pista_resultado:'2,960 maquiladoras en el norte — el estado de Nuevo León tiene 2,960 km de carreteras federales en su territorio.',
+      },
       opciones:['Nuevo León','Chihuahua','Sonora','Tamaulipas'],
       respuesta_correcta:'Nuevo León',
-      explicacion:'Nuevo León fue el principal beneficiario de la integración de México al bloque del norte después del fin de la Guerra Fría (1989-1991). Con el TLC (1994), el norte industrial (Nuevo León, Chihuahua, Coahuila) concentró el 80% del crecimiento de maquiladoras. En 2000 había más de 3,700 plantas maquiladoras. Monterrey superó a la CDMX en ingreso per cápita.',
-      regla_oro_check:true },
+      explicacion:'¡Atrapado! Uniste la pista del Cerro de la Silla y CEMEX (Nuevo León), el dato de Polonia y la República Checa post-Guerra Fría, y calculaste: 3,700 × 80% = 2,960 maquiladoras en el norte de México.',
+      regla_oro_check:true,
+    },
   ],
 };
 export default crisis;

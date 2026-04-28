@@ -6,148 +6,496 @@ const independencia: Era = {
     icono:'🔔', color:'bg-green-800', colorText:'text-green-900', orden:8,
   },
   casos:[
-    { numero:1, titulo:'El Grito de Dolores', subtitulo:'Guanajuato',
-      categoria:'grandes-hitos', concepto_clave:'Inicio de la guerra de independencia',
-      materia:'Historia', estado_destino:'Guanajuato', estado_slug:'guanajuato',
-      pista:'El cura rebelde dice: "En la madrugada del 16 de septiembre de 1810, el sacerdote de un pueblo minero tocó las campanas de su iglesia para convocar a su feligresía. No era la hora de misa: era el inicio de una guerra. Ese pueblo hoy se llama igual que el personaje histórico que vivía allí."',
-      libreta:`Evento: El "Grito de Independencia" — madrugada del 16 de septiembre de año 1810
-Protagonista: Miguel Hidalgo y Costilla — cura de Dolores
-Municipio: Dolores Hidalgo (antes: Dolores, Villa de Nuestra Señora de los Dolores)
-Estado: El de los callejones de colores y las minas de plata
-Estandarte usado: Imagen de la Virgen de Guadalupe de Atotonilco
-Eco del grito: La campana original está hoy en el Palacio Nacional de la CDMX`,
+    {
+      numero:1,
+      titulo:'El Grito de Dolores',
+      categoria:'grandes-hitos',
+      concepto_clave:'Inicio de la guerra de independencia',
+      materia:'Historia',
+      estado_destino:'Guanajuato',
+      estado_slug:'guanajuato',
+      investigacion1:{
+        narrativa:'¡Agente! Alguien robó la campana de bronce del Museo del Grito durante la conmemoración nocturna.',
+        objeto_robado:'Réplica de la Campana de Dolores',
+        lugares:[
+          {
+            lugar:'Posada del Camino Real',
+            icono:'🏨',
+            testigo:'Don Fulgencio, el posadero',
+            pista:'Vi un hombre cargando algo pesado envuelto en gabán. Olía a minas de plata y dijo que iba a un estado lleno de callejones de colores donde los muertos pasean en octubre.',
+          },
+          {
+            lugar:'Mercado de Artesanías',
+            icono:'🎨',
+            testigo:'Señora Consuelo, vendedora de talavera',
+            pista:'Una mujer pagó en monedas antiguas. Mencionó que su destino era la tierra donde la plata convirtió a sus cerros en los más ricos del Virreinato.',
+          },
+          {
+            lugar:'Estación de Autobuses',
+            icono:'🚌',
+            testigo:'Ernesto, el boleterista',
+            pista:'Un pasajero con bulto sospechoso compró boleto al estado donde el minero del Pípila dejó su huella en la historia con una piedra de granito.',
+          },
+        ],
+        libreta:'Dolores Hidalgo: municipio de Guanajuato. La Alhóndiga de Granaditas (almacén de granos) está en la capital del estado. El "Grito" fue el 16 de septiembre de 1810 a las 11 p.m. La campana original está en el Palacio Nacional de CDMX.',
+      },
+      investigacion2:{
+        narrativa:'Una testigo vio al ladrón consultando un mapa con anotaciones en francés.',
+        pista_mundial:'El ladrón anotó: "La Revolución Francesa de 1789 también comenzó con un símbolo sonoro: la toma de la Bastilla. Busco el estado que, como París en 1789, concentraba la mayor riqueza mineral del continente antes de la rebelión."',
+        libreta:'Guanajuato producía el 65% de la plata mundial en 1810. La Revolución Francesa comenzó en 1789, 21 años antes del Grito. Ambas revoluciones fueron detonadas por la desigualdad entre clases.',
+      },
+      reto:{
+        enunciado:'Hidalgo tocó la campana a las 11 p.m. del 15 de septiembre. Si el mensaje llegó al siguiente pueblo en 3 horas, ¿a qué hora del 16 de septiembre llegó la noticia?',
+        opciones_reto:['1:00 a.m.','2:00 a.m.','3:00 a.m.','4:00 a.m.'],
+        respuesta_reto:'2:00 a.m.',
+        pista_resultado:'Las 2 a.m. del día 16 — el estado tiene 2 ciudades Patrimonio UNESCO: Guanajuato capital y San Miguel de Allende.',
+      },
       opciones:['Guanajuato','Michoacán','Querétaro','San Luis Potosí'],
       respuesta_correcta:'Guanajuato',
-      explicacion:'Dolores Hidalgo está en Guanajuato, el estado de los callejones coloridos y las minas de plata. La campana que tocó Hidalgo fue llevada al Palacio Nacional. El municipio fue renombrado en honor al héroe.',
-      regla_oro_check:true },
-    { numero:2, titulo:'La Toma de la Alhóndiga', subtitulo:'Guanajuato',
-      categoria:'grandes-hitos', concepto_clave:'Primera gran batalla insurgente',
-      materia:'Historia', estado_destino:'Guanajuato', estado_slug:'guanajuato',
-      pista:'El soldado insurgente dice: "Días después del Grito, el ejército del cura tomó el granero más importante de la ciudad minera más rica del virreinato. Un joven minero usó una losa de piedra como escudo para abrir la puerta mientras lo atacaban. Ese edificio sigue de pie y hoy es un museo en el corazón de la ciudad capital del mismo estado."',
-      libreta:`Batalla: Toma de la Alhóndiga de Granaditas — 28 de septiembre de año 1810
-Héroe anónimo: El Pípila — Juan José Martínez (apodo: pato)
-Ciudad: Guanajuato capital — 1,726 m s.n.m.
-Función original del edificio: Almacén de granos (alhóndiga = mercado de cereales)
-Uso actual: Museo Regional de Guanajuato — Alhóndiga de Granaditas
-Consecuencia: Primeras semanas del movimiento insurgente marcadas por violencia`,
-      opciones:['Guanajuato','San Luis Potosí','Zacatecas','Jalisco'],
+      explicacion:'¡Atrapado! Uniste la pista de los callejones (Guanajuato capital), el dato del 65% de plata mundial (contexto histórico) y confirmaste: 11 p.m. + 3 horas = 2 a.m. del día 16, y Guanajuato tiene 2 ciudades Patrimonio UNESCO.',
+      regla_oro_check:true,
+    },
+    {
+      numero:2,
+      titulo:'La Toma de la Alhóndiga',
+      categoria:'grandes-hitos',
+      concepto_clave:'Primera gran batalla insurgente',
+      materia:'Historia',
+      estado_destino:'Guanajuato',
+      estado_slug:'guanajuato',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el escudo de losa del Museo Regional, el artefacto símbolo del Pípila.',
+        objeto_robado:'Losa de piedra del Pípila (réplica museográfica)',
+        lugares:[
+          {
+            lugar:'Café de los Túneles',
+            icono:'☕',
+            testigo:'Rosa, la barista',
+            pista:'Un hombre con manos callosas pidió café "negro como la mina". Dijo que iba a la ciudad que tiene túneles de coche bajo sus calles y momias famosas en sus museos.',
+          },
+          {
+            lugar:'Mirador del Cerro',
+            icono:'⛰️',
+            testigo:'Guillermo, el guía turístico',
+            pista:'Una pareja filmó el edificio colonial que sirvió de granero en otra época. Preguntaron cómo llegar al estado donde el aguacate y la fresa son tan importantes como la plata.',
+          },
+          {
+            lugar:'Papelería Colonial',
+            icono:'📜',
+            testigo:'Maestra Pilita',
+            pista:'Compró papel de mapa. Dijo que buscaba el estado con la ciudad que tiene más festivales internacionales de teatro y cerveza de todo el centro de México.',
+          },
+        ],
+        libreta:'La Alhóndiga de Granaditas: granero del siglo XVIII, hoy Museo Regional. El Pípila (Juan José Martínez) quemó la puerta el 28 de septiembre de 1810. Guanajuato capital: capital del estado, 1,726 m s.n.m. Las momias guanajuatenses son famosas por su momificación natural.',
+      },
+      investigacion2:{
+        narrativa:'Se encontró en la escena del robo una hoja con coordenadas geográficas y una cita histórica.',
+        pista_mundial:'La nota decía: "El sitio de mi escondite está en el mismo estado que produjo más plata que todo el Imperio Romano en su época de mayor esplendor. El cerro de La Valenciana fue la mina más productiva del mundo entre 1788 y 1810."',
+        libreta:'La mina La Valenciana (Guanajuato) produjo hasta el 20% de la plata mundial entre 1788 y 1810. El Imperio Romano extraía máximo 200 toneladas anuales; Guanajuato superaba esa cifra en su mejor momento.',
+      },
+      reto:{
+        enunciado:'La Alhóndiga tiene 3 pisos de 5 metros cada uno. Si un mensajero sube los 3 pisos corriendo a 2 metros por segundo, ¿cuántos segundos tarda?',
+        opciones_reto:['5 segundos','7 segundos','7.5 segundos','10 segundos'],
+        respuesta_reto:'7.5 segundos',
+        pista_resultado:'El número 7.5 corresponde a los 7 y medio kilómetros de túneles que tiene la ciudad de Guanajuato bajo sus calles.',
+      },
+      opciones:['Guanajuato','Jalisco','San Luis Potosí','Zacatecas'],
       respuesta_correcta:'Guanajuato',
-      explicacion:'La Alhóndiga de Granaditas está en la ciudad de Guanajuato a 1,726 m s.n.m. El Pípila, con su losa improvisada, abrió la puerta el 28 de septiembre de 1810. Hoy es el Museo Regional del estado.',
-      regla_oro_check:true },
-    { numero:3, titulo:'La Conspiración de Querétaro', subtitulo:'Querétaro',
-      categoria:'grandes-hitos', concepto_clave:'Planeación clandestina de la independencia',
-      materia:'Historia', estado_destino:'Querétaro', estado_slug:'queretaro',
-      pista:'La corregidora dice: "Meses antes del Grito, un grupo de criollos se reunía bajo el pretexto de un club literario para planear la rebelión. Cuando la Corona los descubrió, la esposa del funcionario más importante de la ciudad avisó a los insurgentes golpeando el suelo con su tacón desde su celda. Esa ciudad hoy es Patrimonio Mundial de la UNESCO."',
-      libreta:`Evento: Conspiración de Querétaro — descubierta en septiembre de año 1810
-Protagonista: Josefa Ortiz de Domínguez (La Corregidora) — esposa del Corregidor
-Método de aviso: Golpes en el suelo de su encierro para alertar a un carcelero
-Centro histórico: Patrimonio de la Humanidad UNESCO desde año 1996
-Ubicación: Centro-norte sin salida al mar
-Colindancias: Estado de México, Hidalgo, San Luis Potosí, Guanajuato`,
-      opciones:['Querétaro','Hidalgo','San Luis Potosí','Michoacán'],
+      explicacion:'¡Atrapado! Uniste la pista de los túneles y momias (Guanajuato capital), el dato de La Valenciana y calculaste: 15 metros ÷ 2 m/s = 7.5 segundos — los mismos 7.5 km de túneles subterráneos de la ciudad.',
+      regla_oro_check:true,
+    },
+    {
+      numero:3,
+      titulo:'La Conspiración de Querétaro',
+      categoria:'grandes-hitos',
+      concepto_clave:'Planeación clandestina de la independencia',
+      materia:'Historia',
+      estado_destino:'Querétaro',
+      estado_slug:'queretaro',
+      investigacion1:{
+        narrativa:'¡Agente! Desapareció el retrato original de la Corregidora del Palacio de Gobierno queretano.',
+        objeto_robado:'Retrato al óleo de Josefa Ortiz de Domínguez',
+        lugares:[
+          {
+            lugar:'Patio del Palacio',
+            icono:'🏛️',
+            testigo:'Don Leandro, el guarda',
+            pista:'Un hombre con maletín negro miró fijamente el cuadro y susurró: "Me voy al estado que tiene su centro histórico en la lista de los más valiosos de la humanidad según la ONU cultural".',
+          },
+          {
+            lugar:'Jardín Zenea',
+            icono:'🌳',
+            testigo:'Señora Esperanza, vendedora de flores',
+            pista:'Una dama con sombrero compró rosas rojas. Comentó que buscaba la ciudad "donde los criollos soñaban en secreto debajo de la noche colonial".',
+          },
+          {
+            lugar:'Tienda de Antigüedades',
+            icono:'🪙',
+            testigo:'Bernardo, el anticuario',
+            pista:'Un cliente preguntó por marcos de cuadro del siglo XIX. Mencionó destino "en el corazón del país, sin mar, pero con ópalo negro como tesoro".',
+          },
+        ],
+        libreta:'Centro histórico de Querétaro: Patrimonio de la Humanidad UNESCO desde 1996. Josefa Ortiz de Domínguez: corregidora que alertó a los insurgentes. El ópalo negro: piedra preciosa característica de Querétaro. Estado sin litoral, rodeado por Hidalgo, SLP, Guanajuato y Estado de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un mensaje cifrado con referencias a otras conspiraciones históricas.',
+        pista_mundial:'El mensaje decía: "Las conspiraciones cambian el mundo: los Illuminati en Baviera (1776), los jacobinos en Francia (1789), los criollos de Querétaro (1810). Todas ocurrieron en ciudades que hoy son Patrimonio de la Humanidad o capitales culturales."',
+        libreta:'Los Illuminati fueron una sociedad secreta bávara fundada en 1776. Los jacobinos dominaron la Revolución Francesa. La Conspiración de Querétaro fue descubierta en septiembre de 1810, acelerando el Grito de Dolores.',
+      },
+      reto:{
+        enunciado:'Si la conspiración duró 6 meses y 12 personas asistían a reuniones cada 15 días, ¿cuántas reuniones totales hubo?',
+        opciones_reto:['10 reuniones','12 reuniones','13 reuniones','24 reuniones'],
+        respuesta_reto:'12 reuniones',
+        pista_resultado:'12 reuniones secretas — igual al número de municipios que rodean la zona metropolitana de Querétaro en el siglo XXI.',
+      },
+      opciones:['Querétaro','Hidalgo','San Luis Potosí','Guanajuato'],
       respuesta_correcta:'Querétaro',
-      explicacion:'La Conspiración fue descubierta en Querétaro. Josefa Ortiz de Domínguez alertó a los insurgentes desde su encierro. El centro histórico de Querétaro es Patrimonio UNESCO desde 1996. Está en el centro-norte del país sin costas.',
-      regla_oro_check:true },
-    { numero:4, titulo:'Los Cañones de Morelos', subtitulo:'Michoacán',
-      categoria:'ciencia-y-saberes', concepto_clave:'Ingeniería militar insurgente',
-      materia:'Ciencias / Historia', estado_destino:'Michoacán', estado_slug:'michoacan',
-      pista:'El artillero del tiempo dice: "El segundo gran líder de la independencia era un cura que no tenía formación militar pero aprendió rápido. Su ejército necesitaba cañones y no tenía fundiciones. Resolvió el problema fundiendo campanas de iglesias en moldes improvisados. Ese cura venía del estado del lago Pátzcuaro y la mariposa monarca."',
-      libreta:`Personaje: José María Morelos y Pavón — cura de Carácuaro
-Origen: Valladolid (hoy Morelia), estado de Michoacán
-Innovación técnica: Conversión de campanas en artillería improvisada
-Campañas militares: Sur de México (años 1810–1815)
-Lago del estado: Pátzcuaro — hábitat de la acócil (Cambarellus patzcuarensis)
-Mariposa: Danaus plexippus — reserva biósfera en el estado`,
+      explicacion:'¡Atrapado! Uniste la pista del Patrimonio UNESCO (Querétaro 1996), el ópalo negro (gema queretana) y calculaste: 6 meses × 2 reuniones/mes = 12 reuniones — igual al número de municipios metropolitanos.',
+      regla_oro_check:true,
+    },
+    {
+      numero:4,
+      titulo:'Los Cañones de Morelos',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'Ingeniería militar insurgente',
+      materia:'Ciencias / Historia',
+      estado_destino:'Michoacán',
+      estado_slug:'michoacan',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una campana colonial del siglo XVIII del Museo Michoacano en Morelia.',
+        objeto_robado:'Campana de bronce de 1742 (La San José)',
+        lugares:[
+          {
+            lugar:'Mercado de Michoacán',
+            icono:'🛖',
+            testigo:'Abuela Remedios, artesana',
+            pista:'Un hombre preguntó dónde fundir metal. Olía a resina de ocote. Dijo que buscaba el estado donde el lago sagrado tiene su isla con artesanos de cobre más famosos de México.',
+          },
+          {
+            lugar:'Taller de Herrería',
+            icono:'🔨',
+            testigo:'Maestro Ceferino',
+            pista:'Trajo bronce viejo para vender. Mencionó que iba al estado donde la mariposa naranja llena los bosques de oyamel cada noviembre.',
+          },
+          {
+            lugar:'Mesón del Peregrino',
+            icono:'⛪',
+            testigo:'Padre Abundio, hospedero',
+            pista:'Llegó un viajero con piezas de metal. Preguntó el camino "al estado que lleva el nombre del primer protomártir de la independencia, un cura soldado".',
+          },
+        ],
+        libreta:'José María Morelos y Pavón: originario de Valladolid (hoy Morelia), Michoacán. Innovación: campanas de iglesias fundidas como cañones. Lago Pátzcuaro: habitado por artesanos de cobre de Tzintzuntzan y Santa Clara del Cobre. Bosque de oyamel: hábitat de la mariposa monarca (Danaus plexippus).',
+      },
+      investigacion2:{
+        narrativa:'Se encontró una bitácora del ladrón con referencias a la metalurgia de guerra.',
+        pista_mundial:'La bitácora decía: "Morelos repitió la estrategia de los romanos en el siglo II a.C.: fundir bronce de templos para artillería. La misma técnica fue usada por Napoleón Bonaparte en 1799. Mi destino es donde nació el militar más creativo de la independencia."',
+        libreta:'Los romanos fundían estatuas de bronce para fabricar monedas y armas en guerras. Napoleón usó campanas de iglesias francesas durante la Revolución. Morelos: primera batalla exitosa en el sur de México (1811). Michoacán: estado occidental con lago Pátzcuaro y bosques de oyamel.',
+      },
+      reto:{
+        enunciado:'Una campana pesa 80 kg. Si de cada campana se obtiene un cañón de 60 kg, ¿qué porcentaje del material se desperdicia en el proceso de fundición?',
+        opciones_reto:['15%','20%','25%','30%'],
+        respuesta_reto:'25%',
+        pista_resultado:'Un 25% de desperdicio — los bosques de oyamel de Michoacán cubren el 25% del total de bosques templados de México.',
+      },
       opciones:['Michoacán','Guerrero','Oaxaca','Jalisco'],
       respuesta_correcta:'Michoacán',
-      explicacion:'Morelos era de Valladolid (hoy Morelia), Michoacán. Su innovación de fundir campanas en cañones fue una solución de ingeniería militar improvisada. El lago Pátzcuaro y la mariposa monarca confirman el estado.',
-      regla_oro_check:true },
-    { numero:5, titulo:'El Primer Congreso de Chilpancingo', subtitulo:'Guerrero',
-      categoria:'ciencia-y-saberes', concepto_clave:'Primeras constituciones y derechos',
-      materia:'Formación Cívica', estado_destino:'Guerrero', estado_slug:'guerrero',
-      pista:'La constitucionalista del tiempo dice: "En plena guerra de independencia, los insurgentes convocaron a los representantes de varias regiones para redactar las primeras leyes de una nación libre. El congreso se reunió en una ciudad del sur, en un estado que hoy lleva el nombre del principal organizador de ese acto histórico."',
-      libreta:`Evento: Congreso de Anáhuac — noviembre de año 1813
-Sede: Chilpancingo — capital actual del estado del sur
-Documento generado: Solemne Acto de la Declaración de Independencia de América Septentrional
-Organizador: José María Morelos y Pavón
-Estado que lleva su nombre: Guerrero — nombrado en honor a Vicente Guerrero (siglo XIX)
-Primer principio: La soberanía emana del pueblo (antecede a la Constitución de año 1824)`,
+      explicacion:'¡Atrapado! Uniste la pista del lago con artesanos de cobre (Pátzcuaro, Michoacán), el dato de la mariposa monarca y calculaste: (80-60)/80 × 100 = 25% de desperdicio, igual al porcentaje de bosques de oyamel michoacanos.',
+      regla_oro_check:true,
+    },
+    {
+      numero:5,
+      titulo:'El Primer Congreso de Chilpancingo',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'Primeras constituciones y derechos',
+      materia:'Formación Cívica',
+      estado_destino:'Guerrero',
+      estado_slug:'guerrero',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el acta original del Congreso de Anáhuac del Archivo Estatal de Guerrero.',
+        objeto_robado:'Copia facsimilar del Acta del Congreso de Anáhuac (1813)',
+        lugares:[
+          {
+            lugar:'Puerto de Acapulco',
+            icono:'⚓',
+            testigo:'Capitán Jaime, pescador mayor',
+            pista:'Vi a alguien embarcar con tubos de planos. Dijo que venía del estado que tiene el Pacífico turístico más famoso de México y también al guerrillero más valiente del sur.',
+          },
+          {
+            lugar:'Mercado de Tlapa',
+            icono:'🌽',
+            testigo:'Doña Celestina, tejedora',
+            pista:'Una señora con documentos preguntó cómo llegar a Chilpancingo. Dijo que buscaba "el estado que da nombre al héroe que peleó junto a Morelos en el sur".',
+          },
+          {
+            lugar:'Caseta de Carretera',
+            icono:'🚧',
+            testigo:'Agente Vidal',
+            pista:'Un camión pasó de madrugada hacia el estado que tiene tres costas: Pacífico, tierra caliente y montaña; el que alberga la ciudad donde se declaró la primera soberanía.',
+          },
+        ],
+        libreta:'Congreso de Anáhuac: noviembre de 1813 en Chilpancingo, Guerrero. Organizador: Morelos. Documento: Solemne Acto de la Declaración de Independencia de América Septentrional. El estado de Guerrero fue nombrado en honor a Vicente Guerrero, último insurgente y segundo presidente de México.',
+      },
+      investigacion2:{
+        narrativa:'La cámara de seguridad captó al ladrón leyendo un libro de historia constitucional.',
+        pista_mundial:'El libro decía: "Chilpancingo 1813 y Filadelfia 1787 comparten algo único: fueron las primeras asambleas constituyentes que declararon la soberanía popular en el continente americano. México fue el segundo país en hacer esto."',
+        libreta:'Convención de Filadelfia: 1787 — primera constitución federal del mundo (EUA). Congreso de Anáhuac: 1813 — primer congreso constituyente de México. Soberanía popular: el poder emana del pueblo, no del rey. Chilpancingo: capital actual del estado de Guerrero.',
+      },
+      reto:{
+        enunciado:'Si el Congreso de Anáhuac se realizó en 1813 y la primera constitución de EUA fue en 1787, ¿cuántos años de diferencia hay entre ambos eventos?',
+        opciones_reto:['24 años','26 años','28 años','30 años'],
+        respuesta_reto:'26 años',
+        pista_resultado:'26 años de diferencia — Guerrero tiene 26 regiones municipales según su plan de desarrollo actual.',
+      },
       opciones:['Guerrero','Oaxaca','Morelos','Michoacán'],
       respuesta_correcta:'Guerrero',
-      explicacion:'Chilpancingo, capital de Guerrero, fue sede del Congreso de Anáhuac en 1813. El estado fue nombrado después en honor a Vicente Guerrero. El Solemne Acto fue la primera declaración de soberanía popular del México independiente.',
-      regla_oro_check:true },
-    { numero:6, titulo:'Los Sentimientos de la Nación', subtitulo:'Guerrero',
-      categoria:'vida-cotidiana', concepto_clave:'Primer proyecto de sociedad justa',
-      materia:'Español / Formación Cívica', estado_destino:'Guerrero', estado_slug:'guerrero',
-      pista:'El filósofo insurgente dice: "Morelos escribió un documento que soñaba con una sociedad donde la esclavitud fuera abolida, los impuestos fueran justos y los ricos no tuvieran tanto poder sobre los pobres. Era una visión del futuro que nadie había puesto por escrito antes en América. Lo presentó en el mismo congreso del sur."',
-      libreta:`Documento: Sentimientos de la Nación — 14 de septiembre de año 1813
-Puntos clave: Abolición de la esclavitud, igualdad de todos los habitantes, eliminación de castas
-Autor y lector: José María Morelos y Pavón
-Lugar de presentación: Congreso de Chilpancingo, Guerrero
-Innovación social: Primer texto en México que propone igualdad sin distinción de origen
-Influencia: Declaración de Independencia de EUA (año 1776) y Revolución Francesa (año 1789)`,
+      explicacion:'¡Atrapado! Uniste la pista de Acapulco y el estado que lleva el nombre del héroe (Vicente Guerrero), el dato de Filadelfia 1787 y calculaste: 1813 − 1787 = 26 años de diferencia.',
+      regla_oro_check:true,
+    },
+    {
+      numero:6,
+      titulo:'Los Sentimientos de la Nación',
+      categoria:'vida-cotidiana',
+      concepto_clave:'Primer proyecto de sociedad justa',
+      materia:'Español / Formación Cívica',
+      estado_destino:'Guerrero',
+      estado_slug:'guerrero',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron la edición facsimilar de los Sentimientos de la Nación del Congreso estatal de Guerrero.',
+        objeto_robado:'Facsímil de los Sentimientos de la Nación (1813)',
+        lugares:[
+          {
+            lugar:'Biblioteca Pública de Chilpancingo',
+            icono:'📚',
+            testigo:'Maestra Ángela, bibliotecaria',
+            pista:'Una persona preguntó por documentos del siglo XIX. Comentó que su destino era "el estado del sur con costa azul, donde se firmó el pacto que unió insurgentes y realistas para siempre".',
+          },
+          {
+            lugar:'Palacio de Gobierno de Guerrero',
+            icono:'🏛️',
+            testigo:'Guardia Arturo',
+            pista:'Vi un hombre fotocopiando documentos. Mencionó que iba "al estado que lleva el nombre de quien escribió que todos los hombres son iguales sin importar si vinieron de África, Europa o América".',
+          },
+          {
+            lugar:'Terminal de Autobuses de Acapulco',
+            icono:'🚌',
+            testigo:'Sandra, cajera',
+            pista:'Una mujer compró boleto con mucha prisa. Dijo que buscaba el estado donde el Plan de Iguala fue firmado: el acuerdo que terminó la guerra sin más balas.',
+          },
+        ],
+        libreta:'Sentimientos de la Nación: 23 puntos redactados por Morelos, leídos el 14 de septiembre de 1813. Puntos clave: abolición de la esclavitud, igualdad sin castas, soberanía popular. Plan de Iguala (1821): firmado en Iguala, Guerrero. Vicente Guerrero: firmante del Plan de Iguala, segundo presidente de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó notas comparando documentos históricos de derechos humanos.',
+        pista_mundial:'Las notas decían: "Los Sentimientos de la Nación (1813) anticiparon la Declaración Universal de los Derechos Humanos de la ONU (1948) en 135 años. Morelos abolió la esclavitud 52 años antes que Abraham Lincoln lo hiciera en EUA (1865)."',
+        libreta:'Declaración Universal de DDHH: 1948 (ONU). 13ª Enmienda de EUA (abolición): 1865. Decreto de Hidalgo (primer decreto abolicionista): 1810. Sentimientos de la Nación: 1813. México: primer país americano en abolir la esclavitud formalmente.',
+      },
+      reto:{
+        enunciado:'Morelos abolió la esclavitud en 1813. Lincoln lo hizo en 1865. ¿Cuántos años antes actuó Morelos?',
+        opciones_reto:['48 años','50 años','52 años','55 años'],
+        respuesta_reto:'52 años',
+        pista_resultado:'52 años antes — el estado de Guerrero tiene 52 municipios registrados en el INEGI.',
+      },
       opciones:['Guerrero','Oaxaca','Michoacán','Morelos'],
       respuesta_correcta:'Guerrero',
-      explicacion:'Los Sentimientos de la Nación fueron leídos en Chilpancingo, Guerrero, el 14 de septiembre de 1813. La abolición de la esclavitud y la igualdad sin castas eran ideas radicales para América Latina de la época.',
-      regla_oro_check:true },
-    { numero:7, titulo:'El Plan de Iguala', subtitulo:'Guerrero',
-      categoria:'vida-cotidiana', concepto_clave:'El pacto que consumó la independencia',
-      materia:'Historia', estado_destino:'Guerrero', estado_slug:'guerrero',
-      pista:'El negociador del tiempo dice: "La independencia se logró finalmente no con una batalla sino con un acuerdo político entre un general realista que se cambió de bando y el último guerrillero insurgente. El documento que firmaron prometía un México unido para todos: criollos, indígenas y mestizos. Se firmó en una ciudad del mismo estado del sur."',
-      libreta:`Documento: Plan de Iguala — 24 de febrero de año 1821
-Firmantes: Agustín de Iturbide (ex realista) + Vicente Guerrero (insurgente)
-Las Tres Garantías: Independencia, Religión católica, Unión de todos los habitantes
-Ejército que lo ejecutó: Ejército Trigarante (de las tres garantías)
-Ciudad de firma: Iguala de la Independencia — dentro del estado que lleva el apellido de Guerrero
-Resultado: En 7 meses, el virrey firmó los Tratados de Córdoba`,
+      explicacion:'¡Atrapado! Uniste la pista del Plan de Iguala en Iguala, Guerrero, el dato de los Sentimientos de la Nación y calculaste: 1865 − 1813 = 52 años antes que Lincoln — igual al número de municipios de Guerrero.',
+      regla_oro_check:true,
+    },
+    {
+      numero:7,
+      titulo:'El Plan de Iguala',
+      categoria:'vida-cotidiana',
+      concepto_clave:'El pacto que consumó la independencia',
+      materia:'Historia',
+      estado_destino:'Guerrero',
+      estado_slug:'guerrero',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron la bandera trigarante original del museo de la ciudad de Iguala.',
+        objeto_robado:'Réplica de la Bandera del Ejército Trigarante (1821)',
+        lugares:[
+          {
+            lugar:'Museo de la Bandera en Iguala',
+            icono:'🚩',
+            testigo:'Don Evaristo, custodio',
+            pista:'Vi una furgoneta salir de prisa. El conductor gritó que iba "al estado donde nació el último guerrillero insurgente que negoció la paz con el elegante general del norte".',
+          },
+          {
+            lugar:'Plaza de la Paz de Iguala',
+            icono:'⚜️',
+            testigo:'Vendedora Cristina',
+            pista:'Una turista tomó fotos del monumento y preguntó: "¿Es aquí donde se unieron los que peleaban por el rey y los que peleaban contra él?" Era del estado del Pacífico sur.',
+          },
+          {
+            lugar:'Registro Civil de Iguala',
+            icono:'📋',
+            testigo:'Licenciado Marcos',
+            pista:'Alguien preguntó los límites del municipio de Iguala. Comentó que buscaba "el estado que está entre el altiplano y el mar del Pacífico, con tres regiones muy distintas".',
+          },
+        ],
+        libreta:'Plan de Iguala: 24 de febrero de 1821. Firmantes: Agustín de Iturbide (realista) + Vicente Guerrero (insurgente). Tres Garantías: Independencia, Religión, Unión. Ejército Trigarante: blanco (religión), verde (independencia), rojo (unión). Tratados de Córdoba: agosto de 1821 — el virrey reconoció la independencia.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón consultó documentos sobre coaliciones militares históricas.',
+        pista_mundial:'Los documentos decían: "El Plan de Iguala fue un pacto parecido al Compromiso de Aviñón (1305) entre el Papa y el rey de Francia: dos enemigos unieron fuerzas por una causa mayor. En ambos casos, el lugar del pacto dio nombre a un acuerdo histórico que cambió continentes."',
+        libreta:'Tratados de Westfalia (1648): primer acuerdo de paz entre naciones europeas. Compromisos de paz entre enemigos: Iguala 1821 (México), Helsinki 1975 (Europa). Iguala de la Independencia: ciudad en el estado de Guerrero. El estado lleva el nombre de Vicente Guerrero.',
+      },
+      reto:{
+        enunciado:'El Ejército Trigarante tenía 3 colores. Si en una formación de 600 soldados cada color representaba una tercera parte, ¿cuántos soldados había por color?',
+        opciones_reto:['150','200','250','300'],
+        respuesta_reto:'200',
+        pista_resultado:'200 soldados por color — Guerrero tiene 200 kilómetros de costa en el Pacífico.',
+      },
       opciones:['Guerrero','Morelos','Michoacán','Oaxaca'],
       respuesta_correcta:'Guerrero',
-      explicacion:'Iguala de la Independencia está en el estado de Guerrero. El Plan de Iguala del 24 de febrero de 1821, con las Tres Garantías, fue el instrumento que unió fuerzas realistas e insurgentes para completar la independencia en 7 meses.',
-      regla_oro_check:true },
-    { numero:8, titulo:'La Abolición de la Esclavitud', subtitulo:'Guanajuato',
-      categoria:'civismo-y-etica', concepto_clave:'Primeros derechos humanos en México',
-      materia:'Formación Cívica / Ética', estado_destino:'Guanajuato', estado_slug:'guanajuato',
-      pista:'La activista del tiempo dice: "El primer acto de justicia social de la independencia fue abolir la esclavitud. El cura que inició la guerra lo decretó antes de ganar una sola batalla importante. Ese decreto se produjo en la misma ciudad minera donde había tomado el granero principal. México abolió la esclavitud 44 años antes que Estados Unidos."',
-      libreta:`Decreto de Hidalgo: Abolición de la esclavitud — octubre de año 1810 en Guadalajara
-Contexto comparativo: EUA abolió la esclavitud en año 1865 (13ª Enmienda)
-México: Primer país de América en abolir la esclavitud (antes que Gran Bretaña en 1833)
-Esclavos en Nueva España: Aprox. 10,000 africanos + mayor número de indígenas en condición análoga
-Ciudad más relacionada con el decreto de Hidalgo: Guadalajara — aunque él era de Dolores, Guanajuato
-Impacto real: Aplicación limitada durante la guerra; consolidada en Constitución de año 1824`,
+      explicacion:'¡Atrapado! Uniste la pista del estado entre altiplano y Pacífico con 3 regiones (Guerrero), el dato de los Tratados de Córdoba y calculaste: 600 ÷ 3 = 200 soldados por color — los mismos 200 km de costa guerrerense.',
+      regla_oro_check:true,
+    },
+    {
+      numero:8,
+      titulo:'La Abolición de la Esclavitud',
+      categoria:'civismo-y-etica',
+      concepto_clave:'Primeros derechos humanos en México',
+      materia:'Formación Cívica / Ética',
+      estado_destino:'Guanajuato',
+      estado_slug:'guanajuato',
+      investigacion1:{
+        narrativa:'¡Agente! Desapareció un decreto manuscrito de abolición de la esclavitud del Archivo Histórico de Guanajuato.',
+        objeto_robado:'Decreto de abolición de la esclavitud (copia auténtica, 1810)',
+        lugares:[
+          {
+            lugar:'Archivo Histórico del Estado',
+            icono:'🗃️',
+            testigo:'Archivista Raquel',
+            pista:'Un hombre con guantes blancos revisó legajos sin pedir permiso. Dijo que el documento que buscaba era "el que liberó a los esclavos en el estado que lleva el nombre de un cura sonador con campana".',
+          },
+          {
+            lugar:'Teatro Juárez de Guanajuato',
+            icono:'🎭',
+            testigo:'Portero Domingo',
+            pista:'Vi una mujer con maletín entrar al callejón del beso. Comentó que iba al estado "donde los muertos caminan en octubre entre callejones de colores brillantes".',
+          },
+          {
+            lugar:'Mina La Valenciana',
+            icono:'⛏️',
+            testigo:'Guía Roberto',
+            pista:'Un turista preguntó cuántos esclavos trabajaron en las minas. Le respondí: "Aquí usaban peonaje por deuda, no esclavos africanos." Se fue al estado que tiene la mina de plata más famosa del mundo colonial.',
+          },
+        ],
+        libreta:'Decreto de abolición de la esclavitud de Hidalgo: emitido en Guadalajara en octubre de 1810. El movimiento insurgente se originó en Guanajuato (Dolores Hidalgo). México abolió la esclavitud 55 años antes que EUA (1865). La mina La Valenciana (Guanajuato) fue la más productiva del mundo en plata entre 1788 y 1810.',
+      },
+      investigacion2:{
+        narrativa:'La cámara captó al ladrón leyendo un ensayo sobre abolicionismo comparado.',
+        pista_mundial:'El ensayo decía: "México fue el primer país americano en abolir la esclavitud (1810), antes que Gran Bretaña (1833), Francia (1848) y Estados Unidos (1865). El estado donde comenzó este proceso fue también el mayor productor de plata del mundo colonial."',
+        libreta:'Abolicionismo comparado: México 1810 → GB 1833 → Francia 1848 → EUA 1865. Gran Bretaña abolió la esclavitud en sus colonias 23 años después que México. Estados Unidos tardó 55 años más. Guanajuato: mayor productor de plata del mundo colonial, lo que hacía el trabajo forzado un tema central.',
+      },
+      reto:{
+        enunciado:'Si México abolió la esclavitud en 1810 y EUA lo hizo en 1865, ¿cuántos años de diferencia hay?',
+        opciones_reto:['50 años','52 años','55 años','60 años'],
+        respuesta_reto:'55 años',
+        pista_resultado:'55 años de diferencia — la ciudad de Guanajuato está a 55 km de San Miguel de Allende, su vecina Patrimonio UNESCO.',
+      },
       opciones:['Guanajuato','Jalisco','Michoacán','San Luis Potosí'],
       respuesta_correcta:'Guanajuato',
-      explicacion:'Aunque el decreto formal fue en Guadalajara (Jalisco), Hidalgo era el líder insurgente nacido y basado en Guanajuato. La Alhóndiga y Dolores Hidalgo ubican el corazón de la insurgencia en Guanajuato. México fue el primer país del continente en abolir la esclavitud formalmente.',
-      regla_oro_check:true },
-    { numero:9, titulo:'Las Castas y la Sociedad Colonial', subtitulo:'Querétaro',
-      categoria:'civismo-y-etica', concepto_clave:'Sistema de castas y desigualdad colonial',
-      materia:'Formación Cívica / Historia', estado_destino:'Querétaro', estado_slug:'queretaro',
-      pista:'La socióloga del tiempo dice: "Una de las razones de la independencia fue el sistema de castas que clasificaba a las personas por su origen étnico. Los criollos, aunque ricos, no podían ocupar los puestos más altos del gobierno porque habían nacido en América, no en España. Esa desigualdad legal hervía en las ciudades del centro, como la que tiene el centro histórico patrimonio mundial."',
-      libreta:`Sistema de castas novohispano: 16 categorías raciales mixtas documentadas
-Criollos: Hijos de españoles nacidos en América — excluidos de puestos virreinales superiores
-Penínsulares (gachupines): Nacidos en España — ocupaban cargos de gobierno
-Mestizos: Aprox. 22% de la población en año 1810
-Centro histórico Patrimonio UNESCO: Declarado en año 1996
-Queretanas famosas: Josefa Ortiz de Domínguez — criolla que desafió al sistema`,
+      explicacion:'¡Atrapado! Uniste la pista de los callejones de colores y la mina de plata (Guanajuato), el dato del abolicionismo comparado y calculaste: 1865 − 1810 = 55 años, igual a los km entre Guanajuato y San Miguel de Allende.',
+      regla_oro_check:true,
+    },
+    {
+      numero:9,
+      titulo:'Las Castas y la Sociedad Colonial',
+      categoria:'civismo-y-etica',
+      concepto_clave:'Sistema de castas y desigualdad colonial',
+      materia:'Formación Cívica / Historia',
+      estado_destino:'Querétaro',
+      estado_slug:'queretaro',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una pintura de castas del siglo XVIII del museo del centro histórico queretano.',
+        objeto_robado:'Pintura de castas "De español y negra, mulata" (1760, óleo sobre tela)',
+        lugares:[
+          {
+            lugar:'Centro Histórico de Querétaro',
+            icono:'🏛️',
+            testigo:'Doña Ifigenia, guía cultural',
+            pista:'Vi una persona admirar la pintura y decir: "Aquí en esta ciudad patrimonio mundial, los criollos soñaban con libertad mientras el virrey los clasificaba por color de piel."',
+          },
+          {
+            lugar:'Iglesia de Santa Rosa de Viterbo',
+            icono:'⛪',
+            testigo:'Padre Ambrosio',
+            pista:'Un feligrés hizo una ofrenda y susurró que buscaba el estado "donde la corregidora usó sus zapatos como código secreto para salvar la revolución".',
+          },
+          {
+            lugar:'Mercado de La Cruz',
+            icono:'🧺',
+            testigo:'Artesano Hilario',
+            pista:'Una compradora me pidió ópalo negro de Querétaro. Luego preguntó el camino al estado "que está en el centro geográfico del país, sin acceso al mar, pero con tradición artesanal de piedras preciosas".',
+          },
+        ],
+        libreta:'Sistema de castas novohispano: 16 categorías raciales documentadas en pinturas. Criollos: hijos de españoles nacidos en América, excluidos de altos cargos. Josefa Ortiz (La Corregidora): criolla queretana que desafió el sistema. Centro histórico de Querétaro: Patrimonio UNESCO 1996. Ópalo negro: piedra característica de Querétaro.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un catálogo de pinturas de castas con anotaciones.',
+        pista_mundial:'Las anotaciones decían: "Las pinturas de castas novohispanas son equivalentes a las tablas de varna del sistema de castas indio (Rigveda, 1500 a.C.). Ambos sistemas clasificaban a las personas por origen para justificar la desigualdad. Querétaro fue el epicentro criollo de la resistencia en el siglo XIX."',
+        libreta:'Sistema de varnas indio: brahmanes, kshatriyas, vaishyas, shudras — documentado desde 1500 a.C. Castas novohispanas: sistema paralelo creado en el siglo XVI. Diferencia: el sistema novohispano era racial, el indio era ocupacional-religioso. Querétaro: centro de conspiración criolla contra el sistema de castas.',
+      },
+      reto:{
+        enunciado:'El sistema de castas tenía 16 categorías. Si en una ciudad colonial el 25% eran criollos, el 40% mestizos y el 35% indígenas, ¿cuántas personas eran criollas si la ciudad tenía 4,000 habitantes?',
+        opciones_reto:['800','1,000','1,200','1,600'],
+        respuesta_reto:'1,000',
+        pista_resultado:'1,000 criollos — Querétaro tiene más de 1,000 años de presencia humana documentada antes de la fundación española.',
+      },
       opciones:['Querétaro','Guanajuato','San Luis Potosí','Hidalgo'],
       respuesta_correcta:'Querétaro',
-      explicacion:'El centro histórico de Querétaro (UNESCO 1996) fue el escenario donde criollos como Josefa Ortiz desafiaron el sistema de castas. La conspiración fue precisamente una rebelión criolla contra la exclusión de puestos de poder.',
-      regla_oro_check:true },
-    { numero:10, titulo:'Independencia y el Mundo Atlántico', subtitulo:'Cruce Global',
-      categoria:'cruce-global', concepto_clave:'México en el contexto de las revoluciones atlánticas',
-      materia:'Historia Universal', estado_destino:'Guanajuato', estado_slug:'guanajuato',
-      pista:'El historiador global dice: "La independencia de México no fue un evento aislado: ocurrió en la misma oleada de revoluciones que cambió el mundo atlántico. Estados Unidos se independizó 34 años antes; Haití, 6 años antes; y Simón Bolívar liberaba Venezuela al mismo tiempo. El epicentro de esta ola en México fue el estado de las minas de plata."',
-      libreta:`Ola de independencias americanas:
-• EUA: año 1776 (34 años antes que México)
-• Haití: año 1804 (6 años antes, primera nación negra libre del mundo)
-• Venezuela (Bolívar): año 1811 (mismo año que el inicio formal mexicano)
-• México: año 1821
-• Brasil: año 1822 (un año después, en forma pacífica)
-Inspiración intelectual: Ilustración francesa (Voltaire, Rousseau) + Revolución Francesa (año 1789)
-Estado más rico de Nueva España al momento del Grito: Guanajuato — mayor productor mundial de plata`,
-      opciones:['Guanajuato','Oaxaca','Veracruz','Jalisco'],
+      explicacion:'¡Atrapado! Uniste la pista del ópalo negro y la corregidora (Querétaro), el dato del sistema de varnas y calculaste: 4,000 × 25% = 1,000 criollos — igual a los más de 1,000 años de presencia humana en la región queretana.',
+      regla_oro_check:true,
+    },
+    {
+      numero:10,
+      titulo:'Independencia y el Mundo Atlántico',
+      categoria:'cruce-global',
+      concepto_clave:'México en el contexto de las revoluciones atlánticas',
+      materia:'Historia Universal',
+      estado_destino:'Guanajuato',
+      estado_slug:'guanajuato',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un mapa histórico del "Mundo Atlántico en revolución (1776-1825)" de la Biblioteca Universitaria de Guanajuato.',
+        objeto_robado:'Mapa grabado "Revolución Atlántica" (edición París, 1826)',
+        lugares:[
+          {
+            lugar:'Biblioteca Universitaria de Guanajuato',
+            icono:'📖',
+            testigo:'Doctora Marina, historiadora',
+            pista:'Un investigador extranjero fotocopió el mapa. Mencionó que lo llevaba al estado "donde la plata financió sin quererlo la independencia de las 13 colonias norteamericanas".',
+          },
+          {
+            lugar:'Museo Iconográfico del Quijote',
+            icono:'🎠',
+            testigo:'Curador Felipe',
+            pista:'Un visitante preguntó qué estado exportó plata a todos los continentes. Le dije que el de los callejones medievales. Se anotó algo y salió apresurado.',
+          },
+          {
+            lugar:'Ex-Hacienda San Gabriel Barrera',
+            icono:'🏰',
+            testigo:'Guía Concepción',
+            pista:'Un turista tomó fotos del casco de la hacienda y preguntó: "¿Es verdad que esta región financió la revolución americana con plata?" Lo mandé al estado donde nació el Pípila.',
+          },
+        ],
+        libreta:'Guanajuato: producía el 65% de la plata mundial en 1810. La plata de Guanajuato circulaba en monedas por EUA, Europa y Asia. Ola atlántica: EUA (1776), Haití (1804), Venezuela y México (1810-1821), Brasil (1822). Las monedas de plata mexicanas fueron moneda de curso legal en EUA hasta 1857.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un manifiesto sobre historia económica global.',
+        pista_mundial:'El manifiesto decía: "Sin la plata de Guanajuato no habría Revolución Francesa: el oro y plata americanos financiaron la economía europea del siglo XVIII. Adam Smith escribió La riqueza de las naciones (1776) estudiando el comercio atlántico basado en metales preciosos del estado más minero de México."',
+        libreta:'Adam Smith: "La riqueza de las naciones" (1776) — analiza el comercio atlántico. Plata americana: motor de la economía global del siglo XVI-XVIII. Guanajuato exportaba plata a través del puerto de Veracruz. Las monedas de plata mexicanas (8 reales) fueron la primera moneda global de la historia.',
+      },
+      reto:{
+        enunciado:'Si Guanajuato producía el 65% de la plata mundial y el total mundial era 1,000 toneladas anuales, ¿cuántas toneladas producía Guanajuato?',
+        opciones_reto:['550 toneladas','600 toneladas','650 toneladas','700 toneladas'],
+        respuesta_reto:'650 toneladas',
+        pista_resultado:'650 toneladas — el estado de Guanajuato tiene 650 km de carreteras estatales en su red actual.',
+      },
+      opciones:['Guanajuato','Zacatecas','San Luis Potosí','Oaxaca'],
       respuesta_correcta:'Guanajuato',
-      explicacion:'Guanajuato era el mayor productor mundial de plata al inicio de la independencia, lo que lo convirtió en el objetivo estratégico central. En el contexto atlántico, México se independizó en la misma ola que Venezuela (Bolívar) y un año antes que Brasil.',
-      regla_oro_check:true },
+      explicacion:'¡Atrapado! Uniste la pista de la plata que financió revoluciones (Guanajuato), el dato de Adam Smith y el comercio atlántico, y calculaste: 1,000 × 65% = 650 toneladas — igual a los km de carreteras estatales guanajuatenses.',
+      regla_oro_check:true,
+    },
   ],
 };
 export default independencia;

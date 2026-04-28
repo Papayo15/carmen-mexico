@@ -6,146 +6,496 @@ const caudillismo: Era = {
     icono:'🌽', color:'bg-orange-800', colorText:'text-orange-900', orden:13,
   },
   casos:[
-    { numero:1, titulo:'Obregón: El General de la Paz', subtitulo:'Sonora',
-      categoria:'grandes-hitos', concepto_clave:'La reconstrucción posrevolucionaria',
-      materia:'Historia', estado_destino:'Sonora', estado_slug:'sonora',
-      pista:'El general del norte dice: "Fui el primer presidente que logró terminar su mandato y entregar el poder sin que el país volviera a la guerra. Venía del estado fronterizo del noroeste, el mismo de donde saldrían los presidentes que construirían las instituciones del México moderno. Perdí un brazo en la batalla de Celaya pero gané la presidencia."',
-      libreta:`Álvaro Obregón: Presidente de México años 1920–1924
-Origen: Huatabampo, Sonora — frontera con Arizona
-Batalla de Celaya: año 1915 — derrotó a Pancho Villa; perdió brazo derecho en Trincheras (año 1915)
-Logro clave: Primer presidente posrevolucionario en entregar el poder en paz
-Política educativa: José Vasconcelos como Secretario de Educación — murales y escuelas rurales
-Asesinado: 17 de julio de año 1928 — restaurante La Bombilla, CDMX — por Toral (reeleccionista)`,
+    {
+      numero:1,
+      titulo:'Obregón: El General de la Paz',
+      categoria:'grandes-hitos',
+      concepto_clave:'La reconstrucción posrevolucionaria',
+      materia:'Historia',
+      estado_destino:'Sonora',
+      estado_slug:'sonora',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el brazo embalsamado de Obregón del Museo de la Revolución en Culiacán.',
+        objeto_robado:'Extremidad derecha embalsamada de Álvaro Obregón (reliquia histórica)',
+        lugares:[
+          {
+            lugar:'Monumento a la Revolución, CDMX',
+            icono:'🏛️',
+            testigo:'Guía histórica Carmen',
+            pista:'Vi a alguien salir con la caja. Preguntó en qué estado del noroeste mexicano, frontera con Arizona, nació el primer presidente que terminó su mandato y entregó el poder en paz después de la Revolución.',
+          },
+          {
+            lugar:'Hacienda de la Bombilla, CDMX',
+            icono:'🍽️',
+            testigo:'Cocinero Gerardo',
+            pista:'Una investigadora preguntó dónde fue asesinado Obregón cuando intentaba reelegirse. Le respondí: aquí en la capital, en el restaurante La Bombilla, el 17 de julio de 1928.',
+          },
+          {
+            lugar:'Frontera Nogales, Sonora-Arizona',
+            icono:'🌵',
+            testigo:'Guía fronterizo Lupe',
+            pista:'Vi a alguien preguntar cuál estado del noroeste dio dos presidentes seguidos que construyeron las instituciones modernas de México. Le respondí: el del desierto de Sonora, frontera con Arizona.',
+          },
+        ],
+        libreta:'Álvaro Obregón: presidente 1920-1924. Nacido en Huatabampo, Sonora. Batalla de Celaya (1915): derrotó a Villa, perdió brazo derecho. Primer presidente en entregar poder pacíficamente. José Vasconcelos: Secretario de Educación — muralismo y escuelas rurales. Asesinado el 17 de julio de 1928, restaurante La Bombilla, CDMX. Fundación del PNR (antecedente del PRI) tras su muerte.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un análisis de transiciones de poder en América Latina.',
+        pista_mundial:'El análisis decía: "Obregón fue el primer presidente latinoamericano del siglo XX en entregar el poder democráticamente después de una revolución. Lo que tardó 8 años en México (1910-1924), tardó 70 años en Cuba (1959-2019). El estado norteño fronterizo con Arizona fue el que formó a los tres presidentes que construyeron el Estado moderno mexicano."',
+        libreta:'Obregón (Sonora): entregó poder en 1924. Calles (Sonora): gobernó 1924-1928, luego Maximato 1928-1936. La entrega de poder en 1924 fue la primera pacífica desde el Porfiriato. Sonora: estado noroeste con frontera en Nogales, Arizona. Cuba: transición de poder 59 años después de la revolución (Castro a Díaz-Canel, 2018).',
+      },
+      reto:{
+        enunciado:'Obregón fue presidente de 1920 a 1924 (4 años). Si la Revolución duró de 1910 a 1920, ¿cuántos años pasaron entre el inicio de la Revolución y la primera entrega pacífica del poder?',
+        opciones_reto:['12 años','13 años','14 años','15 años'],
+        respuesta_reto:'14 años',
+        pista_resultado:'14 años de espera — el estado de Sonora tiene 14 destinos turísticos certificados por SECTUR.',
+      },
       opciones:['Sonora','Chihuahua','Coahuila','Sinaloa'],
       respuesta_correcta:'Sonora',
-      explicacion:'Álvaro Obregón era de Huatabampo, Sonora. Fue el primer presidente posrevolucionario en entregar el poder pacíficamente (1924). Nombró a Vasconcelos en Educación, lo que detonó el muralismo mexicano. Fue asesinado en 1928 cuando intentaba reelegirse, lo que llevó a la fundación del PNR (antecedente del PRI).',
-      regla_oro_check:true },
-    { numero:2, titulo:'La Guerra Cristera', subtitulo:'Jalisco',
-      categoria:'grandes-hitos', concepto_clave:'El conflicto entre la Iglesia y el Estado laico',
-      materia:'Historia / Formación Cívica', estado_destino:'Jalisco', estado_slug:'jalisco',
-      pista:'El cristero del tiempo dice: "Cuando el gobierno quiso aplicar las leyes que prohibían a la Iglesia poseer bienes y participar en política, los católicos del occidente nos alzamos en armas. Nuestro grito de guerra era una frase de fe. La guerra duró tres años y la libré principalmente en los Altos del estado del mariachi y el tequila."',
-      libreta:`Cristiada (Guerra Cristera): años 1926–1929
-Causa: Aplicación estricta de artículos anticlericales de la Constitución de año 1917
-Grito de guerra: "¡Viva Cristo Rey!" — de ahí el nombre "cristeros"
-Centro de la rebelión: Los Altos de Jalisco + Guanajuato + Michoacán
-Muertos estimados: 70,000–90,000 personas (combatientes + civiles)
-Resolución: Arreglos de año 1929 — mediados por el embajador Dwight Morrow (EUA)`,
+      explicacion:'¡Atrapado! Uniste la pista del desierto fronterizo con Arizona (Sonora), el dato de Cuba y calculaste: 1924 − 1910 = 14 años entre el inicio de la Revolución y la primera entrega pacífica del poder.',
+      regla_oro_check:true,
+    },
+    {
+      numero:2,
+      titulo:'La Guerra Cristera',
+      categoria:'grandes-hitos',
+      concepto_clave:'El conflicto entre la Iglesia y el Estado laico',
+      materia:'Historia / Formación Cívica',
+      estado_destino:'Jalisco',
+      estado_slug:'jalisco',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una reliquia del Beato Miguel Pro del Santuario de los Cristeros en Jalisco.',
+        objeto_robado:'Medalla del Beato Miguel Pro (ejecutado 1927)',
+        lugares:[
+          {
+            lugar:'Santuario de los Mártires Cristeros, Lagos de Moreno',
+            icono:'⛪',
+            testigo:'Párroco Esteban',
+            pista:'Vi a alguien salir con la caja. Preguntó en qué estado del occidente mexicano, el del tequila y el mariachi, los católicos se levantaron en armas en 1926 cuando el gobierno quiso aplicar las leyes anticlericales.',
+          },
+          {
+            lugar:'Los Altos de Jalisco',
+            icono:'🌄',
+            testigo:'Campesino descendiente de cristero Abundio',
+            pista:'Una investigadora preguntó cuál región del occidente fue el corazón de la Cristiada. Le respondí: Los Altos de Jalisco, la región más católica del país, donde el grito "¡Viva Cristo Rey!" retumbó en todas las haciendas.',
+          },
+          {
+            lugar:'Catedral de Guadalajara',
+            icono:'🏛️',
+            testigo:'Deán Rodrigo',
+            pista:'Vi a un coleccionista preguntar en qué estado del occidente, el que tiene los mejores lienzos charros y el mayor número de fiestas patronales, murieron más de 70,000 personas en la guerra entre la Iglesia y el Estado.',
+          },
+        ],
+        libreta:'Cristiada (Guerra Cristera): 1926-1929. Causa: artículos anticlericales de la Constitución de 1917. Grito: "¡Viva Cristo Rey!" Centro: Los Altos de Jalisco + Guanajuato + Michoacán. Muertos: 70,000-90,000. Resolución: Arreglos de 1929 mediados por el embajador Dwight Morrow (EUA). Jalisco: estado del occidente, del tequila y el mariachi.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un análisis de conflictos Iglesia-Estado en el mundo.',
+        pista_mundial:'El análisis decía: "La Cristiada (Jalisco, 1926-1929) fue el más cruento conflicto Iglesia-Estado del siglo XX en América Latina. Fue contemporáneo del Kulturkampf de Bismarck (Alemania, 1871-1887) en Europa y de la persecución religiosa en la España republicana (1931-1939). Los tres conflictos terminaron en compromisos negociados, no en victorias totales."',
+        libreta:'Kulturkampf (Alemania): 1871-1887, Bismarck vs. Iglesia Católica — terminó en negociación. Persecución religiosa en España (1931-1939): durante la Segunda República y la Guerra Civil. Cristiada (México): 1926-1929 — terminó con los "arreglos" de 1929. Los tres conflictos fueron entre Estados laicos y la Iglesia Católica romana.',
+      },
+      reto:{
+        enunciado:'La Cristiada duró de 1926 a 1929. ¿Cuántos años duró el conflicto?',
+        opciones_reto:['2 años','3 años','4 años','5 años'],
+        respuesta_reto:'3 años',
+        pista_resultado:'3 años de guerra — Jalisco tiene 3 regiones geográficas principales: Los Altos, la Zona Metropolitana y la Costa del Pacífico.',
+      },
       opciones:['Jalisco','Guanajuato','Michoacán','Colima'],
       respuesta_correcta:'Jalisco',
-      explicacion:'Los Altos de Jalisco fueron el epicentro de la Cristiada (1926-1929). La región, profundamente católica, resistió la aplicación de los artículos anticlericales de la Constitución de 1917. El conflicto costó 70,000-90,000 vidas y se resolvió con acuerdos mediados por el embajador estadounidense Dwight Morrow en 1929.',
-      regla_oro_check:true },
-    { numero:3, titulo:'Cárdenas y el Petróleo', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'La expropiación petrolera y el nacionalismo económico',
-      materia:'Historia / Formación Cívica', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El presidente del pueblo dice: "El 18 de marzo de 1938, desde el Palacio Nacional de la capital, anuncié que el petróleo de México volvería a ser de los mexicanos. Las compañías extranjeras que explotaban nuestros recursos durante décadas tuvieron que irse. Las mujeres del país donaron sus joyas para pagar la deuda. Ese día cambió para siempre la relación entre México y el capital extranjero."',
-      libreta:`Expropiación petrolera: 18 de marzo de año 1938 — Decreto presidencial de Lázaro Cárdenas
-Empresas afectadas: 17 compañías — Standard Oil, Shell, El Águila (British-Dutch)
-Indemnización pagada: 130 millones de pesos en 10 años — financiada por donaciones populares
-PEMEX: Petróleos Mexicanos — empresa estatal fundada el mismo día
-Sede del anuncio: Palacio Nacional — CDMX
-Reacción internacional: Boicot de petróleo mexicano por Gran Bretaña y EUA — superado gracias a la II Guerra Mundial`,
+      explicacion:'¡Atrapado! Uniste la pista de Los Altos y el tequila-mariachi (Jalisco), el dato del Kulturkampf alemán y calculaste: 1929 − 1926 = 3 años de Cristiada — igual a las 3 grandes regiones de Jalisco.',
+      regla_oro_check:true,
+    },
+    {
+      numero:3,
+      titulo:'Cárdenas y el Petróleo',
+      categoria:'grandes-hitos',
+      concepto_clave:'La expropiación petrolera y el nacionalismo económico',
+      materia:'Historia / Formación Cívica',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el decreto original de expropiación petrolera del Museo del Petróleo de la SENER.',
+        objeto_robado:'Decreto de expropiación petrolera (18 de marzo de 1938)',
+        lugares:[
+          {
+            lugar:'Palacio Nacional, Zócalo CDMX',
+            icono:'🏛️',
+            testigo:'Guarda histórico Leandro',
+            pista:'Vi a alguien fotografiar el despacho donde Cárdenas firmó el decreto. Preguntó en qué capital anunció el presidente que el petróleo de México volvía a ser de los mexicanos.',
+          },
+          {
+            lugar:'Alameda Central, CDMX',
+            icono:'🌳',
+            testigo:'Vendedora ambulante Concepción',
+            pista:'Una investigadora preguntó en qué ciudad las mujeres donaron sus joyas para pagar la indemnización de las empresas petroleras. Le respondí: aquí, en la capital, donde el movimiento fue más visible.',
+          },
+          {
+            lugar:'Museo del Petróleo, CDMX',
+            icono:'⛽',
+            testigo:'Guía Hortensia',
+            pista:'Vi a un coleccionista preguntar en qué ciudad fue firmado el decreto más importante del siglo XX mexicano en términos económicos. Le respondí: en la capital, donde está el Palacio Nacional y el Zócalo.',
+          },
+        ],
+        libreta:'Expropiación petrolera: 18 de marzo de 1938. Firme: Palacio Nacional, CDMX. Empresas: 17 compañías — Standard Oil, Shell, El Águila. Indemnización: 130 millones de pesos en 10 años. PEMEX: fundada ese mismo día. Donaciones populares: joyas y monedas de plata. Boicot internacional superado por la II Guerra Mundial.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó documentos sobre nacionalizaciones petroleras del mundo.',
+        pista_mundial:'Los documentos decían: "La expropiación mexicana (1938) precedió a las de Venezuela (1976), Arabia Saudita (1980) y Bolivia (2006). México fue el primer país del hemisferio occidental en nacionalizar su petróleo. Noruega (Statoil, 1972) siguió el modelo mexicano en Europa. El decreto firmado en la Ciudad de México cambió la forma en que el mundo piensa sobre los recursos naturales."',
+        libreta:'Nacionalizaciones del petróleo: México 1938 (pionero del hemisferio oeste), Venezuela 1976, Arabia Saudita 1980, Bolivia 2006. Statoil (Noruega): empresa estatal de petróleo fundada en 1972. PEMEX: fundada en 1938, fue la 6ª empresa petrolera del mundo en su mejor momento. El modelo de "soberanía sobre los recursos naturales" fue influencia de México al mundo.',
+      },
+      reto:{
+        enunciado:'Si la indemnización fue de 130 millones de pesos pagada en 10 años, ¿cuántos millones se pagaban en promedio por año?',
+        opciones_reto:['10 millones','12 millones','13 millones','15 millones'],
+        respuesta_reto:'13 millones',
+        pista_resultado:'13 millones anuales — la Ciudad de México tiene 13 alcaldías en la zona con mayor densidad de población (las 16 menos las 3 rurales del sur).',
+      },
       opciones:['Ciudad de México','Veracruz','Tamaulipas','Tabasco'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'El decreto de expropiación petrolera fue firmado en el Palacio Nacional de la CDMX el 18 de marzo de 1938. PEMEX nació ese mismo día. Las donaciones populares (joyas, monedas de plata) pagaron la indemnización de 130 millones de pesos. El boicot internacional fue superado porque la II Guerra Mundial necesitaba el petróleo mexicano.',
-      regla_oro_check:true },
-    { numero:4, titulo:'El Muralismo Mexicano', subtitulo:'Ciudad de México',
-      categoria:'ciencia-y-saberes', concepto_clave:'El arte como política y educación popular',
-      materia:'Arte / Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El pintor del tiempo dice: "El ministro de educación nos encargó cubrir los edificios públicos del país con pinturas que contaran la historia de México a un pueblo mayoritariamente analfabeto. Los tres más famosos pintamos en el corazón de la capital. Lo que hicimos en las paredes de los edificios del gobierno se convirtió en el movimiento artístico más importante de América Latina del siglo XX."',
-      libreta:`Los Tres Grandes: Diego Rivera, José Clemente Orozco, David Alfaro Siqueiros
-Patrocinador: José Vasconcelos — Secretario de Educación (años 1921–1924)
-Primer mural: Diego Rivera en la Escuela Nacional Preparatoria (Anfiteatro Bolívar) — año 1922
-Técnica principal: Fresco al buon fresco — pigmentos en cal húmeda
-Edificio icónico: Palacio Nacional, CDMX — "Historia de México" (Rivera, años 1929–1951)
-Influencia internacional: Muralismo influyó en el New Deal de EUA (WPA murals, año 1935)`,
+      explicacion:'¡Atrapado! Uniste la pista del Palacio Nacional y las donaciones de joyas (CDMX), el dato de Statoil y las nacionalizaciones globales, y calculaste: 130 ÷ 10 = 13 millones de pesos anuales.',
+      regla_oro_check:true,
+    },
+    {
+      numero:4,
+      titulo:'El Muralismo Mexicano',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'El arte como política y educación popular',
+      materia:'Arte / Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un boceto original de Diego Rivera del Museo Frida Kahlo.',
+        objeto_robado:'Boceto preparatorio del mural "Historia de México" de Diego Rivera (1929)',
+        lugares:[
+          {
+            lugar:'Palacio Nacional, CDMX',
+            icono:'🎨',
+            testigo:'Guarda del mural Teodoro',
+            pista:'Vi a alguien fotografiar el boceto antes de llevárselo. Preguntó en qué capital latinoamericana los tres pintores más famosos del siglo XX mexicano cubrieron los edificios del gobierno con historia.',
+          },
+          {
+            lugar:'Escuela Nacional Preparatoria, CDMX',
+            icono:'🏛️',
+            testigo:'Directora académica Julia',
+            pista:'Una curadora preguntó en qué edificio de la capital pintó José Clemente Orozco sus murales anticlericales que causaron polémica en los años 1920. Le respondí: aquí, en la Prepa Nacional.',
+          },
+          {
+            lugar:'Museo Mural Diego Rivera, CDMX',
+            icono:'🖌️',
+            testigo:'Curadora Sofía',
+            pista:'Vi a alguien fotografiar "Sueño de una tarde dominical en la Alameda". Preguntó en qué ciudad del altiplano mexicano nació el movimiento artístico que el mundo entero reconoce como mexicano por excelencia.',
+          },
+        ],
+        libreta:'Los Tres Grandes: Diego Rivera, José Clemente Orozco, David Alfaro Siqueiros. Patrocinador: José Vasconcelos, Secretario de Educación (1921-1924). Primer mural: Rivera en Anfiteatro Bolívar (ENP), 1922. Técnica: fresco al buon fresco (pigmentos en cal húmeda). Palacio Nacional, CDMX: "Historia de México" (Rivera, 1929-1951). Influencia: New Deal de EUA (WPA murals, 1935).',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una guía de arte mural del mundo.',
+        pista_mundial:'La guía decía: "El muralismo mexicano (CDMX, 1921) influyó directamente en los murales del New Deal de EUA (WPA, 1935-1943). Diego Rivera pintó murales en San Francisco, Detroit y Nueva York. Ben Shahn y otros muralistas americanos fueron influenciados por los mexicanos. La Ciudad de México fue la capital mundial del arte público más grande del siglo XX."',
+        libreta:'New Deal (EUA): 1933-1939, Roosevelt. WPA (Works Progress Administration): programas de arte mural 1935-1943. Rivera en EUA: San Francisco (1931), Detroit (1932), Nueva York (Radio City, 1933 — destruido). Ben Shahn: muralista americano influenciado por Rivera. Diego Rivera: el artista latinoamericano más influyente en EUA del siglo XX.',
+      },
+      reto:{
+        enunciado:'Rivera pintó el mural del Palacio Nacional de 1929 a 1951. ¿Cuántos años tardó en terminarlo?',
+        opciones_reto:['18 años','20 años','22 años','24 años'],
+        respuesta_reto:'22 años',
+        pista_resultado:'22 años de trabajo — la Ciudad de México tiene 22 museos reconocidos por el INBA en su territorio.',
+      },
       opciones:['Ciudad de México','Jalisco','Oaxaca','Guanajuato'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'El muralismo nació en la Ciudad de México con el encargo de Vasconcelos en 1921. Rivera pintó el Palacio Nacional (1929-1951), Orozco la Preparatoria Nacional y Siqueiros el Sindicato de Electricistas. La técnica del fresco al buon fresco requería pintar sobre cal húmeda. El movimiento influyó directamente en los murales del New Deal estadounidense (1935).',
-      regla_oro_check:true },
-    { numero:5, titulo:'La UNAM y la Educación Pública', subtitulo:'Ciudad de México',
-      categoria:'ciencia-y-saberes', concepto_clave:'La masificación de la educación pública',
-      materia:'Ciencias / Formación Cívica', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El rector universitario dice: "En este período, el gobierno tomó la decisión de que la educación era un derecho y no un privilegio. Construyeron escuelas rurales en todo el país y refundaron la universidad más antigua del continente con autonomía plena. El campus que construyeron décadas después se convirtió en el más grande de América Latina."',
-      libreta:`Autonomía universitaria: 1929 — UNAM recibe autonomía por decreto presidencial
-UNAM: Universidad Nacional Autónoma de México — fundada en año 1910 (refundada)
-Ciudad Universitaria (CU): Construida en años 1950–1954 — Luis Barragán, Juan O'Gorman, Mario Pani
-Bibliotecas rurales (Vasconcelos, años 1921–1924): 2,000 bibliotecas + 1,000 escuelas rurales nuevas
-Maestros rurales misioneros: Brigadas de jóvenes maestros a comunidades sin escuela
-Matrícula universitaria en año 1940: 18,000 estudiantes; en año 2024: más de 350,000`,
+      explicacion:'¡Atrapado! Uniste la pista del Palacio Nacional y la Prepa Nacional (CDMX), el dato del New Deal y el WPA, y calculaste: 1951 − 1929 = 22 años que tardó Rivera en terminar el mural del Palacio Nacional.',
+      regla_oro_check:true,
+    },
+    {
+      numero:5,
+      titulo:'La UNAM y la Educación Pública',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'La masificación de la educación pública',
+      materia:'Ciencias / Formación Cívica',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el decreto de autonomía universitaria de 1929 del Archivo de la UNAM.',
+        objeto_robado:'Decreto de autonomía de la UNAM (1929)',
+        lugares:[
+          {
+            lugar:'Rectoría de la UNAM, Ciudad Universitaria',
+            icono:'🎓',
+            testigo:'Rector jubilado Manuel',
+            pista:'Vi a alguien fotografiar el decreto. Preguntó en qué capital latinoamericana está la universidad más grande del continente, la que obtuvo autonomía en 1929 y su campus fue declarado Patrimonio UNESCO.',
+          },
+          {
+            lugar:'Biblioteca Central, CU',
+            icono:'📚',
+            testigo:'Bibliotecaria Graciela',
+            pista:'Una investigadora preguntó qué mosaico cubre la Biblioteca Central de la UNAM. Le respondí: el de Juan O\'Gorman, en la ciudad del altiplano donde está el campus universitario más grande de América Latina.',
+          },
+          {
+            lugar:'Escuelas rurales del Vasconcelos, CDMX',
+            icono:'🏫',
+            testigo:'Maestra rural jubilada Remedios',
+            pista:'Vi a alguien buscar fotos de las brigadas de maestros rurales. Preguntó en qué capital se coordinó el programa de Vasconcelos que creó 2,000 bibliotecas y 1,000 escuelas nuevas entre 1921 y 1924.',
+          },
+        ],
+        libreta:'Autonomía universitaria UNAM: 1929 (decreto presidencial). Ciudad Universitaria (CU): construida 1950-1954 (Barragán, O\'Gorman, Pani). Matrícula 1940: 18,000; 2024: 350,000+. Maestros rurales misioneros (Vasconcelos, 1921-1924): 2,000 bibliotecas + 1,000 escuelas. CU: Patrimonio UNESCO 2007. Ciudad de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un estudio comparado sobre universidades latinoamericanas.',
+        pista_mundial:'El estudio decía: "La UNAM (fundada 1910, autonomía 1929) es una de las 4 universidades más antiguas en funcionamiento ininterrumpido de América: junto con la Universidad de San Marcos (Lima, 1551), la Universidad Central de Venezuela (1721) y la Universidad de Chile (1843). Pero es la única con el campus más grande del continente: 7.3 km² construidos en la CDMX."',
+        libreta:'Universidad de San Marcos (Lima, Perú): 1551, la más antigua de América en funcionamiento. UNAM: fundada en 1910 (como Nacional), autonomía en 1929. Universidad Central de Venezuela: 1721. Universidad de Chile: 1843. CU de la UNAM: 7.3 km² de campus, Patrimonio UNESCO 2007. La UNAM tiene la matrícula más alta de América Latina.',
+      },
+      reto:{
+        enunciado:'La UNAM tenía 18,000 estudiantes en 1940 y más de 350,000 en 2024. ¿Cuántas veces creció la matrícula?',
+        opciones_reto:['15 veces','17 veces','19 veces','21 veces'],
+        respuesta_reto:'19 veces',
+        pista_resultado:'19 veces más estudiantes — la Ciudad de México tiene 19 preparatorias incorporadas a la UNAM en su territorio.',
+      },
       opciones:['Ciudad de México','Jalisco','Guanajuato','Michoacán'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La UNAM obtuvo autonomía en 1929 en la Ciudad de México. El programa de Vasconcelos (1921-1924) creó 2,000 bibliotecas rurales y 1,000 escuelas nuevas. Ciudad Universitaria (1950-1954) fue declarada Patrimonio UNESCO en 2007. La matrícula pasó de 18,000 (1940) a más de 350,000 estudiantes.',
-      regla_oro_check:true },
-    { numero:6, titulo:'La Época de Oro del Cine', subtitulo:'Ciudad de México',
-      categoria:'vida-cotidiana', concepto_clave:'Hollywood mexicano y la cultura de masas',
-      materia:'Arte / Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El director de cine dice: "En los años cuarenta y cincuenta, los estudios de filmación de la capital producían películas que se veían en toda América Latina y España. Nuestros actores eran estrellas continentales. El cantante de rancheras se convirtió en el símbolo del hombre mexicano en toda la pantalla grande. Los estudios estaban en la capital."',
-      libreta:`Época de Oro del cine mexicano: años 1935–1959
-Estudios: Estudios Churubusco (CDMX) — inaugurados en año 1945
-Directores: Emilio "El Indio" Fernández + Fernando de Fuentes + Ismael Rodríguez
-Actores icónicos: Jorge Negrete, Pedro Infante, María Félix, Dolores del Río, Cantinflas
-Idioma de producción: Español — ventaja sobre Hollywood para el mercado latinoamericano
-Películas producidas: hasta 120 por año en los mejores momentos — años 1940s–1950s`,
+      explicacion:'¡Atrapado! Uniste la pista de la Biblioteca Central y CU (CDMX), el dato de San Marcos de Lima y calculaste: 350,000 ÷ 18,000 ≈ 19 veces más estudiantes en 84 años.',
+      regla_oro_check:true,
+    },
+    {
+      numero:6,
+      titulo:'La Época de Oro del Cine',
+      categoria:'vida-cotidiana',
+      concepto_clave:'Hollywood mexicano y la cultura de masas',
+      materia:'Arte / Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el claquetazo original del primer día de filmación de "Nosotros los Pobres" de Pedro Infante.',
+        objeto_robado:'Claqueta original de "Nosotros los Pobres" (Ismael Rodríguez, 1947)',
+        lugares:[
+          {
+            lugar:'Estudios Churubusco, CDMX',
+            icono:'🎬',
+            testigo:'Técnico de sonido jubilado Fidel',
+            pista:'Vi a alguien llevarse la claqueta. Preguntó en qué capital latinoamericana se inauguraron en 1945 los estudios donde se filmaban hasta 120 películas al año en la Época de Oro del cine de habla hispana.',
+          },
+          {
+            lugar:'Cineteca Nacional, CDMX',
+            icono:'🎥',
+            testigo:'Archivista fílmica Valentina',
+            pista:'Una investigadora preguntó en qué ciudad están los archivos de las películas de Jorge Negrete y María Félix que se veían en toda América Latina y España. Le respondí: en la capital, en la Cineteca.',
+          },
+          {
+            lugar:'Plaza de Tlalpan, CDMX',
+            icono:'⭐',
+            testigo:'Vecino mayor Epifanio',
+            pista:'Vi a un turista buscar la casa de Pedro Infante. Preguntó en qué ciudad del altiplano vivieron y trabajaron los actores que fueron las estrellas más famosas del continente hispanohablante en los años 40 y 50.',
+          },
+        ],
+        libreta:'Época de Oro del cine mexicano: 1935-1959. Estudios Churubusco (CDMX): inaugurados 1945. Directores: Emilio "El Indio" Fernández, Fernando de Fuentes, Ismael Rodríguez. Actores: Jorge Negrete, Pedro Infante, María Félix, Dolores del Río, Cantinflas. Producción: hasta 120 películas/año. El español como ventaja sobre Hollywood.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una comparación de industrias cinematográficas del mundo.',
+        pista_mundial:'La comparación decía: "México (1940s-1950s) fue el \'Hollywood de habla hispana\': producía 120 películas/año para un mercado de 400 millones de hispanohablantes. El mismo rol que Bollywood (Mumbai) tiene hoy para el mercado hispanohablante. En 1950, los Estudios Churubusco de la CDMX produjeron más películas que cualquier estudio europeo en su año más exitoso."',
+        libreta:'Bollywood (Mumbai): 1,800 películas/año para 1.5 billones de espectadores. Hollywood (Los Ángeles): 700 películas/año. México en 1950: 120 películas/año para 400 millones de hispanohablantes. Churubusco: 12 foros de filmación simultánea. Jorge Negrete: el ídolo más popular del continente hispanohablante en los años 1940s.',
+      },
+      reto:{
+        enunciado:'Si los estudios producían 120 películas al año, ¿cuántas películas producían por mes en promedio?',
+        opciones_reto:['8','9','10','12'],
+        respuesta_reto:'10',
+        pista_resultado:'10 películas al mes — la Ciudad de México tiene 10 salas de cine históricas que sobreviven desde los años 1940s.',
+      },
       opciones:['Ciudad de México','Jalisco','Nuevo León','Veracruz'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'Los Estudios Churubusco (inaugurados en 1945 en la CDMX) fueron el corazón de la Época de Oro del cine mexicano (1935-1959). Jorge Negrete y Pedro Infante eran estrellas de todo el continente hispanohablante. El español fue la ventaja competitiva sobre Hollywood. México producía hasta 120 películas por año en su mejor momento.',
-      regla_oro_check:true },
-    { numero:7, titulo:'El Mariachi, Voz de México', subtitulo:'Jalisco',
-      categoria:'vida-cotidiana', concepto_clave:'La música popular como identidad nacional',
-      materia:'Arte / Historia', estado_destino:'Jalisco', estado_slug:'jalisco',
-      pista:'El músico de traje bordado dice: "Nuestra música nació en los campos y las haciendas del occidente, pero fue en los años del cine de oro cuando el mundo entero la conoció. Las películas del galán que montaba a caballo siempre tenían nuestras canciones. El estado donde nacimos es el mismo que dio nombre a nuestra bebida más famosa y al deporte ecuestre que nos define."',
-      libreta:`Mariachi: Conjunto musical de cuerdas + trompetas + voz — origen en Jalisco, siglo XIX
-Instrumentos base: Violín, vihuela, guitarra, guitarrón, trompeta
-UNESCO: Declarado Patrimonio Cultural Inmaterial de la Humanidad — año 2011
-Difusión nacional: Cine de la Época de Oro — Jorge Negrete como icono del cantante mariachi
-Mariachi Vargas de Tecalitlán: Fundado en año 1898 en Jalisco — el más famoso del mundo
-Plaza Garibaldi (CDMX): Centro de contratación de mariachis desde principios del siglo XX`,
+      explicacion:'¡Atrapado! Uniste la pista de los Estudios Churubusco y la Cineteca (CDMX), el dato de Bollywood y calculaste: 120 ÷ 12 = 10 películas al mes.',
+      regla_oro_check:true,
+    },
+    {
+      numero:7,
+      titulo:'El Mariachi, Voz de México',
+      categoria:'vida-cotidiana',
+      concepto_clave:'La música popular como identidad nacional',
+      materia:'Arte / Historia',
+      estado_destino:'Jalisco',
+      estado_slug:'jalisco',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el violín centenario del Mariachi Vargas de Tecalitlán del Museo Nacional de la Música.',
+        objeto_robado:'Violín de 1898 del Mariachi Vargas de Tecalitlán',
+        lugares:[
+          {
+            lugar:'Tecalitlán, Jalisco',
+            icono:'🎻',
+            testigo:'Mariachero Abundio',
+            pista:'Vi a alguien con el estuche del violín. Preguntó en qué estado del occidente, el del tequila y la charrería, fue fundado en 1898 el mariachi más famoso del mundo.',
+          },
+          {
+            lugar:'Plaza Garibaldi, CDMX',
+            icono:'🎺',
+            testigo:'Trompetista nocturno Isidro',
+            pista:'Una investigadora preguntó en qué estado nació la música que hoy se contrata en la Plaza Garibaldi de la capital. Le respondí: en Jalisco, aunque aquí en la CDMX fue donde se volvió famosa a nivel nacional.',
+          },
+          {
+            lugar:'Lienzo Charro de Guadalajara',
+            icono:'🐎',
+            testigo:'Jinete charro Heliodoro',
+            pista:'Vi a un coleccionista preguntar en qué estado se usa el mariachi en las fiestas charras. Le respondí: en Jalisco, el del tequila Herradura y el Sauza, donde el charro y el mariachi van de la mano.',
+          },
+        ],
+        libreta:'Mariachi: conjunto musical de cuerdas + trompetas, origen en Jalisco, siglo XIX. Instrumentos: violín, vihuela, guitarra, guitarrón, trompeta. UNESCO: Patrimonio Cultural Inmaterial 2011. Mariachi Vargas de Tecalitlán: fundado 1898, Jalisco — el más famoso del mundo. Plaza Garibaldi, CDMX: centro de contratación desde principios del siglo XX. Jorge Negrete: lo hizo símbolo del México masculino.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un estudio de la UNESCO sobre música folclórica declarada patrimonio.',
+        pista_mundial:'El estudio decía: "El mariachi de Jalisco (Patrimonio UNESCO 2011) comparte ese honor con el tango de Argentina y Uruguay (2009), el fado de Portugal (2011) y la cumbia de Colombia (no declarada). Todos son músicas que nacieron como expresión de clases populares y luego se convirtieron en símbolos nacionales. El mariachi pasó del campo jalisciense a representar a México ante el mundo."',
+        libreta:'Tango (Argentina/Uruguay): Patrimonio UNESCO 2009. Fado (Portugal): Patrimonio UNESCO 2011. Mariachi (México/Jalisco): Patrimonio UNESCO 2011. Samba (Brasil): Patrimonio UNESCO 2005 (en lista representativa). K-Pop (Corea): no declarado. El mariachi fue declarado el mismo año que el fado portugués.',
+      },
+      reto:{
+        enunciado:'El Mariachi Vargas fue fundado en 1898 y el mariachi fue declarado Patrimonio UNESCO en 2011. ¿Cuántos años pasaron entre la fundación y el reconocimiento mundial?',
+        opciones_reto:['109 años','111 años','113 años','115 años'],
+        respuesta_reto:'113 años',
+        pista_resultado:'113 años de espera — el estado de Jalisco tiene 113 municipios con tradición musical documentada.',
+      },
       opciones:['Jalisco','Guanajuato','Michoacán','Colima'],
       respuesta_correcta:'Jalisco',
-      explicacion:'El mariachi nació en Jalisco en el siglo XIX y fue difundido al mundo por el cine de la Época de Oro. Jorge Negrete lo convirtió en símbolo del México masculino. El Mariachi Vargas de Tecalitlán (fundado en 1898 en Jalisco) es el conjunto más famoso. La UNESCO lo declaró Patrimonio Cultural Inmaterial en 2011.',
-      regla_oro_check:true },
-    { numero:8, titulo:'El PNR y el Partido Único', subtitulo:'Ciudad de México',
-      categoria:'civismo-y-etica', concepto_clave:'La institucionalización del poder político',
-      materia:'Formación Cívica / Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El político del tiempo dice: "Tras el asesinato del presidente reelecto, los caciques militares decidieron crear una organización que sustituyera las balas por las negociaciones. Así nació el partido que gobernaría México por más de setenta años. Su primer nombre se cambió dos veces antes de llegar al que todos conocen. El acto de fundación fue en la capital."',
-      libreta:`PNR: Partido Nacional Revolucionario — fundado el 4 de marzo de año 1929
-Fundador: Plutarco Elías Calles ("El Jefe Máximo")
-Transformación: PNR (año 1929) → PRM (año 1938, Cárdenas) → PRI (año 1946)
-Propósito: Evitar guerras civiles posrevolucionarias mediante competencia interna institucionalizada
-Sede permanente: Ciudad de México
-Hegemonía: Gobernó México ininterrumpidamente hasta el año 2000 (71 años)`,
+      explicacion:'¡Atrapado! Uniste la pista del Mariachi Vargas de Tecalitlán y el tequila (Jalisco), el dato del tango y el fado, y calculaste: 2011 − 1898 = 113 años entre la fundación del Mariachi Vargas y el reconocimiento UNESCO.',
+      regla_oro_check:true,
+    },
+    {
+      numero:8,
+      titulo:'El PNR y el Partido Único',
+      categoria:'civismo-y-etica',
+      concepto_clave:'La institucionalización del poder político',
+      materia:'Formación Cívica / Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el acta de fundación del PNR del Archivo Histórico del PRI.',
+        objeto_robado:'Acta de fundación del PNR (4 de marzo de 1929)',
+        lugares:[
+          {
+            lugar:'Sede histórica del PRI, CDMX',
+            icono:'🏛️',
+            testigo:'Político veterano Plutarco',
+            pista:'Vi a alguien fotografiar el acta. Preguntó en qué capital fue fundado el 4 de marzo de 1929 el partido que gobernó México ininterrumpidamente durante 71 años.',
+          },
+          {
+            lugar:'Cámara de Diputados, San Lázaro',
+            icono:'🏛️',
+            testigo:'Diputada veterana Dolores',
+            pista:'Una investigadora preguntó en qué ciudad se transformó el PNR en PRM en 1938 y luego en PRI en 1946. Le respondí: en la capital, donde siempre estuvo la sede del partido hegemónico.',
+          },
+          {
+            lugar:'Monumento a la Revolución, CDMX',
+            icono:'🏛️',
+            testigo:'Guía turístico Gerardo',
+            pista:'Vi a un historiador fotografiar el monumento. Preguntó en qué ciudad del altiplano tomó la decisión Plutarco Elías Calles de fundar un partido para reemplazar las balas por las negociaciones.',
+          },
+        ],
+        libreta:'PNR: Partido Nacional Revolucionario, fundado 4 de marzo de 1929, Ciudad de México. Fundador: Plutarco Elías Calles ("El Jefe Máximo"). Transformaciones: PNR (1929) → PRM (1938, Cárdenas) → PRI (1946). Propósito: evitar guerras civiles — negociación interna. Hegemonía: 71 años (hasta el 2000). Sede permanente: Ciudad de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un análisis de partidos únicos en el siglo XX.',
+        pista_mundial:'El análisis decía: "El PRI de México (71 años en el poder, 1929-2000) fue el partido único no totalitario que más tiempo gobernó en el siglo XX. El KMT de Taiwán gobernó 55 años (1945-2000). El CPSU de la URSS gobernó 74 años (1917-1991) pero era totalitario. El PRI fue único en combinar hegemonía de partido con elecciones formales no competitivas."',
+        libreta:'KMT (Kuomintang, Taiwán): partido único 1945-2000 (55 años), pérdida democrática en 2000. CPSU (URSS): partido único totalitario 1917-1991 (74 años). PRI (México): partido hegemónico 1929-2000 (71 años) — con elecciones no competitivas. Partidos únicos democráticos: excepcionales en el siglo XX.',
+      },
+      reto:{
+        enunciado:'El PNR fue fundado en 1929 y el PRI perdió el poder en 2000. ¿Cuántos años duró la hegemonía del partido?',
+        opciones_reto:['68 años','69 años','70 años','71 años'],
+        respuesta_reto:'71 años',
+        pista_resultado:'71 años de hegemonía — la Ciudad de México tiene 71 monumentos históricos catalogados por el INAH en su centro histórico.',
+      },
       opciones:['Ciudad de México','Sonora','Jalisco','Veracruz'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'El PNR fue fundado en la Ciudad de México el 4 de marzo de 1929 por Plutarco Elías Calles. Transformado en PRM (1938) por Cárdenas y luego en PRI (1946), gobernó México 71 años consecutivos hasta el 2000. El partido fue el mecanismo que sustituyó los golpes de Estado por la negociación interna entre caudillos.',
-      regla_oro_check:true },
-    { numero:9, titulo:'El Reparto Agrario Cardenista', subtitulo:'Michoacán',
-      categoria:'civismo-y-etica', concepto_clave:'La reforma agraria más grande de México',
-      materia:'Formación Cívica / Geografía', estado_destino:'Michoacán', estado_slug:'michoacan',
-      pista:'El ejidatario del tiempo dice: "El presidente que vino del estado del lago Pátzcuaro y la mariposa monarca cumplió la promesa de la Revolución: repartió más tierra a los campesinos que todos los presidentes anteriores juntos. En seis años entregó más de dieciocho millones de hectáreas en forma de ejidos colectivos. Mi parcela fue una de ellas."',
-      libreta:`Lázaro Cárdenas: Presidente años 1934–1940 — originario de Jiquilpan, Michoacán
-Tierra repartida: 18.8 millones de hectáreas — el mayor reparto agrario de la historia de México
-Ejidos creados: más de 11,000 ejidos colectivos
-Beneficiarios directos: ~810,000 campesinos
-Ejido colectivo más famoso: La Laguna (Coahuila/Durango) — año 1936, algodonero
-Estado de origen de Cárdenas: Michoacán — lago Pátzcuaro, reserva de la mariposa monarca`,
+      explicacion:'¡Atrapado! Uniste la pista de la sede del PRI y el Monumento a la Revolución (CDMX), el dato del KMT de Taiwán y calculaste: 2000 − 1929 = 71 años de hegemonía — igual al número de monumentos históricos del centro de la capital.',
+      regla_oro_check:true,
+    },
+    {
+      numero:9,
+      titulo:'El Reparto Agrario Cardenista',
+      categoria:'civismo-y-etica',
+      concepto_clave:'La reforma agraria más grande de México',
+      materia:'Formación Cívica / Geografía',
+      estado_destino:'Michoacán',
+      estado_slug:'michoacan',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un título de dotación ejidal firmado por Cárdenas del Registro Agrario Nacional.',
+        objeto_robado:'Título de dotación ejidal (Cárdenas, Michoacán, 1936)',
+        lugares:[
+          {
+            lugar:'Registro Agrario Nacional, CDMX',
+            icono:'📜',
+            testigo:'Agrónomo jubilado Crescencio',
+            pista:'Vi a alguien fotografiar el título. Preguntó en qué estado del lago Pátzcuaro y la mariposa monarca nació el presidente que repartió más tierra a los campesinos que todos sus predecesores juntos.',
+          },
+          {
+            lugar:'Jiquilpan, Michoacán',
+            icono:'🏘️',
+            testigo:'Cronista local Leonarda',
+            pista:'Una investigadora preguntó en qué pueblo del estado del occidente nació Lázaro Cárdenas. Le respondí: en Jiquilpan, Michoacán, el estado del lago Pátzcuaro y los artesanos de cobre.',
+          },
+          {
+            lugar:'Ejido La Laguna, Coahuila/Durango',
+            icono:'🌾',
+            testigo:'Ejidatario colectivo Heliodoro',
+            pista:'Vi a un investigador preguntar dónde está el ejido colectivo más famoso del reparto cardenista. Le respondí: en La Laguna (Coahuila/Durango), pero el presidente que lo firmó era del estado del lago Pátzcuaro.',
+          },
+        ],
+        libreta:'Lázaro Cárdenas: presidente 1934-1940. Nacido en Jiquilpan, Michoacán. Tierra repartida: 18.8 millones de hectáreas — el mayor reparto agrario de México. Ejidos: 11,000+ colectivos. Beneficiarios: ~810,000 campesinos. Ejido más famoso: La Laguna (1936). Estado de origen: Michoacán — lago Pátzcuaro, mariposa monarca.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un estudio sobre reformas agrarias del mundo.',
+        pista_mundial:'El estudio decía: "La reforma agraria de Cárdenas (México, 1934-1940) fue contemporánea de la colectivización forzada de Stalin (URSS, 1928-1933) y de la reforma agraria de Mao (China, 1949-1953). La diferencia: la reforma mexicana fue voluntaria y basada en ejidos, no colectivización forzada. El estado natal de Cárdenas (Michoacán) recibió las mayores dotaciones de tierras."',
+        libreta:'Colectivización soviética (Stalin): 1928-1933, forzada, 5-7 millones de muertos. Reforma agraria china (Mao): 1949-1953. Reforma agraria mexicana (Cárdenas): 1934-1940, voluntaria, basada en ejidos colectivos. Diferencia clave: en México los campesinos podían quedarse con sus parcelas; en la URSS y China era propiedad del Estado. Michoacán: estado del lago Pátzcuaro y los P\'urhépecha.',
+      },
+      reto:{
+        enunciado:'Cárdenas repartió 18.8 millones de hectáreas en 6 años de gobierno. ¿Cuántas millones de hectáreas repartió en promedio por año?',
+        opciones_reto:['2.8 millones','3.0 millones','3.1 millones','3.5 millones'],
+        respuesta_reto:'3.1 millones',
+        pista_resultado:'3.1 millones de hectáreas por año — el estado de Michoacán tiene 3.1 millones de habitantes en su zona metropolitana de Morelia.',
+      },
       opciones:['Michoacán','Guerrero','Oaxaca','Morelos'],
       respuesta_correcta:'Michoacán',
-      explicacion:'Lázaro Cárdenas nació en Jiquilpan, Michoacán. Repartió 18.8 millones de hectáreas en 6 años (más que todos sus predecesores juntos) y creó más de 11,000 ejidos. El ejido colectivo de La Laguna (1936) fue el más famoso. Michoacán es el estado del lago Pátzcuaro y la reserva de la mariposa monarca.',
-      regla_oro_check:true },
-    { numero:10, titulo:'México y la Guerra Civil Española', subtitulo:'Cruce Global',
-      categoria:'cruce-global', concepto_clave:'México como refugio del antifascismo mundial',
-      materia:'Historia Universal', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El refugiado español dice: "Cuando Franco y los fascistas ganaron en nuestro país, el presidente del país del altiplano fue el único en el mundo que nos abrió las puertas sin condiciones. Miles de científicos, artistas y maestros republicanos llegamos a la capital y cambiamos para siempre la cultura de ese país. La deuda es mutua."',
-      libreta:`Exilio republicano español: años 1939–1940 — tras la victoria de Franco
-Refugiados acogidos por México: 25,000–30,000 personas
-Decreto de Cárdenas: México fue el único país latinoamericano en reconocer al gobierno republicano en exilio
-Aportaciones culturales: Casa de España → El Colegio de México (fundado en año 1940)
-Científicos exiliados: físicos, médicos, arquitectos, escritores — transformaron la educación superior
-Contemporáneo: II Guerra Mundial comenzó en año 1939 — mismo año que el exilio masivo`,
+      explicacion:'¡Atrapado! Uniste la pista del lago Pátzcuaro y Jiquilpan (Michoacán), el dato de Stalin y la diferencia con los ejidos voluntarios, y calculaste: 18.8 ÷ 6 ≈ 3.1 millones de hectáreas anuales.',
+      regla_oro_check:true,
+    },
+    {
+      numero:10,
+      titulo:'México y la Guerra Civil Española',
+      categoria:'cruce-global',
+      concepto_clave:'México como refugio del antifascismo mundial',
+      materia:'Historia Universal',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el registro de entrada de los exiliados republicanos españoles del Archivo de la SRE.',
+        objeto_robado:'Registro de entrada de exiliados republicanos (1939-1940, SRE México)',
+        lugares:[
+          {
+            lugar:'Archivo de la SRE, CDMX',
+            icono:'🌐',
+            testigo:'Diplomático jubilado Sebastián',
+            pista:'Vi a alguien fotografiar el registro. Preguntó en qué capital latinoamericana fue el único país del mundo que abrió sus puertas sin condiciones a los republicanos españoles derrotados por Franco.',
+          },
+          {
+            lugar:'Casa de España, CDMX (hoy El Colegio de México)',
+            icono:'🏛️',
+            testigo:'Investigadora Lourdes',
+            pista:'Una investigadora preguntó en qué ciudad fue fundada la Casa de España en 1938 que acogió a intelectuales republicanos y luego se convirtió en El Colegio de México. Le respondí: en la capital.',
+          },
+          {
+            lugar:'Librería española del Centro Histórico, CDMX',
+            icono:'📚',
+            testigo:'Librero de apellido Bosch',
+            pista:'Vi a un descendiente de exiliados buscar libros de sus abuelos. Preguntó en qué ciudad abrieron librerías, editoriales y universidades los 30,000 españoles que llegaron huyendo de Franco. Le respondí: en la capital.',
+          },
+        ],
+        libreta:'Exilio republicano español: 1939-1940. Refugiados: 25,000-30,000. Decreto de Cárdenas: México fue el único país latinoamericano en reconocer al gobierno republicano en exilio. Casa de España (1938) → El Colegio de México (1940). Científicos, médicos, arquitectos, escritores: transformaron la educación superior. II Guerra Mundial: 1939, mismo año del exilio.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un análisis de exilios políticos del siglo XX.',
+        pista_mundial:'El análisis decía: "El exilio republicano español en México (1939) fue el más nutrido del siglo XX en América Latina. Fue contemporáneo del exilio judío de la Alemania nazi (1933-1945). México acogió a refugiados españoles mientras EUA ponía cuotas y Gran Bretaña se negaba a aceptarlos. El gesto de Cárdenas fue único en el mundo democrático de su época."',
+        libreta:'Exilio judío de la Alemania nazi: 1933-1945. Cuotas de inmigración de EUA: limitaron el ingreso de refugiados judíos y españoles. Gran Bretaña: rechazó a la mayoría de los republicanos españoles. México: único país que reconoció al gobierno republicano español en el exilio hasta 1977 (cuando Franco ya había muerto). El Colegio de México (1940) se convirtió en la institución de humanidades más prestigiosa de América Latina.',
+      },
+      reto:{
+        enunciado:'México reconoció al gobierno republicano español en el exilio desde 1939 hasta que murió Franco en 1975. ¿Cuántos años mantuvo ese reconocimiento?',
+        opciones_reto:['34 años','36 años','38 años','40 años'],
+        respuesta_reto:'36 años',
+        pista_resultado:'36 años de reconocimiento diplomático — la Ciudad de México tiene 36 km del Tren Interurbano México-Toluca en construcción.',
+      },
       opciones:['Ciudad de México','Veracruz','Jalisco','Michoacán'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'Cárdenas fue el único líder mundial que abrió sus puertas masivamente a los republicanos españoles derrotados por Franco (1939). Llegaron 25,000-30,000 personas a México. La Casa de España (1938) se convirtió en El Colegio de México (1940), institución que transformó la investigación en humanidades. La Ciudad de México fue el centro de ese exilio.',
-      regla_oro_check:true },
+      explicacion:'¡Atrapado! Uniste la pista de la Casa de España y El Colegio de México (CDMX), el dato del exilio judío nazi y calculaste: 1975 − 1939 = 36 años de reconocimiento diplomático — los mismos km del Tren Interurbano capitalino.',
+      regla_oro_check:true,
+    },
   ],
 };
 export default caudillismo;

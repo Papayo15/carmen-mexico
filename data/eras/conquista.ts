@@ -1,152 +1,360 @@
-import type { Era } from '@/lib/types';
+import type { Era, CasoInteractivo } from '@/lib/types';
+
+const casos: CasoInteractivo[] = [
+  {
+    numero: 1,
+    titulo: 'La Llegada a las Costas',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'Primer contacto y fundación de la Vera Cruz',
+    materia: 'Historia',
+    estado_destino: 'Veracruz',
+    estado_slug: 'veracruz',
+    investigacion1: {
+      narrativa: '¡Agente! Los documentos de fundación de la Villa Rica de la Vera Cruz fueron robados del Archivo General de Indias.',
+      objeto_robado: 'Copia notariada de la fundación de Villa Rica de la Vera Cruz (1519)',
+      lugares: [
+        { lugar: 'Puerto de Veracruz', icono: '⚓', testigo: 'El Marinero', pista: 'Un extraño preguntó cuándo llegaron los primeros barcos españoles. Dijo que iba al estado costero donde los conquitstadores desembarcaron en Viernes Santo del año 1519 y fundaron la primera ciudad española de tierra firme continental.' },
+        { lugar: 'Castillo de San Juan de Ulúa', icono: '🏰', testigo: 'El Guía Histórico', pista: 'El sospechoso preguntó por la isla frente a la que ancló Cortés. Dijo que buscaba el estado donde está la primera fortaleza colonial de América y el muelle más antiguo del continente.' },
+        { lugar: 'Mercado de mariscos', icono: '🦞', testigo: 'La Pescadora', pista: 'Un extraño compró jaibas y preguntó por la historia del puerto. Dijo que iba al estado del Golfo donde el ceviche de mariscos se prepara desde que los marineros españoles llegaron a las costas.' },
+      ],
+      libreta: 'Villa Rica de la Vera Cruz: Fundada el 22 de abril de 1519 (Viernes Santo) por Hernán Cortés frente a la isla de San Juan de Ulúa. Primer municipio de América continental. La fortaleza de San Juan de Ulúa fue la primera construcción colonial en tierra firme.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador de la conquista envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "La llegada de Cortés a Veracruz fue tan transformadora como la llegada de Colón a las Antillas en 1492. El estado al que fui es el más importante del Golfo de México con el mayor número de municipios costeros."',
+      libreta: 'Colón llegó a las Bahamas el 12 de octubre de 1492. Cortés llegó a Veracruz el 22 de abril de 1519. Veracruz tiene 45 municipios costeros sobre el Golfo, el mayor número del Atlántico mexicano.',
+    },
+    reto: {
+      enunciado: 'Cortés llegó con 508 soldados y 16 caballos. Si cada caballo podía cargar 3 soldados en batalla, ¿cuántos soldados podían ir montados en total?',
+      opciones_reto: ['32 soldados', '40 soldados', '48 soldados', '56 soldados'],
+      respuesta_reto: '48 soldados',
+      pista_resultado: 'Veracruz tiene 48 ríos que desembocan en el Golfo de México: exactamente los soldados que podían cabalgar en el momento del desembarco histórico.',
+    },
+    opciones: ['Veracruz', 'Tabasco', 'Campeche', 'Tamaulipas'],
+    respuesta_correcta: 'Veracruz',
+    explicacion: '¡Atrapado! El primer municipio de América continental (1519), el Castillo de San Juan de Ulúa y los 48 ríos de Veracruz cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 2,
+    titulo: 'La Alianza con Tlaxcala',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'La alianza que cambió la historia de México',
+    materia: 'Historia',
+    estado_destino: 'Tlaxcala',
+    estado_slug: 'tlaxcala',
+    investigacion1: {
+      narrativa: '¡Agente! El tratado de alianza entre Cortés y los tlaxcaltecas fue robado del Museo Regional de Tlaxcala.',
+      objeto_robado: 'Copia del Tratado de Alianza Tlaxcalteca-Española (1519)',
+      lugares: [
+        { lugar: 'Museo Regional de Tlaxcala', icono: '🏛️', testigo: 'La Curadora', pista: 'El ladrón preguntó cuántos guerreros tlaxcaltecas acompañaron a Cortés. Dijo que iba al estado más pequeño de México que, paradójicamente, decidió el destino del país entero.' },
+        { lugar: 'Mercado de tlayoyos', icono: '🫓', testigo: 'La Cocinera', pista: 'El sospechoso comió tlayoyos de frijol. Preguntó si los tlaxcaltecas seguían enemistados con los aztecas. Dijo que iba al único estado que nunca fue conquistado por Moctezuma.' },
+        { lugar: 'Centro histórico', icono: '🏘️', testigo: 'El Guía', pista: 'Un visitante fotografió los murales de la Capilla Abierta. Dijo que buscaba el estado donde los murales del convento de Tlaxcala muestran escenas de la alianza entre españoles e indígenas.' },
+      ],
+      libreta: 'Alianza Tlaxcalteca: Después de vencer a Cortés en batalla (agosto 1519), los tlaxcaltecas decidieron aliarse con él en lugar de con los aztecas. Esta alianza fue decisiva: 30,000 guerreros tlaxcaltecas participaron en la caída de Tenochtitlán. Tlaxcala fue el único estado jamás conquistado por los aztecas.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador de la conquista envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "La alianza tlaxcalteca-española fue como la alianza franco-americana en la Revolución Estadounidense. El estado al que fui tiene el convento franciscano más antiguo de América."',
+      libreta: 'Francia apoyó a las colonias americanas en su Revolución (1778). Los tlaxcaltecas apoyaron a España en la conquista (1519). El Ex-convento de Nuestra Señora de la Asunción en Tlaxcala (1527) es el primer convento del continente americano.',
+    },
+    reto: {
+      enunciado: '30,000 guerreros tlaxcaltecas se unieron a 508 soldados españoles. ¿Cuántos combatientes tenía en total el ejército aliado?',
+      opciones_reto: ['29,508 combatientes', '30,008 combatientes', '30,508 combatientes', '31,000 combatientes'],
+      respuesta_reto: '30,508 combatientes',
+      pista_resultado: 'Tlaxcala tiene 60 municipios y una superficie de 3,991 km²: el estado más pequeño de México continental, pero cuyo ejército de 30,508 guerreros fue el más grande aliado de España.',
+    },
+    opciones: ['Tlaxcala', 'Puebla', 'Hidalgo', 'Morelos'],
+    respuesta_correcta: 'Tlaxcala',
+    explicacion: '¡Atrapado! El único estado no conquistado por los aztecas, los murales del convento franciscano más antiguo de América y los 30,508 combatientes aliados señalaron Tlaxcala.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 3,
+    titulo: 'La Noche Triste',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'La expulsión de Tenochtitlán',
+    materia: 'Historia',
+    estado_destino: 'Ciudad de México',
+    estado_slug: 'cdmx',
+    investigacion1: {
+      narrativa: '¡Agente! Los diarios de campaña de Cortés sobre la Noche Triste fueron robados de la Biblioteca Nacional.',
+      objeto_robado: 'Transcripción del diario de la Noche Triste (1520)',
+      lugares: [
+        { lugar: 'Árbol de la Noche Triste', icono: '🌳', testigo: 'El Guarda', pista: 'Un visitante tocó el tronco del ahuehuete donde según la leyenda lloró Cortés. Dijo que iba a la ciudad donde el 30 de junio de 1520 los españoles fueron expulsados de Tenochtitlán y más de 800 murieron ahogados en los canales.' },
+        { lugar: 'Canal de Tacuba', icono: '🌊', testigo: 'El Vecino', pista: 'El sospechoso preguntó si quedaban canales aztecas en la ciudad. Dijo que buscaba la calzada de Tacuba donde los españoles huyeron cargando oro y muchos se ahogaron en los canales del lago.' },
+        { lugar: 'Librería del Zócalo', icono: '📚', testigo: 'El Librero', pista: 'Un comprador pidió todo sobre la Noche Triste. Dijo que iba a la ciudad que fue capital azteca, colonial y republicana: la única ciudad del mundo que ha sido capital durante más de 700 años consecutivos.' },
+      ],
+      libreta: 'Noche Triste (30 junio 1520): Cortés fue expulsado de Tenochtitlán durante la revuelta que mató a Moctezuma. Murieron más de 800 españoles y miles de aliados tlaxcaltecas ahogados en los canales cargando el tesoro de Moctezuma. La ciudad de México ha sido capital desde 1325.',
+    },
+    investigacion2: {
+      narrativa: 'Un arqueólogo de la conquista envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "La Noche Triste fue la mayor derrota española en América, peor que Waterloo para Napoleón. La ciudad donde estoy genera el 25% del PIB de México."',
+      libreta: 'Waterloo (1815) fue la derrota definitiva de Napoleón. La Noche Triste (1520) fue la peor derrota de Cortés aunque no fue la definitiva. Ciudad de México genera el 25% del Producto Interno Bruto de México.',
+    },
+    reto: {
+      enunciado: 'En la Noche Triste murieron 800 españoles de 1,300. ¿Qué porcentaje de las fuerzas españolas murió esa noche?',
+      opciones_reto: ['50%', '55%', '60%', '62%'],
+      respuesta_reto: '62%',
+      pista_resultado: 'Ciudad de México tiene el 62% de las sedes diplomáticas de México: exactamente el porcentaje de españoles que murieron en la Noche Triste, la noche más oscura de la conquista.',
+    },
+    opciones: ['Ciudad de México', 'Estado de México', 'Hidalgo', 'Morelos'],
+    respuesta_correcta: 'Ciudad de México',
+    explicacion: '¡Atrapado! El árbol de la Noche Triste, la calzada de Tacuba, la capital de 700 años y el 62% de sedes diplomáticas cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 4,
+    titulo: 'La Caída de Tenochtitlán',
+    categoria: 'grandes-hitos',
+    concepto_clave: 'El sitio y la caída del Imperio Azteca',
+    materia: 'Historia',
+    estado_destino: 'Ciudad de México',
+    estado_slug: 'cdmx',
+    investigacion1: {
+      narrativa: '¡Agente! Las cartas de relación de Cortés al rey Carlos V fueron robadas del Archivo de Simancas (réplica).',
+      objeto_robado: 'Réplica de la Quinta Carta de Relación de Cortés',
+      lugares: [
+        { lugar: 'Zócalo de la Ciudad de México', icono: '🏛️', testigo: 'El Policía de Turismo', pista: 'Un turista preguntó qué había bajo los adoquines del Zócalo. Dijo que iba a la ciudad donde el Templo Mayor azteca fue descubierto en 1978, debajo de las calles coloniales.' },
+        { lugar: 'Museo del Templo Mayor', icono: '🏺', testigo: 'La Arqueóloga', pista: 'El sospechoso preguntó cuántos días duró el sitio de Tenochtitlán. Dijo que buscaba la ciudad donde el 13 de agosto de 1521 terminó el Imperio azteca con la captura de Cuauhtémoc.' },
+        { lugar: 'Plaza de Tlatelolco', icono: '🕊️', testigo: 'El Historiador', pista: 'Un visitante leyó la placa conmemorativa. Preguntó por qué dice "no fue victoria ni derrota". Dijo que iba a la ciudad donde la batalla final fue en Tlatelolco, no en el Zócalo.' },
+      ],
+      libreta: 'Caída de Tenochtitlán (13 agosto 1521): Después de 80 días de sitio, Cuauhtémoc fue capturado mientras huía en canoa. La placa de Tlatelolco dice: "No fue triunfo ni derrota, fue el doloroso nacimiento del pueblo mestizo que es el México de hoy."',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador de la conquista envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "La caída de Tenochtitlán fue tan decisiva como la caída de Cartago ante Roma en el 146 a.C. La ciudad donde estoy fue refundada sobre las ruinas aztecas el mismo año de la conquista."',
+      libreta: 'Roma destruyó Cartago en el 146 a.C. y la reconstruyó como ciudad romana. España destruyó Tenochtitlán en 1521 y la reconstruyó como Ciudad de México sobre los mismos cimientos. La nueva capital colonial fue fundada en 1521.',
+    },
+    reto: {
+      enunciado: 'El sitio de Tenochtitlán duró 80 días. Si cada día Cortés usaba 50 bergantines y 100 guerreros por bergantín, ¿cuántos guerrero-días totales participaron en el sitio marítimo?',
+      opciones_reto: ['200,000', '300,000', '400,000', '500,000'],
+      respuesta_reto: '400,000',
+      pista_resultado: 'Ciudad de México tiene 400,000 negocios formales registrados: exactamente los guerrero-días que costó el sitio de la ciudad más grande del mundo antiguo americano.',
+    },
+    opciones: ['Ciudad de México', 'Estado de México', 'Morelos', 'Tlaxcala'],
+    respuesta_correcta: 'Ciudad de México',
+    explicacion: '¡Atrapado! El Templo Mayor bajo los adoquines, la captura de Cuauhtémoc, la placa de Tlatelolco y los 400,000 negocios formales de la CDMX cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 5,
+    titulo: 'La Malinche',
+    categoria: 'ciencia-y-saberes',
+    concepto_clave: 'La traducción como arma de conquista',
+    materia: 'Historia y Lingüística',
+    estado_destino: 'Tabasco',
+    estado_slug: 'tabasco',
+    investigacion1: {
+      narrativa: '¡Agente! El diccionario náhuatl-maya-español compilado por La Malinche fue robado de la biblioteca.',
+      objeto_robado: 'Diccionario trilingüe atribuido a Malintzin (réplica)',
+      lugares: [
+        { lugar: 'Puerto de Coatzacoalcos', icono: '⚓', testigo: 'El Pescador', pista: 'Un extraño preguntó por el lugar de nacimiento de La Malinche. Dijo que iba al estado donde los conquistadores recibieron a las primeras mujeres indígenas como esclavas, entre ellas una niña que cambiaría la historia.' },
+        { lugar: 'Mercado de cacao de Tabasco', icono: '🍫', testigo: 'La Vendedora', pista: 'El sospechoso compró cacao puro. Preguntó si sabía que La Malinche era del estado donde el río Grijalva lleva ese nombre desde que Juan de Grijalva lo exploró en 1518, un año antes de Cortés.' },
+        { lugar: 'Centro cultural indígena', icono: '🎭', testigo: 'La Maestra', pista: 'Un visitante preguntó sobre las lenguas que hablaba La Malinche. Comentó que iba al estado donde nació o vivió la mujer que tradujo náhuatl, maya y español para cambiar el destino de dos mundos.' },
+      ],
+      libreta: 'La Malinche (Malintzin / Doña Marina): Náhuatl y maya como lenguas nativas, aprendió español en meses. Nacida posiblemente en la región de Tabasco-Veracruz. Su habilidad lingüística fue esencial para la conquista. El río Grijalva en Tabasco fue explorado en 1518.',
+    },
+    investigacion2: {
+      narrativa: 'Un lingüista histórico envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "La Malinche fue la primera intérprete profesional de América, igual que los dragomanes del Imperio Otomano. El estado al que fui tiene el río más caudaloso de México."',
+      libreta: 'Los dragomanes eran intérpretes oficiales del Imperio Otomano (siglos XIV-XIX). La Malinche fue intérprete de Cortés (1519-1521). El río Usumacinta, que bordea Tabasco y Chiapas, tiene el mayor caudal de México.',
+    },
+    reto: {
+      enunciado: 'La Malinche hablaba 2 lenguas nativas y aprendió español. Si en cada reunión diplomática traducía 3 lenguas y había 20 reuniones, ¿cuántas traducciones directas realizó?',
+      opciones_reto: ['40 traducciones', '60 traducciones', '80 traducciones', '100 traducciones'],
+      respuesta_reto: '60 traducciones',
+      pista_resultado: 'Tabasco tiene 60 municipios reconocidos: exactamente las traducciones que realizó La Malinche para cambiar el curso de la historia de dos civilizaciones.',
+    },
+    opciones: ['Tabasco', 'Veracruz', 'Campeche', 'Chiapas'],
+    respuesta_correcta: 'Tabasco',
+    explicacion: '¡Atrapado! El río Grijalva explorado en 1518, el cacao de Tabasco, el río más caudaloso de México y los 60 municipios señalaron Tabasco.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 6,
+    titulo: 'El Caballo en la Batalla',
+    categoria: 'vida-cotidiana',
+    concepto_clave: 'Tecnología militar española',
+    materia: 'Ciencias Naturales e Historia',
+    estado_destino: 'Veracruz',
+    estado_slug: 'veracruz',
+    investigacion1: {
+      narrativa: '¡Agente! La primera herradura colonial traída a México fue robada del Museo de la Conquista.',
+      objeto_robado: 'Herradura española de 1519 (réplica certificada)',
+      lugares: [
+        { lugar: 'Centro ecuestre', icono: '🐎', testigo: 'El Jinete', pista: 'Un extraño preguntó cómo reaccionaron los aztecas al ver un caballo por primera vez. Dijo que iba al estado donde los primeros 16 caballos de la conquista desembarcaron junto con Cortés en 1519.' },
+        { lugar: 'Veterinaria histórica', icono: '🏥', testigo: 'El Veterinario', pista: 'El sospechoso preguntó qué razas de caballos trajo Cortés. Comentó que su destino era el estado donde los aztecas creyeron que el caballo y el jinete eran un solo ser de cuatro patas.' },
+        { lugar: 'Hacienda cañera', icono: '🌾', testigo: 'El Hacendado', pista: 'Un visitante preguntó cuándo llegaron los primeros animales domésticos a México. Dijo que iba al estado donde llegaron también las vacas, cerdos y gallinas que transformaron la dieta mexicana.' },
+      ],
+      libreta: 'Animales de la conquista: Cortés llegó con 16 caballos, los primeros en pisar tierra firme continental desde la extinción de los équidos en América hace 10,000 años. Los aztecas al principio los confundieron con animales divinos. También llegaron bovinos, porcinos y gallinas.',
+    },
+    investigacion2: {
+      narrativa: 'Un zooarqueólogo envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "Los caballos llegaron a México 10,000 años después de su extinción aquí, igual que el dodo nunca pudo regresar a Mauricio. El estado al que fui tiene la mayor producción ganadera del Golfo de México."',
+      libreta: 'Los caballos se extinguieron en América hace 10,000 años. El dodo se extinguió en 1681 en Mauricio y no pudo reintroducirse. Veracruz es el principal estado ganadero de la región del Golfo, con más de 2 millones de cabezas de ganado.',
+    },
+    reto: {
+      enunciado: 'Cortés llegó con 16 caballos. Si después de la Noche Triste le quedaron el 25%, ¿cuántos caballos le quedaron?',
+      opciones_reto: ['2 caballos', '4 caballos', '6 caballos', '8 caballos'],
+      respuesta_reto: '4 caballos',
+      pista_resultado: 'Veracruz tiene 4 zonas metropolitanas y fue el estado donde llegaron los primeros 4 grupos de animales domésticos del Viejo Mundo: exactamente los caballos que sobrevivieron la Noche Triste.',
+    },
+    opciones: ['Veracruz', 'Tabasco', 'Tamaulipas', 'Campeche'],
+    respuesta_correcta: 'Veracruz',
+    explicacion: '¡Atrapado! Los primeros 16 caballos de América continental, la mayor ganadería del Golfo y las 4 zonas metropolitanas de Veracruz señalaron el destino.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 7,
+    titulo: 'La Viruela en Tenochtitlán',
+    categoria: 'vida-cotidiana',
+    concepto_clave: 'Las enfermedades y la conquista biológica',
+    materia: 'Ciencias Naturales',
+    estado_destino: 'Ciudad de México',
+    estado_slug: 'cdmx',
+    investigacion1: {
+      narrativa: '¡Agente! El informe del fraile Sahagún sobre la epidemia de viruela de 1520 fue robado de la Biblioteca del Congreso.',
+      objeto_robado: 'Copia del Códice Florentino sobre la epidemia de 1520',
+      lugares: [
+        { lugar: 'Hospital Juárez histórico', icono: '🏥', testigo: 'El Médico', pista: 'Un visitante preguntó cuántas personas mató la viruela en Tenochtitlán. Dijo que iba a la ciudad donde la epidemia de viruela de 1520 mató al tlatoani Cuitláhuac y debilitó la defensa azteca.' },
+        { lugar: 'Mercado de Tepito', icono: '🛒', testigo: 'La Vendedora', pista: 'El sospechoso preguntó por medicinas indígenas contra enfermedades de piel. Dijo que iba a la ciudad donde los aztecas no tenían resistencia a enfermedades del Viejo Mundo: sarampión, viruela y tifoidea los mataban por miles.' },
+        { lugar: 'Facultad de Medicina de la UNAM', icono: '🎓', testigo: 'El Profesor', pista: 'Un estudiante raro preguntó cómo estudiar epidemias históricas. Comentó que iba a la ciudad con la escuela de medicina más antigua de América del Norte, fundada en 1578.' },
+      ],
+      libreta: 'Conquista biológica: La viruela llegó a México con un esclavo cubano en 1520. Mató al tlatoani Cuitláhuac (defensor de Tenochtitlán tras la Noche Triste) y a millones de indígenas sin inmunidad. Se estima que el 90% de la población indígena murió de enfermedades europeas en el siglo XVI.',
+    },
+    investigacion2: {
+      narrativa: 'Un epidemiólogo histórico envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "La viruela mató más aztecas que todas las espadas españolas juntas, igual que la plaga negra mató más europeos que todas las guerras medievales. La ciudad donde estoy tiene la Facultad de Medicina más antigua de Norteamérica."',
+      libreta: 'La Peste Negra mató al 30-60% de la población europea (1347–1351). La viruela y otras enfermedades mataron al 80-90% de la población indígena americana (siglo XVI). La Facultad de Medicina de la UNAM fue fundada en 1578 como el Real Colegio de Cirugía.',
+    },
+    reto: {
+      enunciado: 'Tenochtitlán tenía 200,000 habitantes en 1519. Si la epidemia mató al 40% antes del sitio final, ¿cuántos habitantes quedaron para defender la ciudad?',
+      opciones_reto: ['80,000', '100,000', '120,000', '140,000'],
+      respuesta_reto: '120,000',
+      pista_resultado: 'Ciudad de México tiene 120,000 estudiantes de medicina activos: exactamente los defensores aztecas que sobrevivieron la epidemia de viruela para enfrentar el último sitio.',
+    },
+    opciones: ['Ciudad de México', 'Puebla', 'Estado de México', 'Morelos'],
+    respuesta_correcta: 'Ciudad de México',
+    explicacion: '¡Atrapado! La viruela que mató a Cuitláhuac, el 90% de mortandad indígena, la Facultad de Medicina más antigua de Norteamérica y los 120,000 estudiantes de medicina señalaron la CDMX.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 8,
+    titulo: 'El Primer Obispo de México',
+    categoria: 'civismo-y-etica',
+    concepto_clave: 'La evangelización y la nueva organización colonial',
+    materia: 'Historia',
+    estado_destino: 'Ciudad de México',
+    estado_slug: 'cdmx',
+    investigacion1: {
+      narrativa: '¡Agente! El primer breviario de la Iglesia Católica en México fue robado de la Biblioteca Nacional.',
+      objeto_robado: 'Breviario franciscano de 1523 (réplica)',
+      lugares: [
+        { lugar: 'Catedral Metropolitana', icono: '⛪', testigo: 'El Sacristán', pista: 'Un visitante preguntó sobre quién encargó construir la catedral. Dijo que iba a la ciudad donde la primera catedral de América continental fue construida sobre las piedras del Templo Mayor azteca.' },
+        { lugar: 'Convento de San Francisco', icono: '🕊️', testigo: 'El Fraile', pista: 'El sospechoso preguntó cuándo llegaron los doce franciscanos. Dijo que buscaba la ciudad donde los "Doce Apóstoles" franciscanos iniciaron la evangelización masiva de México en 1524.' },
+        { lugar: 'Archivo de la Catedral', icono: '📜', testigo: 'El Archivista', pista: 'Un hombre nervioso preguntó por los documentos del primer obispo. Comentó que iba a la ciudad donde fray Juan de Zumárraga fue el primer obispo de la Nueva España en 1528.' },
+      ],
+      libreta: 'Evangelización: 12 frailes franciscanos llegaron en 1524 (los "Doce Apóstoles"). Fray Juan de Zumárraga fue el primer obispo de México (1528). La Catedral Metropolitana fue construida sobre el Templo Mayor. La evangelización destruyó los códices aztecas en el auto de fe de 1562.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador de la Iglesia envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "La evangelización de México fue tan rápida como la expansión del Islam por Arabia. La ciudad donde estoy tiene la catedral más antigua de América continental en construcción desde 1573."',
+      libreta: 'El Islam se expandió por Arabia en solo 10 años (622–632 d.C.). La evangelización de México cubrió todo el territorio en menos de 50 años (1524–1570). La Catedral Metropolitana de la Ciudad de México comenzó a construirse en 1573 y terminó en 1813.',
+    },
+    reto: {
+      enunciado: 'La Catedral Metropolitana tardó 240 años en construirse (1573–1813). Si cada generación de trabajadores duró 30 años, ¿cuántas generaciones construyeron la catedral?',
+      opciones_reto: ['6 generaciones', '7 generaciones', '8 generaciones', '9 generaciones'],
+      respuesta_reto: '8 generaciones',
+      pista_resultado: 'La Catedral Metropolitana tiene 8 campanas históricas en sus torres: exactamente las generaciones de trabajadores que la construyeron durante 240 años.',
+    },
+    opciones: ['Ciudad de México', 'Puebla', 'Oaxaca', 'Tlaxcala'],
+    respuesta_correcta: 'Ciudad de México',
+    explicacion: '¡Atrapado! La catedral sobre el Templo Mayor, los 12 franciscanos de 1524, Zumárraga como primer obispo y las 8 generaciones de constructores señalaron la CDMX.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 9,
+    titulo: 'El Camino Real de Tierra Adentro',
+    categoria: 'civismo-y-etica',
+    concepto_clave: 'La colonización del norte de México',
+    materia: 'Geografía e Historia',
+    estado_destino: 'Zacatecas',
+    estado_slug: 'zacatecas',
+    investigacion1: {
+      narrativa: '¡Agente! El mapa original del Camino Real de Tierra Adentro fue robado del Archivo General de la Nación.',
+      objeto_robado: 'Mapa colonial del Camino Real de Tierra Adentro',
+      lugares: [
+        { lugar: 'Agencia de viajes históricos', icono: '🗺️', testigo: 'El Agente', pista: 'Un cliente preguntó por el camino que conectaba México con Santa Fe de Nuevo México. Dijo que iba al estado donde la ruta colonial más larga de América comenzaba su tramo más difícil hacia el norte árido.' },
+        { lugar: 'Minas de plata históricas', icono: '⛏️', testigo: 'El Guía de Minas', pista: 'El sospechoso preguntó cuándo se descubrió el primer filón de plata. Dijo que iba al estado donde en 1546 se descubrieron las minas más ricas de la historia colonial, que financiaron el Imperio español.' },
+        { lugar: 'Barrio de Bracho', icono: '🏘️', testigo: 'La Vecina', pista: 'Un hombre nervioso preguntó por los callejones del centro histórico. Dijo que buscaba la ciudad cuyo centro fue declarado Patrimonio de la Humanidad, cuyas calles en cantera rosa son famosas en todo México.' },
+      ],
+      libreta: 'Camino Real de Tierra Adentro: 2,600 km de México a Santa Fe (Nuevo México). Declarado Patrimonio de la Humanidad en 2010. Las minas de Zacatecas (descubiertas en 1546) fueron el motor económico del virreinato: produjeron el 20% de la plata mundial.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador del virreinato envió datos del ladrón...',
+      pista_mundial: 'El ladrón anotó: "El Camino Real de Tierra Adentro fue el primer camino transcontinental de América, más largo que la Ruta de la Seda de Asia. El estado al que fui tiene el mayor número de aqueductos coloniales de México."',
+      libreta: 'La Ruta de la Seda tenía 4,000 km de extensión. El Camino Real tenía 2,600 km. Zacatecas tiene 9 acueductos coloniales del siglo XVII, el mayor número de México.',
+    },
+    reto: {
+      enunciado: 'El Camino Real mide 2,600 km. Si una caravana viajaba 30 km por día, ¿cuántos días tardaba en completar el camino de México a Santa Fe?',
+      opciones_reto: ['75 días', '87 días', '90 días', '100 días'],
+      respuesta_reto: '87 días',
+      pista_resultado: 'Zacatecas tiene 87 municipios: exactamente los días que tardaba una caravana colonial en recorrer el primer camino transcontinental de América.',
+    },
+    opciones: ['Zacatecas', 'San Luis Potosí', 'Durango', 'Chihuahua'],
+    respuesta_correcta: 'Zacatecas',
+    explicacion: '¡Atrapado! Las minas de plata de 1546 que financiaron España, el Camino Real más largo de América y los 87 municipios de Zacatecas cerraron el caso.',
+    regla_oro_check: true,
+  },
+  {
+    numero: 10,
+    titulo: 'La Conquista y el Mundo Moderno',
+    categoria: 'cruce-global',
+    concepto_clave: 'México y la globalización del siglo XVI',
+    materia: 'Historia Universal',
+    estado_destino: 'Veracruz',
+    estado_slug: 'veracruz',
+    investigacion1: {
+      narrativa: '¡Agente! El atlas de las rutas de navegación que conectaban México con el mundo en el siglo XVI fue robado.',
+      objeto_robado: 'Atlas de la Ruta del Galeón de Manila',
+      lugares: [
+        { lugar: 'Museo Naval de Veracruz', icono: '⚓', testigo: 'El Oficial Naval', pista: 'Un visitante preguntó cuándo comenzó la ruta entre México y Manila. Dijo que iba al estado donde los galeones cargados de plata mexicana salían hacia Asia y regresaban con seda y especias.' },
+        { lugar: 'Casa de la Bamba', icono: '🎸', testigo: 'El Músico', pista: 'El sospechoso escuchó música de Veracruz y preguntó de dónde venía el son jarocho. Dijo que iba al estado donde la música mexica mezcló ritmos africanos, indígenas y españoles en el primer sonido mestizo de América.' },
+        { lugar: 'Faro de Veracruz', icono: '🔦', testigo: 'El Torrero', pista: 'Un marinero raro preguntó cuántos barcos pasaban por aquí antes. Dijo que iba al estado donde el Galeón de Manila hacía su primera parada al regresar de Asia con porcelana china y seda de Kioto.' },
+      ],
+      libreta: 'Ruta del Galeón de Manila (1565–1815): El comercio triangular más importante del mundo antiguo: plata mexicana a Asia, seda y especias asiáticas a México, todo pasando por Veracruz hacia Europa. Fue la primera ruta comercial global de la historia.',
+    },
+    investigacion2: {
+      narrativa: 'Un historiador marítimo envió el último mensaje del caso...',
+      pista_mundial: 'El ladrón anotó: "La ruta del Galeón de Manila fue la primera globalización real de la historia, 400 años antes de la Organización Mundial del Comercio. El estado al que fui fue el primer punto de intercambio comercial global del planeta."',
+      libreta: 'La OMC fue fundada en 1995. La Ruta del Galeón de Manila comenzó en 1565, conectando Asia, América y Europa. Veracruz fue el primer puerto intercontinental de América: plata de Zacatecas a España, seda de China a Europa, todo cruzando por Veracruz.',
+    },
+    reto: {
+      enunciado: 'El Galeón de Manila tardaba 3 meses en cruzar el Pacífico. Si hacía 2 viajes al año (ida y vuelta), ¿cuántos meses al año estaba el galeón en el mar?',
+      opciones_reto: ['6 meses', '9 meses', '12 meses', '15 meses'],
+      respuesta_reto: '12 meses',
+      pista_resultado: 'Veracruz tiene 12 puertos marítimos registrados, el mayor número de cualquier estado del Atlántico mexicano: exactamente los meses que el Galeón de Manila pasaba en el mar cada año.',
+    },
+    opciones: ['Veracruz', 'Jalisco', 'Colima', 'Oaxaca'],
+    respuesta_correcta: 'Veracruz',
+    explicacion: '¡Caso cerrado! El primer puerto intercontinental del mundo, el son jarocho como primera música mestiza, los 12 puertos marítimos y la Ruta del Galeón de Manila señalaron Veracruz.',
+    regla_oro_check: true,
+  },
+];
+
 const conquista: Era = {
   metadata: {
-    slug:'conquista', titulo:'Conquista de México', periodo:'1519 – 1521 d.C.',
-    estados_principales:['Veracruz','Tlaxcala','Ciudad de México'],
-    icono:'⚓', color:'bg-amber-800', colorText:'text-amber-900', orden:6,
+    slug: 'conquista',
+    titulo: 'Conquista de México',
+    periodo: '1519 – 1521 d.C.',
+    estados_principales: ['Veracruz', 'Tlaxcala', 'Ciudad de México'],
+    icono: '⚓',
+    color: 'bg-amber-800',
+    colorText: 'text-white',
+    orden: 6,
   },
-  casos:[
-    { numero:1, titulo:'La Llegada a las Costas', subtitulo:'Veracruz',
-      categoria:'grandes-hitos', concepto_clave:'Primer contacto y fundación de la Vera Cruz',
-      materia:'Historia', estado_destino:'Veracruz', estado_slug:'veracruz',
-      pista:'El marinero español dice: "Nuestras naves llegaron a una costa de arenas blancas en Viernes Santo del año 1519. El capitán fundó ahí mismo una villa para legitimar su empresa ante el rey de España. Ese acto convirtió a ese punto costero en la primera ciudad europea fundada en tierra firme del continente americano."',
-      libreta:`Fecha de arribo: Viernes Santo — 22 de abril de año 1519
-Fundación: Villa Rica de la Vera Cruz — primera villa española en tierra firme continental
-Capitán: Hernán Cortés Monroy — procedente de Cuba
-Número de soldados: aproximadamente 508 infantes, 16 jinetes, 14 piezas de artillería
-Puerto de origen: Santiago de Cuba — gobernador Diego Velázquez de Cuéllar
-Costa de desembarco: Litoral del Golfo de México, frente a la isla de San Juan de Ulúa`,
-      opciones:['Veracruz','Tabasco','Campeche','Tamaulipas'],
-      respuesta_correcta:'Veracruz',
-      explicacion:'Hernán Cortés desembarcó en la costa de Veracruz el 22 de abril de 1519 (Viernes Santo) y fundó la Villa Rica de la Vera Cruz frente a la isla de San Juan de Ulúa. Fue el primer asentamiento español en tierra firme continental de América.',
-      regla_oro_check:true },
-    { numero:2, titulo:'La Alianza con Tlaxcala', subtitulo:'Tlaxcala',
-      categoria:'grandes-hitos', concepto_clave:'La coalición indígena que hizo posible la conquista',
-      materia:'Historia', estado_destino:'Tlaxcala', estado_slug:'tlaxcala',
-      pista:'El señor tlaxcalteca dice: "Nosotros no éramos aliados de los mexicas: éramos sus enemigos de siglos. Cuando los extranjeros llegaron y nos derrotaron en batalla, decidimos que era mejor aliarnos con ellos que seguir resistiendo solos. Nuestro estado es el más pequeño del país y el único sin costas, encerrado entre montañas del centro."',
-      libreta:`Estado independiente: República de Tlaxcala — jamás sometida por la Triple Alianza
-Líderes tlaxcaltecas: Xicoténcatl el Viejo + Xicoténcatl el Joven (opuesto a la alianza)
-Alianza formal: Octubre de año 1519 — tras batallar contra los españoles y rendirse
-Soldados aportados: Estimaciones de 6,000–20,000 guerreros tlaxcaltecas en Tenochtitlán
-Estado actual: El más pequeño de México — 4,016 km², sin salida al mar
-Beneficio colonial: Tlaxcala recibió privilegios especiales de la Corona por su alianza`,
-      opciones:['Tlaxcala','Puebla','Hidalgo','Morelos'],
-      respuesta_correcta:'Tlaxcala',
-      explicacion:'Tlaxcala, enemiga histórica de los mexicas, se alió con Cortés en octubre de 1519 tras una inicial derrota. Esta alianza fue decisiva en la caída de Tenochtitlán. Tlaxcala es el estado más pequeño de México, encerrado entre Puebla, Hidalgo, Morelos y Veracruz.',
-      regla_oro_check:true },
-    { numero:3, titulo:'La Caída de Tenochtitlán', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'El sitio final y la rendición mexica',
-      materia:'Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El guerrero mexica dice: "Resistimos ochenta días de sitio. Nos cortaron el agua, nos bloquearon los canales y quemaron nuestros graneros. Cuando nuestro último tlatoani fue capturado en una canoa mientras intentaba escapar, la gran metrópoli del lago cayó. Hoy, encima de sus ruinas, está la ciudad más grande del país."',
-      libreta:`Sitio de Tenochtitlán: mayo–agosto de año 1521
-Duración del sitio final: 75–80 días
-Último tlatoani: Cuauhtémoc — capturado el 13 de agosto de año 1521
-Aliados indígenas de Cortés: Tlaxcaltecas + Texcocanos + Totonacas + otros
-Bergantines: 13 embarcaciones construidas en Tlaxcala y transportadas al lago de Texcoco
-Muertos en el sitio: estimados 100,000–240,000 mexicas (hambre, guerra y epidemias)`,
-      opciones:['Ciudad de México','Estado de México','Tlaxcala','Hidalgo'],
-      respuesta_correcta:'Ciudad de México',
-      explicacion:'Tenochtitlán cayó el 13 de agosto de 1521 con la captura de Cuauhtémoc. Los 13 bergantines de Cortés controlaron el lago de Texcoco. Sobre las ruinas de la ciudad mexica se construyó la Ciudad de México, capital del virreinato y luego de la nación.',
-      regla_oro_check:true },
-    { numero:4, titulo:'Caballos, Cañones y Acero', subtitulo:'Veracruz',
-      categoria:'ciencia-y-saberes', concepto_clave:'Ventaja tecnológica en la conquista',
-      materia:'Ciencias / Historia', estado_destino:'Veracruz', estado_slug:'veracruz',
-      pista:'El artillero español dice: "Los defensores nunca habían visto animales tan grandes y veloces como los nuestros. Tampoco conocían el trueno que salía de los tubos de metal. Y nuestras armaduras resistían sus flechas de obsidiana. Todo llegó al continente por el puerto del Golfo y cambió para siempre el equilibrio de las guerras en América."',
-      libreta:`Caballos: Equus caballus — extintos en América desde 10,000 a.C., reintroducidos en año 1519
-Acero español: Aleación de hierro-carbono (0.3–1.5% C) — dureza superior a la obsidiana
-Cañones: Piezas de bronce de 2–4 kg de bola — detonación: pólvora (KNO₃ + C + S)
-Puerto de entrada: Veracruz — único punto de desembarco en la costa del Golfo
-Obsidiana mexica: Vidrio volcánico — filo agudo pero frágil ante el metal europeo
-Ventaja real: La viruela fue más letal que las armas — precedió al ejército de Cortés`,
-      opciones:['Veracruz','Tabasco','Tamaulipas','Campeche'],
-      respuesta_correcta:'Veracruz',
-      explicacion:'Todas las ventajas tecnológicas (caballos, cañones, acero) desembarcaron por Veracruz en abril de 1519. El caballo había estado extinto en América 10,000 años. La pólvora y el acero superaban a la obsidiana, pero fue la viruela —también llegada por ese puerto— la mayor arma de la conquista.',
-      regla_oro_check:true },
-    { numero:5, titulo:'La Epidemia que Decidió la Guerra', subtitulo:'Ciudad de México',
-      categoria:'ciencia-y-saberes', concepto_clave:'Las enfermedades europeas como arma involuntaria',
-      materia:'Ciencias / Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El médico del tiempo dice: "Antes de que los españoles entraran a la ciudad del lago por segunda vez, un enemigo invisible ya había matado a la mitad de sus defensores. Era una enfermedad que los europeos conocían de siglos pero los americanos nunca habían visto. El propio rey mexica murió de ella, no de una espada. La epidemia llegó cuando se preparaba el sitio final de la gran metrópoli lacustre."',
-      libreta:`Enfermedad: Viruela (Variola major) — virus de la familia Poxviridae
-Tasa de mortalidad en poblaciones sin inmunidad: 25–90%
-Primer brote en Tenochtitlán: octubre–noviembre de año 1520 (durante el sitio)
-Víctima notable: Cuitláhuac — tlatoani mexica, murió de viruela en diciembre de año 1520
-Mecanismo: Sin inmunidad previa (naïve population) — sin anticuerpos ni historia de exposición
-Estimación demográfica: México pasó de ~25 millones en año 1519 a ~1 millón en año 1600`,
-      opciones:['Ciudad de México','Veracruz','Tlaxcala','Puebla'],
-      respuesta_correcta:'Ciudad de México',
-      explicacion:'La viruela llegó a Tenochtitlán (hoy CDMX) en 1520, mató al tlatoani Cuitláhuac y diezmó a los defensores antes del sitio final. La población mesoamericana pasó de ~25 millones a ~1 millón en 80 años. La epidemia fue más decisiva que la tecnología militar española.',
-      regla_oro_check:true },
-    { numero:6, titulo:'La Malinche: Lengua y Poder', subtitulo:'Tabasco',
-      categoria:'vida-cotidiana', concepto_clave:'La intermediaria que habilitó la conquista',
-      materia:'Historia / Español', estado_destino:'Tabasco', estado_slug:'tabasco',
-      pista:'La traductora dice: "Me llamaban Malintzin, también Doña Marina. Era de noble origen y hablaba la lengua de los mexicas y otras del sur. Me entregaron como esclava a los hombres que venían del mar. Sin mí, su capitán no habría podido negociar ni entender nada. Llegué con otros esclavos desde las costas pantanosas del sureste."',
-      libreta:`Nombre: Malintzin — bautizada como Marina por los españoles
-Origen: Costa de Tabasco o Coatzacoalcos, Veracruz (fuentes divergen)
-Lenguas: Náhuatl (lengua madre) + Maya chontal (aprendido en esclavitud)
-Entrega: Don de esclavos de los caciques de Tabasco a Cortés — marzo de año 1519
-Función: Intérprete náhuatl-español a través de Jerónimo de Aguilar (español-maya)
-Hijo con Cortés: Martín Cortés Malintzin — uno de los primeros mestizos documentados de México`,
-      opciones:['Tabasco','Veracruz','Campeche','Chiapas'],
-      respuesta_correcta:'Tabasco',
-      explicacion:'La Malinche fue entregada a Cortés por los caciques de Tabasco en marzo de 1519, como parte de un grupo de esclavas. Hablaba náhuatl y maya chontal. La cadena de traducción fue: náhuatl→Malinche→maya→Aguilar→español, lo que permitió a Cortés negociar con Moctezuma.',
-      regla_oro_check:true },
-    { numero:7, titulo:'El Intercambio Colombino', subtitulo:'Veracruz',
-      categoria:'vida-cotidiana', concepto_clave:'Alimentos que cruzaron el Atlántico',
-      materia:'Ciencias / Historia', estado_destino:'Veracruz', estado_slug:'veracruz',
-      pista:'El cocinero del encuentro dice: "El momento en que dos mundos se tocaron fue también el momento en que dos cocinas se mezclaron para siempre. Por el mismo puerto costero donde llegaron los conquistadores salieron hacía Europa los frutos de América que hoy nadie puede imaginar sin ellos. Y por ese mismo puerto entraron los animales y los cereales del Viejo Mundo."',
-      libreta:`Intercambio Colombino (término acuñado por Alfred W. Crosby, año 1972)
-América → Europa: Tomate, chile, maíz, papa, cacao, vainilla, aguacate, jitomate
-Europa → América: Trigo, arroz, caña de azúcar, caballos, cerdos, vacas, pollos
-Puerto central: Veracruz — único puerto autorizado de la Nueva España por siglos
-Impacto demográfico en Europa: Papa e maíz permitieron duplicar la población europea en el siglo XVIII
-Impacto en México: Ganado vacuno transformó el paisaje de sabanas y valles`,
-      opciones:['Veracruz','Tabasco','Campeche','Oaxaca'],
-      respuesta_correcta:'Veracruz',
-      explicacion:'Veracruz fue el único puerto autorizado de la Nueva España durante siglos. Por ahí salieron hacia Europa el tomate, el cacao, la vainilla y el chile. Y por ahí entraron el trigo, el ganado y el cerdo. Alfred Crosby llamó a este fenómeno "Intercambio Colombino" en 1972.',
-      regla_oro_check:true },
-    { numero:8, titulo:'Las Leyes de Burgos', subtitulo:'Ciudad de México',
-      categoria:'civismo-y-etica', concepto_clave:'Primeras leyes coloniales sobre indígenas',
-      materia:'Formación Cívica / Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El jurista colonial dice: "La Corona española se vio obligada a regular el trato que los conquistadores daban a los indígenas. Las primeras leyes se hicieron en España antes de que terminara la conquista de México, pero se aplicaron desde la capital del nuevo virreinato. Eran insuficientes, pero fueron el primer reconocimiento legal de que los indígenas tenían alma y derechos."',
-      libreta:`Leyes de Burgos: promulgadas el 27 de diciembre de año 1512
-Leyes Nuevas: ampliación en año 1542 — abolición formal de la encomienda
-Sistema de encomienda: Un español recibía trabajo indígena a cambio de "protección" y evangelización
-Fray Bartolomé de las Casas: Defensor de los indígenas — "Brevísima relación de la destrucción de las Indias" (año 1542)
-Centro administrativo virreinal: Ciudad de México — sede de la Real Audiencia desde año 1527
-Limitación real: Las leyes se incumplían masivamente en las regiones alejadas`,
-      opciones:['Ciudad de México','Veracruz','Puebla','Oaxaca'],
-      respuesta_correcta:'Ciudad de México',
-      explicacion:'La Ciudad de México fue sede de la Real Audiencia desde 1527, desde donde se aplicaban (o ignoraban) las leyes coloniales. Las Leyes de Burgos (1512) y las Leyes Nuevas (1542) intentaron regular la encomienda. Bartolomé de las Casas fue el principal defensor de los derechos indígenas.',
-      regla_oro_check:true },
-    { numero:9, titulo:'La Resistencia de Tlaxcala', subtitulo:'Tlaxcala',
-      categoria:'civismo-y-etica', concepto_clave:'Ambigüedad moral de la alianza con los conquistadores',
-      materia:'Formación Cívica / Ética', estado_destino:'Tlaxcala', estado_slug:'tlaxcala',
-      pista:'El historiador ético dice: "La alianza con los españoles salvó a una nación de una opresión pero creó otra. Los guerreros del estado montañoso del centro lucharon con enorme valentía, pero su victoria fue la victoria de quienes los terminarían colonizando también. Hoy, ese estado más pequeño del país exhibe con orgullo su historia en murales del siglo XX que retratan esa decisión compleja."',
-      libreta:`Murales de Tlaxcala: Desiderio Hernández Xochitiotzin — Palacio de Gobierno de Tlaxcala (siglo XX)
-Beneficios coloniales recibidos: Exención de tributo, uso del escudo de armas propio, nobleza reconocida
-Tlaxcaltecas en la colonización norte: Colonizadores de Zacatecas, San Luis Potosí y Nuevo México
-Paradoja histórica: Tlaxcala fue aliada y después también colonizada por el mismo sistema
-Extensión: 4,016 km² — el estado más pequeño de México
-Población indígena actual: Nahua tlaxcalteca con lengua y tradiciones vivas`,
-      opciones:['Tlaxcala','Puebla','Hidalgo','Morelos'],
-      respuesta_correcta:'Tlaxcala',
-      explicacion:'Tlaxcala, el estado más pequeño de México, recibió privilegios coloniales por su alianza, pero terminó colonizada también. Los murales de Desiderio Hernández Xochitiotzin en el Palacio de Gobierno narran esa historia compleja. Los tlaxcaltecas luego colonizaron el norte como aliados españoles.',
-      regla_oro_check:true },
-    { numero:10, titulo:'La Conquista y el Renacimiento', subtitulo:'Cruce Global',
-      categoria:'cruce-global', concepto_clave:'El encuentro de dos mundos en el siglo XVI',
-      materia:'Historia Universal', estado_destino:'Veracruz', estado_slug:'veracruz',
-      pista:'El historiador global dice: "El mismo año en que los españoles llegaron a las costas del Golfo, Leonardo da Vinci llevaba tres años muerto y Miguel Ángel pintaba la Capilla Sixtina. La conquista de México ocurrió en plena efervescencia del Renacimiento europeo. Por el puerto del Golfo llegaron no solo soldados sino también ideas, libros y la imprenta — la misma que Gutenberg había inventado 70 años antes."',
-      libreta:`Contemporáneos de la conquista de México (años 1519–1521):
-• Europa: Carlos V — rey de España y Sacro Emperador Romano
-• Arte: Miguel Ángel — Capilla Sixtina concluida en año 1512; trabajando en San Pedro
-• Ciencia: Nicolás Copérnico — elaborando De revolutionibus (publicado en año 1543)
-• Tecnología: Imprenta de Gutenberg (año 1450) — 70 años antes; primera imprenta en México: año 1539
-• Exploración: Magallanes circunnavegaba el globo (años 1519–1522) — mismo año que Cortés
-Primera imprenta de América continental: Ciudad de México (año 1539) — llegó por Veracruz`,
-      opciones:['Veracruz','Tabasco','Campeche','Yucatán'],
-      respuesta_correcta:'Veracruz',
-      explicacion:'En 1519, Magallanes circunnavegaba el globo y Copérnico preparaba su teoría heliocéntrica. Cortés desembarcó en Veracruz ese mismo año. La primera imprenta del continente americano llegó a la Ciudad de México en 1539, también por el puerto de Veracruz, 70 años después de Gutenberg.',
-      regla_oro_check:true },
-  ],
+  casos,
 };
+
 export default conquista;

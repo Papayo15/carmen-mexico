@@ -6,147 +6,496 @@ const porfiriato: Era = {
     icono:'🏭', color:'bg-zinc-700', colorText:'text-zinc-900', orden:11,
   },
   casos:[
-    { numero:1, titulo:'El Ferrocarril de México', subtitulo:'Veracruz',
-      categoria:'grandes-hitos', concepto_clave:'La modernización del transporte y el territorio',
-      materia:'Historia / Geografía', estado_destino:'Veracruz', estado_slug:'veracruz',
-      pista:'El maquinista del tiempo dice: "El sueño del virreinato era conectar el océano Atlántico con la capital. En el Porfiriato ese sueño se cumplió: una máquina de vapor trazó rieles desde el puerto del Golfo hasta la capital en menos de un día de viaje. Antes tardabas diez días en diligencia. El presidente que lo inauguró en el año final del gobierno de Juárez lo terminó él mismo décadas después."',
-      libreta:`Ferrocarril Mexicano (México–Veracruz): Inaugurado el 1 de enero de año 1873
-Longitud: 424 km — primer ferrocarril de larga distancia de México
-Tiempo de viaje: 12 horas (vs. 8–12 días en diligencia)
-Velocidad máxima: 40–60 km/h
-Red total en el Porfiriato: De 640 km en año 1876 a 19,280 km en año 1910
-Inversión: Capital inglés y estadounidense — Pearson & Son + otros consorcios`,
+    {
+      numero:1,
+      titulo:'El Ferrocarril de México',
+      categoria:'grandes-hitos',
+      concepto_clave:'La modernización del transporte y el territorio',
+      materia:'Historia / Geografía',
+      estado_destino:'Veracruz',
+      estado_slug:'veracruz',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una locomotora de vapor en miniatura (réplica de 1873) del Museo Ferrocarrilero de Puebla.',
+        objeto_robado:'Locomotora miniatura Ferrocarril Mexicano (1873)',
+        lugares:[
+          {
+            lugar:'Estación del Ferrocarril de Orizaba',
+            icono:'🚂',
+            testigo:'Maquinista jubilado Felipe',
+            pista:'Vi a alguien con la caja de la locomotora. Dijo que iba al estado donde el primer tren de México llegó desde la capital pasando por las montañas hacia el mar, el Golfo de México.',
+          },
+          {
+            lugar:'Puerto Comercial de Veracruz',
+            icono:'⚓',
+            testigo:'Capitán de puerto Rodrigo',
+            pista:'Una mujer con maletín preguntó cuál estado era el destino del primer ferrocarril de larga distancia de México. Le dije que era aquí, donde los barcos ingleses descargaban las locomotoras que después recorrían el país.',
+          },
+          {
+            lugar:'Aduana Marítima de Veracruz',
+            icono:'🏢',
+            testigo:'Aduanero Joaquín',
+            pista:'Un turista preguntó en qué estado del Golfo terminó el primer tren que tardaba 12 horas en lugar de diez días de diligencia desde la capital. Le respondí que en el del café de altura y los jarochos.',
+          },
+        ],
+        libreta:'Ferrocarril Mexicano (México-Veracruz): inaugurado 1 de enero de 1873. Longitud: 424 km. Tiempo: 12 horas vs 8-12 días en diligencia. Velocidad: 40-60 km/h. Red total en el Porfiriato: de 640 km (1876) a 19,280 km (1910). Capital: inglés y estadounidense (Pearson & Son). Puerto de entrada de locomotoras: Veracruz.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un mapa ferroviario con rutas marcadas en rojo.',
+        pista_mundial:'El mapa tenía una nota: "El Ferrocarril Mexicano (1873) llegó 33 años después que el primero del mundo (Liverpool-Manchester, 1830). En ese tiempo, Gran Bretaña ya tenía 25,000 km de vías. El estado terminal del tren mexicano fue el mismo puerto que recibió a Hernán Cortés en 1519."',
+        libreta:'Primer ferrocarril del mundo: Liverpool-Manchester (Gran Bretaña), 1830. Red británica en 1873: 25,000 km. México en 1873: 424 km (el primero de larga distancia). Veracruz: primer puerto del continente — aquí llegó Cortés en 1519 y aquí llegaron las locomotoras inglesas en 1873.',
+      },
+      reto:{
+        enunciado:'La red ferroviaria creció de 640 km en 1876 a 19,280 km en 1910. ¿Cuántos km se agregaron en total?',
+        opciones_reto:['17,640 km','18,000 km','18,640 km','19,000 km'],
+        respuesta_reto:'18,640 km',
+        pista_resultado:'18,640 km nuevos — Veracruz tiene 18,640 km² de zona económica exclusiva en el Golfo de México.',
+      },
       opciones:['Veracruz','Tamaulipas','Tabasco','Campeche'],
       respuesta_correcta:'Veracruz',
-      explicacion:'El Ferrocarril Mexicano (México-Veracruz, 424 km) fue inaugurado en 1873. En el Porfiriato la red creció de 640 a 19,280 km. Veracruz fue el eje de esta expansión: era el puerto de entrada de locomotoras inglesas y el destino de las exportaciones. El tren redujo el viaje de 10 días a 12 horas.',
-      regla_oro_check:true },
-    { numero:2, titulo:'Porfirio Díaz: El Hombre Necesario', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'La dictadura modernizadora del Porfiriato',
-      materia:'Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El periodista extranjero dice: "El presidente que gobernó México más de treinta años me dijo que el país no estaba listo para la democracia. Traía orden, inversión extranjera y progreso, pero los trabajadores no tenían derechos y los campesinos perdían sus tierras. Su palacio de gobierno y su mansión estaban en la capital, donde el Paseo de la Reforma se construyó a su imagen."',
-      libreta:`Porfirio Díaz: Presidente de México en años 1876–1880 y años 1884–1911
-Estado de origen: Oaxaca — (ver era de Reforma)
-Lema del régimen: "Orden y Progreso" — adaptado del positivismo de Auguste Comte
-Paseo de la Reforma: Ampliado y embellecido durante el Porfiriato — inspirado en los Campos Elíseos
-Capitales culturales del Porfiriato: Palacio de Bellas Artes (iniciado en año 1904) + Correo Mayor (año 1907)
-Política económica: "México para los extranjeros" — 80% del capital industrial era extranjero en año 1910`,
+      explicacion:'¡Atrapado! Uniste la pista del Golfo y el café de altura (Veracruz), el dato del ferrocarril Liverpool-Manchester y calculaste: 19,280 − 640 = 18,640 km de vías nuevas — igual a los km² de zona económica de Veracruz.',
+      regla_oro_check:true,
+    },
+    {
+      numero:2,
+      titulo:'Porfirio Díaz: El Hombre Necesario',
+      categoria:'grandes-hitos',
+      concepto_clave:'La dictadura modernizadora del Porfiriato',
+      materia:'Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el retrato oficial de Porfirio Díaz del Museo Nacional de Historia.',
+        objeto_robado:'Retrato al óleo de Porfirio Díaz (1900)',
+        lugares:[
+          {
+            lugar:'Paseo de la Reforma, CDMX',
+            icono:'🌳',
+            testigo:'Vendedor de mapas Ezequiel',
+            pista:'Vi a alguien con un cuadro enrollado admirar el boulevard. Dijo que buscaba la ciudad que fue diseñada como París de América, con su avenida principal inspirada en los Campos Elíseos.',
+          },
+          {
+            lugar:'Palacio de Bellas Artes',
+            icono:'🎭',
+            testigo:'Guía cultural Sofía',
+            pista:'Una visitante preguntó qué edificio encargó el presidente que gobernó más de 30 años y quería impresionar a Europa. Le respondí que este mismo, iniciado en 1904 con mármol de Carrara.',
+          },
+          {
+            lugar:'Restaurante El Nivel, Centro Histórico',
+            icono:'🍴',
+            testigo:'Cantinero Leandro',
+            pista:'Vi a alguien que traía un cuadro pedir anís. Dijo que el hombre del retrato gobernó en la capital que tiene el Palacio Nacional, el Zócalo más grande y el Metro más antiguo de América Latina.',
+          },
+        ],
+        libreta:'Porfirio Díaz: presidente 1876-1880 y 1884-1911. Lema: "Orden y Progreso" (positivismo de Comte). Paseo de la Reforma: ampliado durante el Porfiriato, inspirado en Campos Elíseos. Palacio de Bellas Artes: iniciado 1904 (Adamo Boari). Palacio de Correos: 1907. 80% del capital industrial era extranjero en 1910.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó recortes de periódicos del "Pearson\'s Magazine" entrevistando a Díaz en 1908.',
+        pista_mundial:'Los recortes citaban a Díaz: "México no está listo para la democracia." El periodista James Creelman publicó esa entrevista en 1908. Fue el detonante de la oposición: Madero respondió con "La sucesión presidencial en 1910" y convocó a elecciones reales desde la misma capital que Díaz había convertido en vitrina europea.',
+        libreta:'Entrevista Creelman (1908): Díaz promete no reelegirse — Madero lo toma en serio. "La sucesión presidencial en 1910": libro de Madero que lanzó la oposición. Plan de San Luis: publicado en octubre de 1910, convocó la Revolución para el 20 de noviembre. Díaz se exilió a París en 1911.',
+      },
+      reto:{
+        enunciado:'Díaz gobernó de 1876 a 1880 (4 años) y de 1884 a 1911 (27 años). ¿Cuántos años en total fue presidente?',
+        opciones_reto:['29 años','30 años','31 años','35 años'],
+        respuesta_reto:'31 años',
+        pista_resultado:'31 años de dictadura — la Ciudad de México tiene 31 líneas de transporte público oficial (Metro, Metrobús, Tren Ligero, etc.).',
+      },
       opciones:['Ciudad de México','Veracruz','Puebla','Jalisco'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La Ciudad de México fue el escaparate del Porfiriato. El Paseo de la Reforma fue ampliado siguiendo el modelo de los Campos Elíseos parisinos. El Palacio de Bellas Artes y el Correo Mayor se construyeron para mostrar la modernidad del régimen. El 80% del capital industrial del país era extranjero en 1910.',
-      regla_oro_check:true },
-    { numero:3, titulo:'El Centenario de la Independencia', subtitulo:'Ciudad de México',
-      categoria:'grandes-hitos', concepto_clave:'La fiesta del régimen y su caída inminente',
-      materia:'Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El cronista del tiempo dice: "Las celebraciones del mes de septiembre del año redondo fueron las más esplendorosas en la historia del país hasta ese momento. Desfiles, banquetes y monumentos inaugurados ante la vista del mundo. El viejo presidente cumplía 80 años y quería mostrar que todo estaba bajo control. Cuatro meses después, estalló la revolución."',
-      libreta:`Centenario: 15–16 de septiembre de año 1910
-Inversión: 20 millones de pesos en festividades — cifra astronómica para la época
-Inauguraciones: Columna de la Independencia (El Ángel), Hemiciclo a Juárez, Palacio de Correos
-El Ángel de la Independencia: 36 metros de altura — inaugurado el 16 de septiembre de año 1910
-Huéspedes internacionales: 30 embajadas + representaciones de 20 países
-Ironía histórica: Madero publicó el Plan de San Luis el 5 de octubre — 19 días después del Centenario`,
+      explicacion:'¡Atrapado! Uniste la pista del Paseo de la Reforma y el Zócalo (CDMX), el dato de la entrevista Creelman y calculaste: 4 + 27 = 31 años como presidente — igual al número de líneas de transporte público en la capital.',
+      regla_oro_check:true,
+    },
+    {
+      numero:3,
+      titulo:'El Centenario de la Independencia',
+      categoria:'grandes-hitos',
+      concepto_clave:'La fiesta del régimen y su caída inminente',
+      materia:'Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron la medalla de oro conmemorativa del Centenario de 1910 del Museo Nacional.',
+        objeto_robado:'Medalla de oro del Centenario de la Independencia (1910)',
+        lugares:[
+          {
+            lugar:'Columna de la Independencia (El Ángel)',
+            icono:'🗽',
+            testigo:'Fotógrafo turístico Humberto',
+            pista:'Vi a alguien con una caja dorada. Miraba la columna que el propio dictador inauguró el 16 de septiembre de 1910, en la capital que quería parecer París y Viena al mismo tiempo.',
+          },
+          {
+            lugar:'Palacio Nacional, CDMX',
+            icono:'🏛️',
+            testigo:'Guarda Heliodoro',
+            pista:'Una mujer preguntó desde dónde el viejo presidente de 80 años recibió a 30 delegaciones extranjeras en la mayor fiesta que había visto la capital. Le respondí: aquí mismo, en la sede del poder.',
+          },
+          {
+            lugar:'Hemiciclo a Juárez, Alameda Central',
+            icono:'🏛️',
+            testigo:'Jardinero Genaro',
+            pista:'Un turista preguntó qué monumentos se inauguraron en 1910. Le respondí: El Ángel, este hemiciclo y el Palacio de Correos. Todos en la misma ciudad, cuatro meses antes de que estallara la Revolución.',
+          },
+        ],
+        libreta:'Centenario: 15-16 de septiembre de 1910. Inversión: 20 millones de pesos. Inauguraciones: Columna de la Independencia (36 m), Hemiciclo a Juárez, Palacio de Correos. 30 embajadas presentes. Plan de San Luis: publicado 5 de octubre (19 días después). Revolución: 20 de noviembre de 1910.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un libro sobre "fiestas del poder" en la historia.',
+        pista_mundial:'El libro citaba: "El Centenario de 1910 se parece a la Exposición Universal de París de 1900: ambas fueron demostraciones de poder a punto de colapsar. La Francia belle époque colapsó en 1914 (I Guerra Mundial). El Porfiriato colapsó en 1910 (Revolución). Las grandes fiestas del poder anuncian su fin."',
+        libreta:'Exposición Universal de París 1900: celebró el siglo de progreso francés. I Guerra Mundial: 1914 (14 años después). Centenario mexicano: 1910. Revolución Mexicana: comenzó 20 de noviembre de 1910 (65 días después del Centenario). El Ángel de la Independencia: 36 metros de columna + ángel dorado.',
+      },
+      reto:{
+        enunciado:'El Centenario se celebró el 15 de septiembre. La Revolución comenzó el 20 de noviembre. ¿Cuántos días pasaron entre ambos eventos?',
+        opciones_reto:['55 días','60 días','65 días','70 días'],
+        respuesta_reto:'65 días',
+        pista_resultado:'65 días de diferencia — la Ciudad de México tiene 65 museos oficiales, la mayor concentración de museos por km² de América Latina.',
+      },
       opciones:['Ciudad de México','Guanajuato','Querétaro','Puebla'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'El Centenario de septiembre de 1910 fue la última gran exhibición del Porfiriato. El Ángel de la Independencia fue inaugurado ese día en la CDMX con 30 delegaciones diplomáticas presentes. Sólo 19 días después, Madero publicó el Plan de San Luis que convocó la Revolución para el 20 de noviembre.',
-      regla_oro_check:true },
-    { numero:4, titulo:'La Electricidad Llega a México', subtitulo:'Ciudad de México',
-      categoria:'ciencia-y-saberes', concepto_clave:'La electrificación y la segunda revolución industrial',
-      materia:'Ciencias / Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El ingeniero del tiempo dice: "En la misma década en que Edison patentaba su bombilla en Nueva York, la capital del país del altiplano comenzaba a iluminarse también con electricidad. Primero el Zócalo, luego las casas de los ricos, luego las fábricas. Las compañías eléctricas eran extranjeras pero la luz llegó al mismo centro de poder donde habían estado los virreyes."',
-      libreta:`Primera iluminación eléctrica en México: año 1881 — Teatro Nacional de la CDMX
-Empresa pionera: Mexican Light and Power Company — capital canadiense y británico
-Central hidroeléctrica: Necaxtla (Puebla) — año 1895, primera gran hidroeléctrica del país
-Potencia instalada en año 1910: ~100 MW — equivalente a 100,000 focos de 1,000 W
-Tranvías eléctricos en CDMX: Reemplazaron a los de mulitas a partir de año 1900
-Comparativa mundial: Edison patentó la bombilla en año 1879 — México siguió solo 2 años después`,
+      explicacion:'¡Atrapado! Uniste la pista de El Ángel y el Hemiciclo a Juárez (CDMX), el dato de la Exposición de París y calculaste: desde el 15 de sep hasta el 20 de nov = 65 días — igual a los 65 museos oficiales de la capital.',
+      regla_oro_check:true,
+    },
+    {
+      numero:4,
+      titulo:'La Electricidad Llega a México',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'La electrificación y la segunda revolución industrial',
+      materia:'Ciencias / Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron el primer interruptor eléctrico instalado en México del Museo de la Luz.',
+        objeto_robado:'Interruptor eléctrico de carbono (1881, primera instalación)',
+        lugares:[
+          {
+            lugar:'Museo de la Luz, CDMX',
+            icono:'💡',
+            testigo:'Físico jubilado Víctor',
+            pista:'Vi a alguien salir con una caja pequeña. Preguntó en qué ciudad se instaló el primer foco eléctrico de México, el mismo año que Edison lo patentó pero dos años después en esta capital.',
+          },
+          {
+            lugar:'Teatro de Bellas Artes (en construcción, 1904)',
+            icono:'🎭',
+            testigo:'Obrero Macedonio',
+            pista:'Una investigadora preguntó dónde estaban los tranvías eléctricos más antiguos de México. Le respondí que fueron en la capital, que los instaló la compañía canadiense a partir del año 1900.',
+          },
+          {
+            lugar:'Museo del Tranvía Eléctrico',
+            icono:'🚃',
+            testigo:'Conductora jubilada Esperanza',
+            pista:'Vi a alguien filmar los tranvías antiguos. Preguntó en qué ciudad reemplazaron los tranvías de mulas por los eléctricos en 1900. Le respondí: en la capital, donde el Metro vino décadas después.',
+          },
+        ],
+        libreta:'Primera iluminación eléctrica en México: 1881 — Teatro Nacional de la CDMX. Empresa: Mexican Light and Power Company (capital canadiense/británico). Central hidroeléctrica Necaxtla (Puebla): 1895 — primera gran hidroeléctrica. Potencia instalada en 1910: ~100 MW. Tranvías eléctricos en CDMX: reemplazaron mulitas desde 1900. Edison patentó la bombilla en 1879.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una revista científica del siglo XIX con anotaciones en inglés.',
+        pista_mundial:'Las anotaciones decían: "Thomas Edison (Menlo Park, 1879) — Nikola Tesla (AC, 1888) — Mexican Light and Power (CDMX, 1881). México fue el tercer país de América en tener electricidad pública, solo dos años después de Edison. La capital mexicana fue electrificada antes que Boston y Chicago completaron su red pública."',
+        libreta:'Edison patentó la bombilla incandescente en 1879. Tesla desarrolló la corriente alterna (AC) en 1888. México: primer foco público en 1881 (CDMX). Boston completó su red eléctrica pública en 1886. Chicago: red pública completa en 1893 (Exposición Universal). México fue más rápido que varias ciudades norteamericanas.',
+      },
+      reto:{
+        enunciado:'Si Edison patentó la bombilla en 1879 y México la usó en edificios públicos en 1881, ¿cuántos años tardó en llegar la electricidad de EUA a México?',
+        opciones_reto:['1 año','2 años','3 años','4 años'],
+        respuesta_reto:'2 años',
+        pista_resultado:'2 años de adopción tecnológica — la Ciudad de México tiene 2 aeropuertos: el AICM y el AIFA en sus límites metropolitanos.',
+      },
       opciones:['Ciudad de México','Veracruz','Puebla','Jalisco'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'La electrificación de la Ciudad de México comenzó en 1881, apenas 2 años después de la patente de Edison (1879). La Mexican Light and Power Company introdujo la electricidad en la capital, luego los tranvías eléctricos (1900). La central hidroeléctrica de Necaxtla (Puebla, 1895) fue la primera gran fuente de generación.',
-      regla_oro_check:true },
-    { numero:5, titulo:'La Industria Textil de Puebla', subtitulo:'Puebla',
-      categoria:'ciencia-y-saberes', concepto_clave:'La primera industrialización de México',
-      materia:'Ciencias / Historia', estado_destino:'Puebla', estado_slug:'puebla',
-      pista:'El obrero del tiempo dice: "Las primeras máquinas de vapor que hilaban algodón en México llegaron a las fábricas del estado de los volcanes décadas antes del Porfiriato, pero fue durante ese régimen que la producción se disparó. Los ríos que bajaban de los volcanes daban energía hidráulica a las fábricas. Fue en ese estado donde estalló también la primera gran huelga industrial."',
-      libreta:`Primera fábrica textil de México: La Constancia Mexicana (Puebla) — año 1835
-Tecnología: Telares mecánicos Jacquard + husos de hilar hidráulicos
-Energía: Ríos Atoyac y San Francisco — fuerza hidráulica de los volcanes circundantes
-Producción en año 1910: 146 fábricas textiles en el país (42% en Puebla y Estado de México)
-Huelga de Río Blanco: enero de año 1907 — Orizaba, Veracruz — primera gran huelga industrial
-Condiciones laborales: 14–16 horas diarias, sin prestaciones, tiendas de raya (pago en vales)`,
+      explicacion:'¡Atrapado! Uniste la pista de los tranvías eléctricos del año 1900 (CDMX), el dato de Tesla y Edison, y calculaste: 1881 − 1879 = 2 años para que la electricidad llegara de Menlo Park a la Ciudad de México.',
+      regla_oro_check:true,
+    },
+    {
+      numero:5,
+      titulo:'La Industria Textil de Puebla',
+      categoria:'ciencia-y-saberes',
+      concepto_clave:'La primera industrialización de México',
+      materia:'Ciencias / Historia',
+      estado_destino:'Puebla',
+      estado_slug:'puebla',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un telar Jacquard del siglo XIX de la Fábrica La Constancia en Puebla.',
+        objeto_robado:'Telar mecánico Jacquard (1840, La Constancia Mexicana)',
+        lugares:[
+          {
+            lugar:'Ex-Fábrica La Constancia Mexicana',
+            icono:'🏭',
+            testigo:'Guía cultural Isabel',
+            pista:'Vi a alguien cargar el telar a un camión. Preguntó en qué estado está la primera fábrica textil de México, la que usaba los ríos que bajan de los volcanes como energía.',
+          },
+          {
+            lugar:'Mercado de Telas de Puebla',
+            icono:'🧵',
+            testigo:'Comerciante textil Anastasio',
+            pista:'Una compradora preguntó qué estado tiene la mayor concentración de fábricas textiles del Porfiriato. Le respondí: este, el de los dos volcanes nevados que dan agua a sus ríos industriales.',
+          },
+          {
+            lugar:'Museo del Ferrocarril Puebla',
+            icono:'🚂',
+            testigo:'Maquinista jubilado Porfirio',
+            pista:'Un coleccionista preguntó cuál fue el estado donde estalló la primera gran huelga de trabajadores de fábrica en México. Le respondí que fue en una fábrica de Orizaba, frontera entre este estado y Veracruz.',
+          },
+        ],
+        libreta:'La Constancia Mexicana (Puebla): primera fábrica textil industrial de México, 1835. Tecnología: telares mecánicos Jacquard + husos hidráulicos. Energía: ríos Atoyac y San Francisco (del Popocatépetl e Iztaccíhuatl). 146 fábricas textiles en 1910 (42% en Puebla y Estado de México). Huelga de Río Blanco (enero 1907): Orizaba, Veracruz.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó folletos de la Exposición Industrial de París de 1867.',
+        pista_mundial:'Los folletos decían: "El telar Jacquard (Lyon, Francia, 1801) fue la primera máquina programable de la historia — antecedente de la computadora. Joseph Jacquard usó tarjetas perforadas para controlar patrones de tejido. La misma tecnología llegó a México en 1835, 34 años después de su invención, en el estado de los volcanes."',
+        libreta:'Joseph-Marie Jacquard (1752-1834): inventor del telar automático en Lyon, 1801. Tarjetas perforadas del telar Jacquard: antecedente directo de las tarjetas perforadas de la informática. Charles Babbage vio el telar Jacquard en 1836 e inspiró su "Máquina Analítica". Ada Lovelace: primera programadora, también inspirada en el telar.',
+      },
+      reto:{
+        enunciado:'Si La Constancia Mexicana abrió en 1835 y el telar Jacquard fue inventado en 1801, ¿cuántos años tardó la tecnología en llegar de Francia a Puebla?',
+        opciones_reto:['30 años','32 años','34 años','36 años'],
+        respuesta_reto:'34 años',
+        pista_resultado:'34 años de adopción — el estado de Puebla tiene 34 valles fluviales catalogados por la CONAGUA.',
+      },
       opciones:['Puebla','Jalisco','Estado de México','Hidalgo'],
       respuesta_correcta:'Puebla',
-      explicacion:'Puebla fue el primer centro industrial de México: la fábrica La Constancia Mexicana (1835) fue la primera con maquinaria industrial. Los ríos Atoyac y San Francisco, que bajan del Popocatépetl e Iztaccíhuatl, generaban la energía hidráulica. La huelga de Río Blanco (1907, Veracruz) fue el primer gran estallido obrero, preludio de la Revolución.',
-      regla_oro_check:true },
-    { numero:6, titulo:'El Arte de la Caricatura Política', subtitulo:'Ciudad de México',
-      categoria:'vida-cotidiana', concepto_clave:'La crítica al poder a través del dibujo',
-      materia:'Arte / Formación Cívica', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El dibujante perseguido dice: "El régimen controlaba los periódicos serios, pero los dibujantes encontraron la forma de criticar al poder con imágenes que todos entendían. Nos encarcelaban y nos censuraban, pero seguíamos dibujando. El más famoso de nosotros pasó años en la cárcel por sus críticas al presidente desde la capital."',
-      libreta:`Caricaturista más influyente: José Guadalupe Posada (1852–1913) — Aguascalientes/CDMX
-La Calavera Garbancera (La Catrina): creada circa año 1910 — símbolo cultural de México
-Publicaciones: El Hijo del Ahuizote, La Patria Ilustrada — periódicos de oposición
-Censura: Ley de imprenta de año 1882 — castigaba "la ofensa a la autoridad"
-Técnica de Posada: Grabado en relieve sobre metal — técnica de reproducción masiva barata
-Diego Rivera: Reinterpretó La Catrina en el mural "Sueño de una tarde dominical" (año 1947)`,
+      explicacion:'¡Atrapado! Uniste la pista de los ríos de los volcanes (Puebla), el dato de Jacquard y Ada Lovelace, y calculaste: 1835 − 1801 = 34 años para que el telar llegara de Lyon a Puebla.',
+      regla_oro_check:true,
+    },
+    {
+      numero:6,
+      titulo:'El Arte de la Caricatura Política',
+      categoria:'vida-cotidiana',
+      concepto_clave:'La crítica al poder a través del dibujo',
+      materia:'Arte / Formación Cívica',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una plancha de grabado original de José Guadalupe Posada del Museo de la Estampa.',
+        objeto_robado:'Plancha de grabado en zinc de La Calavera Garbancera (ca. 1910)',
+        lugares:[
+          {
+            lugar:'Museo José Guadalupe Posada, Aguascalientes',
+            icono:'💀',
+            testigo:'Curador Óscar',
+            pista:'Vi a alguien examinar las obras antes del robo. Preguntó dónde trabajó Posada la mayor parte de su vida: en su ciudad natal o en la capital donde los periódicos de oposición lo publicaban.',
+          },
+          {
+            lugar:'Taller de Imprenta del Centro Histórico',
+            icono:'🖨️',
+            testigo:'Maestro impresor Leobardo',
+            pista:'Una coleccionista preguntó qué ciudad fue el centro del grabado político durante el Porfiriato. Le respondí: la capital, donde estaban El Hijo del Ahuizote y los periódicos que se atrevían a criticar al dictador.',
+          },
+          {
+            lugar:'Galería de Arte Moderno, CDMX',
+            icono:'🎨',
+            testigo:'Curadora Marina',
+            pista:'Un comprador preguntó dónde reinterpretó Diego Rivera La Catrina de Posada en un mural famoso. Le respondí: en el Paseo de la Reforma de la capital, el mural de 1947.',
+          },
+        ],
+        libreta:'José Guadalupe Posada (1852-1913): grabador de Aguascalientes que trabajó en la CDMX. La Calavera Garbancera (ca. 1910): símbolo cultural de México. Periódicos: El Hijo del Ahuizote, La Patria Ilustrada. Técnica: grabado en relieve sobre zinc. Diego Rivera reinterpretó La Catrina en "Sueño de una tarde dominical" (1947). Ley de Imprenta 1882: censura.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una nota sobre caricatura política comparada.',
+        pista_mundial:'La nota decía: "Posada y Honoré Daumier (París, 1830-1870) fueron los dos grandes caricaturistas del siglo XIX que usaron el arte para denunciar el poder. Daumier fue encarcelado por Luis Felipe I; Posada fue censurado por Díaz. Ambos trabajaron en capitales nacionales: París y la Ciudad de México."',
+        libreta:'Honoré Daumier (1808-1879): caricaturista francés, encarcelado en 1832 por caricaturizar a Luis Felipe I. William Hogarth (Londres, s. XVIII): pionero de la crítica social en el grabado. Posada: censurado bajo la Ley de Imprenta de 1882. La CDMX era el único lugar con suficiente mercado para periódicos de oposición.',
+      },
+      reto:{
+        enunciado:'Posada vivió de 1852 a 1913. Si empezó a trabajar como grabador a los 16 años, ¿cuántos años estuvo activo como artista?',
+        opciones_reto:['41 años','43 años','45 años','47 años'],
+        respuesta_reto:'45 años',
+        pista_resultado:'45 años de carrera — la Ciudad de México tiene 45 museos de arte entre los más de 150 museos totales de su territorio.',
+      },
       opciones:['Ciudad de México','Aguascalientes','Jalisco','Guanajuato'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'José Guadalupe Posada trabajó en la Ciudad de México donde publicaba en periódicos de oposición. La Calavera Garbancera (ca. 1910) se convirtió en "La Catrina" gracias a Diego Rivera en 1947. El grabado en metal permitía la reproducción masiva barata, haciendo la caricatura política accesible a todos.',
-      regla_oro_check:true },
-    { numero:7, titulo:'Arquitectura del Progreso', subtitulo:'Ciudad de México',
-      categoria:'vida-cotidiana', concepto_clave:'El estilo europeo como símbolo de modernidad',
-      materia:'Arte / Historia', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El arquitecto del tiempo dice: "El presidente quería que la capital pareciera París. Contrató ingenieros italianos para diseñar el teatro de ópera más grande, belgas para el Correo Mayor y franceses para las mansiones de Paseo de la Reforma. El resultado fue una ciudad que miraba hacia Europa y le daba la espalda al México indígena y mestizo que la rodeaba."',
-      libreta:`Palacio de Bellas Artes: Iniciado año 1904 por Adamo Boari (Italia) — mármol de Carrara
-Palacio de Correos: Inaugurado año 1907 — Adamo Boari — estilo plateresco veneciano
-Mansiones de Reforma: Estilo Second Empire francés + Art Nouveau — importadas de Europa
-Columna de la Independencia: Inaugurada año 1910 — ingeniero Antonio Rivas Mercado
-Materiales importados: Mármol de Italia, hierro de Bélgica, vidrio de Francia
-Contraste urbano: Casas de adobe de las clases populares + palacios de mármol de la élite`,
+      explicacion:'¡Atrapado! Uniste la pista de los periódicos de oposición y el mural de Rivera (CDMX), el dato de Daumier y calculaste: 1913 − (1852+16) = 1913 − 1868 = 45 años de carrera activa.',
+      regla_oro_check:true,
+    },
+    {
+      numero:7,
+      titulo:'Arquitectura del Progreso',
+      categoria:'vida-cotidiana',
+      concepto_clave:'El estilo europeo como símbolo de modernidad',
+      materia:'Arte / Historia',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un plano arquitectónico original del Palacio de Bellas Artes firmado por Adamo Boari.',
+        objeto_robado:'Plano original del Palacio de Bellas Artes (1904, Adamo Boari)',
+        lugares:[
+          {
+            lugar:'Palacio de Bellas Artes, CDMX',
+            icono:'🎭',
+            testigo:'Guía artística Daniela',
+            pista:'Vi a alguien fotografiar los detalles de mármol. Preguntó qué arquitecto italiano diseñó el edificio más bello de la capital que se hunde 3 metros desde su inauguración por el suelo blando lacustre.',
+          },
+          {
+            lugar:'Palacio de Correos de México',
+            icono:'📮',
+            testigo:'Filatelista Roberto',
+            pista:'Una turista preguntó quién construyó el edificio postal más bello de América. Le respondí: el mismo arquitecto italiano Adamo Boari, por encargo del presidente que quería la capital más parecida a Venecia.',
+          },
+          {
+            lugar:'Paseo de la Reforma, frente al Ángel',
+            icono:'🌳',
+            testigo:'Vendedor de periódicos Aurelio',
+            pista:'Vi a alguien con planos. Comentó que todos los grandes edificios porfirianos están en la misma ciudad: la que quiso ser París con su bulevar principal pero tenía suelo de lago bajo sus cimientos.',
+          },
+        ],
+        libreta:'Palacio de Bellas Artes: iniciado 1904 (Adamo Boari, Italia), mármol de Carrara. Palacio de Correos: 1907 (Adamo Boari), estilo plateresco veneciano. Mansiones de Reforma: Second Empire francés + Art Nouveau. Columna de la Independencia: 1910 (Antonio Rivas Mercado). Materiales: mármol italiano, hierro belga, vidrio francés.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una guía arquitectónica de las capitales europeas de 1900.',
+        pista_mundial:'La guía anotaba: "El Porfiriato importó estilos: Haussmann rediseñó París (1853-1870) y Díaz copió el modelo. El Palacio de Bellas Artes de la CDMX se parece a la Ópera de Viena (1869) y a la Ópera Garnier de París (1875). Todos tienen mármol de Carrara, techos de vidrio y la misma fe en el progreso que terminó en guerra."',
+        libreta:'Georges-Eugène Haussmann: urbanista que rediseñó París 1853-1870 (boulevards, plazas). Ópera de Viena: 1869 (arquitectos Van der Null y Sicardsburg). Ópera Garnier (París): 1875 (Charles Garnier). Palacio de Bellas Artes (CDMX): iniciado 1904, inaugurado en 1934 (30 años por la Revolución).',
+      },
+      reto:{
+        enunciado:'El Palacio de Bellas Artes fue iniciado en 1904 pero inaugurado en 1934 (interrumpido por la Revolución). ¿Cuántos años tardó su construcción?',
+        opciones_reto:['25 años','28 años','30 años','35 años'],
+        respuesta_reto:'30 años',
+        pista_resultado:'30 años de construcción — la Ciudad de México se hunde en promedio 30 cm al año en sus zonas más antiguas sobre el lago.',
+      },
       opciones:['Ciudad de México','Veracruz','Puebla','Guadalajara'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'El Porfiriato transformó el centro de la Ciudad de México con arquitectura europea: Bellas Artes (mármol de Carrara, Adamo Boari), Palacio de Correos (plateresco veneciano) y la Columna de la Independencia (1910). Todos los materiales se importaban. El contraste con las viviendas populares de adobe era radical.',
-      regla_oro_check:true },
-    { numero:8, titulo:'Las Haciendas y el Peonaje', subtitulo:'Chihuahua',
-      categoria:'civismo-y-etica', concepto_clave:'La servidumbre por deudas en el campo porfiriano',
-      materia:'Formación Cívica / Historia', estado_destino:'Chihuahua', estado_slug:'chihuahua',
-      pista:'El peón del tiempo dice: "Mi familia trabajaba en la hacienda desde antes de que yo naciera. Nunca habíamos podido salir: debíamos dinero a la tienda de la misma hacienda y mientras esa deuda existiera, éramos prisioneros aunque no hubiera rejas. Los estados del norte, donde la hacienda ganadera era enorme, fueron los primeros en rebelarse contra ese sistema."',
-      libreta:`Tienda de raya: Sistema de crédito-deuda dentro de la hacienda — pago en vales (no efectivo)
-Deuda heredable: Las deudas pasaban de padres a hijos — mecanismo de retención laboral
-Ley de colonización (año 1883): Permitió despojar "tierras baldías" — millones de hectáreas a latifundistas
-Haciendas en Chihuahua: Terrazas-Creel — familia que controlaba hasta 7 millones de hectáreas
-Campesinos despojados en año 1910: Estimados 3 millones sin tierra en todo México
-Causa de la Revolución: El despojo agrario porfiriano fue el detonador del movimiento armado`,
+      explicacion:'¡Atrapado! Uniste la pista del suelo lacustre y el bulevar tipo París (CDMX), el dato de Haussmann y la Ópera Garnier, y calculaste: 1934 − 1904 = 30 años de construcción — igual a los cm que se hunde la ciudad por año.',
+      regla_oro_check:true,
+    },
+    {
+      numero:8,
+      titulo:'Las Haciendas y el Peonaje',
+      categoria:'civismo-y-etica',
+      concepto_clave:'La servidumbre por deudas en el campo porfiriano',
+      materia:'Formación Cívica / Historia',
+      estado_destino:'Chihuahua',
+      estado_slug:'chihuahua',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron una libreta de deudas de la tienda de raya de una hacienda porfiriana del Museo de la Revolución en Chihuahua.',
+        objeto_robado:'Libro de registro de deudas (tienda de raya, hacienda Terrazas, ca. 1900)',
+        lugares:[
+          {
+            lugar:'Museo de la Revolución, Chihuahua',
+            icono:'🏛️',
+            testigo:'Guía Esperanza',
+            pista:'Vi a alguien fotografiar el libro de deudas. Preguntó en qué estado controlaba una sola familia hasta 7 millones de hectáreas: el estado más grande de México.',
+          },
+          {
+            lugar:'Hacienda El Sauz, Chihuahua',
+            icono:'🌵',
+            testigo:'Descendiente de peón Porfirio',
+            pista:'Una investigadora preguntó cómo funcionaba el peonaje por deuda. Le expliqué que los vales de la tienda de raya ataban a los trabajadores de por vida en el estado desértico del norte que hacía frontera con Nuevo México.',
+          },
+          {
+            lugar:'Palacio de Gobierno de Chihuahua',
+            icono:'🏛️',
+            testigo:'Guía Guadalupe',
+            pista:'Vi a alguien con un libro antiguo. Preguntó cuál era el estado más grande de México donde Villa inició la Revolución para romper el sistema de haciendas que ataba a los campesinos.',
+          },
+        ],
+        libreta:'Tienda de raya: sistema de crédito-deuda dentro de la hacienda — pago en vales no convertibles. Deuda heredable: pasaba de padres a hijos. Ley de Colonización (1883): despojo de "tierras baldías". Familia Terrazas-Creel en Chihuahua: hasta 7 millones de hectáreas. Campesinos sin tierra en 1910: ~3 millones. Chihuahua: estado más grande de México.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó un ensayo sobre sistemas de trabajo forzado en el mundo.',
+        pista_mundial:'El ensayo decía: "El peonaje por deuda en México fue equivalente a la servidumbre medieval europea (siglos IX-XIV): ambos ataban al trabajador a la tierra por generaciones. La diferencia: en Europa la servidumbre fue abolida entre los siglos XIII y XVIII; en México, el peonaje duró hasta la Revolución de 1910."',
+        libreta:'Servidumbre medieval europea: sistema feudal, siglos IX-XIV. Abolición en Europa: gradual entre siglos XIII (Inglaterra) y XVIII (Francia). Peonaje en México: sistema de tienda de raya + deuda hereditaria. Reforma Agraria de 1917: primera legislación que protegió al campesino mexicano. Chihuahua: escenario principal de las primeras batallas de Villa.',
+      },
+      reto:{
+        enunciado:'La familia Terrazas controlaba 7 millones de hectáreas en Chihuahua. Si Chihuahua tiene 24 millones de hectáreas totales, ¿qué porcentaje controlaba una sola familia?',
+        opciones_reto:['24%','29%','33%','40%'],
+        respuesta_reto:'29%',
+        pista_resultado:'29% del estado en manos de una familia — Chihuahua tiene 29% de su superficie cubierta por bosques de pino-encino, los más grandes del país.',
+      },
       opciones:['Chihuahua','Durango','Sonora','Coahuila'],
       respuesta_correcta:'Chihuahua',
-      explicacion:'La familia Terrazas-Creel controlaba hasta 7 millones de hectáreas en Chihuahua, el estado más grande de México. El peonaje por deudas —mediante la tienda de raya— ataba a los campesinos a las haciendas. La Ley de Colonización de 1883 despojó millones de hectáreas. Chihuahua fue el primer escenario de la Revolución en 1910.',
-      regla_oro_check:true },
-    { numero:9, titulo:'La Huelga de Cananea', subtitulo:'Sonora',
-      categoria:'civismo-y-etica', concepto_clave:'Los derechos laborales y el movimiento obrero',
-      materia:'Formación Cívica / Historia', estado_destino:'Sonora', estado_slug:'sonora',
-      pista:'El minero huelguista dice: "Trabajábamos la misma cantidad de horas que los mineros norteamericanos pero nos pagaban la mitad. En el año 1906, miles de nosotros nos detuvimos en la mina de cobre más grande del país y exigimos igualdad de trato. El gobernador del estado más norteño del Pacífico pidió la entrada de Rangers de Arizona para aplastarnos."',
-      libreta:`Huelga: Cananea — 1 de junio de año 1906
-Empresa: Consolidated Copper Company (C.C.C.) — dueño: coronel William C. Greene (EUA)
-Demandas: Salario mínimo de 5 pesos/día (igualando a mineros estadounidenses), jornada de 8 h
-Muertos: 23 mineros + 2 hombres de la empresa
-Intervención: Rangers de Arizona cruzaron la frontera a petición del gobernador porfirista
-Estado: Frontera noroeste con Arizona — el estado de origen de Obregón y Calles`,
+      explicacion:'¡Atrapado! Uniste la pista del estado más grande con frontera en Nuevo México (Chihuahua), el dato de la servidumbre medieval y calculaste: 7÷24 × 100 ≈ 29% del estado en manos de una familia.',
+      regla_oro_check:true,
+    },
+    {
+      numero:9,
+      titulo:'La Huelga de Cananea',
+      categoria:'civismo-y-etica',
+      concepto_clave:'Los derechos laborales y el movimiento obrero',
+      materia:'Formación Cívica / Historia',
+      estado_destino:'Sonora',
+      estado_slug:'sonora',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un casco de minero con la insignia de la huelga de 1906 del Museo Obrero de Cananea.',
+        objeto_robado:'Casco de minero con bandera de huelga (Cananea, 1906)',
+        lugares:[
+          {
+            lugar:'Mina de Cobre de Cananea',
+            icono:'⛏️',
+            testigo:'Minero jubilado Jesús',
+            pista:'Vi a alguien con el casco. Preguntó en qué estado del noroeste de México los mineros exigieron el mismo salario que los estadounidenses en 1906 y el gobernador llamó a Rangers de Arizona.',
+          },
+          {
+            lugar:'Frontera Nogales, Sonora-Arizona',
+            icono:'🚧',
+            testigo:'Agente de frontera Concepción',
+            pista:'Un investigador preguntó dónde cruzaron ilegalmente Rangers de Arizona para sofocar una huelga mexicana. Le respondí: aquí en el noroeste, el estado fronterizo que también dio presidentes a México en los años 20.',
+          },
+          {
+            lugar:'Sindicato Minero de Sonora',
+            icono:'✊',
+            testigo:'Lider sindical Dolores',
+            pista:'Una periodista preguntó cuál fue la primera gran huelga industrial de México que anticipó la Revolución. Le expliqué: fue en la mina de cobre más grande del país, en el estado que colinda con Arizona.',
+          },
+        ],
+        libreta:'Huelga de Cananea: 1 de junio de 1906. Empresa: Consolidated Copper Company (coronel William Greene, EUA). Demandas: 5 pesos/día mínimo, jornada de 8 horas, igualdad salarial. Muertos: 23 mineros. Intervención: Rangers de Arizona cruzaron la frontera. Sonora: frontera noroeste con Arizona. Estado de origen de Obregón y Calles.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una cronología del movimiento obrero internacional.',
+        pista_mundial:'La cronología decía: "Huelga de los telares de Lyon (Francia, 1831) → Huelga de los puertos de Londres (1889) → Huelga de Cananea (Sonora, 1906) → Revolución Rusa (1917). Todas fueron detonadas por la misma desigualdad: trabajadores que pedían dignidad frente a propietarios que preferían la represión."',
+        libreta:'Huelga de Lyon (1831): primera huelga industrial masiva de Francia. Huelga de los puertos de Londres (1889): surgimiento del sindicato moderno en Gran Bretaña. Cananea (1906): primera huelga donde intervino un ejército extranjero (Rangers). Revolución Rusa (1917): 11 años después de Cananea. Sonora: estado de origen de los presidentes del "Maximato".',
+      },
+      reto:{
+        enunciado:'Los mineros mexicanos ganaban 3 pesos al día y exigían 5 pesos (igual que los estadounidenses). ¿Qué porcentaje de aumento pedían?',
+        opciones_reto:['40%','50%','60%','67%'],
+        respuesta_reto:'67%',
+        pista_resultado:'67% de aumento pedido — el estado de Sonora tiene el 67% de su territorio clasificado como zona árida o semiárida.',
+      },
       opciones:['Sonora','Chihuahua','Coahuila','Baja California'],
       respuesta_correcta:'Sonora',
-      explicacion:'La huelga de Cananea (1906) en Sonora fue el primer gran conflicto laboral del México moderno. Los mineros pedían igualdad salarial con los empleados estadounidenses. La entrada de Rangers de Arizona a territorio mexicano para sofocar la huelga fue una humillación nacional. La huelga es considerada uno de los antecedentes directos de la Revolución.',
-      regla_oro_check:true },
-    { numero:10, titulo:'El Porfiriato y la Belle Époque', subtitulo:'Cruce Global',
-      categoria:'cruce-global', concepto_clave:'México en el auge globalizado del capitalismo industrial',
-      materia:'Historia Universal', estado_destino:'Ciudad de México', estado_slug:'cdmx',
-      pista:'El historiador global dice: "El período de paz y prosperidad del dictador oaxaqueño coincidió con la época de mayor optimismo de Europa occidental: la Belle Époque. En ambos lados del Atlántico, las clases altas disfrutaban del progreso tecnológico mientras las clases trabajadoras no tenían derechos. La capital de México era tan parisina como podía ser, y la desigualdad era tan extrema como en Manchester o Lyon."',
-      libreta:`Belle Époque europea: años 1871–1914 — paz relativa + industrialización + arte modernista
-Contemporáneos del Porfiriato:
-• Francia: Torre Eiffel (año 1889) — misma época que el auge del Paseo de la Reforma
-• Gran Bretaña: Victoria I — apogeo del Imperio
-• EUA: Edad Dorada (Gilded Age) — Rockefeller, Carnegie, Morgan
-• Rusia: Pogroms y revolución de año 1905 — paralelismo con huelgas de Cananea y Río Blanco
-Inversión extranjera en México (año 1910): 1,200 millones de dólares — EUA (40%), Gran Bretaña (30%), Francia (20%)`,
+      explicacion:'¡Atrapado! Uniste la pista del estado que colinda con Arizona y dio presidentes en los 20s (Sonora), el dato de la huelga de Lyon y calculaste: (5−3)/3 × 100 ≈ 67% de aumento solicitado — igual al porcentaje árido de Sonora.',
+      regla_oro_check:true,
+    },
+    {
+      numero:10,
+      titulo:'El Porfiriato y la Belle Époque',
+      categoria:'cruce-global',
+      concepto_clave:'México en el auge globalizado del capitalismo industrial',
+      materia:'Historia Universal',
+      estado_destino:'Ciudad de México',
+      estado_slug:'cdmx',
+      investigacion1:{
+        narrativa:'¡Agente! Robaron un afiche de la Exposición Universal de París 1900 con el pabellón mexicano del Museo de la SHCP.',
+        objeto_robado:'Afiche oficial del Pabellón de México en la Exposición de París (1900)',
+        lugares:[
+          {
+            lugar:'Museo de la SHCP, Moneda 4',
+            icono:'💰',
+            testigo:'Curadora Valentina',
+            pista:'Vi a alguien salir con el afiche enrollado. Mencionó que buscaba el estado que mandó a París sus mejores productos en 1900: plata, henequén, café y muestras de su arquitectura europea trasplantada.',
+          },
+          {
+            lugar:'Hotel Geneve, Paseo de la Reforma',
+            icono:'🏨',
+            testigo:'Conserje Leopoldo',
+            pista:'Un huésped preguntó dónde vivían los 30 embajadores que vinieron al Centenario de 1910. Le respondí: en la capital, en los hoteles del Paseo de la Reforma que el dictador construyó como imagen del progreso.',
+          },
+          {
+            lugar:'Casino Español de México',
+            icono:'🎰',
+            testigo:'Socio antiguo Ernesto',
+            pista:'Un investigador preguntó dónde se concentraba el 80% del capital extranjero de México en 1910. Le respondí: en la capital, donde la élite extranjera tenía sus clubes, sus mansiones y sus negocios.',
+          },
+        ],
+        libreta:'Belle Époque europea: 1871-1914 — paz relativa, industrialización, art nouveau. Torre Eiffel: 1889. Exposición Universal de París 1900: México presentó sus logros modernizadores. Inversión extranjera en México (1910): 1,200 millones de dólares — EUA (40%), GB (30%), Francia (20%). CDMX: escaparate del Porfiriato.',
+      },
+      investigacion2:{
+        narrativa:'El ladrón dejó una comparación entre la Belle Époque y el Porfiriato.',
+        pista_mundial:'El documento decía: "1876-1910 México / 1871-1914 Europa — la misma era de progreso-desigualdad-colapso. La I Guerra Mundial terminó la Belle Époque en Europa; la Revolución Mexicana terminó el Porfiriato en México. Ambas comenzaron en 1914 y 1910 respectivamente, apenas 4 años de diferencia."',
+        libreta:'I Guerra Mundial (1914): fin de la Belle Époque. Revolución Mexicana (1910-1920): fin del Porfiriato. Simultaneidad: mientras Europa se hundía en la guerra, México vivía su propia revolución. La CDMX fue el escenario central de ambos regímenes (Porfiriato y Revolución): en ella vivían los que perdieron y los que ganaron.',
+      },
+      reto:{
+        enunciado:'Si EUA invirtió el 40% y Gran Bretaña el 30% de los 1,200 millones de dólares en México en 1910, ¿cuántos millones de dólares invirtió cada uno?',
+        opciones_reto:['EUA: 400 / GB: 300','EUA: 420 / GB: 330','EUA: 480 / GB: 360','EUA: 500 / GB: 400'],
+        respuesta_reto:'EUA: 480 / GB: 360',
+        pista_resultado:'480 millones de dólares de EUA — la Ciudad de México procesaba en 1910 el equivalente a 480 millones de pesos anuales en aduanas, siendo el mayor centro fiscal del país.',
+      },
       opciones:['Ciudad de México','Veracruz','Puebla','Jalisco'],
       respuesta_correcta:'Ciudad de México',
-      explicacion:'El Porfiriato (1876-1910) es el equivalente mexicano de la Belle Époque europea: paz relativa, progreso para las élites, opresión para los trabajadores. Los 1,200 millones de dólares invertidos en México (1910) venían de EUA, Gran Bretaña y Francia. La CDMX se transformó en escaparate de esa modernidad importada con el Paseo de la Reforma y sus palacios.',
-      regla_oro_check:true },
+      explicacion:'¡Atrapado! Uniste la pista del Paseo de la Reforma y el 80% del capital extranjero (CDMX), el dato de la Belle Époque y la I Guerra Mundial, y calculaste: 1,200 × 40% = 480 millones (EUA) y 1,200 × 30% = 360 millones (GB).',
+      regla_oro_check:true,
+    },
   ],
 };
 export default porfiriato;

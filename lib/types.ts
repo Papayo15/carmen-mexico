@@ -6,14 +6,14 @@ export type EraSlug =
   | 'reforma' | 'porfiriato' | 'revolucion' | 'caudillismo'
   | 'mexico-industrial' | 'crisis' | 'contemporaneo';
 
-// ─── Case categories (Matriz de 10 casos) ────────────────────────────────────
+// ─── Case categories ─────────────────────────────────────────────────────────
 
 export type CategoriaCase =
-  | 'grandes-hitos'     // 1–3: examen SEP
-  | 'ciencia-y-saberes' // 4–5: inventos, medicina, ingeniería
-  | 'vida-cotidiana'    // 6–7: comida, arte, deporte
-  | 'civismo-y-etica'   // 8–9: leyes, organización, derechos
-  | 'cruce-global';     // 10:  México vs mundo en ese siglo
+  | 'grandes-hitos'
+  | 'ciencia-y-saberes'
+  | 'vida-cotidiana'
+  | 'civismo-y-etica'
+  | 'cruce-global';
 
 export const CATEGORIA_LABELS: Record<CategoriaCase, string> = {
   'grandes-hitos': 'Grandes Hitos',
@@ -31,7 +31,6 @@ export const CATEGORIA_ICONOS: Record<CategoriaCase, string> = {
   'cruce-global': '🌍',
 };
 
-// Derived from case number — no need to store
 export type Dificultad = 'basico' | 'intermedio' | 'avanzado';
 export function getDificultad(numero: number): Dificultad {
   if (numero <= 3) return 'basico';
@@ -39,20 +38,47 @@ export function getDificultad(numero: number): Dificultad {
   return 'avanzado';
 }
 
-// ─── Core case (mission) ──────────────────────────────────────────────────────
+// ─── Pursuit mechanic types ───────────────────────────────────────────────────
 
-export interface Caso {
-  numero: number;            // 1–10
-  titulo: string;            // "El Misterio de La Venta"
-  subtitulo: string;         // location hint: "Tabasco"
+export interface PistaTestigo {
+  lugar: string;
+  icono: string;
+  testigo: string;
+  pista: string;
+}
+
+export interface Investigacion1 {
+  narrativa: string;
+  objeto_robado: string;
+  lugares: [PistaTestigo, PistaTestigo, PistaTestigo];
+  libreta: string;
+}
+
+export interface Investigacion2 {
+  narrativa: string;
+  pista_mundial: string;
+  libreta: string;
+}
+
+export interface RetoMatematico {
+  enunciado: string;
+  opciones_reto: [string, string, string, string];
+  respuesta_reto: string;
+  pista_resultado: string;
+}
+
+export interface CasoInteractivo {
+  numero: number;
+  titulo: string;
   categoria: CategoriaCase;
-  concepto_clave: string;    // what the student takes away
+  concepto_clave: string;
   materia: string;
   estado_destino: string;
   estado_slug: string;
-  pista: string;             // narrative — no shared keywords with libreta
-  libreta: string;           // technical data — no shared keywords with pista
-  opciones: string[];        // 3–4 state names
+  investigacion1: Investigacion1;
+  investigacion2: Investigacion2;
+  reto: RetoMatematico;
+  opciones: [string, string, string, string];
   respuesta_correcta: string;
   explicacion: string;
   regla_oro_check: boolean;
@@ -73,7 +99,7 @@ export interface EraMetadata {
 
 export interface Era {
   metadata: EraMetadata;
-  casos: Caso[];   // exactly 10
+  casos: CasoInteractivo[];
 }
 
 // ─── Progress ─────────────────────────────────────────────────────────────────
@@ -87,17 +113,29 @@ export interface CasoResultado {
 
 export interface EraProgreso {
   era: EraSlug;
-  casos: Record<number, CasoResultado>;   // key: case numero 1–10
+  casos: Record<number, CasoResultado>;
 }
 
 export type ProgresoTotal = Record<EraSlug, EraProgreso>;
 
-// ─── Mission UI state ────────────────────────────────────────────────────────
+// ─── Mission UI state (6-phase pursuit) ──────────────────────────────────────
 
-export type FaseMision = 'jugando' | 'correcto' | 'incorrecto';
+export type FaseInvestigacion =
+  | 'intro'
+  | 'testigos'
+  | 'rastro'
+  | 'reto'
+  | 'viaje'
+  | 'resuelto';
 
 export interface MisionUIState {
-  fase: FaseMision;
-  seleccion: string | null;
-  intentos: number;
+  fase: FaseInvestigacion;
+  testigo_elegido: number | null;
+  pistas_acumuladas: string[];
+  reto_respuesta: string | null;
+  reto_correcto: boolean | null;
+  seleccion_final: string | null;
+  resultado: 'correcto' | 'incorrecto' | null;
+  intentos_viaje: number;
+  intentos_reto: number;
 }
